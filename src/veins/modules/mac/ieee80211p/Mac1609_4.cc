@@ -701,7 +701,7 @@ BaseFrame1609_4* Mac1609_4::EDCA::initiateTransmit(simtime_t lastIdle)
 
                     statsNumInternalContention++;
                     iter->second.cwCur = std::min(iter->second.cwMax, (iter->second.cwCur + 1) * 2 - 1);
-                    iter->second.currentBackoff = owner->intuniform(0, iter->second.cwCur);
+                    //iter->second.currentBackoff = owner->intuniform(0, iter->second.cwCur);
                     EV_TRACE << "Internal contention for queue " << iter->first << " : " << iter->second.currentBackoff << ". Increase cwCur to " << iter->second.cwCur << std::endl;
                 }
             }
@@ -825,9 +825,9 @@ void Mac1609_4::EDCA::stopContent(bool allowBackoff, bool generateTxOp)
 }
 void Mac1609_4::EDCA::backoff(t_access_category ac)
 {
-    myQueues[ac].currentBackoff = owner->intuniform(0, myQueues[ac].cwCur);
-    statsSlotsBackoff += myQueues[ac].currentBackoff;
-    statsNumBackoff++;
+    //myQueues[ac].currentBackoff = owner->intuniform(0, myQueues[ac].cwCur);
+   // statsSlotsBackoff += myQueues[ac].currentBackoff;
+    //statsNumBackoff++;
     EV_TRACE << "Going into Backoff because channel was busy when new packet arrived from upperLayer" << std::endl;
 }
 
@@ -847,9 +847,9 @@ void Mac1609_4::EDCA::postTransmit(t_access_category ac, BaseFrame1609_4* wsm, b
         myQueues[ac].queue.pop();
         myQueues[ac].cwCur = myQueues[ac].cwMin;
         // post transmit backoff
-        myQueues[ac].currentBackoff = owner->intuniform(0, myQueues[ac].cwCur);
-        statsSlotsBackoff += myQueues[ac].currentBackoff;
-        statsNumBackoff++;
+        //myQueues[ac].currentBackoff = owner->intuniform(0, myQueues[ac].cwCur);
+        //statsSlotsBackoff += myQueues[ac].currentBackoff;
+        //statsNumBackoff++;
         EV_TRACE << "Queue " << ac << " will go into post-transmit backoff for " << myQueues[ac].currentBackoff << " slots" << std::endl;
     }
 }

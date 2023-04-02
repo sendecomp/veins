@@ -50,6 +50,10 @@ simple TraCIScenarioManager
         double updateInterval @unit("s") = default(1s);  // time interval of hosts' position updates
         string moduleType = default("org.car2x.veins.nodes.Car");  // module type to be used in the simulation for each managed vehicle
         string moduleName = default("node");  // module name to be used in the simulation for each managed vehicle
+        
+        string moduleType2 = default("org.car2x.veins.nodes.Car");  // module type to be used in the simulation for each managed vehicle
+        string moduleName2 = default("attacker");  // module name to be used in the simulation for each managed vehicle
+        
         // module displayString to be used in the simulation for each managed vehicle
         // display strings key-value pairs needs to be protected with single quotes, as they use an = sign as the type mappings. For example
         // <pre>
