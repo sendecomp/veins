@@ -1,0 +1,145 @@
+file 158846 1680994201                                          
+version 3
+run Default-0-20230408-17:49:10-12445
+attr configname Default
+attr datetime 20230408-17:49:10
+attr datetimef 20230408-174910
+attr experiment Default
+attr inifile omnetpp_pva.ini
+attr iterationvars ""
+attr iterationvarsd ""
+attr iterationvarsf ""
+attr measurement ""
+attr network PriorityV2VAttack
+attr processid 12445
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+config image-path ../../../images
+config cmdenv-express-mode true
+config cmdenv-autoflush true
+config cmdenv-status-frequency 1s
+config **.cmdenv-log-level info
+config image-path ../../../images
+config network PriorityV2VAttack
+config debug-on-errors true
+config print-undisposed true
+config sim-time-limit 200s
+config **.scalar-recording true
+config **.vector-recording true
+config *.playgroundSizeX 2500m
+config *.playgroundSizeY 2500m
+config *.playgroundSizeZ 50m
+config *.annotations.draw true
+config *.obstacles.obstacles "xmldoc(\"config.xml\", \"//AnalogueModel[@type='SimpleObstacleShadowing']/obstacles\")"
+config *.manager.updateInterval 1s
+config *.manager.host "\"localhost\""
+config *.manager.port 9999
+config *.manager.autoShutdown true
+config *.manager.launchConfig "xmldoc(\"erlangen.launchd.xml\")"
+config *.connectionManager.sendDirect true
+config *.connectionManager.maxInterfDist 2600m
+config *.connectionManager.drawMaxIntfDist false
+config *.**.nic.mac1609_4.useServiceChannel false
+config *.**.nic.mac1609_4.txPower 20mW
+config *.**.nic.mac1609_4.bitrate 6Mbps
+config *.**.nic.phy80211p.minPowerLevel -110dBm
+config *.**.nic.phy80211p.useNoiseFloor true
+config *.**.nic.phy80211p.noiseFloor -98dBm
+config *.**.nic.phy80211p.decider "xmldoc(\"config.xml\")"
+config *.**.nic.phy80211p.analogueModels "xmldoc(\"config.xml\")"
+config *.**.nic.phy80211p.usePropagationDelay true
+config *.**.nic.phy80211p.antenna "xmldoc(\"antenna.xml\", \"/root/Antenna[@id='monopole']\")"
+config *.node[*].nic.phy80211p.antennaOffsetY "0 m"
+config *.node[*].nic.phy80211p.antennaOffsetZ "1.895 m"
+config *.attacker[*].nic.phy80211p.antennaOffsetY "0 m"
+config *.attacker[*].nic.phy80211p.antennaOffsetZ "1.895 m"
+config *.manager.moduleType "\"vtype1=org.car2x.veins.nodes.Car *=org.car2x.veins.nodes.Car\""
+config *.manager.moduleName "\"vtype1=attacker *=node\""
+config *.node[*].applType "\"TraCIDemo11p\""
+config *.node[*].appl.headerLength "80 bit"
+config *.node[*].appl.sendBeacons false
+config *.node[*].appl.dataOnSch false
+config *.node[*].appl.beaconInterval 1s
+config *.node[*].appl.dataUserPriority 1
+config *.attacker[*].applType "\"TraCIV2Vp\""
+config *.attacker[*].appl.headerLength "80 bit"
+config *.attacker[*].appl.sendBeacons false
+config *.attacker[*].appl.dataOnSch false
+config *.attacker[*].appl.beaconInterval 1s
+config *.attacker[*].appl.dataUserPriority 7
+config *.node[*].veinsmobility.x 0
+config *.node[*].veinsmobility.y 0
+config *.node[*].veinsmobility.z 0
+config *.node[*].veinsmobility.setHostSpeed false
+config *.node[*0].veinsmobility.accidentCount 1
+config *.node[*0].veinsmobility.accidentStart 73s
+config *.node[*0].veinsmobility.accidentDuration 50s
+config *.attacker[*].veinsmobility.x 0
+config *.attacker[*].veinsmobility.y 0
+config *.attacker[*].veinsmobility.z 0
+config *.attacker[*].veinsmobility.setHostSpeed false
+
+vector 0 PriorityV2VAttack.node[0].veinsmobility posx ETV
+vector 1 PriorityV2VAttack.node[0].veinsmobility posy ETV
+vector 2 PriorityV2VAttack.node[0].veinsmobility speed ETV
+vector 3 PriorityV2VAttack.attacker[1].veinsmobility posx ETV
+vector 4 PriorityV2VAttack.attacker[1].veinsmobility posy ETV
+vector 5 PriorityV2VAttack.node[0].veinsmobility acceleration ETV
+vector 6 PriorityV2VAttack.node[0].veinsmobility co2emission ETV
+vector 7 PriorityV2VAttack.attacker[1].veinsmobility speed ETV
+vector 8 PriorityV2VAttack.node[2].veinsmobility posx ETV
+vector 9 PriorityV2VAttack.node[2].veinsmobility posy ETV
+vector 10 PriorityV2VAttack.attacker[1].veinsmobility acceleration ETV
+vector 11 PriorityV2VAttack.attacker[1].veinsmobility co2emission ETV
+vector 12 PriorityV2VAttack.node[2].veinsmobility speed ETV
+vector 13 PriorityV2VAttack.node[3].veinsmobility posx ETV
+vector 14 PriorityV2VAttack.node[3].veinsmobility posy ETV
+vector 15 PriorityV2VAttack.node[2].veinsmobility acceleration ETV
+vector 16 PriorityV2VAttack.node[2].veinsmobility co2emission ETV
+vector 17 PriorityV2VAttack.node[3].veinsmobility speed ETV
+vector 18 PriorityV2VAttack.node[3].veinsmobility acceleration ETV
+vector 19 PriorityV2VAttack.node[3].veinsmobility co2emission ETV
+vector 20 PriorityV2VAttack.node[4].veinsmobility posx ETV
+vector 21 PriorityV2VAttack.node[4].veinsmobility posy ETV
+vector 22 PriorityV2VAttack.node[4].veinsmobility speed ETV
+vector 23 PriorityV2VAttack.node[4].veinsmobility acceleration ETV
+vector 24 PriorityV2VAttack.node[4].veinsmobility co2emission ETV
+vector 25 PriorityV2VAttack.node[5].veinsmobility posx ETV
+vector 26 PriorityV2VAttack.node[5].veinsmobility posy ETV
+vector 27 PriorityV2VAttack.node[5].veinsmobility speed ETV
+vector 28 PriorityV2VAttack.node[5].veinsmobility acceleration ETV
+vector 29 PriorityV2VAttack.node[5].veinsmobility co2emission ETV
+0	5160 5325 2 390397 1 200 200 1389.6724301211 2450.5186212618 417996.20733517 891024344.13436
+1	10485 5314 2 390397 1 200 200 1382.1895149173 2120.8990969192 374883.43596461 712797418.29
+2	15799 4618 3 390397 2 200 199 0 13.998502501769 1976.5250315657 26834.470616537
+3	20417 5279 4 390397 3 200 198 1402.2171742361 2450.1548796889 414766.1848816 885915097.83355
+4	25696 5285 4 390397 3 200 198 1389.8662799662 2120.7231405396 371541.9031689 706999614.22971
+5	30981 4934 4 390397 3 200 198 -4.5 2.2219942613752 9.7742028066184 139.82620526338
+6	35915 4741 4 390397 3 200 198 0.973 8.2306431470796 408.86566633457 1195.9069668055
+7	40656 4813 5 390397 4 200 197 0 13.998327960956 1962.5757757901 26475.565759604
+8	45469 5230 6 390397 5 200 196 1417.8572319348 2450.3303391745 411741.12213505 881430048.54445
+9	50699 5240 6 390397 5 200 196 1393.5951786293 2120.8208642201 368016.4325005 700629790.65308
+10	55939 5351 6 390397 5 200 196 -3.338648169218 2.1237983872113 10.326754549228 102.04526784584
+11	61290 4966 6 390397 5 200 196 0.973 8.5321147306764 403.95814527791 1180.5355288892
+12	66256 5010 7 390397 6 200 195 0 13.999889892975 1946.8393054031 26181.738394395
+13	71266 5383 8 390397 7 200 194 1429.7017127573 2450.637849304 408361.00017754 875695250.20403
+14	76649 5387 8 390397 7 200 194 1402.8241321156 2120.9484376432 364780.72480223 695238216.81021
+15	82036 5342 8 390397 7 200 194 -3.672612825486 2.3323943811352 10.478324627187 106.31381562196
+16	87378 4947 8 390397 7 200 194 0.973 7.8075372481839 402.25437315846 1181.447143476
+17	92325 4989 9 390397 8 200 193 0 13.999773463665 1931.7341476302 25916.020021672
+18	97314 5327 10 390397 9 200 192 -3.2365987240623 2.1312690187385 10.571227765971 102.92014464676
+19	102641 4912 10 390397 9 200 192 0.973 8.7976396055077 399.61463707553 1183.6686869506
+20	107553 5315 11 390397 10 200 191 1447.4313008526 2450.2020918654 403206.28819771 866628942.24509
+21	112868 5317 11 390397 10 200 191 1407.5381601406 2120.6992948847 359150.17942048 684408280.97722
+22	118185 4960 12 390397 11 200 190 0 13.999527041174 1914.0834052396 25513.020241571
+23	123145 5314 13 390397 12 200 189 -2.6596696745298 2.286540487071 9.8325949366788 91.023901557856
+24	128459 4884 13 390397 12 200 189 0.973 8.1752376244721 388.05432373717 1108.510587268
+25	133343 5241 14 390397 13 200 188 1465.0280234028 2450.3035414632 397890.33626559 856879097.20796
+26	138584 5242 14 390397 13 200 188 1419.6605187366 2120.8072397746 354399.89901111 676777590.78882
+27	143826 4940 15 390397 14 200 187 0 13.998967196981 1892.1046261291 25299.055693759
+28	148766 5256 16 390397 15 200 186 -2.9728402023813 2.112048474357 9.766526892068 96.800584031133
+29	154022 4823 16 390397 15 200 186 0.973 7.9137325716312 388.52904089793 1158.0102814176
+

@@ -1,0 +1,120 @@
+file 122745 1680993815                                          
+version 3
+run Default-0-20230408-17:43:30-12003
+attr configname Default
+attr datetime 20230408-17:43:30
+attr datetimef 20230408-174330
+attr experiment Default
+attr inifile omnetpp_base.ini
+attr iterationvars ""
+attr iterationvarsd ""
+attr iterationvarsf ""
+attr measurement ""
+attr network BaseScenario
+attr processid 12003
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+config image-path ../../../images
+config cmdenv-express-mode true
+config cmdenv-autoflush true
+config cmdenv-status-frequency 1s
+config **.cmdenv-log-level info
+config image-path ../../images
+config network BaseScenario
+config debug-on-errors true
+config print-undisposed true
+config sim-time-limit 200s
+config **.scalar-recording true
+config **.vector-recording true
+config *.playgroundSizeX 2500m
+config *.playgroundSizeY 2500m
+config *.playgroundSizeZ 50m
+config *.annotations.draw true
+config *.obstacles.obstacles "xmldoc(\"config.xml\", \"//AnalogueModel[@type='SimpleObstacleShadowing']/obstacles\")"
+config *.manager.updateInterval 1s
+config *.manager.host "\"localhost\""
+config *.manager.port 9999
+config *.manager.autoShutdown true
+config *.manager.launchConfig "xmldoc(\"erlangen.launchd.xml\")"
+config *.connectionManager.sendDirect true
+config *.connectionManager.maxInterfDist 2600m
+config *.connectionManager.drawMaxIntfDist false
+config *.**.nic.mac1609_4.useServiceChannel false
+config *.**.nic.mac1609_4.txPower 20mW
+config *.**.nic.mac1609_4.bitrate 6Mbps
+config *.**.nic.phy80211p.minPowerLevel -110dBm
+config *.**.nic.phy80211p.useNoiseFloor true
+config *.**.nic.phy80211p.noiseFloor -98dBm
+config *.**.nic.phy80211p.decider "xmldoc(\"config.xml\")"
+config *.**.nic.phy80211p.analogueModels "xmldoc(\"config.xml\")"
+config *.**.nic.phy80211p.usePropagationDelay true
+config *.**.nic.phy80211p.antenna "xmldoc(\"antenna.xml\", \"/root/Antenna[@id='monopole']\")"
+config *.node[*].nic.phy80211p.antennaOffsetY "0 m"
+config *.node[*].nic.phy80211p.antennaOffsetZ "1.895 m"
+config *.node[*].applType "\"TraCIDemo11p\""
+config *.node[*].appl.headerLength "80 bit"
+config *.node[*].appl.sendBeacons false
+config *.node[*].appl.dataOnSch false
+config *.node[*].appl.beaconInterval 1s
+config *.node[*].veinsmobility.x 0
+config *.node[*].veinsmobility.y 0
+config *.node[*].veinsmobility.z 0
+config *.node[*].veinsmobility.setHostSpeed false
+config *.node[*0].veinsmobility.accidentCount 1
+config *.node[*0].veinsmobility.accidentStart 73s
+config *.node[*0].veinsmobility.accidentDuration 50s
+
+vector 0 BaseScenario.node[0].veinsmobility posx ETV
+vector 1 BaseScenario.node[0].veinsmobility posy ETV
+vector 2 BaseScenario.node[0].veinsmobility speed ETV
+vector 3 BaseScenario.node[0].veinsmobility acceleration ETV
+vector 4 BaseScenario.node[0].veinsmobility co2emission ETV
+vector 5 BaseScenario.node[1].veinsmobility posx ETV
+vector 6 BaseScenario.node[1].veinsmobility posy ETV
+vector 7 BaseScenario.node[1].veinsmobility speed ETV
+vector 8 BaseScenario.node[1].veinsmobility acceleration ETV
+vector 9 BaseScenario.node[1].veinsmobility co2emission ETV
+vector 10 BaseScenario.node[2].veinsmobility posx ETV
+vector 11 BaseScenario.node[2].veinsmobility posy ETV
+vector 12 BaseScenario.node[2].veinsmobility speed ETV
+vector 13 BaseScenario.node[2].veinsmobility acceleration ETV
+vector 14 BaseScenario.node[2].veinsmobility co2emission ETV
+vector 15 BaseScenario.node[3].veinsmobility posx ETV
+vector 16 BaseScenario.node[3].veinsmobility posy ETV
+vector 17 BaseScenario.node[3].veinsmobility speed ETV
+vector 18 BaseScenario.node[3].veinsmobility acceleration ETV
+vector 19 BaseScenario.node[3].veinsmobility co2emission ETV
+vector 20 BaseScenario.node[4].veinsmobility posx ETV
+vector 21 BaseScenario.node[4].veinsmobility posy ETV
+vector 22 BaseScenario.node[4].veinsmobility speed ETV
+vector 23 BaseScenario.node[4].veinsmobility acceleration ETV
+vector 24 BaseScenario.node[4].veinsmobility co2emission ETV
+0	3943 4986 2 367 1 200 200 1389.7382683196 2450.6249284665 418044.55592993 891242420.18339
+1	8929 4992 2 367 1 200 200 1382.2107562935 2120.9425833616 374821.40103193 712565232.39647
+2	13921 4281 3 367 2 200 199 0 13.998502501769 1975.9685688371 26803.047113744
+3	18202 4574 4 367 3 200 198 -4.5 2.2219942613752 9.7742028066184 138.55193655993
+4	22776 4403 4 367 3 200 198 0.973 8.9023657158011 408.5171472001 1214.3413990119
+5	27179 4911 5 367 4 200 197 1402.2025009987 2450.4762349875 412538.56962714 880935793.83332
+6	32090 4922 5 367 4 200 197 1389.8593621263 2120.5704686744 369598.85551218 703185194.701
+7	37012 4445 6 367 5 200 196 0 13.998578815588 1961.7753941515 26488.863361392
+8	41457 4786 7 367 6 200 195 -4.4608324981877 2.0360211738362 9.8637989850226 109.50223223547
+9	46243 4429 7 367 6 200 195 0.973 8.4454142222778 402.70734691752 1171.1398272158
+10	50672 5042 8 367 7 200 194 1417.4673916373 2450.6565878353 407238.45462446 871283093.4969
+11	55714 5016 8 367 7 200 194 1393.4113846412 2120.9623304959 364135.59910769 693020811.04078
+12	60730 4641 9 367 8 200 193 0 13.997141638149 1947.4328265005 26275.306154164
+13	65371 4978 10 367 9 200 192 -4.439656564949 2.1423691611597 10.009020010094 104.47318631407
+14	70349 4579 10 367 9 200 192 0.973 8.2469806235914 398.44322096803 1169.3850134688
+15	74928 4982 11 367 10 200 191 1429.8677620488 2450.5209289911 401619.63566617 860495204.71162
+16	79910 4974 11 367 10 200 191 1402.9024176635 2120.9001720846 359010.68828258 684001665.1876
+17	84884 4613 12 367 11 200 190 0 13.998921147089 1931.2439332877 26041.402524981
+18	89497 4942 13 367 12 200 189 -4.4516438954996 2.1600366940722 9.9610912156878 106.62930624282
+19	94439 4526 13 367 12 200 189 0.973 9.0222426779718 395.33276710275 1182.9805626587
+20	98965 4900 14 367 13 200 188 1448.3105316054 2450.241538589 396823.58487817 853028947.27237
+21	103865 4899 14 367 13 200 188 1407.9620866776 2120.7795959963 352867.49895518 671245719.08122
+22	108764 4570 15 367 14 200 187 0 13.999391850769 1912.2139186867 25483.958632893
+23	113334 4907 16 367 15 200 186 -3.0797774601796 2.3075221271976 9.7900271047104 97.892161936724
+24	118241 4503 16 367 15 200 186 0.973 8.3469476410468 386.20497637683 1100.2585745242
+

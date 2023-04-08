@@ -1,0 +1,1036 @@
+version 3
+run Default-0-20230408-17:38:17-11383
+attr configname Default
+attr datetime 20230408-17:38:17
+attr datetimef 20230408-173817
+attr experiment Default
+attr inifile omnetpp_savs.ini
+attr iterationvars ""
+attr iterationvarsd ""
+attr iterationvarsf ""
+attr measurement ""
+attr network SingleAttackerV2VScenario
+attr processid 11383
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+config image-path ../../../images
+config cmdenv-express-mode true
+config cmdenv-autoflush true
+config cmdenv-status-frequency 1s
+config **.cmdenv-log-level info
+config image-path ../../images
+config network SingleAttackerV2VScenario
+config debug-on-errors true
+config print-undisposed true
+config sim-time-limit 200s
+config **.scalar-recording true
+config **.vector-recording true
+config *.playgroundSizeX 2500m
+config *.playgroundSizeY 2500m
+config *.playgroundSizeZ 50m
+config *.annotations.draw true
+config *.obstacles.obstacles "xmldoc(\"config.xml\", \"//AnalogueModel[@type='SimpleObstacleShadowing']/obstacles\")"
+config *.manager.updateInterval 1s
+config *.manager.host "\"localhost\""
+config *.manager.port 9999
+config *.manager.autoShutdown true
+config *.manager.launchConfig "xmldoc(\"erlangen.launchd.xml\")"
+config *.connectionManager.sendDirect true
+config *.connectionManager.maxInterfDist 2600m
+config *.connectionManager.drawMaxIntfDist false
+config *.**.nic.mac1609_4.useServiceChannel false
+config *.**.nic.mac1609_4.txPower 20mW
+config *.**.nic.mac1609_4.bitrate 6Mbps
+config *.**.nic.phy80211p.minPowerLevel -110dBm
+config *.**.nic.phy80211p.useNoiseFloor true
+config *.**.nic.phy80211p.noiseFloor -98dBm
+config *.**.nic.phy80211p.decider "xmldoc(\"config.xml\")"
+config *.**.nic.phy80211p.analogueModels "xmldoc(\"config.xml\")"
+config *.**.nic.phy80211p.usePropagationDelay true
+config *.**.nic.phy80211p.antenna "xmldoc(\"antenna.xml\", \"/root/Antenna[@id='monopole']\")"
+config *.node[*].nic.phy80211p.antennaOffsetY "0 m"
+config *.node[*].nic.phy80211p.antennaOffsetZ "1.895 m"
+config *.attacker[*].nic.phy80211p.antennaOffsetY "0 m"
+config *.attacker[*].nic.phy80211p.antennaOffsetZ "1.895 m"
+config *.manager.moduleType "\"vtype1=org.car2x.veins.nodes.Car *=org.car2x.veins.nodes.Car\""
+config *.manager.moduleName "\"vtype1=attacker *=node\""
+config *.node[*].applType "\"TraCIDemo11p\""
+config *.node[*].appl.headerLength "80 bit"
+config *.node[*].appl.sendBeacons false
+config *.node[*].appl.dataOnSch false
+config *.node[*].appl.beaconInterval 1s
+config *.attacker[*].applType "\"TraCIV2Vp\""
+config *.attacker[*].appl.headerLength "80 bit"
+config *.attacker[*].appl.sendBeacons false
+config *.attacker[*].appl.dataOnSch false
+config *.attacker[*].appl.beaconInterval 1s
+config *.node[*].veinsmobility.x 0
+config *.node[*].veinsmobility.y 0
+config *.node[*].veinsmobility.z 0
+config *.node[*].veinsmobility.setHostSpeed false
+config *.node[*0].veinsmobility.accidentCount 1
+config *.node[*0].veinsmobility.accidentStart 73s
+config *.node[*0].veinsmobility.accidentDuration 50s
+config *.attacker[*].veinsmobility.x 0
+config *.attacker[*].veinsmobility.y 0
+config *.attacker[*].veinsmobility.z 0
+config *.attacker[*].veinsmobility.setHostSpeed false
+
+par SingleAttackerV2VScenario.obstacles typename "\"org.car2x.veins.modules.obstacle.ObstacleControl\""
+par SingleAttackerV2VScenario.obstacles obstacles "<obstacles>...</obstacles> at /media/DATA/av_surv_veins/veins/examples/veins/SingleAttackerV2V//config.xml:40"
+par SingleAttackerV2VScenario.obstacles gridCellSize 250
+par SingleAttackerV2VScenario.annotations typename "\"org.car2x.veins.modules.world.annotations.AnnotationManager\""
+par SingleAttackerV2VScenario.annotations draw true
+par SingleAttackerV2VScenario.annotations annotations "<annotations/> at content:1"
+par SingleAttackerV2VScenario.connectionManager typename "\"org.car2x.veins.base.connectionManager.ConnectionManager\""
+par SingleAttackerV2VScenario.connectionManager sendDirect true
+par SingleAttackerV2VScenario.connectionManager maxInterfDist 2600m
+attr unit m
+par SingleAttackerV2VScenario.connectionManager drawMaxIntfDist false
+par SingleAttackerV2VScenario.world typename "\"org.car2x.veins.base.modules.BaseWorldUtility\""
+par SingleAttackerV2VScenario.world playgroundSizeX 2500m
+attr unit m
+par SingleAttackerV2VScenario.world playgroundSizeY 2500m
+attr unit m
+par SingleAttackerV2VScenario.world playgroundSizeZ 50m
+attr unit m
+par SingleAttackerV2VScenario.world useTorus false
+par SingleAttackerV2VScenario.world use2D false
+par SingleAttackerV2VScenario.manager typename "\"org.car2x.veins.modules.mobility.traci.TraCIScenarioManagerLaunchd\""
+par SingleAttackerV2VScenario.manager connectAt 0s
+attr unit s
+par SingleAttackerV2VScenario.manager firstStepAt -1s
+attr unit s
+par SingleAttackerV2VScenario.manager updateInterval 1s
+attr unit s
+par SingleAttackerV2VScenario.manager moduleType "\"vtype1=org.car2x.veins.nodes.Car *=org.car2x.veins.nodes.Car\""
+par SingleAttackerV2VScenario.manager moduleName "\"vtype1=attacker *=node\""
+par SingleAttackerV2VScenario.manager moduleType2 "\"org.car2x.veins.nodes.Car\""
+par SingleAttackerV2VScenario.manager moduleName2 "\"attacker\""
+par SingleAttackerV2VScenario.manager moduleDisplayString "\"*='i=veins/node/car;is=vs'\""
+par SingleAttackerV2VScenario.manager trafficLightModuleType "\"\""
+par SingleAttackerV2VScenario.manager trafficLightModuleName "\"tls\""
+par SingleAttackerV2VScenario.manager trafficLightFilter "\"\""
+par SingleAttackerV2VScenario.manager trafficLightModuleDisplayString "\"i=misc/node2;is=vs;r=0,,#707070,1\""
+par SingleAttackerV2VScenario.manager host "\"localhost\""
+par SingleAttackerV2VScenario.manager port 9999
+par SingleAttackerV2VScenario.manager seed -1
+par SingleAttackerV2VScenario.manager autoShutdown true
+par SingleAttackerV2VScenario.manager margin 25
+par SingleAttackerV2VScenario.manager roiRoads "\"\""
+par SingleAttackerV2VScenario.manager roiRects "\"\""
+par SingleAttackerV2VScenario.manager penetrationRate 1
+par SingleAttackerV2VScenario.manager ignoreGuiCommands false
+par SingleAttackerV2VScenario.manager launchConfig "<launch>...</launch> at /media/DATA/av_surv_veins/veins/examples/veins/SingleAttackerV2V//erlangen.launchd.xml:35"
+scalar SingleAttackerV2VScenario.manager roiArea 0
+par SingleAttackerV2VScenario.roadsCanvasVisualizer typename "\"org.car2x.veins.visualizer.roads.RoadsCanvasVisualizer\""
+par SingleAttackerV2VScenario.roadsCanvasVisualizer enabled true
+par SingleAttackerV2VScenario.roadsCanvasVisualizer lineZIndex -1
+par SingleAttackerV2VScenario.roadsCanvasVisualizer lineColor "\"firebrick4\""
+par SingleAttackerV2VScenario.roadsCanvasVisualizer lineWidth 1
+par SingleAttackerV2VScenario.roadsCanvasVisualizer lineWidthZoom false
+par SingleAttackerV2VScenario.node[0].appl typename "\"org.car2x.veins.modules.application.traci.TraCIDemo11p\""
+par SingleAttackerV2VScenario.node[0].appl headerLength 80bit
+attr unit bit
+par SingleAttackerV2VScenario.node[0].appl sendBeacons false
+par SingleAttackerV2VScenario.node[0].appl beaconLengthBits 256bit
+attr unit bit
+par SingleAttackerV2VScenario.node[0].appl beaconUserPriority 7
+par SingleAttackerV2VScenario.node[0].appl beaconInterval 1s
+attr unit s
+par SingleAttackerV2VScenario.node[0].appl dataLengthBits 1024bit
+attr unit bit
+par SingleAttackerV2VScenario.node[0].appl dataOnSch false
+par SingleAttackerV2VScenario.node[0].appl dataUserPriority 7
+par SingleAttackerV2VScenario.node[0].appl avoidBeaconSynchronization true
+par SingleAttackerV2VScenario.node[0].appl sendWSA false
+par SingleAttackerV2VScenario.node[0].appl wsaLengthBits 250bit
+attr unit bit
+par SingleAttackerV2VScenario.node[0].appl wsaInterval 1s
+attr unit s
+scalar SingleAttackerV2VScenario.node[0].appl generatedWSMs 1
+scalar SingleAttackerV2VScenario.node[0].appl receivedWSMs 10002
+scalar SingleAttackerV2VScenario.node[0].appl generatedBSMs 0
+scalar SingleAttackerV2VScenario.node[0].appl receivedBSMs 0
+scalar SingleAttackerV2VScenario.node[0].appl generatedWSAs 0
+scalar SingleAttackerV2VScenario.node[0].appl receivedWSAs 0
+par SingleAttackerV2VScenario.node[0].nic.phy80211p typename "\"org.car2x.veins.modules.phy.PhyLayer80211p\""
+par SingleAttackerV2VScenario.node[0].nic.phy80211p recordStats false
+par SingleAttackerV2VScenario.node[0].nic.phy80211p usePropagationDelay true
+par SingleAttackerV2VScenario.node[0].nic.phy80211p noiseFloor -98dBm
+attr unit dBm
+par SingleAttackerV2VScenario.node[0].nic.phy80211p useNoiseFloor true
+par SingleAttackerV2VScenario.node[0].nic.phy80211p antenna "<Antenna type=\"SampledAntenna1D\" id=\"monopole\">...</Antenna> at /media/DATA/av_surv_veins/veins/examples/veins/SingleAttackerV2V//antenna.xml:35"
+par SingleAttackerV2VScenario.node[0].nic.phy80211p antennaOffsetX 0m
+attr unit m
+par SingleAttackerV2VScenario.node[0].nic.phy80211p antennaOffsetY 0m
+attr unit m
+par SingleAttackerV2VScenario.node[0].nic.phy80211p antennaOffsetZ 1.895m
+attr unit m
+par SingleAttackerV2VScenario.node[0].nic.phy80211p antennaOffsetYaw 0rad
+attr unit rad
+par SingleAttackerV2VScenario.node[0].nic.phy80211p analogueModels "<root>...</root> at /media/DATA/av_surv_veins/veins/examples/veins/SingleAttackerV2V//config.xml:34"
+par SingleAttackerV2VScenario.node[0].nic.phy80211p decider "<root>...</root> at /media/DATA/av_surv_veins/veins/examples/veins/SingleAttackerV2V//config.xml:34"
+par SingleAttackerV2VScenario.node[0].nic.phy80211p minPowerLevel -110dBm
+attr unit dBm
+par SingleAttackerV2VScenario.node[0].nic.phy80211p timeRXToTX 0s
+attr unit s
+par SingleAttackerV2VScenario.node[0].nic.phy80211p timeRXToSleep 0s
+attr unit s
+par SingleAttackerV2VScenario.node[0].nic.phy80211p timeTXToRX 0s
+attr unit s
+par SingleAttackerV2VScenario.node[0].nic.phy80211p timeTXToSleep 0s
+attr unit s
+par SingleAttackerV2VScenario.node[0].nic.phy80211p timeSleepToRX 0s
+attr unit s
+par SingleAttackerV2VScenario.node[0].nic.phy80211p timeSleepToTX 0s
+attr unit s
+par SingleAttackerV2VScenario.node[0].nic.phy80211p initialRadioState 0
+par SingleAttackerV2VScenario.node[0].nic.phy80211p radioMinAtt 1
+par SingleAttackerV2VScenario.node[0].nic.phy80211p radioMaxAtt 0
+par SingleAttackerV2VScenario.node[0].nic.phy80211p nbRadioChannels 1
+par SingleAttackerV2VScenario.node[0].nic.phy80211p initialRadioChannel 0
+par SingleAttackerV2VScenario.node[0].nic.phy80211p ccaThreshold -65dBm
+attr unit dBm
+par SingleAttackerV2VScenario.node[0].nic.phy80211p collectCollisionStatistics false
+par SingleAttackerV2VScenario.node[0].nic.phy80211p allowTxDuringRx false
+scalar SingleAttackerV2VScenario.node[0].nic.phy80211p busyTime 0.01166295477387
+par SingleAttackerV2VScenario.node[0].nic.mac1609_4 typename "\"org.car2x.veins.modules.mac.ieee80211p.Mac1609_4\""
+par SingleAttackerV2VScenario.node[0].nic.mac1609_4 notAffectedByHostState false
+par SingleAttackerV2VScenario.node[0].nic.mac1609_4 headerLength 0bit
+attr unit bit
+par SingleAttackerV2VScenario.node[0].nic.mac1609_4 address "\"auto\""
+par SingleAttackerV2VScenario.node[0].nic.mac1609_4 useServiceChannel false
+par SingleAttackerV2VScenario.node[0].nic.mac1609_4 serviceChannel 1
+par SingleAttackerV2VScenario.node[0].nic.mac1609_4 bitrate 6000000bps
+attr unit bps
+par SingleAttackerV2VScenario.node[0].nic.mac1609_4 syncOffset 0.0003s
+attr unit s
+par SingleAttackerV2VScenario.node[0].nic.mac1609_4 txPower 20mW
+attr unit mW
+par SingleAttackerV2VScenario.node[0].nic.mac1609_4 queueSize 0
+par SingleAttackerV2VScenario.node[0].nic.mac1609_4 dot11RTSThreshold 12000bit
+attr unit bit
+par SingleAttackerV2VScenario.node[0].nic.mac1609_4 dot11ShortRetryLimit 7
+par SingleAttackerV2VScenario.node[0].nic.mac1609_4 dot11LongRetryLimit 4
+par SingleAttackerV2VScenario.node[0].nic.mac1609_4 ackLength 112bit
+attr unit bit
+par SingleAttackerV2VScenario.node[0].nic.mac1609_4 useAcks false
+par SingleAttackerV2VScenario.node[0].nic.mac1609_4 frameErrorRate 0
+par SingleAttackerV2VScenario.node[0].nic.mac1609_4 ackErrorRate 0
+scalar SingleAttackerV2VScenario.node[0].nic.mac1609_4 ReceivedUnicastPackets 0
+scalar SingleAttackerV2VScenario.node[0].nic.mac1609_4 ReceivedBroadcasts 10002
+scalar SingleAttackerV2VScenario.node[0].nic.mac1609_4 SentPackets 1
+scalar SingleAttackerV2VScenario.node[0].nic.mac1609_4 SentAcknowledgements 0
+scalar SingleAttackerV2VScenario.node[0].nic.mac1609_4 RetriesExceeded 0
+scalar SingleAttackerV2VScenario.node[0].nic.mac1609_4 SNIRLostPackets 2
+scalar SingleAttackerV2VScenario.node[0].nic.mac1609_4 RXTXLostPackets 0
+scalar SingleAttackerV2VScenario.node[0].nic.mac1609_4 TotalLostPackets 2
+scalar SingleAttackerV2VScenario.node[0].nic.mac1609_4 DroppedPacketsInMac 0
+scalar SingleAttackerV2VScenario.node[0].nic.mac1609_4 TooLittleTime 0
+scalar SingleAttackerV2VScenario.node[0].nic.mac1609_4 TimesIntoBackoff 1
+scalar SingleAttackerV2VScenario.node[0].nic.mac1609_4 SlotsBackoff 0
+scalar SingleAttackerV2VScenario.node[0].nic.mac1609_4 NumInternalContention 0
+scalar SingleAttackerV2VScenario.node[0].nic.mac1609_4 totalBusyTime 2.32069710423
+scalar SingleAttackerV2VScenario.node[0].nic.mac1609_4 retriesExceeded:count 0
+attr recordingmode count
+attr source org_car2x_veins_modules_mac_sigRetriesExceeded
+scalar SingleAttackerV2VScenario.node[0].nic.mac1609_4 sentAcks:count 0
+attr recordingmode count
+attr source org_car2x_veins_modules_mac_sigSentAck
+scalar SingleAttackerV2VScenario.node[0].nic.mac1609_4 sentPackets:count 1
+attr recordingmode count
+attr source org_car2x_veins_modules_mac_sigSentPacket
+scalar SingleAttackerV2VScenario.node[0].nic.mac1609_4 collisions:count 0
+attr recordingmode count
+attr source org_car2x_veins_modules_mac_sigCollision
+scalar SingleAttackerV2VScenario.node[0].nic.mac1609_4 channelBusy:timeavg 0.011661794493619
+attr recordingmode timeavg
+attr source org_car2x_veins_modules_mac_sigChannelBusy
+par SingleAttackerV2VScenario.node[0].nic typename "\"org.car2x.veins.modules.nic.Nic80211p\""
+par SingleAttackerV2VScenario.node[0].nic connectionManagerName "\"connectionManager\""
+par SingleAttackerV2VScenario.node[0].veinsmobility typename "\"org.car2x.veins.modules.mobility.traci.TraCIMobility\""
+par SingleAttackerV2VScenario.node[0].veinsmobility notAffectedByHostState true
+par SingleAttackerV2VScenario.node[0].veinsmobility x 0
+par SingleAttackerV2VScenario.node[0].veinsmobility y 0
+par SingleAttackerV2VScenario.node[0].veinsmobility z 0
+par SingleAttackerV2VScenario.node[0].veinsmobility xOrientation 1
+par SingleAttackerV2VScenario.node[0].veinsmobility yOrientation 0
+par SingleAttackerV2VScenario.node[0].veinsmobility zOrientation 0
+par SingleAttackerV2VScenario.node[0].veinsmobility hostPositionOffset 0m
+attr unit m
+par SingleAttackerV2VScenario.node[0].veinsmobility setHostSpeed false
+par SingleAttackerV2VScenario.node[0].veinsmobility accidentCount 1
+par SingleAttackerV2VScenario.node[0].veinsmobility accidentStart 73s
+attr unit s
+par SingleAttackerV2VScenario.node[0].veinsmobility accidentDuration 50s
+attr unit s
+par SingleAttackerV2VScenario.node[0].veinsmobility accidentInterval "uniform(30s, 60s)"
+attr unit s
+scalar SingleAttackerV2VScenario.node[0].veinsmobility startTime 1
+scalar SingleAttackerV2VScenario.node[0].veinsmobility totalTime 199
+scalar SingleAttackerV2VScenario.node[0].veinsmobility stopTime 200
+scalar SingleAttackerV2VScenario.node[0].veinsmobility minSpeed 0
+scalar SingleAttackerV2VScenario.node[0].veinsmobility maxSpeed 13.998502501769
+scalar SingleAttackerV2VScenario.node[0].veinsmobility totalDistance 1968.8124046302
+scalar SingleAttackerV2VScenario.node[0].veinsmobility totalCO2Emission 408.86566633457
+par SingleAttackerV2VScenario.node[0] typename "\"org.car2x.veins.nodes.Car\""
+par SingleAttackerV2VScenario.node[0] applType "\"TraCIDemo11p\""
+par SingleAttackerV2VScenario.node[0] nicType "\"Nic80211p\""
+par SingleAttackerV2VScenario.node[0] veinsmobilityType "\"org.car2x.veins.modules.mobility.traci.TraCIMobility\""
+par SingleAttackerV2VScenario.node[2].appl typename "\"org.car2x.veins.modules.application.traci.TraCIDemo11p\""
+par SingleAttackerV2VScenario.node[2].appl headerLength 80bit
+attr unit bit
+par SingleAttackerV2VScenario.node[2].appl sendBeacons false
+par SingleAttackerV2VScenario.node[2].appl beaconLengthBits 256bit
+attr unit bit
+par SingleAttackerV2VScenario.node[2].appl beaconUserPriority 7
+par SingleAttackerV2VScenario.node[2].appl beaconInterval 1s
+attr unit s
+par SingleAttackerV2VScenario.node[2].appl dataLengthBits 1024bit
+attr unit bit
+par SingleAttackerV2VScenario.node[2].appl dataOnSch false
+par SingleAttackerV2VScenario.node[2].appl dataUserPriority 7
+par SingleAttackerV2VScenario.node[2].appl avoidBeaconSynchronization true
+par SingleAttackerV2VScenario.node[2].appl sendWSA false
+par SingleAttackerV2VScenario.node[2].appl wsaLengthBits 250bit
+attr unit bit
+par SingleAttackerV2VScenario.node[2].appl wsaInterval 1s
+attr unit s
+scalar SingleAttackerV2VScenario.node[2].appl generatedWSMs 1
+scalar SingleAttackerV2VScenario.node[2].appl receivedWSMs 10002
+scalar SingleAttackerV2VScenario.node[2].appl generatedBSMs 0
+scalar SingleAttackerV2VScenario.node[2].appl receivedBSMs 0
+scalar SingleAttackerV2VScenario.node[2].appl generatedWSAs 0
+scalar SingleAttackerV2VScenario.node[2].appl receivedWSAs 0
+par SingleAttackerV2VScenario.node[2].nic.phy80211p typename "\"org.car2x.veins.modules.phy.PhyLayer80211p\""
+par SingleAttackerV2VScenario.node[2].nic.phy80211p recordStats false
+par SingleAttackerV2VScenario.node[2].nic.phy80211p usePropagationDelay true
+par SingleAttackerV2VScenario.node[2].nic.phy80211p noiseFloor -98dBm
+attr unit dBm
+par SingleAttackerV2VScenario.node[2].nic.phy80211p useNoiseFloor true
+par SingleAttackerV2VScenario.node[2].nic.phy80211p antenna "<Antenna type=\"SampledAntenna1D\" id=\"monopole\">...</Antenna> at /media/DATA/av_surv_veins/veins/examples/veins/SingleAttackerV2V//antenna.xml:35"
+par SingleAttackerV2VScenario.node[2].nic.phy80211p antennaOffsetX 0m
+attr unit m
+par SingleAttackerV2VScenario.node[2].nic.phy80211p antennaOffsetY 0m
+attr unit m
+par SingleAttackerV2VScenario.node[2].nic.phy80211p antennaOffsetZ 1.895m
+attr unit m
+par SingleAttackerV2VScenario.node[2].nic.phy80211p antennaOffsetYaw 0rad
+attr unit rad
+par SingleAttackerV2VScenario.node[2].nic.phy80211p analogueModels "<root>...</root> at /media/DATA/av_surv_veins/veins/examples/veins/SingleAttackerV2V//config.xml:34"
+par SingleAttackerV2VScenario.node[2].nic.phy80211p decider "<root>...</root> at /media/DATA/av_surv_veins/veins/examples/veins/SingleAttackerV2V//config.xml:34"
+par SingleAttackerV2VScenario.node[2].nic.phy80211p minPowerLevel -110dBm
+attr unit dBm
+par SingleAttackerV2VScenario.node[2].nic.phy80211p timeRXToTX 0s
+attr unit s
+par SingleAttackerV2VScenario.node[2].nic.phy80211p timeRXToSleep 0s
+attr unit s
+par SingleAttackerV2VScenario.node[2].nic.phy80211p timeTXToRX 0s
+attr unit s
+par SingleAttackerV2VScenario.node[2].nic.phy80211p timeTXToSleep 0s
+attr unit s
+par SingleAttackerV2VScenario.node[2].nic.phy80211p timeSleepToRX 0s
+attr unit s
+par SingleAttackerV2VScenario.node[2].nic.phy80211p timeSleepToTX 0s
+attr unit s
+par SingleAttackerV2VScenario.node[2].nic.phy80211p initialRadioState 0
+par SingleAttackerV2VScenario.node[2].nic.phy80211p radioMinAtt 1
+par SingleAttackerV2VScenario.node[2].nic.phy80211p radioMaxAtt 0
+par SingleAttackerV2VScenario.node[2].nic.phy80211p nbRadioChannels 1
+par SingleAttackerV2VScenario.node[2].nic.phy80211p initialRadioChannel 0
+par SingleAttackerV2VScenario.node[2].nic.phy80211p ccaThreshold -65dBm
+attr unit dBm
+par SingleAttackerV2VScenario.node[2].nic.phy80211p collectCollisionStatistics false
+par SingleAttackerV2VScenario.node[2].nic.phy80211p allowTxDuringRx false
+scalar SingleAttackerV2VScenario.node[2].nic.phy80211p busyTime 0.011902194871795
+par SingleAttackerV2VScenario.node[2].nic.mac1609_4 typename "\"org.car2x.veins.modules.mac.ieee80211p.Mac1609_4\""
+par SingleAttackerV2VScenario.node[2].nic.mac1609_4 notAffectedByHostState false
+par SingleAttackerV2VScenario.node[2].nic.mac1609_4 headerLength 0bit
+attr unit bit
+par SingleAttackerV2VScenario.node[2].nic.mac1609_4 address "\"auto\""
+par SingleAttackerV2VScenario.node[2].nic.mac1609_4 useServiceChannel false
+par SingleAttackerV2VScenario.node[2].nic.mac1609_4 serviceChannel 1
+par SingleAttackerV2VScenario.node[2].nic.mac1609_4 bitrate 6000000bps
+attr unit bps
+par SingleAttackerV2VScenario.node[2].nic.mac1609_4 syncOffset 0.0003s
+attr unit s
+par SingleAttackerV2VScenario.node[2].nic.mac1609_4 txPower 20mW
+attr unit mW
+par SingleAttackerV2VScenario.node[2].nic.mac1609_4 queueSize 0
+par SingleAttackerV2VScenario.node[2].nic.mac1609_4 dot11RTSThreshold 12000bit
+attr unit bit
+par SingleAttackerV2VScenario.node[2].nic.mac1609_4 dot11ShortRetryLimit 7
+par SingleAttackerV2VScenario.node[2].nic.mac1609_4 dot11LongRetryLimit 4
+par SingleAttackerV2VScenario.node[2].nic.mac1609_4 ackLength 112bit
+attr unit bit
+par SingleAttackerV2VScenario.node[2].nic.mac1609_4 useAcks false
+par SingleAttackerV2VScenario.node[2].nic.mac1609_4 frameErrorRate 0
+par SingleAttackerV2VScenario.node[2].nic.mac1609_4 ackErrorRate 0
+scalar SingleAttackerV2VScenario.node[2].nic.mac1609_4 ReceivedUnicastPackets 0
+scalar SingleAttackerV2VScenario.node[2].nic.mac1609_4 ReceivedBroadcasts 10002
+scalar SingleAttackerV2VScenario.node[2].nic.mac1609_4 SentPackets 1
+scalar SingleAttackerV2VScenario.node[2].nic.mac1609_4 SentAcknowledgements 0
+scalar SingleAttackerV2VScenario.node[2].nic.mac1609_4 RetriesExceeded 0
+scalar SingleAttackerV2VScenario.node[2].nic.mac1609_4 SNIRLostPackets 2
+scalar SingleAttackerV2VScenario.node[2].nic.mac1609_4 RXTXLostPackets 0
+scalar SingleAttackerV2VScenario.node[2].nic.mac1609_4 TotalLostPackets 2
+scalar SingleAttackerV2VScenario.node[2].nic.mac1609_4 DroppedPacketsInMac 0
+scalar SingleAttackerV2VScenario.node[2].nic.mac1609_4 TooLittleTime 0
+scalar SingleAttackerV2VScenario.node[2].nic.mac1609_4 TimesIntoBackoff 1
+scalar SingleAttackerV2VScenario.node[2].nic.mac1609_4 SlotsBackoff 3
+scalar SingleAttackerV2VScenario.node[2].nic.mac1609_4 NumInternalContention 0
+scalar SingleAttackerV2VScenario.node[2].nic.mac1609_4 totalBusyTime 2.320697196768
+scalar SingleAttackerV2VScenario.node[2].nic.mac1609_4 retriesExceeded:count 0
+attr recordingmode count
+attr source org_car2x_veins_modules_mac_sigRetriesExceeded
+scalar SingleAttackerV2VScenario.node[2].nic.mac1609_4 sentAcks:count 0
+attr recordingmode count
+attr source org_car2x_veins_modules_mac_sigSentAck
+scalar SingleAttackerV2VScenario.node[2].nic.mac1609_4 sentPackets:count 1
+attr recordingmode count
+attr source org_car2x_veins_modules_mac_sigSentPacket
+scalar SingleAttackerV2VScenario.node[2].nic.mac1609_4 collisions:count 0
+attr recordingmode count
+attr source org_car2x_veins_modules_mac_sigCollision
+scalar SingleAttackerV2VScenario.node[2].nic.mac1609_4 channelBusy:timeavg 0.011901011265477
+attr recordingmode timeavg
+attr source org_car2x_veins_modules_mac_sigChannelBusy
+par SingleAttackerV2VScenario.node[2].nic typename "\"org.car2x.veins.modules.nic.Nic80211p\""
+par SingleAttackerV2VScenario.node[2].nic connectionManagerName "\"connectionManager\""
+par SingleAttackerV2VScenario.node[2].veinsmobility typename "\"org.car2x.veins.modules.mobility.traci.TraCIMobility\""
+par SingleAttackerV2VScenario.node[2].veinsmobility notAffectedByHostState true
+par SingleAttackerV2VScenario.node[2].veinsmobility x 0
+par SingleAttackerV2VScenario.node[2].veinsmobility y 0
+par SingleAttackerV2VScenario.node[2].veinsmobility z 0
+par SingleAttackerV2VScenario.node[2].veinsmobility xOrientation 1
+par SingleAttackerV2VScenario.node[2].veinsmobility yOrientation 0
+par SingleAttackerV2VScenario.node[2].veinsmobility zOrientation 0
+par SingleAttackerV2VScenario.node[2].veinsmobility hostPositionOffset 0m
+attr unit m
+par SingleAttackerV2VScenario.node[2].veinsmobility setHostSpeed false
+par SingleAttackerV2VScenario.node[2].veinsmobility accidentCount 0
+par SingleAttackerV2VScenario.node[2].veinsmobility accidentStart 48.7069s
+attr unit s
+par SingleAttackerV2VScenario.node[2].veinsmobility accidentDuration "uniform(30s, 60s)"
+attr unit s
+par SingleAttackerV2VScenario.node[2].veinsmobility accidentInterval "uniform(30s, 60s)"
+attr unit s
+scalar SingleAttackerV2VScenario.node[2].veinsmobility startTime 5
+scalar SingleAttackerV2VScenario.node[2].veinsmobility totalTime 195
+scalar SingleAttackerV2VScenario.node[2].veinsmobility stopTime 200
+scalar SingleAttackerV2VScenario.node[2].veinsmobility minSpeed 0
+scalar SingleAttackerV2VScenario.node[2].veinsmobility maxSpeed 13.999889892975
+scalar SingleAttackerV2VScenario.node[2].veinsmobility totalDistance 1939.6556879653
+scalar SingleAttackerV2VScenario.node[2].veinsmobility totalCO2Emission 402.25437315846
+par SingleAttackerV2VScenario.node[2] typename "\"org.car2x.veins.nodes.Car\""
+par SingleAttackerV2VScenario.node[2] applType "\"TraCIDemo11p\""
+par SingleAttackerV2VScenario.node[2] nicType "\"Nic80211p\""
+par SingleAttackerV2VScenario.node[2] veinsmobilityType "\"org.car2x.veins.modules.mobility.traci.TraCIMobility\""
+par SingleAttackerV2VScenario.node[3].appl typename "\"org.car2x.veins.modules.application.traci.TraCIDemo11p\""
+par SingleAttackerV2VScenario.node[3].appl headerLength 80bit
+attr unit bit
+par SingleAttackerV2VScenario.node[3].appl sendBeacons false
+par SingleAttackerV2VScenario.node[3].appl beaconLengthBits 256bit
+attr unit bit
+par SingleAttackerV2VScenario.node[3].appl beaconUserPriority 7
+par SingleAttackerV2VScenario.node[3].appl beaconInterval 1s
+attr unit s
+par SingleAttackerV2VScenario.node[3].appl dataLengthBits 1024bit
+attr unit bit
+par SingleAttackerV2VScenario.node[3].appl dataOnSch false
+par SingleAttackerV2VScenario.node[3].appl dataUserPriority 7
+par SingleAttackerV2VScenario.node[3].appl avoidBeaconSynchronization true
+par SingleAttackerV2VScenario.node[3].appl sendWSA false
+par SingleAttackerV2VScenario.node[3].appl wsaLengthBits 250bit
+attr unit bit
+par SingleAttackerV2VScenario.node[3].appl wsaInterval 1s
+attr unit s
+scalar SingleAttackerV2VScenario.node[3].appl generatedWSMs 1
+scalar SingleAttackerV2VScenario.node[3].appl receivedWSMs 10000
+scalar SingleAttackerV2VScenario.node[3].appl generatedBSMs 0
+scalar SingleAttackerV2VScenario.node[3].appl receivedBSMs 0
+scalar SingleAttackerV2VScenario.node[3].appl generatedWSAs 0
+scalar SingleAttackerV2VScenario.node[3].appl receivedWSAs 0
+par SingleAttackerV2VScenario.node[3].nic.phy80211p typename "\"org.car2x.veins.modules.phy.PhyLayer80211p\""
+par SingleAttackerV2VScenario.node[3].nic.phy80211p recordStats false
+par SingleAttackerV2VScenario.node[3].nic.phy80211p usePropagationDelay true
+par SingleAttackerV2VScenario.node[3].nic.phy80211p noiseFloor -98dBm
+attr unit dBm
+par SingleAttackerV2VScenario.node[3].nic.phy80211p useNoiseFloor true
+par SingleAttackerV2VScenario.node[3].nic.phy80211p antenna "<Antenna type=\"SampledAntenna1D\" id=\"monopole\">...</Antenna> at /media/DATA/av_surv_veins/veins/examples/veins/SingleAttackerV2V//antenna.xml:35"
+par SingleAttackerV2VScenario.node[3].nic.phy80211p antennaOffsetX 0m
+attr unit m
+par SingleAttackerV2VScenario.node[3].nic.phy80211p antennaOffsetY 0m
+attr unit m
+par SingleAttackerV2VScenario.node[3].nic.phy80211p antennaOffsetZ 1.895m
+attr unit m
+par SingleAttackerV2VScenario.node[3].nic.phy80211p antennaOffsetYaw 0rad
+attr unit rad
+par SingleAttackerV2VScenario.node[3].nic.phy80211p analogueModels "<root>...</root> at /media/DATA/av_surv_veins/veins/examples/veins/SingleAttackerV2V//config.xml:34"
+par SingleAttackerV2VScenario.node[3].nic.phy80211p decider "<root>...</root> at /media/DATA/av_surv_veins/veins/examples/veins/SingleAttackerV2V//config.xml:34"
+par SingleAttackerV2VScenario.node[3].nic.phy80211p minPowerLevel -110dBm
+attr unit dBm
+par SingleAttackerV2VScenario.node[3].nic.phy80211p timeRXToTX 0s
+attr unit s
+par SingleAttackerV2VScenario.node[3].nic.phy80211p timeRXToSleep 0s
+attr unit s
+par SingleAttackerV2VScenario.node[3].nic.phy80211p timeTXToRX 0s
+attr unit s
+par SingleAttackerV2VScenario.node[3].nic.phy80211p timeTXToSleep 0s
+attr unit s
+par SingleAttackerV2VScenario.node[3].nic.phy80211p timeSleepToRX 0s
+attr unit s
+par SingleAttackerV2VScenario.node[3].nic.phy80211p timeSleepToTX 0s
+attr unit s
+par SingleAttackerV2VScenario.node[3].nic.phy80211p initialRadioState 0
+par SingleAttackerV2VScenario.node[3].nic.phy80211p radioMinAtt 1
+par SingleAttackerV2VScenario.node[3].nic.phy80211p radioMaxAtt 0
+par SingleAttackerV2VScenario.node[3].nic.phy80211p nbRadioChannels 1
+par SingleAttackerV2VScenario.node[3].nic.phy80211p initialRadioChannel 0
+par SingleAttackerV2VScenario.node[3].nic.phy80211p ccaThreshold -65dBm
+attr unit dBm
+par SingleAttackerV2VScenario.node[3].nic.phy80211p collectCollisionStatistics false
+par SingleAttackerV2VScenario.node[3].nic.phy80211p allowTxDuringRx false
+scalar SingleAttackerV2VScenario.node[3].nic.phy80211p busyTime 0.012025533678757
+par SingleAttackerV2VScenario.node[3].nic.mac1609_4 typename "\"org.car2x.veins.modules.mac.ieee80211p.Mac1609_4\""
+par SingleAttackerV2VScenario.node[3].nic.mac1609_4 notAffectedByHostState false
+par SingleAttackerV2VScenario.node[3].nic.mac1609_4 headerLength 0bit
+attr unit bit
+par SingleAttackerV2VScenario.node[3].nic.mac1609_4 address "\"auto\""
+par SingleAttackerV2VScenario.node[3].nic.mac1609_4 useServiceChannel false
+par SingleAttackerV2VScenario.node[3].nic.mac1609_4 serviceChannel 1
+par SingleAttackerV2VScenario.node[3].nic.mac1609_4 bitrate 6000000bps
+attr unit bps
+par SingleAttackerV2VScenario.node[3].nic.mac1609_4 syncOffset 0.0003s
+attr unit s
+par SingleAttackerV2VScenario.node[3].nic.mac1609_4 txPower 20mW
+attr unit mW
+par SingleAttackerV2VScenario.node[3].nic.mac1609_4 queueSize 0
+par SingleAttackerV2VScenario.node[3].nic.mac1609_4 dot11RTSThreshold 12000bit
+attr unit bit
+par SingleAttackerV2VScenario.node[3].nic.mac1609_4 dot11ShortRetryLimit 7
+par SingleAttackerV2VScenario.node[3].nic.mac1609_4 dot11LongRetryLimit 4
+par SingleAttackerV2VScenario.node[3].nic.mac1609_4 ackLength 112bit
+attr unit bit
+par SingleAttackerV2VScenario.node[3].nic.mac1609_4 useAcks false
+par SingleAttackerV2VScenario.node[3].nic.mac1609_4 frameErrorRate 0
+par SingleAttackerV2VScenario.node[3].nic.mac1609_4 ackErrorRate 0
+scalar SingleAttackerV2VScenario.node[3].nic.mac1609_4 ReceivedUnicastPackets 0
+scalar SingleAttackerV2VScenario.node[3].nic.mac1609_4 ReceivedBroadcasts 10000
+scalar SingleAttackerV2VScenario.node[3].nic.mac1609_4 SentPackets 1
+scalar SingleAttackerV2VScenario.node[3].nic.mac1609_4 SentAcknowledgements 0
+scalar SingleAttackerV2VScenario.node[3].nic.mac1609_4 RetriesExceeded 0
+scalar SingleAttackerV2VScenario.node[3].nic.mac1609_4 SNIRLostPackets 4
+scalar SingleAttackerV2VScenario.node[3].nic.mac1609_4 RXTXLostPackets 0
+scalar SingleAttackerV2VScenario.node[3].nic.mac1609_4 TotalLostPackets 4
+scalar SingleAttackerV2VScenario.node[3].nic.mac1609_4 DroppedPacketsInMac 0
+scalar SingleAttackerV2VScenario.node[3].nic.mac1609_4 TooLittleTime 0
+scalar SingleAttackerV2VScenario.node[3].nic.mac1609_4 TimesIntoBackoff 1
+scalar SingleAttackerV2VScenario.node[3].nic.mac1609_4 SlotsBackoff 0
+scalar SingleAttackerV2VScenario.node[3].nic.mac1609_4 NumInternalContention 0
+scalar SingleAttackerV2VScenario.node[3].nic.mac1609_4 totalBusyTime 2.320697129393
+scalar SingleAttackerV2VScenario.node[3].nic.mac1609_4 retriesExceeded:count 0
+attr recordingmode count
+attr source org_car2x_veins_modules_mac_sigRetriesExceeded
+scalar SingleAttackerV2VScenario.node[3].nic.mac1609_4 sentAcks:count 0
+attr recordingmode count
+attr source org_car2x_veins_modules_mac_sigSentAck
+scalar SingleAttackerV2VScenario.node[3].nic.mac1609_4 sentPackets:count 1
+attr recordingmode count
+attr source org_car2x_veins_modules_mac_sigSentPacket
+scalar SingleAttackerV2VScenario.node[3].nic.mac1609_4 collisions:count 0
+attr recordingmode count
+attr source org_car2x_veins_modules_mac_sigCollision
+scalar SingleAttackerV2VScenario.node[3].nic.mac1609_4 channelBusy:timeavg 0.012024337457995
+attr recordingmode timeavg
+attr source org_car2x_veins_modules_mac_sigChannelBusy
+par SingleAttackerV2VScenario.node[3].nic typename "\"org.car2x.veins.modules.nic.Nic80211p\""
+par SingleAttackerV2VScenario.node[3].nic connectionManagerName "\"connectionManager\""
+par SingleAttackerV2VScenario.node[3].veinsmobility typename "\"org.car2x.veins.modules.mobility.traci.TraCIMobility\""
+par SingleAttackerV2VScenario.node[3].veinsmobility notAffectedByHostState true
+par SingleAttackerV2VScenario.node[3].veinsmobility x 0
+par SingleAttackerV2VScenario.node[3].veinsmobility y 0
+par SingleAttackerV2VScenario.node[3].veinsmobility z 0
+par SingleAttackerV2VScenario.node[3].veinsmobility xOrientation 1
+par SingleAttackerV2VScenario.node[3].veinsmobility yOrientation 0
+par SingleAttackerV2VScenario.node[3].veinsmobility zOrientation 0
+par SingleAttackerV2VScenario.node[3].veinsmobility hostPositionOffset 0m
+attr unit m
+par SingleAttackerV2VScenario.node[3].veinsmobility setHostSpeed false
+par SingleAttackerV2VScenario.node[3].veinsmobility accidentCount 0
+par SingleAttackerV2VScenario.node[3].veinsmobility accidentStart 56.7532s
+attr unit s
+par SingleAttackerV2VScenario.node[3].veinsmobility accidentDuration "uniform(30s, 60s)"
+attr unit s
+par SingleAttackerV2VScenario.node[3].veinsmobility accidentInterval "uniform(30s, 60s)"
+attr unit s
+scalar SingleAttackerV2VScenario.node[3].veinsmobility startTime 7
+scalar SingleAttackerV2VScenario.node[3].veinsmobility totalTime 193
+scalar SingleAttackerV2VScenario.node[3].veinsmobility stopTime 200
+scalar SingleAttackerV2VScenario.node[3].veinsmobility minSpeed 0
+scalar SingleAttackerV2VScenario.node[3].veinsmobility maxSpeed 13.999773463665
+scalar SingleAttackerV2VScenario.node[3].veinsmobility totalDistance 1924.62960244
+scalar SingleAttackerV2VScenario.node[3].veinsmobility totalCO2Emission 399.61463707553
+par SingleAttackerV2VScenario.node[3] typename "\"org.car2x.veins.nodes.Car\""
+par SingleAttackerV2VScenario.node[3] applType "\"TraCIDemo11p\""
+par SingleAttackerV2VScenario.node[3] nicType "\"Nic80211p\""
+par SingleAttackerV2VScenario.node[3] veinsmobilityType "\"org.car2x.veins.modules.mobility.traci.TraCIMobility\""
+par SingleAttackerV2VScenario.node[4].appl typename "\"org.car2x.veins.modules.application.traci.TraCIDemo11p\""
+par SingleAttackerV2VScenario.node[4].appl headerLength 80bit
+attr unit bit
+par SingleAttackerV2VScenario.node[4].appl sendBeacons false
+par SingleAttackerV2VScenario.node[4].appl beaconLengthBits 256bit
+attr unit bit
+par SingleAttackerV2VScenario.node[4].appl beaconUserPriority 7
+par SingleAttackerV2VScenario.node[4].appl beaconInterval 1s
+attr unit s
+par SingleAttackerV2VScenario.node[4].appl dataLengthBits 1024bit
+attr unit bit
+par SingleAttackerV2VScenario.node[4].appl dataOnSch false
+par SingleAttackerV2VScenario.node[4].appl dataUserPriority 7
+par SingleAttackerV2VScenario.node[4].appl avoidBeaconSynchronization true
+par SingleAttackerV2VScenario.node[4].appl sendWSA false
+par SingleAttackerV2VScenario.node[4].appl wsaLengthBits 250bit
+attr unit bit
+par SingleAttackerV2VScenario.node[4].appl wsaInterval 1s
+attr unit s
+scalar SingleAttackerV2VScenario.node[4].appl generatedWSMs 1
+scalar SingleAttackerV2VScenario.node[4].appl receivedWSMs 10001
+scalar SingleAttackerV2VScenario.node[4].appl generatedBSMs 0
+scalar SingleAttackerV2VScenario.node[4].appl receivedBSMs 0
+scalar SingleAttackerV2VScenario.node[4].appl generatedWSAs 0
+scalar SingleAttackerV2VScenario.node[4].appl receivedWSAs 0
+par SingleAttackerV2VScenario.node[4].nic.phy80211p typename "\"org.car2x.veins.modules.phy.PhyLayer80211p\""
+par SingleAttackerV2VScenario.node[4].nic.phy80211p recordStats false
+par SingleAttackerV2VScenario.node[4].nic.phy80211p usePropagationDelay true
+par SingleAttackerV2VScenario.node[4].nic.phy80211p noiseFloor -98dBm
+attr unit dBm
+par SingleAttackerV2VScenario.node[4].nic.phy80211p useNoiseFloor true
+par SingleAttackerV2VScenario.node[4].nic.phy80211p antenna "<Antenna type=\"SampledAntenna1D\" id=\"monopole\">...</Antenna> at /media/DATA/av_surv_veins/veins/examples/veins/SingleAttackerV2V//antenna.xml:35"
+par SingleAttackerV2VScenario.node[4].nic.phy80211p antennaOffsetX 0m
+attr unit m
+par SingleAttackerV2VScenario.node[4].nic.phy80211p antennaOffsetY 0m
+attr unit m
+par SingleAttackerV2VScenario.node[4].nic.phy80211p antennaOffsetZ 1.895m
+attr unit m
+par SingleAttackerV2VScenario.node[4].nic.phy80211p antennaOffsetYaw 0rad
+attr unit rad
+par SingleAttackerV2VScenario.node[4].nic.phy80211p analogueModels "<root>...</root> at /media/DATA/av_surv_veins/veins/examples/veins/SingleAttackerV2V//config.xml:34"
+par SingleAttackerV2VScenario.node[4].nic.phy80211p decider "<root>...</root> at /media/DATA/av_surv_veins/veins/examples/veins/SingleAttackerV2V//config.xml:34"
+par SingleAttackerV2VScenario.node[4].nic.phy80211p minPowerLevel -110dBm
+attr unit dBm
+par SingleAttackerV2VScenario.node[4].nic.phy80211p timeRXToTX 0s
+attr unit s
+par SingleAttackerV2VScenario.node[4].nic.phy80211p timeRXToSleep 0s
+attr unit s
+par SingleAttackerV2VScenario.node[4].nic.phy80211p timeTXToRX 0s
+attr unit s
+par SingleAttackerV2VScenario.node[4].nic.phy80211p timeTXToSleep 0s
+attr unit s
+par SingleAttackerV2VScenario.node[4].nic.phy80211p timeSleepToRX 0s
+attr unit s
+par SingleAttackerV2VScenario.node[4].nic.phy80211p timeSleepToTX 0s
+attr unit s
+par SingleAttackerV2VScenario.node[4].nic.phy80211p initialRadioState 0
+par SingleAttackerV2VScenario.node[4].nic.phy80211p radioMinAtt 1
+par SingleAttackerV2VScenario.node[4].nic.phy80211p radioMaxAtt 0
+par SingleAttackerV2VScenario.node[4].nic.phy80211p nbRadioChannels 1
+par SingleAttackerV2VScenario.node[4].nic.phy80211p initialRadioChannel 0
+par SingleAttackerV2VScenario.node[4].nic.phy80211p ccaThreshold -65dBm
+attr unit dBm
+par SingleAttackerV2VScenario.node[4].nic.phy80211p collectCollisionStatistics false
+par SingleAttackerV2VScenario.node[4].nic.phy80211p allowTxDuringRx false
+scalar SingleAttackerV2VScenario.node[4].nic.phy80211p busyTime 0.012214189473685
+par SingleAttackerV2VScenario.node[4].nic.mac1609_4 typename "\"org.car2x.veins.modules.mac.ieee80211p.Mac1609_4\""
+par SingleAttackerV2VScenario.node[4].nic.mac1609_4 notAffectedByHostState false
+par SingleAttackerV2VScenario.node[4].nic.mac1609_4 headerLength 0bit
+attr unit bit
+par SingleAttackerV2VScenario.node[4].nic.mac1609_4 address "\"auto\""
+par SingleAttackerV2VScenario.node[4].nic.mac1609_4 useServiceChannel false
+par SingleAttackerV2VScenario.node[4].nic.mac1609_4 serviceChannel 1
+par SingleAttackerV2VScenario.node[4].nic.mac1609_4 bitrate 6000000bps
+attr unit bps
+par SingleAttackerV2VScenario.node[4].nic.mac1609_4 syncOffset 0.0003s
+attr unit s
+par SingleAttackerV2VScenario.node[4].nic.mac1609_4 txPower 20mW
+attr unit mW
+par SingleAttackerV2VScenario.node[4].nic.mac1609_4 queueSize 0
+par SingleAttackerV2VScenario.node[4].nic.mac1609_4 dot11RTSThreshold 12000bit
+attr unit bit
+par SingleAttackerV2VScenario.node[4].nic.mac1609_4 dot11ShortRetryLimit 7
+par SingleAttackerV2VScenario.node[4].nic.mac1609_4 dot11LongRetryLimit 4
+par SingleAttackerV2VScenario.node[4].nic.mac1609_4 ackLength 112bit
+attr unit bit
+par SingleAttackerV2VScenario.node[4].nic.mac1609_4 useAcks false
+par SingleAttackerV2VScenario.node[4].nic.mac1609_4 frameErrorRate 0
+par SingleAttackerV2VScenario.node[4].nic.mac1609_4 ackErrorRate 0
+scalar SingleAttackerV2VScenario.node[4].nic.mac1609_4 ReceivedUnicastPackets 0
+scalar SingleAttackerV2VScenario.node[4].nic.mac1609_4 ReceivedBroadcasts 10001
+scalar SingleAttackerV2VScenario.node[4].nic.mac1609_4 SentPackets 1
+scalar SingleAttackerV2VScenario.node[4].nic.mac1609_4 SentAcknowledgements 0
+scalar SingleAttackerV2VScenario.node[4].nic.mac1609_4 RetriesExceeded 0
+scalar SingleAttackerV2VScenario.node[4].nic.mac1609_4 SNIRLostPackets 2
+scalar SingleAttackerV2VScenario.node[4].nic.mac1609_4 RXTXLostPackets 1
+scalar SingleAttackerV2VScenario.node[4].nic.mac1609_4 TotalLostPackets 3
+scalar SingleAttackerV2VScenario.node[4].nic.mac1609_4 DroppedPacketsInMac 0
+scalar SingleAttackerV2VScenario.node[4].nic.mac1609_4 TooLittleTime 0
+scalar SingleAttackerV2VScenario.node[4].nic.mac1609_4 TimesIntoBackoff 1
+scalar SingleAttackerV2VScenario.node[4].nic.mac1609_4 SlotsBackoff 0
+scalar SingleAttackerV2VScenario.node[4].nic.mac1609_4 NumInternalContention 0
+scalar SingleAttackerV2VScenario.node[4].nic.mac1609_4 totalBusyTime 2.3206970551
+scalar SingleAttackerV2VScenario.node[4].nic.mac1609_4 retriesExceeded:count 0
+attr recordingmode count
+attr source org_car2x_veins_modules_mac_sigRetriesExceeded
+scalar SingleAttackerV2VScenario.node[4].nic.mac1609_4 sentAcks:count 0
+attr recordingmode count
+attr source org_car2x_veins_modules_mac_sigSentAck
+scalar SingleAttackerV2VScenario.node[4].nic.mac1609_4 sentPackets:count 1
+attr recordingmode count
+attr source org_car2x_veins_modules_mac_sigSentPacket
+scalar SingleAttackerV2VScenario.node[4].nic.mac1609_4 collisions:count 0
+attr recordingmode count
+attr source org_car2x_veins_modules_mac_sigCollision
+scalar SingleAttackerV2VScenario.node[4].nic.mac1609_4 channelBusy:timeavg 0.012214195026843
+attr recordingmode timeavg
+attr source org_car2x_veins_modules_mac_sigChannelBusy
+par SingleAttackerV2VScenario.node[4].nic typename "\"org.car2x.veins.modules.nic.Nic80211p\""
+par SingleAttackerV2VScenario.node[4].nic connectionManagerName "\"connectionManager\""
+par SingleAttackerV2VScenario.node[4].veinsmobility typename "\"org.car2x.veins.modules.mobility.traci.TraCIMobility\""
+par SingleAttackerV2VScenario.node[4].veinsmobility notAffectedByHostState true
+par SingleAttackerV2VScenario.node[4].veinsmobility x 0
+par SingleAttackerV2VScenario.node[4].veinsmobility y 0
+par SingleAttackerV2VScenario.node[4].veinsmobility z 0
+par SingleAttackerV2VScenario.node[4].veinsmobility xOrientation 1
+par SingleAttackerV2VScenario.node[4].veinsmobility yOrientation 0
+par SingleAttackerV2VScenario.node[4].veinsmobility zOrientation 0
+par SingleAttackerV2VScenario.node[4].veinsmobility hostPositionOffset 0m
+attr unit m
+par SingleAttackerV2VScenario.node[4].veinsmobility setHostSpeed false
+par SingleAttackerV2VScenario.node[4].veinsmobility accidentCount 0
+par SingleAttackerV2VScenario.node[4].veinsmobility accidentStart 44.33s
+attr unit s
+par SingleAttackerV2VScenario.node[4].veinsmobility accidentDuration "uniform(30s, 60s)"
+attr unit s
+par SingleAttackerV2VScenario.node[4].veinsmobility accidentInterval "uniform(30s, 60s)"
+attr unit s
+scalar SingleAttackerV2VScenario.node[4].veinsmobility startTime 10
+scalar SingleAttackerV2VScenario.node[4].veinsmobility totalTime 190
+scalar SingleAttackerV2VScenario.node[4].veinsmobility stopTime 200
+scalar SingleAttackerV2VScenario.node[4].veinsmobility minSpeed 0
+scalar SingleAttackerV2VScenario.node[4].veinsmobility maxSpeed 13.999527041174
+scalar SingleAttackerV2VScenario.node[4].veinsmobility totalDistance 1905.5709536582
+scalar SingleAttackerV2VScenario.node[4].veinsmobility totalCO2Emission 388.05432373717
+par SingleAttackerV2VScenario.node[4] typename "\"org.car2x.veins.nodes.Car\""
+par SingleAttackerV2VScenario.node[4] applType "\"TraCIDemo11p\""
+par SingleAttackerV2VScenario.node[4] nicType "\"Nic80211p\""
+par SingleAttackerV2VScenario.node[4] veinsmobilityType "\"org.car2x.veins.modules.mobility.traci.TraCIMobility\""
+par SingleAttackerV2VScenario.node[5].appl typename "\"org.car2x.veins.modules.application.traci.TraCIDemo11p\""
+par SingleAttackerV2VScenario.node[5].appl headerLength 80bit
+attr unit bit
+par SingleAttackerV2VScenario.node[5].appl sendBeacons false
+par SingleAttackerV2VScenario.node[5].appl beaconLengthBits 256bit
+attr unit bit
+par SingleAttackerV2VScenario.node[5].appl beaconUserPriority 7
+par SingleAttackerV2VScenario.node[5].appl beaconInterval 1s
+attr unit s
+par SingleAttackerV2VScenario.node[5].appl dataLengthBits 1024bit
+attr unit bit
+par SingleAttackerV2VScenario.node[5].appl dataOnSch false
+par SingleAttackerV2VScenario.node[5].appl dataUserPriority 7
+par SingleAttackerV2VScenario.node[5].appl avoidBeaconSynchronization true
+par SingleAttackerV2VScenario.node[5].appl sendWSA false
+par SingleAttackerV2VScenario.node[5].appl wsaLengthBits 250bit
+attr unit bit
+par SingleAttackerV2VScenario.node[5].appl wsaInterval 1s
+attr unit s
+scalar SingleAttackerV2VScenario.node[5].appl generatedWSMs 1
+scalar SingleAttackerV2VScenario.node[5].appl receivedWSMs 10001
+scalar SingleAttackerV2VScenario.node[5].appl generatedBSMs 0
+scalar SingleAttackerV2VScenario.node[5].appl receivedBSMs 0
+scalar SingleAttackerV2VScenario.node[5].appl generatedWSAs 0
+scalar SingleAttackerV2VScenario.node[5].appl receivedWSAs 0
+par SingleAttackerV2VScenario.node[5].nic.phy80211p typename "\"org.car2x.veins.modules.phy.PhyLayer80211p\""
+par SingleAttackerV2VScenario.node[5].nic.phy80211p recordStats false
+par SingleAttackerV2VScenario.node[5].nic.phy80211p usePropagationDelay true
+par SingleAttackerV2VScenario.node[5].nic.phy80211p noiseFloor -98dBm
+attr unit dBm
+par SingleAttackerV2VScenario.node[5].nic.phy80211p useNoiseFloor true
+par SingleAttackerV2VScenario.node[5].nic.phy80211p antenna "<Antenna type=\"SampledAntenna1D\" id=\"monopole\">...</Antenna> at /media/DATA/av_surv_veins/veins/examples/veins/SingleAttackerV2V//antenna.xml:35"
+par SingleAttackerV2VScenario.node[5].nic.phy80211p antennaOffsetX 0m
+attr unit m
+par SingleAttackerV2VScenario.node[5].nic.phy80211p antennaOffsetY 0m
+attr unit m
+par SingleAttackerV2VScenario.node[5].nic.phy80211p antennaOffsetZ 1.895m
+attr unit m
+par SingleAttackerV2VScenario.node[5].nic.phy80211p antennaOffsetYaw 0rad
+attr unit rad
+par SingleAttackerV2VScenario.node[5].nic.phy80211p analogueModels "<root>...</root> at /media/DATA/av_surv_veins/veins/examples/veins/SingleAttackerV2V//config.xml:34"
+par SingleAttackerV2VScenario.node[5].nic.phy80211p decider "<root>...</root> at /media/DATA/av_surv_veins/veins/examples/veins/SingleAttackerV2V//config.xml:34"
+par SingleAttackerV2VScenario.node[5].nic.phy80211p minPowerLevel -110dBm
+attr unit dBm
+par SingleAttackerV2VScenario.node[5].nic.phy80211p timeRXToTX 0s
+attr unit s
+par SingleAttackerV2VScenario.node[5].nic.phy80211p timeRXToSleep 0s
+attr unit s
+par SingleAttackerV2VScenario.node[5].nic.phy80211p timeTXToRX 0s
+attr unit s
+par SingleAttackerV2VScenario.node[5].nic.phy80211p timeTXToSleep 0s
+attr unit s
+par SingleAttackerV2VScenario.node[5].nic.phy80211p timeSleepToRX 0s
+attr unit s
+par SingleAttackerV2VScenario.node[5].nic.phy80211p timeSleepToTX 0s
+attr unit s
+par SingleAttackerV2VScenario.node[5].nic.phy80211p initialRadioState 0
+par SingleAttackerV2VScenario.node[5].nic.phy80211p radioMinAtt 1
+par SingleAttackerV2VScenario.node[5].nic.phy80211p radioMaxAtt 0
+par SingleAttackerV2VScenario.node[5].nic.phy80211p nbRadioChannels 1
+par SingleAttackerV2VScenario.node[5].nic.phy80211p initialRadioChannel 0
+par SingleAttackerV2VScenario.node[5].nic.phy80211p ccaThreshold -65dBm
+attr unit dBm
+par SingleAttackerV2VScenario.node[5].nic.phy80211p collectCollisionStatistics false
+par SingleAttackerV2VScenario.node[5].nic.phy80211p allowTxDuringRx false
+scalar SingleAttackerV2VScenario.node[5].nic.phy80211p busyTime 0.012410139037434
+par SingleAttackerV2VScenario.node[5].nic.mac1609_4 typename "\"org.car2x.veins.modules.mac.ieee80211p.Mac1609_4\""
+par SingleAttackerV2VScenario.node[5].nic.mac1609_4 notAffectedByHostState false
+par SingleAttackerV2VScenario.node[5].nic.mac1609_4 headerLength 0bit
+attr unit bit
+par SingleAttackerV2VScenario.node[5].nic.mac1609_4 address "\"auto\""
+par SingleAttackerV2VScenario.node[5].nic.mac1609_4 useServiceChannel false
+par SingleAttackerV2VScenario.node[5].nic.mac1609_4 serviceChannel 1
+par SingleAttackerV2VScenario.node[5].nic.mac1609_4 bitrate 6000000bps
+attr unit bps
+par SingleAttackerV2VScenario.node[5].nic.mac1609_4 syncOffset 0.0003s
+attr unit s
+par SingleAttackerV2VScenario.node[5].nic.mac1609_4 txPower 20mW
+attr unit mW
+par SingleAttackerV2VScenario.node[5].nic.mac1609_4 queueSize 0
+par SingleAttackerV2VScenario.node[5].nic.mac1609_4 dot11RTSThreshold 12000bit
+attr unit bit
+par SingleAttackerV2VScenario.node[5].nic.mac1609_4 dot11ShortRetryLimit 7
+par SingleAttackerV2VScenario.node[5].nic.mac1609_4 dot11LongRetryLimit 4
+par SingleAttackerV2VScenario.node[5].nic.mac1609_4 ackLength 112bit
+attr unit bit
+par SingleAttackerV2VScenario.node[5].nic.mac1609_4 useAcks false
+par SingleAttackerV2VScenario.node[5].nic.mac1609_4 frameErrorRate 0
+par SingleAttackerV2VScenario.node[5].nic.mac1609_4 ackErrorRate 0
+scalar SingleAttackerV2VScenario.node[5].nic.mac1609_4 ReceivedUnicastPackets 0
+scalar SingleAttackerV2VScenario.node[5].nic.mac1609_4 ReceivedBroadcasts 10001
+scalar SingleAttackerV2VScenario.node[5].nic.mac1609_4 SentPackets 1
+scalar SingleAttackerV2VScenario.node[5].nic.mac1609_4 SentAcknowledgements 0
+scalar SingleAttackerV2VScenario.node[5].nic.mac1609_4 RetriesExceeded 0
+scalar SingleAttackerV2VScenario.node[5].nic.mac1609_4 SNIRLostPackets 2
+scalar SingleAttackerV2VScenario.node[5].nic.mac1609_4 RXTXLostPackets 1
+scalar SingleAttackerV2VScenario.node[5].nic.mac1609_4 TotalLostPackets 3
+scalar SingleAttackerV2VScenario.node[5].nic.mac1609_4 DroppedPacketsInMac 0
+scalar SingleAttackerV2VScenario.node[5].nic.mac1609_4 TooLittleTime 0
+scalar SingleAttackerV2VScenario.node[5].nic.mac1609_4 TimesIntoBackoff 1
+scalar SingleAttackerV2VScenario.node[5].nic.mac1609_4 SlotsBackoff 0
+scalar SingleAttackerV2VScenario.node[5].nic.mac1609_4 NumInternalContention 0
+scalar SingleAttackerV2VScenario.node[5].nic.mac1609_4 totalBusyTime 2.320697
+scalar SingleAttackerV2VScenario.node[5].nic.mac1609_4 retriesExceeded:count 0
+attr recordingmode count
+attr source org_car2x_veins_modules_mac_sigRetriesExceeded
+scalar SingleAttackerV2VScenario.node[5].nic.mac1609_4 sentAcks:count 0
+attr recordingmode count
+attr source org_car2x_veins_modules_mac_sigSentAck
+scalar SingleAttackerV2VScenario.node[5].nic.mac1609_4 sentPackets:count 1
+attr recordingmode count
+attr source org_car2x_veins_modules_mac_sigSentPacket
+scalar SingleAttackerV2VScenario.node[5].nic.mac1609_4 collisions:count 0
+attr recordingmode count
+attr source org_car2x_veins_modules_mac_sigCollision
+scalar SingleAttackerV2VScenario.node[5].nic.mac1609_4 channelBusy:timeavg 0.012410144385027
+attr recordingmode timeavg
+attr source org_car2x_veins_modules_mac_sigChannelBusy
+par SingleAttackerV2VScenario.node[5].nic typename "\"org.car2x.veins.modules.nic.Nic80211p\""
+par SingleAttackerV2VScenario.node[5].nic connectionManagerName "\"connectionManager\""
+par SingleAttackerV2VScenario.node[5].veinsmobility typename "\"org.car2x.veins.modules.mobility.traci.TraCIMobility\""
+par SingleAttackerV2VScenario.node[5].veinsmobility notAffectedByHostState true
+par SingleAttackerV2VScenario.node[5].veinsmobility x 0
+par SingleAttackerV2VScenario.node[5].veinsmobility y 0
+par SingleAttackerV2VScenario.node[5].veinsmobility z 0
+par SingleAttackerV2VScenario.node[5].veinsmobility xOrientation 1
+par SingleAttackerV2VScenario.node[5].veinsmobility yOrientation 0
+par SingleAttackerV2VScenario.node[5].veinsmobility zOrientation 0
+par SingleAttackerV2VScenario.node[5].veinsmobility hostPositionOffset 0m
+attr unit m
+par SingleAttackerV2VScenario.node[5].veinsmobility setHostSpeed false
+par SingleAttackerV2VScenario.node[5].veinsmobility accidentCount 0
+par SingleAttackerV2VScenario.node[5].veinsmobility accidentStart 47.0413s
+attr unit s
+par SingleAttackerV2VScenario.node[5].veinsmobility accidentDuration "uniform(30s, 60s)"
+attr unit s
+par SingleAttackerV2VScenario.node[5].veinsmobility accidentInterval "uniform(30s, 60s)"
+attr unit s
+scalar SingleAttackerV2VScenario.node[5].veinsmobility startTime 13
+scalar SingleAttackerV2VScenario.node[5].veinsmobility totalTime 187
+scalar SingleAttackerV2VScenario.node[5].veinsmobility stopTime 200
+scalar SingleAttackerV2VScenario.node[5].veinsmobility minSpeed 0
+scalar SingleAttackerV2VScenario.node[5].veinsmobility maxSpeed 13.998967196981
+scalar SingleAttackerV2VScenario.node[5].veinsmobility totalDistance 1884.2070030471
+scalar SingleAttackerV2VScenario.node[5].veinsmobility totalCO2Emission 388.52904089793
+par SingleAttackerV2VScenario.node[5] typename "\"org.car2x.veins.nodes.Car\""
+par SingleAttackerV2VScenario.node[5] applType "\"TraCIDemo11p\""
+par SingleAttackerV2VScenario.node[5] nicType "\"Nic80211p\""
+par SingleAttackerV2VScenario.node[5] veinsmobilityType "\"org.car2x.veins.modules.mobility.traci.TraCIMobility\""
+par SingleAttackerV2VScenario.attacker[1].appl typename "\"org.car2x.veins.modules.application.traci.TraCIV2Vp\""
+par SingleAttackerV2VScenario.attacker[1].appl headerLength 80bit
+attr unit bit
+par SingleAttackerV2VScenario.attacker[1].appl sendBeacons false
+par SingleAttackerV2VScenario.attacker[1].appl beaconLengthBits 256bit
+attr unit bit
+par SingleAttackerV2VScenario.attacker[1].appl beaconUserPriority 7
+par SingleAttackerV2VScenario.attacker[1].appl beaconInterval 1s
+attr unit s
+par SingleAttackerV2VScenario.attacker[1].appl dataLengthBits 1024bit
+attr unit bit
+par SingleAttackerV2VScenario.attacker[1].appl dataOnSch false
+par SingleAttackerV2VScenario.attacker[1].appl dataUserPriority 7
+par SingleAttackerV2VScenario.attacker[1].appl avoidBeaconSynchronization true
+par SingleAttackerV2VScenario.attacker[1].appl sendWSA false
+par SingleAttackerV2VScenario.attacker[1].appl wsaLengthBits 250bit
+attr unit bit
+par SingleAttackerV2VScenario.attacker[1].appl wsaInterval 1s
+attr unit s
+scalar SingleAttackerV2VScenario.attacker[1].appl generatedWSMs 10000
+scalar SingleAttackerV2VScenario.attacker[1].appl receivedWSMs 3
+scalar SingleAttackerV2VScenario.attacker[1].appl generatedBSMs 0
+scalar SingleAttackerV2VScenario.attacker[1].appl receivedBSMs 0
+scalar SingleAttackerV2VScenario.attacker[1].appl generatedWSAs 0
+scalar SingleAttackerV2VScenario.attacker[1].appl receivedWSAs 0
+par SingleAttackerV2VScenario.attacker[1].nic.phy80211p typename "\"org.car2x.veins.modules.phy.PhyLayer80211p\""
+par SingleAttackerV2VScenario.attacker[1].nic.phy80211p recordStats false
+par SingleAttackerV2VScenario.attacker[1].nic.phy80211p usePropagationDelay true
+par SingleAttackerV2VScenario.attacker[1].nic.phy80211p noiseFloor -98dBm
+attr unit dBm
+par SingleAttackerV2VScenario.attacker[1].nic.phy80211p useNoiseFloor true
+par SingleAttackerV2VScenario.attacker[1].nic.phy80211p antenna "<Antenna type=\"SampledAntenna1D\" id=\"monopole\">...</Antenna> at /media/DATA/av_surv_veins/veins/examples/veins/SingleAttackerV2V//antenna.xml:35"
+par SingleAttackerV2VScenario.attacker[1].nic.phy80211p antennaOffsetX 0m
+attr unit m
+par SingleAttackerV2VScenario.attacker[1].nic.phy80211p antennaOffsetY 0m
+attr unit m
+par SingleAttackerV2VScenario.attacker[1].nic.phy80211p antennaOffsetZ 1.895m
+attr unit m
+par SingleAttackerV2VScenario.attacker[1].nic.phy80211p antennaOffsetYaw 0rad
+attr unit rad
+par SingleAttackerV2VScenario.attacker[1].nic.phy80211p analogueModels "<root>...</root> at /media/DATA/av_surv_veins/veins/examples/veins/SingleAttackerV2V//config.xml:34"
+par SingleAttackerV2VScenario.attacker[1].nic.phy80211p decider "<root>...</root> at /media/DATA/av_surv_veins/veins/examples/veins/SingleAttackerV2V//config.xml:34"
+par SingleAttackerV2VScenario.attacker[1].nic.phy80211p minPowerLevel -110dBm
+attr unit dBm
+par SingleAttackerV2VScenario.attacker[1].nic.phy80211p timeRXToTX 0s
+attr unit s
+par SingleAttackerV2VScenario.attacker[1].nic.phy80211p timeRXToSleep 0s
+attr unit s
+par SingleAttackerV2VScenario.attacker[1].nic.phy80211p timeTXToRX 0s
+attr unit s
+par SingleAttackerV2VScenario.attacker[1].nic.phy80211p timeTXToSleep 0s
+attr unit s
+par SingleAttackerV2VScenario.attacker[1].nic.phy80211p timeSleepToRX 0s
+attr unit s
+par SingleAttackerV2VScenario.attacker[1].nic.phy80211p timeSleepToTX 0s
+attr unit s
+par SingleAttackerV2VScenario.attacker[1].nic.phy80211p initialRadioState 0
+par SingleAttackerV2VScenario.attacker[1].nic.phy80211p radioMinAtt 1
+par SingleAttackerV2VScenario.attacker[1].nic.phy80211p radioMaxAtt 0
+par SingleAttackerV2VScenario.attacker[1].nic.phy80211p nbRadioChannels 1
+par SingleAttackerV2VScenario.attacker[1].nic.phy80211p initialRadioChannel 0
+par SingleAttackerV2VScenario.attacker[1].nic.phy80211p ccaThreshold -65dBm
+attr unit dBm
+par SingleAttackerV2VScenario.attacker[1].nic.phy80211p collectCollisionStatistics false
+par SingleAttackerV2VScenario.attacker[1].nic.phy80211p allowTxDuringRx false
+scalar SingleAttackerV2VScenario.attacker[1].nic.phy80211p busyTime 3.5329949238579e-06
+par SingleAttackerV2VScenario.attacker[1].nic.mac1609_4 typename "\"org.car2x.veins.modules.mac.ieee80211p.Mac1609_4\""
+par SingleAttackerV2VScenario.attacker[1].nic.mac1609_4 notAffectedByHostState false
+par SingleAttackerV2VScenario.attacker[1].nic.mac1609_4 headerLength 0bit
+attr unit bit
+par SingleAttackerV2VScenario.attacker[1].nic.mac1609_4 address "\"auto\""
+par SingleAttackerV2VScenario.attacker[1].nic.mac1609_4 useServiceChannel false
+par SingleAttackerV2VScenario.attacker[1].nic.mac1609_4 serviceChannel 1
+par SingleAttackerV2VScenario.attacker[1].nic.mac1609_4 bitrate 6000000bps
+attr unit bps
+par SingleAttackerV2VScenario.attacker[1].nic.mac1609_4 syncOffset 0.0003s
+attr unit s
+par SingleAttackerV2VScenario.attacker[1].nic.mac1609_4 txPower 20mW
+attr unit mW
+par SingleAttackerV2VScenario.attacker[1].nic.mac1609_4 queueSize 0
+par SingleAttackerV2VScenario.attacker[1].nic.mac1609_4 dot11RTSThreshold 12000bit
+attr unit bit
+par SingleAttackerV2VScenario.attacker[1].nic.mac1609_4 dot11ShortRetryLimit 7
+par SingleAttackerV2VScenario.attacker[1].nic.mac1609_4 dot11LongRetryLimit 4
+par SingleAttackerV2VScenario.attacker[1].nic.mac1609_4 ackLength 112bit
+attr unit bit
+par SingleAttackerV2VScenario.attacker[1].nic.mac1609_4 useAcks false
+par SingleAttackerV2VScenario.attacker[1].nic.mac1609_4 frameErrorRate 0
+par SingleAttackerV2VScenario.attacker[1].nic.mac1609_4 ackErrorRate 0
+scalar SingleAttackerV2VScenario.attacker[1].nic.mac1609_4 ReceivedUnicastPackets 0
+scalar SingleAttackerV2VScenario.attacker[1].nic.mac1609_4 ReceivedBroadcasts 3
+scalar SingleAttackerV2VScenario.attacker[1].nic.mac1609_4 SentPackets 10000
+scalar SingleAttackerV2VScenario.attacker[1].nic.mac1609_4 SentAcknowledgements 0
+scalar SingleAttackerV2VScenario.attacker[1].nic.mac1609_4 RetriesExceeded 0
+scalar SingleAttackerV2VScenario.attacker[1].nic.mac1609_4 SNIRLostPackets 0
+scalar SingleAttackerV2VScenario.attacker[1].nic.mac1609_4 RXTXLostPackets 2
+scalar SingleAttackerV2VScenario.attacker[1].nic.mac1609_4 TotalLostPackets 2
+scalar SingleAttackerV2VScenario.attacker[1].nic.mac1609_4 DroppedPacketsInMac 0
+scalar SingleAttackerV2VScenario.attacker[1].nic.mac1609_4 TooLittleTime 0
+scalar SingleAttackerV2VScenario.attacker[1].nic.mac1609_4 TimesIntoBackoff 10000
+scalar SingleAttackerV2VScenario.attacker[1].nic.mac1609_4 SlotsBackoff 14933
+scalar SingleAttackerV2VScenario.attacker[1].nic.mac1609_4 NumInternalContention 0
+scalar SingleAttackerV2VScenario.attacker[1].nic.mac1609_4 totalBusyTime 2.33069626356
+scalar SingleAttackerV2VScenario.attacker[1].nic.mac1609_4 retriesExceeded:count 0
+attr recordingmode count
+attr source org_car2x_veins_modules_mac_sigRetriesExceeded
+scalar SingleAttackerV2VScenario.attacker[1].nic.mac1609_4 sentAcks:count 0
+attr recordingmode count
+attr source org_car2x_veins_modules_mac_sigSentAck
+scalar SingleAttackerV2VScenario.attacker[1].nic.mac1609_4 sentPackets:count 10000
+attr recordingmode count
+attr source org_car2x_veins_modules_mac_sigSentPacket
+scalar SingleAttackerV2VScenario.attacker[1].nic.mac1609_4 collisions:count 0
+attr recordingmode count
+attr source org_car2x_veins_modules_mac_sigCollision
+scalar SingleAttackerV2VScenario.attacker[1].nic.mac1609_4 channelBusy:timeavg 0.011830945500304
+attr recordingmode timeavg
+attr source org_car2x_veins_modules_mac_sigChannelBusy
+par SingleAttackerV2VScenario.attacker[1].nic typename "\"org.car2x.veins.modules.nic.Nic80211p\""
+par SingleAttackerV2VScenario.attacker[1].nic connectionManagerName "\"connectionManager\""
+par SingleAttackerV2VScenario.attacker[1].veinsmobility typename "\"org.car2x.veins.modules.mobility.traci.TraCIMobility\""
+par SingleAttackerV2VScenario.attacker[1].veinsmobility notAffectedByHostState true
+par SingleAttackerV2VScenario.attacker[1].veinsmobility x 0
+par SingleAttackerV2VScenario.attacker[1].veinsmobility y 0
+par SingleAttackerV2VScenario.attacker[1].veinsmobility z 0
+par SingleAttackerV2VScenario.attacker[1].veinsmobility xOrientation 1
+par SingleAttackerV2VScenario.attacker[1].veinsmobility yOrientation 0
+par SingleAttackerV2VScenario.attacker[1].veinsmobility zOrientation 0
+par SingleAttackerV2VScenario.attacker[1].veinsmobility hostPositionOffset 0m
+attr unit m
+par SingleAttackerV2VScenario.attacker[1].veinsmobility setHostSpeed false
+par SingleAttackerV2VScenario.attacker[1].veinsmobility accidentCount 0
+par SingleAttackerV2VScenario.attacker[1].veinsmobility accidentStart 48.0829s
+attr unit s
+par SingleAttackerV2VScenario.attacker[1].veinsmobility accidentDuration "uniform(30s, 60s)"
+attr unit s
+par SingleAttackerV2VScenario.attacker[1].veinsmobility accidentInterval "uniform(30s, 60s)"
+attr unit s
+scalar SingleAttackerV2VScenario.attacker[1].veinsmobility startTime 3
+scalar SingleAttackerV2VScenario.attacker[1].veinsmobility totalTime 197
+scalar SingleAttackerV2VScenario.attacker[1].veinsmobility stopTime 200
+scalar SingleAttackerV2VScenario.attacker[1].veinsmobility minSpeed 0
+scalar SingleAttackerV2VScenario.attacker[1].veinsmobility maxSpeed 13.998327960956
+scalar SingleAttackerV2VScenario.attacker[1].veinsmobility totalDistance 1953.5665778733
+scalar SingleAttackerV2VScenario.attacker[1].veinsmobility totalCO2Emission 403.95814527791
+par SingleAttackerV2VScenario.attacker[1] typename "\"org.car2x.veins.nodes.Car\""
+par SingleAttackerV2VScenario.attacker[1] applType "\"TraCIV2Vp\""
+par SingleAttackerV2VScenario.attacker[1] nicType "\"Nic80211p\""
+par SingleAttackerV2VScenario.attacker[1] veinsmobilityType "\"org.car2x.veins.modules.mobility.traci.TraCIMobility\""
+par SingleAttackerV2VScenario typename "\"SingleAttackerV2V.SingleAttackerV2VScenario\""
+par SingleAttackerV2VScenario playgroundSizeX 2500m
+attr unit m
+par SingleAttackerV2VScenario playgroundSizeY 2500m
+attr unit m
+par SingleAttackerV2VScenario playgroundSizeZ 50m
+attr unit m
+
