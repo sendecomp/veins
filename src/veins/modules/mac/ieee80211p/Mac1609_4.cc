@@ -847,9 +847,9 @@ void Mac1609_4::EDCA::postTransmit(t_access_category ac, BaseFrame1609_4* wsm, b
         myQueues[ac].queue.pop();
         myQueues[ac].cwCur = myQueues[ac].cwMin;
         // post transmit backoff
-        //myQueues[ac].currentBackoff = owner->intuniform(0, myQueues[ac].cwCur);
-        //statsSlotsBackoff += myQueues[ac].currentBackoff;
-        //statsNumBackoff++;
+        myQueues[ac].currentBackoff = owner->intuniform(0, myQueues[ac].cwCur);
+        statsSlotsBackoff += myQueues[ac].currentBackoff;
+        statsNumBackoff++;
         EV_TRACE << "Queue " << ac << " will go into post-transmit backoff for " << myQueues[ac].currentBackoff << " slots" << std::endl;
     }
 }
