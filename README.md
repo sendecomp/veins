@@ -19,15 +19,19 @@ are available with the source distribution.
  
  
  ## Overview
+ 
  1 - Installation Process: Instructions taken from the official Veins site `https://veins.car2x.org/tutorial/` to install Veins + related software (Sumo, OMNeT++). With slight modifications/acknowledgement of potential errors. 
  
  2 - Launching Veins: How to run a scenario in Veins, and how to launch Veins after the initial installation/launch process.
  
  3 - Potential GCC Isssue: Build issue resolution for problem with incorrect GCC installation.
  
- 4 - Definitions: Some definitions for the many file types and explanations on some of the terminology used in the Veins project. 
+ 4 - Definitions: Some definitions for the many file types and explanations on some of the terminology used in the Veins project.  
  
- 5 - Useful Links
+ 5 - Repo Structure
+ 
+ 6 - Useful Links
+ 
  
 ## 1 - Installation Process 
 Full installation instructions can be found here but assumes the user is on Windows 7: https://veins.car2x.org/tutorial/. These instructions assume Ubuntu 22.04.1
@@ -134,8 +138,15 @@ Main OmNeT++ runtime simulation GUI
 ### erlangen.rou.xml
 This generates the different types of traffic that SUMO + TraCI spawn/manage.
 
+## 5 - Repo Structure
+### Scenarios: 
+To view the code for scenarios created for this project, navigate to `examples/veins`. Each scenario is in its own folder with its own README. 
 
-## 5 - Useful Links
+### Veins source code:
+Navigate to `src` to view Veins code. 
+
+
+## 6 - Useful Links
 In no particular order, links that were useful resources of information at some point.
 
 **General VEINS Usage Notes** - https://github.com/namnatulco/veins/blob/ldm/usagenotes.md
