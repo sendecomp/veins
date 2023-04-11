@@ -119,7 +119,8 @@ If the GCC installation is not the correct version, either uninstall the selecte
 ## 4 - Definitions
 
 ### .NED Files
-Network definition file, created by OmNeT. Stores logical network structure and information on how classes are tied together. Is accompanied by a C++ source file (.cc, .cpp and headers [.h]). Need both a NED file and C++ behavior file to simulate a network. NED files can be edited graphically (in a drag-and-drop manner) or from Source (text editing) in the OMNeT++ IDE. 
+Network definition file, created by OmNeT. Stores logical network structure and information on how classes are tied together. Is accompanied by a C++ source file (.cc, .cpp and headers [.h]). You will need to create both a **NED file** and a **C++ behavior file** to simulate a network. NED files can be edited graphically (in a drag-and-drop manner) or from Source (text editing) in the OMNeT++ IDE. 
+New scenarios can generally inherit from the base `Scenario.ned` file. 
 
 ### Scenarios
 Scenarios are basically represented by .NED files. They can be extensions of the standard VEINS scenario (./src/veins/nodes/Scenario.ned), but users are not required to use `Scenario.ned` as a base. 
@@ -129,6 +130,10 @@ Define network and simulation parameters. An .ini file can contain many networks
 
 ### Qtenv
 Main OmNeT++ runtime simulation GUI
+
+### erlangen.rou.xml
+This generates the different types of traffic that SUMO + TraCI spawn/manage.
+
 
 ## 5 - Useful Links
 In no particular order, links that were useful resources of information at some point.
