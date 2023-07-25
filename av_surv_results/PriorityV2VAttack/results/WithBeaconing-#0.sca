@@ -1,0 +1,2721 @@
+version 2
+run WithBeaconing-0-20230724-01:28:24-25303
+attr configname WithBeaconing
+attr datetime 20230724-01:28:24
+attr experiment WithBeaconing
+attr inifile omnetpp_pva.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network PriorityV2VAttack
+attr processid 25303
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+param *.node[*].appl.sendBeacons true
+param *.playgroundSizeX 2500m
+param *.playgroundSizeY 2500m
+param *.playgroundSizeZ 50m
+param *.annotations.draw true
+param *.obstacles.obstacles "xmldoc(\"config.xml\", \"//AnalogueModel[@type='SimpleObstacleShadowing']/obstacles\")"
+param *.manager.updateInterval 1s
+param *.manager.host "\"localhost\""
+param *.manager.port 9999
+param *.manager.autoShutdown true
+param *.manager.launchConfig "xmldoc(\"erlangen.launchd.xml\")"
+param *.connectionManager.sendDirect true
+param *.connectionManager.maxInterfDist 2600m
+param *.connectionManager.drawMaxIntfDist false
+param *.**.nic.mac1609_4.useServiceChannel false
+param *.**.nic.mac1609_4.txPower 20mW
+param *.**.nic.mac1609_4.bitrate 6Mbps
+param *.**.nic.phy80211p.minPowerLevel -110dBm
+param *.**.nic.phy80211p.useNoiseFloor true
+param *.**.nic.phy80211p.noiseFloor -98dBm
+param *.**.nic.phy80211p.decider "xmldoc(\"config.xml\")"
+param *.**.nic.phy80211p.analogueModels "xmldoc(\"config.xml\")"
+param *.**.nic.phy80211p.usePropagationDelay true
+param *.**.nic.phy80211p.antenna "xmldoc(\"antenna.xml\", \"/root/Antenna[@id='monopole']\")"
+param *.node[*].nic.phy80211p.antennaOffsetY "0 m"
+param *.node[*].nic.phy80211p.antennaOffsetZ "1.895 m"
+param *.attacker[*].nic.phy80211p.antennaOffsetY "0 m"
+param *.attacker[*].nic.phy80211p.antennaOffsetZ "1.895 m"
+param *.manager.moduleType "\"vtype1=org.car2x.veins.nodes.Car *=org.car2x.veins.nodes.Car\""
+param *.manager.moduleName "\"vtype1=attacker *=node\""
+param *.node[*].applType "\"TraCIDemo11p\""
+param *.node[*].appl.headerLength "80 bit"
+param *.node[*].appl.sendBeacons true
+param *.node[*].appl.dataOnSch false
+param *.node[*].appl.beaconInterval 1s
+param *.node[*].appl.dataUserPriority 7
+param *.attacker[*].applType "\"TraCIV2Vp\""
+param *.attacker[*].appl.headerLength "80 bit"
+param *.attacker[*].appl.sendBeacons true
+param *.attacker[*].appl.dataOnSch false
+param *.attacker[*].appl.beaconInterval 1s
+param *.attacker[*].appl.dataUserPriority 1
+param *.node[*].veinsmobility.x 0
+param *.node[*].veinsmobility.y 0
+param *.node[*].veinsmobility.z 0
+param *.node[*].veinsmobility.setHostSpeed false
+param *.attacker[*].veinsmobility.x 0
+param *.attacker[*].veinsmobility.y 0
+param *.attacker[*].veinsmobility.z 0
+param *.attacker[*].veinsmobility.setHostSpeed false
+
+scalar PriorityV2VAttack.attacker[19].appl generatedWSMs 690000
+scalar PriorityV2VAttack.attacker[19].appl receivedWSMs 14
+scalar PriorityV2VAttack.attacker[19].appl generatedBSMs 26
+scalar PriorityV2VAttack.attacker[19].appl receivedBSMs 328
+scalar PriorityV2VAttack.attacker[19].appl generatedWSAs 0
+scalar PriorityV2VAttack.attacker[19].appl receivedWSAs 0
+scalar PriorityV2VAttack.attacker[19].nic.phy80211p busyTime 0.0015018461538462
+scalar PriorityV2VAttack.attacker[19].nic.mac1609_4 ReceivedUnicastPackets 0
+scalar PriorityV2VAttack.attacker[19].nic.mac1609_4 ReceivedBroadcasts 342
+scalar PriorityV2VAttack.attacker[19].nic.mac1609_4 SentPackets 49953
+scalar PriorityV2VAttack.attacker[19].nic.mac1609_4 SentAcknowledgements 0
+scalar PriorityV2VAttack.attacker[19].nic.mac1609_4 RetriesExceeded 0
+scalar PriorityV2VAttack.attacker[19].nic.mac1609_4 SNIRLostPackets 15
+scalar PriorityV2VAttack.attacker[19].nic.mac1609_4 RXTXLostPackets 7
+scalar PriorityV2VAttack.attacker[19].nic.mac1609_4 TotalLostPackets 22
+scalar PriorityV2VAttack.attacker[19].nic.mac1609_4 DroppedPacketsInMac 0
+scalar PriorityV2VAttack.attacker[19].nic.mac1609_4 TooLittleTime 0
+scalar PriorityV2VAttack.attacker[19].nic.mac1609_4 TimesIntoBackoff 49964
+scalar PriorityV2VAttack.attacker[19].nic.mac1609_4 SlotsBackoff 372808
+scalar PriorityV2VAttack.attacker[19].nic.mac1609_4 NumInternalContention 1
+scalar PriorityV2VAttack.attacker[19].nic.mac1609_4 totalBusyTime 11.674769
+scalar PriorityV2VAttack.attacker[19].nic.mac1609_4 NodeDownCount 0
+scalar PriorityV2VAttack.attacker[19].nic.mac1609_4 retriesExceeded:count 0
+attr source org_car2x_veins_modules_mac_sigRetriesExceeded
+scalar PriorityV2VAttack.attacker[19].nic.mac1609_4 sentAcks:count 0
+attr source org_car2x_veins_modules_mac_sigSentAck
+scalar PriorityV2VAttack.attacker[19].nic.mac1609_4 sentPackets:count 49953
+attr source org_car2x_veins_modules_mac_sigSentPacket
+scalar PriorityV2VAttack.attacker[19].nic.mac1609_4 collisions:count 0
+attr source org_car2x_veins_modules_mac_sigCollision
+scalar PriorityV2VAttack.attacker[19].nic.mac1609_4 channelBusy:timeavg 0.44902957692275
+attr source org_car2x_veins_modules_mac_sigChannelBusy
+scalar PriorityV2VAttack.attacker[19].veinsmobility startTime 57
+scalar PriorityV2VAttack.attacker[19].veinsmobility totalTime 25
+scalar PriorityV2VAttack.attacker[19].veinsmobility stopTime 83
+scalar PriorityV2VAttack.attacker[19].veinsmobility minSpeed 3.2022692176314
+scalar PriorityV2VAttack.attacker[19].veinsmobility maxSpeed 13.998651232829
+scalar PriorityV2VAttack.attacker[19].veinsmobility totalDistance 306.5760273435
+scalar PriorityV2VAttack.attacker[19].veinsmobility totalCO2Emission 71.255618900282
+scalar PriorityV2VAttack.manager roiArea 0
+scalar PriorityV2VAttack.node[0].appl generatedWSMs 1
+scalar PriorityV2VAttack.node[0].appl receivedWSMs 49933
+scalar PriorityV2VAttack.node[0].appl generatedBSMs 199
+scalar PriorityV2VAttack.node[0].appl receivedBSMs 995
+scalar PriorityV2VAttack.node[0].appl generatedWSAs 0
+scalar PriorityV2VAttack.node[0].appl receivedWSAs 0
+scalar PriorityV2VAttack.node[0].nic.phy80211p busyTime 0.058917788944724
+scalar PriorityV2VAttack.node[0].nic.mac1609_4 ReceivedUnicastPackets 0
+scalar PriorityV2VAttack.node[0].nic.mac1609_4 ReceivedBroadcasts 50928
+scalar PriorityV2VAttack.node[0].nic.mac1609_4 SentPackets 200
+scalar PriorityV2VAttack.node[0].nic.mac1609_4 SentAcknowledgements 0
+scalar PriorityV2VAttack.node[0].nic.mac1609_4 RetriesExceeded 0
+scalar PriorityV2VAttack.node[0].nic.mac1609_4 SNIRLostPackets 348
+scalar PriorityV2VAttack.node[0].nic.mac1609_4 RXTXLostPackets 1
+scalar PriorityV2VAttack.node[0].nic.mac1609_4 TotalLostPackets 349
+scalar PriorityV2VAttack.node[0].nic.mac1609_4 DroppedPacketsInMac 0
+scalar PriorityV2VAttack.node[0].nic.mac1609_4 TooLittleTime 0
+scalar PriorityV2VAttack.node[0].nic.mac1609_4 TimesIntoBackoff 213
+scalar PriorityV2VAttack.node[0].nic.mac1609_4 SlotsBackoff 323
+scalar PriorityV2VAttack.node[0].nic.mac1609_4 NumInternalContention 0
+scalar PriorityV2VAttack.node[0].nic.mac1609_4 totalBusyTime 11.745248
+scalar PriorityV2VAttack.node[0].nic.mac1609_4 NodeDownCount 0
+scalar PriorityV2VAttack.node[0].nic.mac1609_4 retriesExceeded:count 0
+attr source org_car2x_veins_modules_mac_sigRetriesExceeded
+scalar PriorityV2VAttack.node[0].nic.mac1609_4 sentAcks:count 0
+attr source org_car2x_veins_modules_mac_sigSentAck
+scalar PriorityV2VAttack.node[0].nic.mac1609_4 sentPackets:count 200
+attr source org_car2x_veins_modules_mac_sigSentPacket
+scalar PriorityV2VAttack.node[0].nic.mac1609_4 collisions:count 0
+attr source org_car2x_veins_modules_mac_sigCollision
+scalar PriorityV2VAttack.node[0].nic.mac1609_4 channelBusy:timeavg 0.059021346733669
+attr source org_car2x_veins_modules_mac_sigChannelBusy
+scalar PriorityV2VAttack.node[0].veinsmobility startTime 1
+scalar PriorityV2VAttack.node[0].veinsmobility totalTime 199
+scalar PriorityV2VAttack.node[0].veinsmobility stopTime 200
+scalar PriorityV2VAttack.node[0].veinsmobility minSpeed 4.1061966058897
+scalar PriorityV2VAttack.node[0].veinsmobility maxSpeed 13.999815066161
+scalar PriorityV2VAttack.node[0].veinsmobility totalDistance 2693.6458966827
+scalar PriorityV2VAttack.node[0].veinsmobility totalCO2Emission 456.26419906984
+scalar PriorityV2VAttack.node[1].appl generatedWSMs 1
+scalar PriorityV2VAttack.node[1].appl receivedWSMs 49934
+scalar PriorityV2VAttack.node[1].appl generatedBSMs 196
+scalar PriorityV2VAttack.node[1].appl receivedBSMs 1058
+scalar PriorityV2VAttack.node[1].appl generatedWSAs 0
+scalar PriorityV2VAttack.node[1].appl receivedWSAs 0
+scalar PriorityV2VAttack.node[1].nic.phy80211p busyTime 0.059885755102042
+scalar PriorityV2VAttack.node[1].nic.mac1609_4 ReceivedUnicastPackets 0
+scalar PriorityV2VAttack.node[1].nic.mac1609_4 ReceivedBroadcasts 50992
+scalar PriorityV2VAttack.node[1].nic.mac1609_4 SentPackets 197
+scalar PriorityV2VAttack.node[1].nic.mac1609_4 SentAcknowledgements 0
+scalar PriorityV2VAttack.node[1].nic.mac1609_4 RetriesExceeded 0
+scalar PriorityV2VAttack.node[1].nic.mac1609_4 SNIRLostPackets 405
+scalar PriorityV2VAttack.node[1].nic.mac1609_4 RXTXLostPackets 0
+scalar PriorityV2VAttack.node[1].nic.mac1609_4 TotalLostPackets 405
+scalar PriorityV2VAttack.node[1].nic.mac1609_4 DroppedPacketsInMac 0
+scalar PriorityV2VAttack.node[1].nic.mac1609_4 TooLittleTime 0
+scalar PriorityV2VAttack.node[1].nic.mac1609_4 TimesIntoBackoff 209
+scalar PriorityV2VAttack.node[1].nic.mac1609_4 SlotsBackoff 320
+scalar PriorityV2VAttack.node[1].nic.mac1609_4 NumInternalContention 0
+scalar PriorityV2VAttack.node[1].nic.mac1609_4 totalBusyTime 11.757565
+scalar PriorityV2VAttack.node[1].nic.mac1609_4 NodeDownCount 0
+scalar PriorityV2VAttack.node[1].nic.mac1609_4 retriesExceeded:count 0
+attr source org_car2x_veins_modules_mac_sigRetriesExceeded
+scalar PriorityV2VAttack.node[1].nic.mac1609_4 sentAcks:count 0
+attr source org_car2x_veins_modules_mac_sigSentAck
+scalar PriorityV2VAttack.node[1].nic.mac1609_4 sentPackets:count 197
+attr source org_car2x_veins_modules_mac_sigSentPacket
+scalar PriorityV2VAttack.node[1].nic.mac1609_4 collisions:count 0
+attr source org_car2x_veins_modules_mac_sigCollision
+scalar PriorityV2VAttack.node[1].nic.mac1609_4 channelBusy:timeavg 0.059987576530613
+attr source org_car2x_veins_modules_mac_sigChannelBusy
+scalar PriorityV2VAttack.node[1].veinsmobility startTime 4
+scalar PriorityV2VAttack.node[1].veinsmobility totalTime 196
+scalar PriorityV2VAttack.node[1].veinsmobility stopTime 200
+scalar PriorityV2VAttack.node[1].veinsmobility minSpeed 4.0332649588119
+scalar PriorityV2VAttack.node[1].veinsmobility maxSpeed 13.994007172689
+scalar PriorityV2VAttack.node[1].veinsmobility totalDistance 2648.1521121417
+scalar PriorityV2VAttack.node[1].veinsmobility totalCO2Emission 446.2633090298
+scalar PriorityV2VAttack.node[2].appl generatedWSMs 1
+scalar PriorityV2VAttack.node[2].appl receivedWSMs 49935
+scalar PriorityV2VAttack.node[2].appl generatedBSMs 193
+scalar PriorityV2VAttack.node[2].appl receivedBSMs 1106
+scalar PriorityV2VAttack.node[2].appl generatedWSAs 0
+scalar PriorityV2VAttack.node[2].appl receivedWSAs 0
+scalar PriorityV2VAttack.node[2].nic.phy80211p busyTime 0.06086756476684
+scalar PriorityV2VAttack.node[2].nic.mac1609_4 ReceivedUnicastPackets 0
+scalar PriorityV2VAttack.node[2].nic.mac1609_4 ReceivedBroadcasts 51041
+scalar PriorityV2VAttack.node[2].nic.mac1609_4 SentPackets 194
+scalar PriorityV2VAttack.node[2].nic.mac1609_4 SentAcknowledgements 0
+scalar PriorityV2VAttack.node[2].nic.mac1609_4 RetriesExceeded 0
+scalar PriorityV2VAttack.node[2].nic.mac1609_4 SNIRLostPackets 453
+scalar PriorityV2VAttack.node[2].nic.mac1609_4 RXTXLostPackets 3
+scalar PriorityV2VAttack.node[2].nic.mac1609_4 TotalLostPackets 456
+scalar PriorityV2VAttack.node[2].nic.mac1609_4 DroppedPacketsInMac 0
+scalar PriorityV2VAttack.node[2].nic.mac1609_4 TooLittleTime 0
+scalar PriorityV2VAttack.node[2].nic.mac1609_4 TimesIntoBackoff 204
+scalar PriorityV2VAttack.node[2].nic.mac1609_4 SlotsBackoff 303
+scalar PriorityV2VAttack.node[2].nic.mac1609_4 NumInternalContention 0
+scalar PriorityV2VAttack.node[2].nic.mac1609_4 totalBusyTime 11.76729
+scalar PriorityV2VAttack.node[2].nic.mac1609_4 NodeDownCount 0
+scalar PriorityV2VAttack.node[2].nic.mac1609_4 retriesExceeded:count 0
+attr source org_car2x_veins_modules_mac_sigRetriesExceeded
+scalar PriorityV2VAttack.node[2].nic.mac1609_4 sentAcks:count 0
+attr source org_car2x_veins_modules_mac_sigSentAck
+scalar PriorityV2VAttack.node[2].nic.mac1609_4 sentPackets:count 194
+attr source org_car2x_veins_modules_mac_sigSentPacket
+scalar PriorityV2VAttack.node[2].nic.mac1609_4 collisions:count 0
+attr source org_car2x_veins_modules_mac_sigCollision
+scalar PriorityV2VAttack.node[2].nic.mac1609_4 channelBusy:timeavg 0.060970414507773
+attr source org_car2x_veins_modules_mac_sigChannelBusy
+scalar PriorityV2VAttack.node[2].veinsmobility startTime 7
+scalar PriorityV2VAttack.node[2].veinsmobility totalTime 193
+scalar PriorityV2VAttack.node[2].veinsmobility stopTime 200
+scalar PriorityV2VAttack.node[2].veinsmobility minSpeed 3.930963162637
+scalar PriorityV2VAttack.node[2].veinsmobility maxSpeed 13.998553946475
+scalar PriorityV2VAttack.node[2].veinsmobility totalDistance 2609.1393008112
+scalar PriorityV2VAttack.node[2].veinsmobility totalCO2Emission 440.32907931197
+scalar PriorityV2VAttack.node[3].appl generatedWSMs 1
+scalar PriorityV2VAttack.node[3].appl receivedWSMs 49933
+scalar PriorityV2VAttack.node[3].appl generatedBSMs 190
+scalar PriorityV2VAttack.node[3].appl receivedBSMs 1185
+scalar PriorityV2VAttack.node[3].appl generatedWSAs 0
+scalar PriorityV2VAttack.node[3].appl receivedWSAs 0
+scalar PriorityV2VAttack.node[3].nic.phy80211p busyTime 0.061925473684212
+scalar PriorityV2VAttack.node[3].nic.mac1609_4 ReceivedUnicastPackets 0
+scalar PriorityV2VAttack.node[3].nic.mac1609_4 ReceivedBroadcasts 51118
+scalar PriorityV2VAttack.node[3].nic.mac1609_4 SentPackets 191
+scalar PriorityV2VAttack.node[3].nic.mac1609_4 SentAcknowledgements 0
+scalar PriorityV2VAttack.node[3].nic.mac1609_4 RetriesExceeded 0
+scalar PriorityV2VAttack.node[3].nic.mac1609_4 SNIRLostPackets 548
+scalar PriorityV2VAttack.node[3].nic.mac1609_4 RXTXLostPackets 1
+scalar PriorityV2VAttack.node[3].nic.mac1609_4 TotalLostPackets 549
+scalar PriorityV2VAttack.node[3].nic.mac1609_4 DroppedPacketsInMac 0
+scalar PriorityV2VAttack.node[3].nic.mac1609_4 TooLittleTime 0
+scalar PriorityV2VAttack.node[3].nic.mac1609_4 TimesIntoBackoff 202
+scalar PriorityV2VAttack.node[3].nic.mac1609_4 SlotsBackoff 323
+scalar PriorityV2VAttack.node[3].nic.mac1609_4 NumInternalContention 0
+scalar PriorityV2VAttack.node[3].nic.mac1609_4 totalBusyTime 11.784644143513
+scalar PriorityV2VAttack.node[3].nic.mac1609_4 NodeDownCount 0
+scalar PriorityV2VAttack.node[3].nic.mac1609_4 retriesExceeded:count 0
+attr source org_car2x_veins_modules_mac_sigRetriesExceeded
+scalar PriorityV2VAttack.node[3].nic.mac1609_4 sentAcks:count 0
+attr source org_car2x_veins_modules_mac_sigSentAck
+scalar PriorityV2VAttack.node[3].nic.mac1609_4 sentPackets:count 191
+attr source org_car2x_veins_modules_mac_sigSentPacket
+scalar PriorityV2VAttack.node[3].nic.mac1609_4 collisions:count 0
+attr source org_car2x_veins_modules_mac_sigCollision
+scalar PriorityV2VAttack.node[3].nic.mac1609_4 channelBusy:timeavg 0.062024442860596
+attr source org_car2x_veins_modules_mac_sigChannelBusy
+scalar PriorityV2VAttack.node[3].veinsmobility startTime 10
+scalar PriorityV2VAttack.node[3].veinsmobility totalTime 190
+scalar PriorityV2VAttack.node[3].veinsmobility stopTime 200
+scalar PriorityV2VAttack.node[3].veinsmobility minSpeed 4.0076977833542
+scalar PriorityV2VAttack.node[3].veinsmobility maxSpeed 13.999527041174
+scalar PriorityV2VAttack.node[3].veinsmobility totalDistance 2537.2663323635
+scalar PriorityV2VAttack.node[3].veinsmobility totalCO2Emission 434.51471612558
+scalar PriorityV2VAttack.node[4].appl generatedWSMs 1
+scalar PriorityV2VAttack.node[4].appl receivedWSMs 37364
+scalar PriorityV2VAttack.node[4].appl generatedBSMs 187
+scalar PriorityV2VAttack.node[4].appl receivedBSMs 2767
+scalar PriorityV2VAttack.node[4].appl generatedWSAs 0
+scalar PriorityV2VAttack.node[4].appl receivedWSAs 0
+scalar PriorityV2VAttack.node[4].nic.phy80211p busyTime 0.048066909090882
+scalar PriorityV2VAttack.node[4].nic.mac1609_4 ReceivedUnicastPackets 0
+scalar PriorityV2VAttack.node[4].nic.mac1609_4 ReceivedBroadcasts 40131
+scalar PriorityV2VAttack.node[4].nic.mac1609_4 SentPackets 188
+scalar PriorityV2VAttack.node[4].nic.mac1609_4 SentAcknowledgements 0
+scalar PriorityV2VAttack.node[4].nic.mac1609_4 RetriesExceeded 0
+scalar PriorityV2VAttack.node[4].nic.mac1609_4 SNIRLostPackets 233
+scalar PriorityV2VAttack.node[4].nic.mac1609_4 RXTXLostPackets 0
+scalar PriorityV2VAttack.node[4].nic.mac1609_4 TotalLostPackets 233
+scalar PriorityV2VAttack.node[4].nic.mac1609_4 DroppedPacketsInMac 0
+scalar PriorityV2VAttack.node[4].nic.mac1609_4 TooLittleTime 0
+scalar PriorityV2VAttack.node[4].nic.mac1609_4 TimesIntoBackoff 194
+scalar PriorityV2VAttack.node[4].nic.mac1609_4 SlotsBackoff 278
+scalar PriorityV2VAttack.node[4].nic.mac1609_4 NumInternalContention 0
+scalar PriorityV2VAttack.node[4].nic.mac1609_4 totalBusyTime 8.997772
+scalar PriorityV2VAttack.node[4].nic.mac1609_4 NodeDownCount 0
+scalar PriorityV2VAttack.node[4].nic.mac1609_4 retriesExceeded:count 0
+attr source org_car2x_veins_modules_mac_sigRetriesExceeded
+scalar PriorityV2VAttack.node[4].nic.mac1609_4 sentAcks:count 0
+attr source org_car2x_veins_modules_mac_sigSentAck
+scalar PriorityV2VAttack.node[4].nic.mac1609_4 sentPackets:count 188
+attr source org_car2x_veins_modules_mac_sigSentPacket
+scalar PriorityV2VAttack.node[4].nic.mac1609_4 collisions:count 0
+attr source org_car2x_veins_modules_mac_sigCollision
+scalar PriorityV2VAttack.node[4].nic.mac1609_4 channelBusy:timeavg 0.048116427807459
+attr source org_car2x_veins_modules_mac_sigChannelBusy
+scalar PriorityV2VAttack.node[4].veinsmobility startTime 13
+scalar PriorityV2VAttack.node[4].veinsmobility totalTime 187
+scalar PriorityV2VAttack.node[4].veinsmobility stopTime 200
+scalar PriorityV2VAttack.node[4].veinsmobility minSpeed 4.1202440707026
+scalar PriorityV2VAttack.node[4].veinsmobility maxSpeed 13.998611656229
+scalar PriorityV2VAttack.node[4].veinsmobility totalDistance 1845.6015299764
+scalar PriorityV2VAttack.node[4].veinsmobility totalCO2Emission 363.71881255918
+scalar PriorityV2VAttack.node[5].appl generatedWSMs 1
+scalar PriorityV2VAttack.node[5].appl receivedWSMs 39440
+scalar PriorityV2VAttack.node[5].appl generatedBSMs 184
+scalar PriorityV2VAttack.node[5].appl receivedBSMs 2790
+scalar PriorityV2VAttack.node[5].appl generatedWSAs 0
+scalar PriorityV2VAttack.node[5].appl receivedWSAs 0
+scalar PriorityV2VAttack.node[5].nic.phy80211p busyTime 0.051494695652152
+scalar PriorityV2VAttack.node[5].nic.mac1609_4 ReceivedUnicastPackets 0
+scalar PriorityV2VAttack.node[5].nic.mac1609_4 ReceivedBroadcasts 42230
+scalar PriorityV2VAttack.node[5].nic.mac1609_4 SentPackets 185
+scalar PriorityV2VAttack.node[5].nic.mac1609_4 SentAcknowledgements 0
+scalar PriorityV2VAttack.node[5].nic.mac1609_4 RetriesExceeded 0
+scalar PriorityV2VAttack.node[5].nic.mac1609_4 SNIRLostPackets 252
+scalar PriorityV2VAttack.node[5].nic.mac1609_4 RXTXLostPackets 0
+scalar PriorityV2VAttack.node[5].nic.mac1609_4 TotalLostPackets 252
+scalar PriorityV2VAttack.node[5].nic.mac1609_4 DroppedPacketsInMac 0
+scalar PriorityV2VAttack.node[5].nic.mac1609_4 TooLittleTime 0
+scalar PriorityV2VAttack.node[5].nic.mac1609_4 TimesIntoBackoff 193
+scalar PriorityV2VAttack.node[5].nic.mac1609_4 SlotsBackoff 304
+scalar PriorityV2VAttack.node[5].nic.mac1609_4 NumInternalContention 0
+scalar PriorityV2VAttack.node[5].nic.mac1609_4 totalBusyTime 9.483345
+scalar PriorityV2VAttack.node[5].nic.mac1609_4 NodeDownCount 0
+scalar PriorityV2VAttack.node[5].nic.mac1609_4 retriesExceeded:count 0
+attr source org_car2x_veins_modules_mac_sigRetriesExceeded
+scalar PriorityV2VAttack.node[5].nic.mac1609_4 sentAcks:count 0
+attr source org_car2x_veins_modules_mac_sigSentAck
+scalar PriorityV2VAttack.node[5].nic.mac1609_4 sentPackets:count 185
+attr source org_car2x_veins_modules_mac_sigSentPacket
+scalar PriorityV2VAttack.node[5].nic.mac1609_4 collisions:count 0
+attr source org_car2x_veins_modules_mac_sigCollision
+scalar PriorityV2VAttack.node[5].nic.mac1609_4 channelBusy:timeavg 0.051539918478238
+attr source org_car2x_veins_modules_mac_sigChannelBusy
+scalar PriorityV2VAttack.node[5].veinsmobility startTime 16
+scalar PriorityV2VAttack.node[5].veinsmobility totalTime 184
+scalar PriorityV2VAttack.node[5].veinsmobility stopTime 200
+scalar PriorityV2VAttack.node[5].veinsmobility minSpeed 4.11254450365
+scalar PriorityV2VAttack.node[5].veinsmobility maxSpeed 13.999388816282
+scalar PriorityV2VAttack.node[5].veinsmobility totalDistance 1830.059143786
+scalar PriorityV2VAttack.node[5].veinsmobility totalCO2Emission 357.4329134363
+scalar PriorityV2VAttack.node[6].appl generatedWSMs 1
+scalar PriorityV2VAttack.node[6].appl receivedWSMs 45683
+scalar PriorityV2VAttack.node[6].appl generatedBSMs 181
+scalar PriorityV2VAttack.node[6].appl receivedBSMs 2849
+scalar PriorityV2VAttack.node[6].appl generatedWSAs 0
+scalar PriorityV2VAttack.node[6].appl receivedWSAs 0
+scalar PriorityV2VAttack.node[6].nic.phy80211p busyTime 0.060431248618778
+scalar PriorityV2VAttack.node[6].nic.mac1609_4 ReceivedUnicastPackets 0
+scalar PriorityV2VAttack.node[6].nic.mac1609_4 ReceivedBroadcasts 48532
+scalar PriorityV2VAttack.node[6].nic.mac1609_4 SentPackets 182
+scalar PriorityV2VAttack.node[6].nic.mac1609_4 SentAcknowledgements 0
+scalar PriorityV2VAttack.node[6].nic.mac1609_4 RetriesExceeded 0
+scalar PriorityV2VAttack.node[6].nic.mac1609_4 SNIRLostPackets 313
+scalar PriorityV2VAttack.node[6].nic.mac1609_4 RXTXLostPackets 0
+scalar PriorityV2VAttack.node[6].nic.mac1609_4 TotalLostPackets 313
+scalar PriorityV2VAttack.node[6].nic.mac1609_4 DroppedPacketsInMac 0
+scalar PriorityV2VAttack.node[6].nic.mac1609_4 TooLittleTime 0
+scalar PriorityV2VAttack.node[6].nic.mac1609_4 TimesIntoBackoff 197
+scalar PriorityV2VAttack.node[6].nic.mac1609_4 SlotsBackoff 289
+scalar PriorityV2VAttack.node[6].nic.mac1609_4 NumInternalContention 0
+scalar PriorityV2VAttack.node[6].nic.mac1609_4 totalBusyTime 10.942774
+scalar PriorityV2VAttack.node[6].nic.mac1609_4 NodeDownCount 0
+scalar PriorityV2VAttack.node[6].nic.mac1609_4 retriesExceeded:count 0
+attr source org_car2x_veins_modules_mac_sigRetriesExceeded
+scalar PriorityV2VAttack.node[6].nic.mac1609_4 sentAcks:count 0
+attr source org_car2x_veins_modules_mac_sigSentAck
+scalar PriorityV2VAttack.node[6].nic.mac1609_4 sentPackets:count 182
+attr source org_car2x_veins_modules_mac_sigSentPacket
+scalar PriorityV2VAttack.node[6].nic.mac1609_4 collisions:count 0
+attr source org_car2x_veins_modules_mac_sigCollision
+scalar PriorityV2VAttack.node[6].nic.mac1609_4 channelBusy:timeavg 0.06045731491712
+attr source org_car2x_veins_modules_mac_sigChannelBusy
+scalar PriorityV2VAttack.node[6].veinsmobility startTime 19
+scalar PriorityV2VAttack.node[6].veinsmobility totalTime 181
+scalar PriorityV2VAttack.node[6].veinsmobility stopTime 200
+scalar PriorityV2VAttack.node[6].veinsmobility minSpeed 4.067372106413
+scalar PriorityV2VAttack.node[6].veinsmobility maxSpeed 12.741513219538
+scalar PriorityV2VAttack.node[6].veinsmobility totalDistance 1704.2663523329
+scalar PriorityV2VAttack.node[6].veinsmobility totalCO2Emission 325.4290988932
+scalar PriorityV2VAttack.node[7].appl generatedWSMs 1
+scalar PriorityV2VAttack.node[7].appl receivedWSMs 45679
+scalar PriorityV2VAttack.node[7].appl generatedBSMs 178
+scalar PriorityV2VAttack.node[7].appl receivedBSMs 2839
+scalar PriorityV2VAttack.node[7].appl generatedWSAs 0
+scalar PriorityV2VAttack.node[7].appl receivedWSAs 0
+scalar PriorityV2VAttack.node[7].nic.phy80211p busyTime 0.064176089887639
+scalar PriorityV2VAttack.node[7].nic.mac1609_4 ReceivedUnicastPackets 0
+scalar PriorityV2VAttack.node[7].nic.mac1609_4 ReceivedBroadcasts 48518
+scalar PriorityV2VAttack.node[7].nic.mac1609_4 SentPackets 179
+scalar PriorityV2VAttack.node[7].nic.mac1609_4 SentAcknowledgements 0
+scalar PriorityV2VAttack.node[7].nic.mac1609_4 RetriesExceeded 0
+scalar PriorityV2VAttack.node[7].nic.mac1609_4 SNIRLostPackets 2416
+scalar PriorityV2VAttack.node[7].nic.mac1609_4 RXTXLostPackets 0
+scalar PriorityV2VAttack.node[7].nic.mac1609_4 TotalLostPackets 2416
+scalar PriorityV2VAttack.node[7].nic.mac1609_4 DroppedPacketsInMac 0
+scalar PriorityV2VAttack.node[7].nic.mac1609_4 TooLittleTime 0
+scalar PriorityV2VAttack.node[7].nic.mac1609_4 TimesIntoBackoff 192
+scalar PriorityV2VAttack.node[7].nic.mac1609_4 SlotsBackoff 299
+scalar PriorityV2VAttack.node[7].nic.mac1609_4 NumInternalContention 0
+scalar PriorityV2VAttack.node[7].nic.mac1609_4 totalBusyTime 11.426659
+scalar PriorityV2VAttack.node[7].nic.mac1609_4 NodeDownCount 0
+scalar PriorityV2VAttack.node[7].nic.mac1609_4 retriesExceeded:count 0
+attr source org_car2x_veins_modules_mac_sigRetriesExceeded
+scalar PriorityV2VAttack.node[7].nic.mac1609_4 sentAcks:count 0
+attr source org_car2x_veins_modules_mac_sigSentAck
+scalar PriorityV2VAttack.node[7].nic.mac1609_4 sentPackets:count 179
+attr source org_car2x_veins_modules_mac_sigSentPacket
+scalar PriorityV2VAttack.node[7].nic.mac1609_4 collisions:count 0
+attr source org_car2x_veins_modules_mac_sigCollision
+scalar PriorityV2VAttack.node[7].nic.mac1609_4 channelBusy:timeavg 0.064194713483144
+attr source org_car2x_veins_modules_mac_sigChannelBusy
+scalar PriorityV2VAttack.node[7].veinsmobility startTime 22
+scalar PriorityV2VAttack.node[7].veinsmobility totalTime 178
+scalar PriorityV2VAttack.node[7].veinsmobility stopTime 200
+scalar PriorityV2VAttack.node[7].veinsmobility minSpeed 4.0430421609162
+scalar PriorityV2VAttack.node[7].veinsmobility maxSpeed 13.996453029746
+scalar PriorityV2VAttack.node[7].veinsmobility totalDistance 1692.035073804
+scalar PriorityV2VAttack.node[7].veinsmobility totalCO2Emission 323.83808589382
+scalar PriorityV2VAttack.node[8].appl generatedWSMs 1
+scalar PriorityV2VAttack.node[8].appl receivedWSMs 47755
+scalar PriorityV2VAttack.node[8].appl generatedBSMs 175
+scalar PriorityV2VAttack.node[8].appl receivedBSMs 2819
+scalar PriorityV2VAttack.node[8].appl generatedWSAs 0
+scalar PriorityV2VAttack.node[8].appl receivedWSAs 0
+scalar PriorityV2VAttack.node[8].nic.phy80211p busyTime 0.068031314285718
+scalar PriorityV2VAttack.node[8].nic.mac1609_4 ReceivedUnicastPackets 0
+scalar PriorityV2VAttack.node[8].nic.mac1609_4 ReceivedBroadcasts 50574
+scalar PriorityV2VAttack.node[8].nic.mac1609_4 SentPackets 176
+scalar PriorityV2VAttack.node[8].nic.mac1609_4 SentAcknowledgements 0
+scalar PriorityV2VAttack.node[8].nic.mac1609_4 RetriesExceeded 0
+scalar PriorityV2VAttack.node[8].nic.mac1609_4 SNIRLostPackets 2431
+scalar PriorityV2VAttack.node[8].nic.mac1609_4 RXTXLostPackets 0
+scalar PriorityV2VAttack.node[8].nic.mac1609_4 TotalLostPackets 2431
+scalar PriorityV2VAttack.node[8].nic.mac1609_4 DroppedPacketsInMac 0
+scalar PriorityV2VAttack.node[8].nic.mac1609_4 TooLittleTime 0
+scalar PriorityV2VAttack.node[8].nic.mac1609_4 TimesIntoBackoff 187
+scalar PriorityV2VAttack.node[8].nic.mac1609_4 SlotsBackoff 300
+scalar PriorityV2VAttack.node[8].nic.mac1609_4 NumInternalContention 0
+scalar PriorityV2VAttack.node[8].nic.mac1609_4 totalBusyTime 11.906488
+scalar PriorityV2VAttack.node[8].nic.mac1609_4 NodeDownCount 0
+scalar PriorityV2VAttack.node[8].nic.mac1609_4 retriesExceeded:count 0
+attr source org_car2x_veins_modules_mac_sigRetriesExceeded
+scalar PriorityV2VAttack.node[8].nic.mac1609_4 sentAcks:count 0
+attr source org_car2x_veins_modules_mac_sigSentAck
+scalar PriorityV2VAttack.node[8].nic.mac1609_4 sentPackets:count 176
+attr source org_car2x_veins_modules_mac_sigSentPacket
+scalar PriorityV2VAttack.node[8].nic.mac1609_4 collisions:count 0
+attr source org_car2x_veins_modules_mac_sigCollision
+scalar PriorityV2VAttack.node[8].nic.mac1609_4 channelBusy:timeavg 0.068037074285718
+attr source org_car2x_veins_modules_mac_sigChannelBusy
+scalar PriorityV2VAttack.node[8].veinsmobility startTime 25
+scalar PriorityV2VAttack.node[8].veinsmobility totalTime 175
+scalar PriorityV2VAttack.node[8].veinsmobility stopTime 200
+scalar PriorityV2VAttack.node[8].veinsmobility minSpeed 4.0410625637338
+scalar PriorityV2VAttack.node[8].veinsmobility maxSpeed 13.996461975116
+scalar PriorityV2VAttack.node[8].veinsmobility totalDistance 1677.1592646272
+scalar PriorityV2VAttack.node[8].veinsmobility totalCO2Emission 322.32668126659
+scalar PriorityV2VAttack.node[9].appl generatedWSMs 1
+scalar PriorityV2VAttack.node[9].appl receivedWSMs 49823
+scalar PriorityV2VAttack.node[9].appl generatedBSMs 172
+scalar PriorityV2VAttack.node[9].appl receivedBSMs 2792
+scalar PriorityV2VAttack.node[9].appl generatedWSAs 0
+scalar PriorityV2VAttack.node[9].appl receivedWSAs 0
+scalar PriorityV2VAttack.node[9].nic.phy80211p busyTime 0.069210046511632
+scalar PriorityV2VAttack.node[9].nic.mac1609_4 ReceivedUnicastPackets 0
+scalar PriorityV2VAttack.node[9].nic.mac1609_4 ReceivedBroadcasts 52615
+scalar PriorityV2VAttack.node[9].nic.mac1609_4 SentPackets 173
+scalar PriorityV2VAttack.node[9].nic.mac1609_4 SentAcknowledgements 0
+scalar PriorityV2VAttack.node[9].nic.mac1609_4 RetriesExceeded 0
+scalar PriorityV2VAttack.node[9].nic.mac1609_4 SNIRLostPackets 377
+scalar PriorityV2VAttack.node[9].nic.mac1609_4 RXTXLostPackets 0
+scalar PriorityV2VAttack.node[9].nic.mac1609_4 TotalLostPackets 377
+scalar PriorityV2VAttack.node[9].nic.mac1609_4 DroppedPacketsInMac 0
+scalar PriorityV2VAttack.node[9].nic.mac1609_4 TooLittleTime 0
+scalar PriorityV2VAttack.node[9].nic.mac1609_4 TimesIntoBackoff 185
+scalar PriorityV2VAttack.node[9].nic.mac1609_4 SlotsBackoff 265
+scalar PriorityV2VAttack.node[9].nic.mac1609_4 NumInternalContention 0
+scalar PriorityV2VAttack.node[9].nic.mac1609_4 totalBusyTime 11.904173
+scalar PriorityV2VAttack.node[9].nic.mac1609_4 NodeDownCount 0
+scalar PriorityV2VAttack.node[9].nic.mac1609_4 retriesExceeded:count 0
+attr source org_car2x_veins_modules_mac_sigRetriesExceeded
+scalar PriorityV2VAttack.node[9].nic.mac1609_4 sentAcks:count 0
+attr source org_car2x_veins_modules_mac_sigSentAck
+scalar PriorityV2VAttack.node[9].nic.mac1609_4 sentPackets:count 173
+attr source org_car2x_veins_modules_mac_sigSentPacket
+scalar PriorityV2VAttack.node[9].nic.mac1609_4 collisions:count 0
+attr source org_car2x_veins_modules_mac_sigCollision
+scalar PriorityV2VAttack.node[9].nic.mac1609_4 channelBusy:timeavg 0.069210308139538
+attr source org_car2x_veins_modules_mac_sigChannelBusy
+scalar PriorityV2VAttack.node[9].veinsmobility startTime 28
+scalar PriorityV2VAttack.node[9].veinsmobility totalTime 172
+scalar PriorityV2VAttack.node[9].veinsmobility stopTime 200
+scalar PriorityV2VAttack.node[9].veinsmobility minSpeed 4.0414518827764
+scalar PriorityV2VAttack.node[9].veinsmobility maxSpeed 13.990338315354
+scalar PriorityV2VAttack.node[9].veinsmobility totalDistance 1671.2916747587
+scalar PriorityV2VAttack.node[9].veinsmobility totalCO2Emission 320.86906731594
+scalar PriorityV2VAttack.node[10].appl generatedWSMs 1
+scalar PriorityV2VAttack.node[10].appl receivedWSMs 49817
+scalar PriorityV2VAttack.node[10].appl generatedBSMs 169
+scalar PriorityV2VAttack.node[10].appl receivedBSMs 2757
+scalar PriorityV2VAttack.node[10].appl generatedWSAs 0
+scalar PriorityV2VAttack.node[10].appl receivedWSAs 0
+scalar PriorityV2VAttack.node[10].nic.phy80211p busyTime 0.0704250887574
+scalar PriorityV2VAttack.node[10].nic.mac1609_4 ReceivedUnicastPackets 0
+scalar PriorityV2VAttack.node[10].nic.mac1609_4 ReceivedBroadcasts 52574
+scalar PriorityV2VAttack.node[10].nic.mac1609_4 SentPackets 170
+scalar PriorityV2VAttack.node[10].nic.mac1609_4 SentAcknowledgements 0
+scalar PriorityV2VAttack.node[10].nic.mac1609_4 RetriesExceeded 0
+scalar PriorityV2VAttack.node[10].nic.mac1609_4 SNIRLostPackets 396
+scalar PriorityV2VAttack.node[10].nic.mac1609_4 RXTXLostPackets 1
+scalar PriorityV2VAttack.node[10].nic.mac1609_4 TotalLostPackets 397
+scalar PriorityV2VAttack.node[10].nic.mac1609_4 DroppedPacketsInMac 0
+scalar PriorityV2VAttack.node[10].nic.mac1609_4 TooLittleTime 0
+scalar PriorityV2VAttack.node[10].nic.mac1609_4 TimesIntoBackoff 182
+scalar PriorityV2VAttack.node[10].nic.mac1609_4 SlotsBackoff 312
+scalar PriorityV2VAttack.node[10].nic.mac1609_4 NumInternalContention 0
+scalar PriorityV2VAttack.node[10].nic.mac1609_4 totalBusyTime 11.901026
+scalar PriorityV2VAttack.node[10].nic.mac1609_4 NodeDownCount 0
+scalar PriorityV2VAttack.node[10].nic.mac1609_4 retriesExceeded:count 0
+attr source org_car2x_veins_modules_mac_sigRetriesExceeded
+scalar PriorityV2VAttack.node[10].nic.mac1609_4 sentAcks:count 0
+attr source org_car2x_veins_modules_mac_sigSentAck
+scalar PriorityV2VAttack.node[10].nic.mac1609_4 sentPackets:count 170
+attr source org_car2x_veins_modules_mac_sigSentPacket
+scalar PriorityV2VAttack.node[10].nic.mac1609_4 collisions:count 0
+attr source org_car2x_veins_modules_mac_sigCollision
+scalar PriorityV2VAttack.node[10].nic.mac1609_4 channelBusy:timeavg 0.070420272189353
+attr source org_car2x_veins_modules_mac_sigChannelBusy
+scalar PriorityV2VAttack.node[10].veinsmobility startTime 31
+scalar PriorityV2VAttack.node[10].veinsmobility totalTime 169
+scalar PriorityV2VAttack.node[10].veinsmobility stopTime 200
+scalar PriorityV2VAttack.node[10].veinsmobility minSpeed 4.0921991861071
+scalar PriorityV2VAttack.node[10].veinsmobility maxSpeed 13.995584658093
+scalar PriorityV2VAttack.node[10].veinsmobility totalDistance 1660.8712191985
+scalar PriorityV2VAttack.node[10].veinsmobility totalCO2Emission 313.41417404079
+scalar PriorityV2VAttack.node[11].appl generatedWSMs 1
+scalar PriorityV2VAttack.node[11].appl receivedWSMs 49803
+scalar PriorityV2VAttack.node[11].appl generatedBSMs 166
+scalar PriorityV2VAttack.node[11].appl receivedBSMs 2703
+scalar PriorityV2VAttack.node[11].appl generatedWSAs 0
+scalar PriorityV2VAttack.node[11].appl receivedWSAs 0
+scalar PriorityV2VAttack.node[11].nic.phy80211p busyTime 0.071683084337353
+scalar PriorityV2VAttack.node[11].nic.mac1609_4 ReceivedUnicastPackets 0
+scalar PriorityV2VAttack.node[11].nic.mac1609_4 ReceivedBroadcasts 52506
+scalar PriorityV2VAttack.node[11].nic.mac1609_4 SentPackets 167
+scalar PriorityV2VAttack.node[11].nic.mac1609_4 SentAcknowledgements 0
+scalar PriorityV2VAttack.node[11].nic.mac1609_4 RetriesExceeded 0
+scalar PriorityV2VAttack.node[11].nic.mac1609_4 SNIRLostPackets 438
+scalar PriorityV2VAttack.node[11].nic.mac1609_4 RXTXLostPackets 0
+scalar PriorityV2VAttack.node[11].nic.mac1609_4 TotalLostPackets 438
+scalar PriorityV2VAttack.node[11].nic.mac1609_4 DroppedPacketsInMac 0
+scalar PriorityV2VAttack.node[11].nic.mac1609_4 TooLittleTime 0
+scalar PriorityV2VAttack.node[11].nic.mac1609_4 TimesIntoBackoff 182
+scalar PriorityV2VAttack.node[11].nic.mac1609_4 SlotsBackoff 268
+scalar PriorityV2VAttack.node[11].nic.mac1609_4 NumInternalContention 0
+scalar PriorityV2VAttack.node[11].nic.mac1609_4 totalBusyTime 11.896143
+scalar PriorityV2VAttack.node[11].nic.mac1609_4 NodeDownCount 0
+scalar PriorityV2VAttack.node[11].nic.mac1609_4 retriesExceeded:count 0
+attr source org_car2x_veins_modules_mac_sigRetriesExceeded
+scalar PriorityV2VAttack.node[11].nic.mac1609_4 sentAcks:count 0
+attr source org_car2x_veins_modules_mac_sigSentAck
+scalar PriorityV2VAttack.node[11].nic.mac1609_4 sentPackets:count 167
+attr source org_car2x_veins_modules_mac_sigSentPacket
+scalar PriorityV2VAttack.node[11].nic.mac1609_4 collisions:count 0
+attr source org_car2x_veins_modules_mac_sigCollision
+scalar PriorityV2VAttack.node[11].nic.mac1609_4 channelBusy:timeavg 0.071663512048196
+attr source org_car2x_veins_modules_mac_sigChannelBusy
+scalar PriorityV2VAttack.node[11].veinsmobility startTime 34
+scalar PriorityV2VAttack.node[11].veinsmobility totalTime 166
+scalar PriorityV2VAttack.node[11].veinsmobility stopTime 200
+scalar PriorityV2VAttack.node[11].veinsmobility minSpeed 4.0902178359286
+scalar PriorityV2VAttack.node[11].veinsmobility maxSpeed 13.998126043116
+scalar PriorityV2VAttack.node[11].veinsmobility totalDistance 1650.0344063084
+scalar PriorityV2VAttack.node[11].veinsmobility totalCO2Emission 309.31724792624
+scalar PriorityV2VAttack.node[12].appl generatedWSMs 1
+scalar PriorityV2VAttack.node[12].appl receivedWSMs 20581
+scalar PriorityV2VAttack.node[12].appl generatedBSMs 163
+scalar PriorityV2VAttack.node[12].appl receivedBSMs 1791
+scalar PriorityV2VAttack.node[12].appl generatedWSAs 0
+scalar PriorityV2VAttack.node[12].appl receivedWSAs 0
+scalar PriorityV2VAttack.node[12].nic.phy80211p busyTime 0.030790625766865
+scalar PriorityV2VAttack.node[12].nic.mac1609_4 ReceivedUnicastPackets 0
+scalar PriorityV2VAttack.node[12].nic.mac1609_4 ReceivedBroadcasts 22372
+scalar PriorityV2VAttack.node[12].nic.mac1609_4 SentPackets 164
+scalar PriorityV2VAttack.node[12].nic.mac1609_4 SentAcknowledgements 0
+scalar PriorityV2VAttack.node[12].nic.mac1609_4 RetriesExceeded 0
+scalar PriorityV2VAttack.node[12].nic.mac1609_4 SNIRLostPackets 311
+scalar PriorityV2VAttack.node[12].nic.mac1609_4 RXTXLostPackets 0
+scalar PriorityV2VAttack.node[12].nic.mac1609_4 TotalLostPackets 311
+scalar PriorityV2VAttack.node[12].nic.mac1609_4 DroppedPacketsInMac 0
+scalar PriorityV2VAttack.node[12].nic.mac1609_4 TooLittleTime 0
+scalar PriorityV2VAttack.node[12].nic.mac1609_4 TimesIntoBackoff 169
+scalar PriorityV2VAttack.node[12].nic.mac1609_4 SlotsBackoff 242
+scalar PriorityV2VAttack.node[12].nic.mac1609_4 NumInternalContention 0
+scalar PriorityV2VAttack.node[12].nic.mac1609_4 totalBusyTime 5.029444
+scalar PriorityV2VAttack.node[12].nic.mac1609_4 NodeDownCount 0
+scalar PriorityV2VAttack.node[12].nic.mac1609_4 retriesExceeded:count 0
+attr source org_car2x_veins_modules_mac_sigRetriesExceeded
+scalar PriorityV2VAttack.node[12].nic.mac1609_4 sentAcks:count 0
+attr source org_car2x_veins_modules_mac_sigSentAck
+scalar PriorityV2VAttack.node[12].nic.mac1609_4 sentPackets:count 164
+attr source org_car2x_veins_modules_mac_sigSentPacket
+scalar PriorityV2VAttack.node[12].nic.mac1609_4 collisions:count 0
+attr source org_car2x_veins_modules_mac_sigCollision
+scalar PriorityV2VAttack.node[12].nic.mac1609_4 channelBusy:timeavg 0.03085548466257
+attr source org_car2x_veins_modules_mac_sigChannelBusy
+scalar PriorityV2VAttack.node[12].veinsmobility startTime 37
+scalar PriorityV2VAttack.node[12].veinsmobility totalTime 163
+scalar PriorityV2VAttack.node[12].veinsmobility stopTime 200
+scalar PriorityV2VAttack.node[12].veinsmobility minSpeed 3.8721652445728
+scalar PriorityV2VAttack.node[12].veinsmobility maxSpeed 13.974055984516
+scalar PriorityV2VAttack.node[12].veinsmobility totalDistance 1775.889298372
+scalar PriorityV2VAttack.node[12].veinsmobility totalCO2Emission 362.39765337446
+scalar PriorityV2VAttack.node[13].appl generatedWSMs 1
+scalar PriorityV2VAttack.node[13].appl receivedWSMs 17558
+scalar PriorityV2VAttack.node[13].appl generatedBSMs 160
+scalar PriorityV2VAttack.node[13].appl receivedBSMs 1440
+scalar PriorityV2VAttack.node[13].appl generatedWSAs 0
+scalar PriorityV2VAttack.node[13].appl receivedWSAs 0
+scalar PriorityV2VAttack.node[13].nic.phy80211p busyTime 0.028157149999999
+scalar PriorityV2VAttack.node[13].nic.mac1609_4 ReceivedUnicastPackets 0
+scalar PriorityV2VAttack.node[13].nic.mac1609_4 ReceivedBroadcasts 18998
+scalar PriorityV2VAttack.node[13].nic.mac1609_4 SentPackets 161
+scalar PriorityV2VAttack.node[13].nic.mac1609_4 SentAcknowledgements 0
+scalar PriorityV2VAttack.node[13].nic.mac1609_4 RetriesExceeded 0
+scalar PriorityV2VAttack.node[13].nic.mac1609_4 SNIRLostPackets 1293
+scalar PriorityV2VAttack.node[13].nic.mac1609_4 RXTXLostPackets 1
+scalar PriorityV2VAttack.node[13].nic.mac1609_4 TotalLostPackets 1294
+scalar PriorityV2VAttack.node[13].nic.mac1609_4 DroppedPacketsInMac 0
+scalar PriorityV2VAttack.node[13].nic.mac1609_4 TooLittleTime 0
+scalar PriorityV2VAttack.node[13].nic.mac1609_4 TimesIntoBackoff 166
+scalar PriorityV2VAttack.node[13].nic.mac1609_4 SlotsBackoff 257
+scalar PriorityV2VAttack.node[13].nic.mac1609_4 NumInternalContention 0
+scalar PriorityV2VAttack.node[13].nic.mac1609_4 totalBusyTime 4.516305
+scalar PriorityV2VAttack.node[13].nic.mac1609_4 NodeDownCount 0
+scalar PriorityV2VAttack.node[13].nic.mac1609_4 retriesExceeded:count 0
+attr source org_car2x_veins_modules_mac_sigRetriesExceeded
+scalar PriorityV2VAttack.node[13].nic.mac1609_4 sentAcks:count 0
+attr source org_car2x_veins_modules_mac_sigSentAck
+scalar PriorityV2VAttack.node[13].nic.mac1609_4 sentPackets:count 161
+attr source org_car2x_veins_modules_mac_sigSentPacket
+scalar PriorityV2VAttack.node[13].nic.mac1609_4 collisions:count 0
+attr source org_car2x_veins_modules_mac_sigCollision
+scalar PriorityV2VAttack.node[13].nic.mac1609_4 channelBusy:timeavg 0.028226906249999
+attr source org_car2x_veins_modules_mac_sigChannelBusy
+scalar PriorityV2VAttack.node[13].veinsmobility startTime 40
+scalar PriorityV2VAttack.node[13].veinsmobility totalTime 160
+scalar PriorityV2VAttack.node[13].veinsmobility stopTime 200
+scalar PriorityV2VAttack.node[13].veinsmobility minSpeed 3.8893497726901
+scalar PriorityV2VAttack.node[13].veinsmobility maxSpeed 13.998275555454
+scalar PriorityV2VAttack.node[13].veinsmobility totalDistance 1782.9099833986
+scalar PriorityV2VAttack.node[13].veinsmobility totalCO2Emission 385.80329040869
+scalar PriorityV2VAttack.node[14].appl generatedWSMs 1
+scalar PriorityV2VAttack.node[14].appl receivedWSMs 20447
+scalar PriorityV2VAttack.node[14].appl generatedBSMs 157
+scalar PriorityV2VAttack.node[14].appl receivedBSMs 1831
+scalar PriorityV2VAttack.node[14].appl generatedWSAs 0
+scalar PriorityV2VAttack.node[14].appl receivedWSAs 0
+scalar PriorityV2VAttack.node[14].nic.phy80211p busyTime 0.032017121019102
+scalar PriorityV2VAttack.node[14].nic.mac1609_4 ReceivedUnicastPackets 0
+scalar PriorityV2VAttack.node[14].nic.mac1609_4 ReceivedBroadcasts 22278
+scalar PriorityV2VAttack.node[14].nic.mac1609_4 SentPackets 158
+scalar PriorityV2VAttack.node[14].nic.mac1609_4 SentAcknowledgements 0
+scalar PriorityV2VAttack.node[14].nic.mac1609_4 RetriesExceeded 0
+scalar PriorityV2VAttack.node[14].nic.mac1609_4 SNIRLostPackets 458
+scalar PriorityV2VAttack.node[14].nic.mac1609_4 RXTXLostPackets 0
+scalar PriorityV2VAttack.node[14].nic.mac1609_4 TotalLostPackets 458
+scalar PriorityV2VAttack.node[14].nic.mac1609_4 DroppedPacketsInMac 0
+scalar PriorityV2VAttack.node[14].nic.mac1609_4 TooLittleTime 0
+scalar PriorityV2VAttack.node[14].nic.mac1609_4 TimesIntoBackoff 164
+scalar PriorityV2VAttack.node[14].nic.mac1609_4 SlotsBackoff 245
+scalar PriorityV2VAttack.node[14].nic.mac1609_4 NumInternalContention 0
+scalar PriorityV2VAttack.node[14].nic.mac1609_4 totalBusyTime 5.035830085227
+scalar PriorityV2VAttack.node[14].nic.mac1609_4 NodeDownCount 0
+scalar PriorityV2VAttack.node[14].nic.mac1609_4 retriesExceeded:count 0
+attr source org_car2x_veins_modules_mac_sigRetriesExceeded
+scalar PriorityV2VAttack.node[14].nic.mac1609_4 sentAcks:count 0
+attr source org_car2x_veins_modules_mac_sigSentAck
+scalar PriorityV2VAttack.node[14].nic.mac1609_4 sentPackets:count 158
+attr source org_car2x_veins_modules_mac_sigSentPacket
+scalar PriorityV2VAttack.node[14].nic.mac1609_4 collisions:count 0
+attr source org_car2x_veins_modules_mac_sigCollision
+scalar PriorityV2VAttack.node[14].nic.mac1609_4 channelBusy:timeavg 0.032075350861312
+attr source org_car2x_veins_modules_mac_sigChannelBusy
+scalar PriorityV2VAttack.node[14].veinsmobility startTime 43
+scalar PriorityV2VAttack.node[14].veinsmobility totalTime 157
+scalar PriorityV2VAttack.node[14].veinsmobility stopTime 200
+scalar PriorityV2VAttack.node[14].veinsmobility minSpeed 0
+scalar PriorityV2VAttack.node[14].veinsmobility maxSpeed 13.999317840978
+scalar PriorityV2VAttack.node[14].veinsmobility totalDistance 1658.2676131381
+scalar PriorityV2VAttack.node[14].veinsmobility totalCO2Emission 363.62754227819
+scalar PriorityV2VAttack.node[15].appl generatedWSMs 1
+scalar PriorityV2VAttack.node[15].appl receivedWSMs 10367
+scalar PriorityV2VAttack.node[15].appl generatedBSMs 154
+scalar PriorityV2VAttack.node[15].appl receivedBSMs 1843
+scalar PriorityV2VAttack.node[15].appl generatedWSAs 0
+scalar PriorityV2VAttack.node[15].appl receivedWSAs 0
+scalar PriorityV2VAttack.node[15].nic.phy80211p busyTime 0.016986805194805
+scalar PriorityV2VAttack.node[15].nic.mac1609_4 ReceivedUnicastPackets 0
+scalar PriorityV2VAttack.node[15].nic.mac1609_4 ReceivedBroadcasts 12210
+scalar PriorityV2VAttack.node[15].nic.mac1609_4 SentPackets 155
+scalar PriorityV2VAttack.node[15].nic.mac1609_4 SentAcknowledgements 0
+scalar PriorityV2VAttack.node[15].nic.mac1609_4 RetriesExceeded 0
+scalar PriorityV2VAttack.node[15].nic.mac1609_4 SNIRLostPackets 130
+scalar PriorityV2VAttack.node[15].nic.mac1609_4 RXTXLostPackets 0
+scalar PriorityV2VAttack.node[15].nic.mac1609_4 TotalLostPackets 130
+scalar PriorityV2VAttack.node[15].nic.mac1609_4 DroppedPacketsInMac 0
+scalar PriorityV2VAttack.node[15].nic.mac1609_4 TooLittleTime 0
+scalar PriorityV2VAttack.node[15].nic.mac1609_4 TimesIntoBackoff 158
+scalar PriorityV2VAttack.node[15].nic.mac1609_4 SlotsBackoff 225
+scalar PriorityV2VAttack.node[15].nic.mac1609_4 NumInternalContention 0
+scalar PriorityV2VAttack.node[15].nic.mac1609_4 totalBusyTime 2.629211
+scalar PriorityV2VAttack.node[15].nic.mac1609_4 NodeDownCount 0
+scalar PriorityV2VAttack.node[15].nic.mac1609_4 retriesExceeded:count 0
+attr source org_car2x_veins_modules_mac_sigRetriesExceeded
+scalar PriorityV2VAttack.node[15].nic.mac1609_4 sentAcks:count 0
+attr source org_car2x_veins_modules_mac_sigSentAck
+scalar PriorityV2VAttack.node[15].nic.mac1609_4 sentPackets:count 155
+attr source org_car2x_veins_modules_mac_sigSentPacket
+scalar PriorityV2VAttack.node[15].nic.mac1609_4 collisions:count 0
+attr source org_car2x_veins_modules_mac_sigCollision
+scalar PriorityV2VAttack.node[15].nic.mac1609_4 channelBusy:timeavg 0.017072798701298
+attr source org_car2x_veins_modules_mac_sigChannelBusy
+scalar PriorityV2VAttack.node[15].veinsmobility startTime 46
+scalar PriorityV2VAttack.node[15].veinsmobility totalTime 154
+scalar PriorityV2VAttack.node[15].veinsmobility stopTime 200
+scalar PriorityV2VAttack.node[15].veinsmobility minSpeed 2.1298658241565
+scalar PriorityV2VAttack.node[15].veinsmobility maxSpeed 13.994507228746
+scalar PriorityV2VAttack.node[15].veinsmobility totalDistance 1631.2665452796
+scalar PriorityV2VAttack.node[15].veinsmobility totalCO2Emission 352.88838843021
+scalar PriorityV2VAttack.node[16].appl generatedWSMs 1
+scalar PriorityV2VAttack.node[16].appl receivedWSMs 10
+scalar PriorityV2VAttack.node[16].appl generatedBSMs 151
+scalar PriorityV2VAttack.node[16].appl receivedBSMs 2212
+scalar PriorityV2VAttack.node[16].appl generatedWSAs 0
+scalar PriorityV2VAttack.node[16].appl receivedWSAs 0
+scalar PriorityV2VAttack.node[16].nic.phy80211p busyTime 0.0016118675496688
+scalar PriorityV2VAttack.node[16].nic.mac1609_4 ReceivedUnicastPackets 0
+scalar PriorityV2VAttack.node[16].nic.mac1609_4 ReceivedBroadcasts 2222
+scalar PriorityV2VAttack.node[16].nic.mac1609_4 SentPackets 152
+scalar PriorityV2VAttack.node[16].nic.mac1609_4 SentAcknowledgements 0
+scalar PriorityV2VAttack.node[16].nic.mac1609_4 RetriesExceeded 0
+scalar PriorityV2VAttack.node[16].nic.mac1609_4 SNIRLostPackets 106
+scalar PriorityV2VAttack.node[16].nic.mac1609_4 RXTXLostPackets 0
+scalar PriorityV2VAttack.node[16].nic.mac1609_4 TotalLostPackets 106
+scalar PriorityV2VAttack.node[16].nic.mac1609_4 DroppedPacketsInMac 0
+scalar PriorityV2VAttack.node[16].nic.mac1609_4 TooLittleTime 0
+scalar PriorityV2VAttack.node[16].nic.mac1609_4 TimesIntoBackoff 152
+scalar PriorityV2VAttack.node[16].nic.mac1609_4 SlotsBackoff 237
+scalar PriorityV2VAttack.node[16].nic.mac1609_4 NumInternalContention 0
+scalar PriorityV2VAttack.node[16].nic.mac1609_4 totalBusyTime 0.25948
+scalar PriorityV2VAttack.node[16].nic.mac1609_4 NodeDownCount 0
+scalar PriorityV2VAttack.node[16].nic.mac1609_4 retriesExceeded:count 0
+attr source org_car2x_veins_modules_mac_sigRetriesExceeded
+scalar PriorityV2VAttack.node[16].nic.mac1609_4 sentAcks:count 0
+attr source org_car2x_veins_modules_mac_sigSentAck
+scalar PriorityV2VAttack.node[16].nic.mac1609_4 sentPackets:count 152
+attr source org_car2x_veins_modules_mac_sigSentPacket
+scalar PriorityV2VAttack.node[16].nic.mac1609_4 collisions:count 0
+attr source org_car2x_veins_modules_mac_sigCollision
+scalar PriorityV2VAttack.node[16].nic.mac1609_4 channelBusy:timeavg 0.0017184105960265
+attr source org_car2x_veins_modules_mac_sigChannelBusy
+scalar PriorityV2VAttack.node[16].veinsmobility startTime 49
+scalar PriorityV2VAttack.node[16].veinsmobility totalTime 151
+scalar PriorityV2VAttack.node[16].veinsmobility stopTime 200
+scalar PriorityV2VAttack.node[16].veinsmobility minSpeed 3.9289234951894
+scalar PriorityV2VAttack.node[16].veinsmobility maxSpeed 12.063327381323
+scalar PriorityV2VAttack.node[16].veinsmobility totalDistance 1160.0922238939
+scalar PriorityV2VAttack.node[16].veinsmobility totalCO2Emission 261.04262757272
+scalar PriorityV2VAttack.node[17].appl generatedWSMs 1
+scalar PriorityV2VAttack.node[17].appl receivedWSMs 11
+scalar PriorityV2VAttack.node[17].appl generatedBSMs 148
+scalar PriorityV2VAttack.node[17].appl receivedBSMs 2204
+scalar PriorityV2VAttack.node[17].appl generatedWSAs 0
+scalar PriorityV2VAttack.node[17].appl receivedWSAs 0
+scalar PriorityV2VAttack.node[17].nic.phy80211p busyTime 0.0016541621621621
+scalar PriorityV2VAttack.node[17].nic.mac1609_4 ReceivedUnicastPackets 0
+scalar PriorityV2VAttack.node[17].nic.mac1609_4 ReceivedBroadcasts 2215
+scalar PriorityV2VAttack.node[17].nic.mac1609_4 SentPackets 149
+scalar PriorityV2VAttack.node[17].nic.mac1609_4 SentAcknowledgements 0
+scalar PriorityV2VAttack.node[17].nic.mac1609_4 RetriesExceeded 0
+scalar PriorityV2VAttack.node[17].nic.mac1609_4 SNIRLostPackets 123
+scalar PriorityV2VAttack.node[17].nic.mac1609_4 RXTXLostPackets 0
+scalar PriorityV2VAttack.node[17].nic.mac1609_4 TotalLostPackets 123
+scalar PriorityV2VAttack.node[17].nic.mac1609_4 DroppedPacketsInMac 0
+scalar PriorityV2VAttack.node[17].nic.mac1609_4 TooLittleTime 0
+scalar PriorityV2VAttack.node[17].nic.mac1609_4 TimesIntoBackoff 149
+scalar PriorityV2VAttack.node[17].nic.mac1609_4 SlotsBackoff 230
+scalar PriorityV2VAttack.node[17].nic.mac1609_4 NumInternalContention 0
+scalar PriorityV2VAttack.node[17].nic.mac1609_4 totalBusyTime 0.260589
+scalar PriorityV2VAttack.node[17].nic.mac1609_4 NodeDownCount 0
+scalar PriorityV2VAttack.node[17].nic.mac1609_4 retriesExceeded:count 0
+attr source org_car2x_veins_modules_mac_sigRetriesExceeded
+scalar PriorityV2VAttack.node[17].nic.mac1609_4 sentAcks:count 0
+attr source org_car2x_veins_modules_mac_sigSentAck
+scalar PriorityV2VAttack.node[17].nic.mac1609_4 sentPackets:count 149
+attr source org_car2x_veins_modules_mac_sigSentPacket
+scalar PriorityV2VAttack.node[17].nic.mac1609_4 collisions:count 0
+attr source org_car2x_veins_modules_mac_sigCollision
+scalar PriorityV2VAttack.node[17].nic.mac1609_4 channelBusy:timeavg 0.0017607364864865
+attr source org_car2x_veins_modules_mac_sigChannelBusy
+scalar PriorityV2VAttack.node[17].veinsmobility startTime 52
+scalar PriorityV2VAttack.node[17].veinsmobility totalTime 148
+scalar PriorityV2VAttack.node[17].veinsmobility stopTime 200
+scalar PriorityV2VAttack.node[17].veinsmobility minSpeed 4.1654516040827
+scalar PriorityV2VAttack.node[17].veinsmobility maxSpeed 12.824866217841
+scalar PriorityV2VAttack.node[17].veinsmobility totalDistance 1144.4690167129
+scalar PriorityV2VAttack.node[17].veinsmobility totalCO2Emission 257.54337215323
+scalar PriorityV2VAttack.node[18].appl generatedWSMs 1
+scalar PriorityV2VAttack.node[18].appl receivedWSMs 14
+scalar PriorityV2VAttack.node[18].appl generatedBSMs 145
+scalar PriorityV2VAttack.node[18].appl receivedBSMs 2211
+scalar PriorityV2VAttack.node[18].appl generatedWSAs 0
+scalar PriorityV2VAttack.node[18].appl receivedWSAs 0
+scalar PriorityV2VAttack.node[18].nic.phy80211p busyTime 0.0049859862068965
+scalar PriorityV2VAttack.node[18].nic.mac1609_4 ReceivedUnicastPackets 0
+scalar PriorityV2VAttack.node[18].nic.mac1609_4 ReceivedBroadcasts 2225
+scalar PriorityV2VAttack.node[18].nic.mac1609_4 SentPackets 146
+scalar PriorityV2VAttack.node[18].nic.mac1609_4 SentAcknowledgements 0
+scalar PriorityV2VAttack.node[18].nic.mac1609_4 RetriesExceeded 0
+scalar PriorityV2VAttack.node[18].nic.mac1609_4 SNIRLostPackets 2174
+scalar PriorityV2VAttack.node[18].nic.mac1609_4 RXTXLostPackets 0
+scalar PriorityV2VAttack.node[18].nic.mac1609_4 TotalLostPackets 2174
+scalar PriorityV2VAttack.node[18].nic.mac1609_4 DroppedPacketsInMac 0
+scalar PriorityV2VAttack.node[18].nic.mac1609_4 TooLittleTime 0
+scalar PriorityV2VAttack.node[18].nic.mac1609_4 TimesIntoBackoff 146
+scalar PriorityV2VAttack.node[18].nic.mac1609_4 SlotsBackoff 258
+scalar PriorityV2VAttack.node[18].nic.mac1609_4 NumInternalContention 0
+scalar PriorityV2VAttack.node[18].nic.mac1609_4 totalBusyTime 0.737986
+scalar PriorityV2VAttack.node[18].nic.mac1609_4 NodeDownCount 0
+scalar PriorityV2VAttack.node[18].nic.mac1609_4 retriesExceeded:count 0
+attr source org_car2x_veins_modules_mac_sigRetriesExceeded
+scalar PriorityV2VAttack.node[18].nic.mac1609_4 sentAcks:count 0
+attr source org_car2x_veins_modules_mac_sigSentAck
+scalar PriorityV2VAttack.node[18].nic.mac1609_4 sentPackets:count 146
+attr source org_car2x_veins_modules_mac_sigSentPacket
+scalar PriorityV2VAttack.node[18].nic.mac1609_4 collisions:count 0
+attr source org_car2x_veins_modules_mac_sigCollision
+scalar PriorityV2VAttack.node[18].nic.mac1609_4 channelBusy:timeavg 0.0050895586206897
+attr source org_car2x_veins_modules_mac_sigChannelBusy
+scalar PriorityV2VAttack.node[18].veinsmobility startTime 55
+scalar PriorityV2VAttack.node[18].veinsmobility totalTime 145
+scalar PriorityV2VAttack.node[18].veinsmobility stopTime 200
+scalar PriorityV2VAttack.node[18].veinsmobility minSpeed 4.0059353912065
+scalar PriorityV2VAttack.node[18].veinsmobility maxSpeed 13.491267315593
+scalar PriorityV2VAttack.node[18].veinsmobility totalDistance 1129.8419679487
+scalar PriorityV2VAttack.node[18].veinsmobility totalCO2Emission 255.72665421292
+scalar PriorityV2VAttack.node[20].appl generatedWSMs 1
+scalar PriorityV2VAttack.node[20].appl receivedWSMs 14
+scalar PriorityV2VAttack.node[20].appl generatedBSMs 142
+scalar PriorityV2VAttack.node[20].appl receivedBSMs 2212
+scalar PriorityV2VAttack.node[20].appl generatedWSAs 0
+scalar PriorityV2VAttack.node[20].appl receivedWSAs 0
+scalar PriorityV2VAttack.node[20].nic.phy80211p busyTime 0.011868338028171
+scalar PriorityV2VAttack.node[20].nic.mac1609_4 ReceivedUnicastPackets 0
+scalar PriorityV2VAttack.node[20].nic.mac1609_4 ReceivedBroadcasts 2226
+scalar PriorityV2VAttack.node[20].nic.mac1609_4 SentPackets 143
+scalar PriorityV2VAttack.node[20].nic.mac1609_4 SentAcknowledgements 0
+scalar PriorityV2VAttack.node[20].nic.mac1609_4 RetriesExceeded 0
+scalar PriorityV2VAttack.node[20].nic.mac1609_4 SNIRLostPackets 6321
+scalar PriorityV2VAttack.node[20].nic.mac1609_4 RXTXLostPackets 0
+scalar PriorityV2VAttack.node[20].nic.mac1609_4 TotalLostPackets 6321
+scalar PriorityV2VAttack.node[20].nic.mac1609_4 DroppedPacketsInMac 0
+scalar PriorityV2VAttack.node[20].nic.mac1609_4 TooLittleTime 0
+scalar PriorityV2VAttack.node[20].nic.mac1609_4 TimesIntoBackoff 146
+scalar PriorityV2VAttack.node[20].nic.mac1609_4 SlotsBackoff 235
+scalar PriorityV2VAttack.node[20].nic.mac1609_4 NumInternalContention 0
+scalar PriorityV2VAttack.node[20].nic.mac1609_4 totalBusyTime 1.698999
+scalar PriorityV2VAttack.node[20].nic.mac1609_4 NodeDownCount 0
+scalar PriorityV2VAttack.node[20].nic.mac1609_4 retriesExceeded:count 0
+attr source org_car2x_veins_modules_mac_sigRetriesExceeded
+scalar PriorityV2VAttack.node[20].nic.mac1609_4 sentAcks:count 0
+attr source org_car2x_veins_modules_mac_sigSentAck
+scalar PriorityV2VAttack.node[20].nic.mac1609_4 sentPackets:count 143
+attr source org_car2x_veins_modules_mac_sigSentPacket
+scalar PriorityV2VAttack.node[20].nic.mac1609_4 collisions:count 0
+attr source org_car2x_veins_modules_mac_sigCollision
+scalar PriorityV2VAttack.node[20].nic.mac1609_4 channelBusy:timeavg 0.011964781690143
+attr source org_car2x_veins_modules_mac_sigChannelBusy
+scalar PriorityV2VAttack.node[20].veinsmobility startTime 58
+scalar PriorityV2VAttack.node[20].veinsmobility totalTime 142
+scalar PriorityV2VAttack.node[20].veinsmobility stopTime 200
+scalar PriorityV2VAttack.node[20].veinsmobility minSpeed 4.1077073881151
+scalar PriorityV2VAttack.node[20].veinsmobility maxSpeed 13.992575319903
+scalar PriorityV2VAttack.node[20].veinsmobility totalDistance 1113.2984801237
+scalar PriorityV2VAttack.node[20].veinsmobility totalCO2Emission 256.65022917249
+scalar PriorityV2VAttack.node[21].appl generatedWSMs 1
+scalar PriorityV2VAttack.node[21].appl receivedWSMs 11
+scalar PriorityV2VAttack.node[21].appl generatedBSMs 139
+scalar PriorityV2VAttack.node[21].appl receivedBSMs 2189
+scalar PriorityV2VAttack.node[21].appl generatedWSAs 0
+scalar PriorityV2VAttack.node[21].appl receivedWSAs 0
+scalar PriorityV2VAttack.node[21].nic.phy80211p busyTime 0.012153899280578
+scalar PriorityV2VAttack.node[21].nic.mac1609_4 ReceivedUnicastPackets 0
+scalar PriorityV2VAttack.node[21].nic.mac1609_4 ReceivedBroadcasts 2200
+scalar PriorityV2VAttack.node[21].nic.mac1609_4 SentPackets 140
+scalar PriorityV2VAttack.node[21].nic.mac1609_4 SentAcknowledgements 0
+scalar PriorityV2VAttack.node[21].nic.mac1609_4 RetriesExceeded 0
+scalar PriorityV2VAttack.node[21].nic.mac1609_4 SNIRLostPackets 6358
+scalar PriorityV2VAttack.node[21].nic.mac1609_4 RXTXLostPackets 0
+scalar PriorityV2VAttack.node[21].nic.mac1609_4 TotalLostPackets 6358
+scalar PriorityV2VAttack.node[21].nic.mac1609_4 DroppedPacketsInMac 0
+scalar PriorityV2VAttack.node[21].nic.mac1609_4 TooLittleTime 0
+scalar PriorityV2VAttack.node[21].nic.mac1609_4 TimesIntoBackoff 142
+scalar PriorityV2VAttack.node[21].nic.mac1609_4 SlotsBackoff 213
+scalar PriorityV2VAttack.node[21].nic.mac1609_4 NumInternalContention 0
+scalar PriorityV2VAttack.node[21].nic.mac1609_4 totalBusyTime 1.701484
+scalar PriorityV2VAttack.node[21].nic.mac1609_4 NodeDownCount 0
+scalar PriorityV2VAttack.node[21].nic.mac1609_4 retriesExceeded:count 0
+attr source org_car2x_veins_modules_mac_sigRetriesExceeded
+scalar PriorityV2VAttack.node[21].nic.mac1609_4 sentAcks:count 0
+attr source org_car2x_veins_modules_mac_sigSentAck
+scalar PriorityV2VAttack.node[21].nic.mac1609_4 sentPackets:count 140
+attr source org_car2x_veins_modules_mac_sigSentPacket
+scalar PriorityV2VAttack.node[21].nic.mac1609_4 collisions:count 0
+attr source org_car2x_veins_modules_mac_sigCollision
+scalar PriorityV2VAttack.node[21].nic.mac1609_4 channelBusy:timeavg 0.012240892086333
+attr source org_car2x_veins_modules_mac_sigChannelBusy
+scalar PriorityV2VAttack.node[21].veinsmobility startTime 61
+scalar PriorityV2VAttack.node[21].veinsmobility totalTime 139
+scalar PriorityV2VAttack.node[21].veinsmobility stopTime 200
+scalar PriorityV2VAttack.node[21].veinsmobility minSpeed 3.9168212624827
+scalar PriorityV2VAttack.node[21].veinsmobility maxSpeed 13.974547270818
+scalar PriorityV2VAttack.node[21].veinsmobility totalDistance 1098.2479446717
+scalar PriorityV2VAttack.node[21].veinsmobility totalCO2Emission 253.51976159879
+scalar PriorityV2VAttack.node[22].appl generatedWSMs 0
+scalar PriorityV2VAttack.node[22].appl receivedWSMs 0
+scalar PriorityV2VAttack.node[22].appl generatedBSMs 136
+scalar PriorityV2VAttack.node[22].appl receivedBSMs 2004
+scalar PriorityV2VAttack.node[22].appl generatedWSAs 0
+scalar PriorityV2VAttack.node[22].appl receivedWSAs 0
+scalar PriorityV2VAttack.node[22].nic.phy80211p busyTime 0.0054464117647059
+scalar PriorityV2VAttack.node[22].nic.mac1609_4 ReceivedUnicastPackets 0
+scalar PriorityV2VAttack.node[22].nic.mac1609_4 ReceivedBroadcasts 2004
+scalar PriorityV2VAttack.node[22].nic.mac1609_4 SentPackets 136
+scalar PriorityV2VAttack.node[22].nic.mac1609_4 SentAcknowledgements 0
+scalar PriorityV2VAttack.node[22].nic.mac1609_4 RetriesExceeded 0
+scalar PriorityV2VAttack.node[22].nic.mac1609_4 SNIRLostPackets 2557
+scalar PriorityV2VAttack.node[22].nic.mac1609_4 RXTXLostPackets 0
+scalar PriorityV2VAttack.node[22].nic.mac1609_4 TotalLostPackets 2557
+scalar PriorityV2VAttack.node[22].nic.mac1609_4 DroppedPacketsInMac 0
+scalar PriorityV2VAttack.node[22].nic.mac1609_4 TooLittleTime 0
+scalar PriorityV2VAttack.node[22].nic.mac1609_4 TimesIntoBackoff 136
+scalar PriorityV2VAttack.node[22].nic.mac1609_4 SlotsBackoff 202
+scalar PriorityV2VAttack.node[22].nic.mac1609_4 NumInternalContention 0
+scalar PriorityV2VAttack.node[22].nic.mac1609_4 totalBusyTime 0.754595449885
+scalar PriorityV2VAttack.node[22].nic.mac1609_4 NodeDownCount 0
+scalar PriorityV2VAttack.node[22].nic.mac1609_4 retriesExceeded:count 0
+attr source org_car2x_veins_modules_mac_sigRetriesExceeded
+scalar PriorityV2VAttack.node[22].nic.mac1609_4 sentAcks:count 0
+attr source org_car2x_veins_modules_mac_sigSentAck
+scalar PriorityV2VAttack.node[22].nic.mac1609_4 sentPackets:count 136
+attr source org_car2x_veins_modules_mac_sigSentPacket
+scalar PriorityV2VAttack.node[22].nic.mac1609_4 collisions:count 0
+attr source org_car2x_veins_modules_mac_sigCollision
+scalar PriorityV2VAttack.node[22].nic.mac1609_4 channelBusy:timeavg 0.0055484959550368
+attr source org_car2x_veins_modules_mac_sigChannelBusy
+scalar PriorityV2VAttack.node[22].veinsmobility startTime 64
+scalar PriorityV2VAttack.node[22].veinsmobility totalTime 136
+scalar PriorityV2VAttack.node[22].veinsmobility stopTime 200
+scalar PriorityV2VAttack.node[22].veinsmobility minSpeed 4.0312268259559
+scalar PriorityV2VAttack.node[22].veinsmobility maxSpeed 13.999499795509
+scalar PriorityV2VAttack.node[22].veinsmobility totalDistance 1805.5283282177
+scalar PriorityV2VAttack.node[22].veinsmobility totalCO2Emission 327.18201563337
+scalar PriorityV2VAttack.node[23].appl generatedWSMs 0
+scalar PriorityV2VAttack.node[23].appl receivedWSMs 0
+scalar PriorityV2VAttack.node[23].appl generatedBSMs 133
+scalar PriorityV2VAttack.node[23].appl receivedBSMs 2238
+scalar PriorityV2VAttack.node[23].appl generatedWSAs 0
+scalar PriorityV2VAttack.node[23].appl receivedWSAs 0
+scalar PriorityV2VAttack.node[23].nic.phy80211p busyTime 0.0020330827067669
+scalar PriorityV2VAttack.node[23].nic.mac1609_4 ReceivedUnicastPackets 0
+scalar PriorityV2VAttack.node[23].nic.mac1609_4 ReceivedBroadcasts 2238
+scalar PriorityV2VAttack.node[23].nic.mac1609_4 SentPackets 133
+scalar PriorityV2VAttack.node[23].nic.mac1609_4 SentAcknowledgements 0
+scalar PriorityV2VAttack.node[23].nic.mac1609_4 RetriesExceeded 0
+scalar PriorityV2VAttack.node[23].nic.mac1609_4 SNIRLostPackets 362
+scalar PriorityV2VAttack.node[23].nic.mac1609_4 RXTXLostPackets 0
+scalar PriorityV2VAttack.node[23].nic.mac1609_4 TotalLostPackets 362
+scalar PriorityV2VAttack.node[23].nic.mac1609_4 DroppedPacketsInMac 0
+scalar PriorityV2VAttack.node[23].nic.mac1609_4 TooLittleTime 0
+scalar PriorityV2VAttack.node[23].nic.mac1609_4 TimesIntoBackoff 133
+scalar PriorityV2VAttack.node[23].nic.mac1609_4 SlotsBackoff 205
+scalar PriorityV2VAttack.node[23].nic.mac1609_4 NumInternalContention 0
+scalar PriorityV2VAttack.node[23].nic.mac1609_4 totalBusyTime 0.284365
+scalar PriorityV2VAttack.node[23].nic.mac1609_4 NodeDownCount 0
+scalar PriorityV2VAttack.node[23].nic.mac1609_4 retriesExceeded:count 0
+attr source org_car2x_veins_modules_mac_sigRetriesExceeded
+scalar PriorityV2VAttack.node[23].nic.mac1609_4 sentAcks:count 0
+attr source org_car2x_veins_modules_mac_sigSentAck
+scalar PriorityV2VAttack.node[23].nic.mac1609_4 sentPackets:count 133
+attr source org_car2x_veins_modules_mac_sigSentPacket
+scalar PriorityV2VAttack.node[23].nic.mac1609_4 collisions:count 0
+attr source org_car2x_veins_modules_mac_sigCollision
+scalar PriorityV2VAttack.node[23].nic.mac1609_4 channelBusy:timeavg 0.0021380827067669
+attr source org_car2x_veins_modules_mac_sigChannelBusy
+scalar PriorityV2VAttack.node[23].veinsmobility startTime 67
+scalar PriorityV2VAttack.node[23].veinsmobility totalTime 133
+scalar PriorityV2VAttack.node[23].veinsmobility stopTime 200
+scalar PriorityV2VAttack.node[23].veinsmobility minSpeed 3.9833337411538
+scalar PriorityV2VAttack.node[23].veinsmobility maxSpeed 13.997477567426
+scalar PriorityV2VAttack.node[23].veinsmobility totalDistance 1668.6704782727
+scalar PriorityV2VAttack.node[23].veinsmobility totalCO2Emission 298.6783729727
+scalar PriorityV2VAttack.node[24].appl generatedWSMs 0
+scalar PriorityV2VAttack.node[24].appl receivedWSMs 0
+scalar PriorityV2VAttack.node[24].appl generatedBSMs 130
+scalar PriorityV2VAttack.node[24].appl receivedBSMs 2245
+scalar PriorityV2VAttack.node[24].appl generatedWSAs 0
+scalar PriorityV2VAttack.node[24].appl receivedWSAs 0
+scalar PriorityV2VAttack.node[24].nic.phy80211p busyTime 0.0020528
+scalar PriorityV2VAttack.node[24].nic.mac1609_4 ReceivedUnicastPackets 0
+scalar PriorityV2VAttack.node[24].nic.mac1609_4 ReceivedBroadcasts 2245
+scalar PriorityV2VAttack.node[24].nic.mac1609_4 SentPackets 130
+scalar PriorityV2VAttack.node[24].nic.mac1609_4 SentAcknowledgements 0
+scalar PriorityV2VAttack.node[24].nic.mac1609_4 RetriesExceeded 0
+scalar PriorityV2VAttack.node[24].nic.mac1609_4 SNIRLostPackets 321
+scalar PriorityV2VAttack.node[24].nic.mac1609_4 RXTXLostPackets 0
+scalar PriorityV2VAttack.node[24].nic.mac1609_4 TotalLostPackets 321
+scalar PriorityV2VAttack.node[24].nic.mac1609_4 DroppedPacketsInMac 0
+scalar PriorityV2VAttack.node[24].nic.mac1609_4 TooLittleTime 0
+scalar PriorityV2VAttack.node[24].nic.mac1609_4 TimesIntoBackoff 130
+scalar PriorityV2VAttack.node[24].nic.mac1609_4 SlotsBackoff 202
+scalar PriorityV2VAttack.node[24].nic.mac1609_4 NumInternalContention 0
+scalar PriorityV2VAttack.node[24].nic.mac1609_4 totalBusyTime 0.280514
+scalar PriorityV2VAttack.node[24].nic.mac1609_4 NodeDownCount 0
+scalar PriorityV2VAttack.node[24].nic.mac1609_4 retriesExceeded:count 0
+attr source org_car2x_veins_modules_mac_sigRetriesExceeded
+scalar PriorityV2VAttack.node[24].nic.mac1609_4 sentAcks:count 0
+attr source org_car2x_veins_modules_mac_sigSentAck
+scalar PriorityV2VAttack.node[24].nic.mac1609_4 sentPackets:count 130
+attr source org_car2x_veins_modules_mac_sigSentPacket
+scalar PriorityV2VAttack.node[24].nic.mac1609_4 collisions:count 0
+attr source org_car2x_veins_modules_mac_sigCollision
+scalar PriorityV2VAttack.node[24].nic.mac1609_4 channelBusy:timeavg 0.0021578
+attr source org_car2x_veins_modules_mac_sigChannelBusy
+scalar PriorityV2VAttack.node[24].veinsmobility startTime 70
+scalar PriorityV2VAttack.node[24].veinsmobility totalTime 130
+scalar PriorityV2VAttack.node[24].veinsmobility stopTime 200
+scalar PriorityV2VAttack.node[24].veinsmobility minSpeed 4.0109846863884
+scalar PriorityV2VAttack.node[24].veinsmobility maxSpeed 13.996943999445
+scalar PriorityV2VAttack.node[24].veinsmobility totalDistance 1641.2199423861
+scalar PriorityV2VAttack.node[24].veinsmobility totalCO2Emission 296.68592102826
+scalar PriorityV2VAttack.node[25].appl generatedWSMs 0
+scalar PriorityV2VAttack.node[25].appl receivedWSMs 0
+scalar PriorityV2VAttack.node[25].appl generatedBSMs 127
+scalar PriorityV2VAttack.node[25].appl receivedBSMs 2253
+scalar PriorityV2VAttack.node[25].appl generatedWSAs 0
+scalar PriorityV2VAttack.node[25].appl receivedWSAs 0
+scalar PriorityV2VAttack.node[25].nic.phy80211p busyTime 0.0020906456692913
+scalar PriorityV2VAttack.node[25].nic.mac1609_4 ReceivedUnicastPackets 0
+scalar PriorityV2VAttack.node[25].nic.mac1609_4 ReceivedBroadcasts 2253
+scalar PriorityV2VAttack.node[25].nic.mac1609_4 SentPackets 127
+scalar PriorityV2VAttack.node[25].nic.mac1609_4 SentAcknowledgements 0
+scalar PriorityV2VAttack.node[25].nic.mac1609_4 RetriesExceeded 0
+scalar PriorityV2VAttack.node[25].nic.mac1609_4 SNIRLostPackets 300
+scalar PriorityV2VAttack.node[25].nic.mac1609_4 RXTXLostPackets 0
+scalar PriorityV2VAttack.node[25].nic.mac1609_4 TotalLostPackets 300
+scalar PriorityV2VAttack.node[25].nic.mac1609_4 DroppedPacketsInMac 0
+scalar PriorityV2VAttack.node[25].nic.mac1609_4 TooLittleTime 0
+scalar PriorityV2VAttack.node[25].nic.mac1609_4 TimesIntoBackoff 127
+scalar PriorityV2VAttack.node[25].nic.mac1609_4 SlotsBackoff 189
+scalar PriorityV2VAttack.node[25].nic.mac1609_4 NumInternalContention 0
+scalar PriorityV2VAttack.node[25].nic.mac1609_4 totalBusyTime 0.278847
+scalar PriorityV2VAttack.node[25].nic.mac1609_4 NodeDownCount 0
+scalar PriorityV2VAttack.node[25].nic.mac1609_4 retriesExceeded:count 0
+attr source org_car2x_veins_modules_mac_sigRetriesExceeded
+scalar PriorityV2VAttack.node[25].nic.mac1609_4 sentAcks:count 0
+attr source org_car2x_veins_modules_mac_sigSentAck
+scalar PriorityV2VAttack.node[25].nic.mac1609_4 sentPackets:count 127
+attr source org_car2x_veins_modules_mac_sigSentPacket
+scalar PriorityV2VAttack.node[25].nic.mac1609_4 collisions:count 0
+attr source org_car2x_veins_modules_mac_sigCollision
+scalar PriorityV2VAttack.node[25].nic.mac1609_4 channelBusy:timeavg 0.0021956456692913
+attr source org_car2x_veins_modules_mac_sigChannelBusy
+scalar PriorityV2VAttack.node[25].veinsmobility startTime 73
+scalar PriorityV2VAttack.node[25].veinsmobility totalTime 127
+scalar PriorityV2VAttack.node[25].veinsmobility stopTime 200
+scalar PriorityV2VAttack.node[25].veinsmobility minSpeed 3.951523708284
+scalar PriorityV2VAttack.node[25].veinsmobility maxSpeed 13.999659525047
+scalar PriorityV2VAttack.node[25].veinsmobility totalDistance 1614.1669397916
+scalar PriorityV2VAttack.node[25].veinsmobility totalCO2Emission 295.48780281564
+scalar PriorityV2VAttack.node[26].appl generatedWSMs 0
+scalar PriorityV2VAttack.node[26].appl receivedWSMs 0
+scalar PriorityV2VAttack.node[26].appl generatedBSMs 124
+scalar PriorityV2VAttack.node[26].appl receivedBSMs 2260
+scalar PriorityV2VAttack.node[26].appl generatedWSAs 0
+scalar PriorityV2VAttack.node[26].appl receivedWSAs 0
+scalar PriorityV2VAttack.node[26].nic.phy80211p busyTime 0.0021194193548387
+scalar PriorityV2VAttack.node[26].nic.mac1609_4 ReceivedUnicastPackets 0
+scalar PriorityV2VAttack.node[26].nic.mac1609_4 ReceivedBroadcasts 2260
+scalar PriorityV2VAttack.node[26].nic.mac1609_4 SentPackets 124
+scalar PriorityV2VAttack.node[26].nic.mac1609_4 SentAcknowledgements 0
+scalar PriorityV2VAttack.node[26].nic.mac1609_4 RetriesExceeded 0
+scalar PriorityV2VAttack.node[26].nic.mac1609_4 SNIRLostPackets 267
+scalar PriorityV2VAttack.node[26].nic.mac1609_4 RXTXLostPackets 0
+scalar PriorityV2VAttack.node[26].nic.mac1609_4 TotalLostPackets 267
+scalar PriorityV2VAttack.node[26].nic.mac1609_4 DroppedPacketsInMac 0
+scalar PriorityV2VAttack.node[26].nic.mac1609_4 TooLittleTime 0
+scalar PriorityV2VAttack.node[26].nic.mac1609_4 TimesIntoBackoff 124
+scalar PriorityV2VAttack.node[26].nic.mac1609_4 SlotsBackoff 190
+scalar PriorityV2VAttack.node[26].nic.mac1609_4 NumInternalContention 0
+scalar PriorityV2VAttack.node[26].nic.mac1609_4 totalBusyTime 0.275828
+scalar PriorityV2VAttack.node[26].nic.mac1609_4 NodeDownCount 0
+scalar PriorityV2VAttack.node[26].nic.mac1609_4 retriesExceeded:count 0
+attr source org_car2x_veins_modules_mac_sigRetriesExceeded
+scalar PriorityV2VAttack.node[26].nic.mac1609_4 sentAcks:count 0
+attr source org_car2x_veins_modules_mac_sigSentAck
+scalar PriorityV2VAttack.node[26].nic.mac1609_4 sentPackets:count 124
+attr source org_car2x_veins_modules_mac_sigSentPacket
+scalar PriorityV2VAttack.node[26].nic.mac1609_4 collisions:count 0
+attr source org_car2x_veins_modules_mac_sigCollision
+scalar PriorityV2VAttack.node[26].nic.mac1609_4 channelBusy:timeavg 0.0022244193548387
+attr source org_car2x_veins_modules_mac_sigChannelBusy
+scalar PriorityV2VAttack.node[26].veinsmobility startTime 76
+scalar PriorityV2VAttack.node[26].veinsmobility totalTime 124
+scalar PriorityV2VAttack.node[26].veinsmobility stopTime 200
+scalar PriorityV2VAttack.node[26].veinsmobility minSpeed 4.1179416208439
+scalar PriorityV2VAttack.node[26].veinsmobility maxSpeed 13.994778898368
+scalar PriorityV2VAttack.node[26].veinsmobility totalDistance 1587.8256101165
+scalar PriorityV2VAttack.node[26].veinsmobility totalCO2Emission 289.34886556986
+scalar PriorityV2VAttack.node[27].appl generatedWSMs 0
+scalar PriorityV2VAttack.node[27].appl receivedWSMs 0
+scalar PriorityV2VAttack.node[27].appl generatedBSMs 121
+scalar PriorityV2VAttack.node[27].appl receivedBSMs 2257
+scalar PriorityV2VAttack.node[27].appl generatedWSAs 0
+scalar PriorityV2VAttack.node[27].appl receivedWSAs 0
+scalar PriorityV2VAttack.node[27].nic.phy80211p busyTime 0.0021642314049586
+scalar PriorityV2VAttack.node[27].nic.mac1609_4 ReceivedUnicastPackets 0
+scalar PriorityV2VAttack.node[27].nic.mac1609_4 ReceivedBroadcasts 2257
+scalar PriorityV2VAttack.node[27].nic.mac1609_4 SentPackets 121
+scalar PriorityV2VAttack.node[27].nic.mac1609_4 SentAcknowledgements 0
+scalar PriorityV2VAttack.node[27].nic.mac1609_4 RetriesExceeded 0
+scalar PriorityV2VAttack.node[27].nic.mac1609_4 SNIRLostPackets 261
+scalar PriorityV2VAttack.node[27].nic.mac1609_4 RXTXLostPackets 0
+scalar PriorityV2VAttack.node[27].nic.mac1609_4 TotalLostPackets 261
+scalar PriorityV2VAttack.node[27].nic.mac1609_4 DroppedPacketsInMac 0
+scalar PriorityV2VAttack.node[27].nic.mac1609_4 TooLittleTime 0
+scalar PriorityV2VAttack.node[27].nic.mac1609_4 TimesIntoBackoff 121
+scalar PriorityV2VAttack.node[27].nic.mac1609_4 SlotsBackoff 180
+scalar PriorityV2VAttack.node[27].nic.mac1609_4 NumInternalContention 0
+scalar PriorityV2VAttack.node[27].nic.mac1609_4 totalBusyTime 0.274577
+scalar PriorityV2VAttack.node[27].nic.mac1609_4 NodeDownCount 0
+scalar PriorityV2VAttack.node[27].nic.mac1609_4 retriesExceeded:count 0
+attr source org_car2x_veins_modules_mac_sigRetriesExceeded
+scalar PriorityV2VAttack.node[27].nic.mac1609_4 sentAcks:count 0
+attr source org_car2x_veins_modules_mac_sigSentAck
+scalar PriorityV2VAttack.node[27].nic.mac1609_4 sentPackets:count 121
+attr source org_car2x_veins_modules_mac_sigSentPacket
+scalar PriorityV2VAttack.node[27].nic.mac1609_4 collisions:count 0
+attr source org_car2x_veins_modules_mac_sigCollision
+scalar PriorityV2VAttack.node[27].nic.mac1609_4 channelBusy:timeavg 0.0022692314049586
+attr source org_car2x_veins_modules_mac_sigChannelBusy
+scalar PriorityV2VAttack.node[27].veinsmobility startTime 79
+scalar PriorityV2VAttack.node[27].veinsmobility totalTime 121
+scalar PriorityV2VAttack.node[27].veinsmobility stopTime 200
+scalar PriorityV2VAttack.node[27].veinsmobility minSpeed 3.8541923716738
+scalar PriorityV2VAttack.node[27].veinsmobility maxSpeed 13.995070113812
+scalar PriorityV2VAttack.node[27].veinsmobility totalDistance 1561.7388774321
+scalar PriorityV2VAttack.node[27].veinsmobility totalCO2Emission 287.78699632418
+scalar PriorityV2VAttack.node[28].appl generatedWSMs 0
+scalar PriorityV2VAttack.node[28].appl receivedWSMs 0
+scalar PriorityV2VAttack.node[28].appl generatedBSMs 118
+scalar PriorityV2VAttack.node[28].appl receivedBSMs 2274
+scalar PriorityV2VAttack.node[28].appl generatedWSAs 0
+scalar PriorityV2VAttack.node[28].appl receivedWSAs 0
+scalar PriorityV2VAttack.node[28].nic.phy80211p busyTime 0.0022315932203389
+scalar PriorityV2VAttack.node[28].nic.mac1609_4 ReceivedUnicastPackets 0
+scalar PriorityV2VAttack.node[28].nic.mac1609_4 ReceivedBroadcasts 2274
+scalar PriorityV2VAttack.node[28].nic.mac1609_4 SentPackets 118
+scalar PriorityV2VAttack.node[28].nic.mac1609_4 SentAcknowledgements 0
+scalar PriorityV2VAttack.node[28].nic.mac1609_4 RetriesExceeded 0
+scalar PriorityV2VAttack.node[28].nic.mac1609_4 SNIRLostPackets 258
+scalar PriorityV2VAttack.node[28].nic.mac1609_4 RXTXLostPackets 0
+scalar PriorityV2VAttack.node[28].nic.mac1609_4 TotalLostPackets 258
+scalar PriorityV2VAttack.node[28].nic.mac1609_4 DroppedPacketsInMac 0
+scalar PriorityV2VAttack.node[28].nic.mac1609_4 TooLittleTime 0
+scalar PriorityV2VAttack.node[28].nic.mac1609_4 TimesIntoBackoff 118
+scalar PriorityV2VAttack.node[28].nic.mac1609_4 SlotsBackoff 165
+scalar PriorityV2VAttack.node[28].nic.mac1609_4 NumInternalContention 0
+scalar PriorityV2VAttack.node[28].nic.mac1609_4 totalBusyTime 0.275718
+scalar PriorityV2VAttack.node[28].nic.mac1609_4 NodeDownCount 0
+scalar PriorityV2VAttack.node[28].nic.mac1609_4 retriesExceeded:count 0
+attr source org_car2x_veins_modules_mac_sigRetriesExceeded
+scalar PriorityV2VAttack.node[28].nic.mac1609_4 sentAcks:count 0
+attr source org_car2x_veins_modules_mac_sigSentAck
+scalar PriorityV2VAttack.node[28].nic.mac1609_4 sentPackets:count 118
+attr source org_car2x_veins_modules_mac_sigSentPacket
+scalar PriorityV2VAttack.node[28].nic.mac1609_4 collisions:count 0
+attr source org_car2x_veins_modules_mac_sigCollision
+scalar PriorityV2VAttack.node[28].nic.mac1609_4 channelBusy:timeavg 0.0023365932203389
+attr source org_car2x_veins_modules_mac_sigChannelBusy
+scalar PriorityV2VAttack.node[28].veinsmobility startTime 82
+scalar PriorityV2VAttack.node[28].veinsmobility totalTime 118
+scalar PriorityV2VAttack.node[28].veinsmobility stopTime 200
+scalar PriorityV2VAttack.node[28].veinsmobility minSpeed 4.0478502342621
+scalar PriorityV2VAttack.node[28].veinsmobility maxSpeed 13.991711857808
+scalar PriorityV2VAttack.node[28].veinsmobility totalDistance 1535.2390593317
+scalar PriorityV2VAttack.node[28].veinsmobility totalCO2Emission 282.43405033205
+scalar PriorityV2VAttack.node[29].appl generatedWSMs 0
+scalar PriorityV2VAttack.node[29].appl receivedWSMs 0
+scalar PriorityV2VAttack.node[29].appl generatedBSMs 115
+scalar PriorityV2VAttack.node[29].appl receivedBSMs 2282
+scalar PriorityV2VAttack.node[29].appl generatedWSAs 0
+scalar PriorityV2VAttack.node[29].appl receivedWSAs 0
+scalar PriorityV2VAttack.node[29].nic.phy80211p busyTime 0.002268104347826
+scalar PriorityV2VAttack.node[29].nic.mac1609_4 ReceivedUnicastPackets 0
+scalar PriorityV2VAttack.node[29].nic.mac1609_4 ReceivedBroadcasts 2282
+scalar PriorityV2VAttack.node[29].nic.mac1609_4 SentPackets 115
+scalar PriorityV2VAttack.node[29].nic.mac1609_4 SentAcknowledgements 0
+scalar PriorityV2VAttack.node[29].nic.mac1609_4 RetriesExceeded 0
+scalar PriorityV2VAttack.node[29].nic.mac1609_4 SNIRLostPackets 226
+scalar PriorityV2VAttack.node[29].nic.mac1609_4 RXTXLostPackets 0
+scalar PriorityV2VAttack.node[29].nic.mac1609_4 TotalLostPackets 226
+scalar PriorityV2VAttack.node[29].nic.mac1609_4 DroppedPacketsInMac 0
+scalar PriorityV2VAttack.node[29].nic.mac1609_4 TooLittleTime 0
+scalar PriorityV2VAttack.node[29].nic.mac1609_4 TimesIntoBackoff 115
+scalar PriorityV2VAttack.node[29].nic.mac1609_4 SlotsBackoff 149
+scalar PriorityV2VAttack.node[29].nic.mac1609_4 NumInternalContention 0
+scalar PriorityV2VAttack.node[29].nic.mac1609_4 totalBusyTime 0.272907
+scalar PriorityV2VAttack.node[29].nic.mac1609_4 NodeDownCount 0
+scalar PriorityV2VAttack.node[29].nic.mac1609_4 retriesExceeded:count 0
+attr source org_car2x_veins_modules_mac_sigRetriesExceeded
+scalar PriorityV2VAttack.node[29].nic.mac1609_4 sentAcks:count 0
+attr source org_car2x_veins_modules_mac_sigSentAck
+scalar PriorityV2VAttack.node[29].nic.mac1609_4 sentPackets:count 115
+attr source org_car2x_veins_modules_mac_sigSentPacket
+scalar PriorityV2VAttack.node[29].nic.mac1609_4 collisions:count 0
+attr source org_car2x_veins_modules_mac_sigCollision
+scalar PriorityV2VAttack.node[29].nic.mac1609_4 channelBusy:timeavg 0.002373104347826
+attr source org_car2x_veins_modules_mac_sigChannelBusy
+scalar PriorityV2VAttack.node[29].veinsmobility startTime 85
+scalar PriorityV2VAttack.node[29].veinsmobility totalTime 115
+scalar PriorityV2VAttack.node[29].veinsmobility stopTime 200
+scalar PriorityV2VAttack.node[29].veinsmobility minSpeed 4.1368244981366
+scalar PriorityV2VAttack.node[29].veinsmobility maxSpeed 13.995045116786
+scalar PriorityV2VAttack.node[29].veinsmobility totalDistance 1506.6239876602
+scalar PriorityV2VAttack.node[29].veinsmobility totalCO2Emission 278.81175574892
+scalar PriorityV2VAttack.node[30].appl generatedWSMs 0
+scalar PriorityV2VAttack.node[30].appl receivedWSMs 0
+scalar PriorityV2VAttack.node[30].appl generatedBSMs 112
+scalar PriorityV2VAttack.node[30].appl receivedBSMs 2295
+scalar PriorityV2VAttack.node[30].appl generatedWSAs 0
+scalar PriorityV2VAttack.node[30].appl receivedWSAs 0
+scalar PriorityV2VAttack.node[30].nic.phy80211p busyTime 0.0023065714285714
+scalar PriorityV2VAttack.node[30].nic.mac1609_4 ReceivedUnicastPackets 0
+scalar PriorityV2VAttack.node[30].nic.mac1609_4 ReceivedBroadcasts 2295
+scalar PriorityV2VAttack.node[30].nic.mac1609_4 SentPackets 112
+scalar PriorityV2VAttack.node[30].nic.mac1609_4 SentAcknowledgements 0
+scalar PriorityV2VAttack.node[30].nic.mac1609_4 RetriesExceeded 0
+scalar PriorityV2VAttack.node[30].nic.mac1609_4 SNIRLostPackets 189
+scalar PriorityV2VAttack.node[30].nic.mac1609_4 RXTXLostPackets 0
+scalar PriorityV2VAttack.node[30].nic.mac1609_4 TotalLostPackets 189
+scalar PriorityV2VAttack.node[30].nic.mac1609_4 DroppedPacketsInMac 0
+scalar PriorityV2VAttack.node[30].nic.mac1609_4 TooLittleTime 0
+scalar PriorityV2VAttack.node[30].nic.mac1609_4 TimesIntoBackoff 112
+scalar PriorityV2VAttack.node[30].nic.mac1609_4 SlotsBackoff 165
+scalar PriorityV2VAttack.node[30].nic.mac1609_4 NumInternalContention 0
+scalar PriorityV2VAttack.node[30].nic.mac1609_4 totalBusyTime 0.270096
+scalar PriorityV2VAttack.node[30].nic.mac1609_4 NodeDownCount 0
+scalar PriorityV2VAttack.node[30].nic.mac1609_4 retriesExceeded:count 0
+attr source org_car2x_veins_modules_mac_sigRetriesExceeded
+scalar PriorityV2VAttack.node[30].nic.mac1609_4 sentAcks:count 0
+attr source org_car2x_veins_modules_mac_sigSentAck
+scalar PriorityV2VAttack.node[30].nic.mac1609_4 sentPackets:count 112
+attr source org_car2x_veins_modules_mac_sigSentPacket
+scalar PriorityV2VAttack.node[30].nic.mac1609_4 collisions:count 0
+attr source org_car2x_veins_modules_mac_sigCollision
+scalar PriorityV2VAttack.node[30].nic.mac1609_4 channelBusy:timeavg 0.0024115714285714
+attr source org_car2x_veins_modules_mac_sigChannelBusy
+scalar PriorityV2VAttack.node[30].veinsmobility startTime 88
+scalar PriorityV2VAttack.node[30].veinsmobility totalTime 112
+scalar PriorityV2VAttack.node[30].veinsmobility stopTime 200
+scalar PriorityV2VAttack.node[30].veinsmobility minSpeed 3.991180438225
+scalar PriorityV2VAttack.node[30].veinsmobility maxSpeed 13.997540312563
+scalar PriorityV2VAttack.node[30].veinsmobility totalDistance 1473.4864806102
+scalar PriorityV2VAttack.node[30].veinsmobility totalCO2Emission 273.91715656532
+scalar PriorityV2VAttack.node[31].appl generatedWSMs 0
+scalar PriorityV2VAttack.node[31].appl receivedWSMs 0
+scalar PriorityV2VAttack.node[31].appl generatedBSMs 109
+scalar PriorityV2VAttack.node[31].appl receivedBSMs 2295
+scalar PriorityV2VAttack.node[31].appl generatedWSAs 0
+scalar PriorityV2VAttack.node[31].appl receivedWSAs 0
+scalar PriorityV2VAttack.node[31].nic.phy80211p busyTime 0.0023328440366972
+scalar PriorityV2VAttack.node[31].nic.mac1609_4 ReceivedUnicastPackets 0
+scalar PriorityV2VAttack.node[31].nic.mac1609_4 ReceivedBroadcasts 2295
+scalar PriorityV2VAttack.node[31].nic.mac1609_4 SentPackets 109
+scalar PriorityV2VAttack.node[31].nic.mac1609_4 SentAcknowledgements 0
+scalar PriorityV2VAttack.node[31].nic.mac1609_4 RetriesExceeded 0
+scalar PriorityV2VAttack.node[31].nic.mac1609_4 SNIRLostPackets 150
+scalar PriorityV2VAttack.node[31].nic.mac1609_4 RXTXLostPackets 0
+scalar PriorityV2VAttack.node[31].nic.mac1609_4 TotalLostPackets 150
+scalar PriorityV2VAttack.node[31].nic.mac1609_4 DroppedPacketsInMac 0
+scalar PriorityV2VAttack.node[31].nic.mac1609_4 TooLittleTime 0
+scalar PriorityV2VAttack.node[31].nic.mac1609_4 TimesIntoBackoff 109
+scalar PriorityV2VAttack.node[31].nic.mac1609_4 SlotsBackoff 171
+scalar PriorityV2VAttack.node[31].nic.mac1609_4 NumInternalContention 0
+scalar PriorityV2VAttack.node[31].nic.mac1609_4 totalBusyTime 0.265725
+scalar PriorityV2VAttack.node[31].nic.mac1609_4 NodeDownCount 0
+scalar PriorityV2VAttack.node[31].nic.mac1609_4 retriesExceeded:count 0
+attr source org_car2x_veins_modules_mac_sigRetriesExceeded
+scalar PriorityV2VAttack.node[31].nic.mac1609_4 sentAcks:count 0
+attr source org_car2x_veins_modules_mac_sigSentAck
+scalar PriorityV2VAttack.node[31].nic.mac1609_4 sentPackets:count 109
+attr source org_car2x_veins_modules_mac_sigSentPacket
+scalar PriorityV2VAttack.node[31].nic.mac1609_4 collisions:count 0
+attr source org_car2x_veins_modules_mac_sigCollision
+scalar PriorityV2VAttack.node[31].nic.mac1609_4 channelBusy:timeavg 0.0024378440366972
+attr source org_car2x_veins_modules_mac_sigChannelBusy
+scalar PriorityV2VAttack.node[31].veinsmobility startTime 91
+scalar PriorityV2VAttack.node[31].veinsmobility totalTime 109
+scalar PriorityV2VAttack.node[31].veinsmobility stopTime 200
+scalar PriorityV2VAttack.node[31].veinsmobility minSpeed 4.1280628345594
+scalar PriorityV2VAttack.node[31].veinsmobility maxSpeed 13.999772730393
+scalar PriorityV2VAttack.node[31].veinsmobility totalDistance 1436.7651094664
+scalar PriorityV2VAttack.node[31].veinsmobility totalCO2Emission 270.73482644941
+scalar PriorityV2VAttack.node[32].appl generatedWSMs 0
+scalar PriorityV2VAttack.node[32].appl receivedWSMs 0
+scalar PriorityV2VAttack.node[32].appl generatedBSMs 106
+scalar PriorityV2VAttack.node[32].appl receivedBSMs 2313
+scalar PriorityV2VAttack.node[32].appl generatedWSAs 0
+scalar PriorityV2VAttack.node[32].appl receivedWSAs 0
+scalar PriorityV2VAttack.node[32].nic.phy80211p busyTime 0.002408679245283
+scalar PriorityV2VAttack.node[32].nic.mac1609_4 ReceivedUnicastPackets 0
+scalar PriorityV2VAttack.node[32].nic.mac1609_4 ReceivedBroadcasts 2313
+scalar PriorityV2VAttack.node[32].nic.mac1609_4 SentPackets 106
+scalar PriorityV2VAttack.node[32].nic.mac1609_4 SentAcknowledgements 0
+scalar PriorityV2VAttack.node[32].nic.mac1609_4 RetriesExceeded 0
+scalar PriorityV2VAttack.node[32].nic.mac1609_4 SNIRLostPackets 142
+scalar PriorityV2VAttack.node[32].nic.mac1609_4 RXTXLostPackets 0
+scalar PriorityV2VAttack.node[32].nic.mac1609_4 TotalLostPackets 142
+scalar PriorityV2VAttack.node[32].nic.mac1609_4 DroppedPacketsInMac 0
+scalar PriorityV2VAttack.node[32].nic.mac1609_4 TooLittleTime 0
+scalar PriorityV2VAttack.node[32].nic.mac1609_4 TimesIntoBackoff 106
+scalar PriorityV2VAttack.node[32].nic.mac1609_4 SlotsBackoff 158
+scalar PriorityV2VAttack.node[32].nic.mac1609_4 NumInternalContention 0
+scalar PriorityV2VAttack.node[32].nic.mac1609_4 totalBusyTime 0.26645
+scalar PriorityV2VAttack.node[32].nic.mac1609_4 NodeDownCount 0
+scalar PriorityV2VAttack.node[32].nic.mac1609_4 retriesExceeded:count 0
+attr source org_car2x_veins_modules_mac_sigRetriesExceeded
+scalar PriorityV2VAttack.node[32].nic.mac1609_4 sentAcks:count 0
+attr source org_car2x_veins_modules_mac_sigSentAck
+scalar PriorityV2VAttack.node[32].nic.mac1609_4 sentPackets:count 106
+attr source org_car2x_veins_modules_mac_sigSentPacket
+scalar PriorityV2VAttack.node[32].nic.mac1609_4 collisions:count 0
+attr source org_car2x_veins_modules_mac_sigCollision
+scalar PriorityV2VAttack.node[32].nic.mac1609_4 channelBusy:timeavg 0.002513679245283
+attr source org_car2x_veins_modules_mac_sigChannelBusy
+scalar PriorityV2VAttack.node[32].veinsmobility startTime 94
+scalar PriorityV2VAttack.node[32].veinsmobility totalTime 106
+scalar PriorityV2VAttack.node[32].veinsmobility stopTime 200
+scalar PriorityV2VAttack.node[32].veinsmobility minSpeed 4.1371057962592
+scalar PriorityV2VAttack.node[32].veinsmobility maxSpeed 13.997278778206
+scalar PriorityV2VAttack.node[32].veinsmobility totalDistance 1364.4516312996
+scalar PriorityV2VAttack.node[32].veinsmobility totalCO2Emission 253.01231578866
+scalar PriorityV2VAttack.node[33].appl generatedWSMs 0
+scalar PriorityV2VAttack.node[33].appl receivedWSMs 0
+scalar PriorityV2VAttack.node[33].appl generatedBSMs 103
+scalar PriorityV2VAttack.node[33].appl receivedBSMs 2278
+scalar PriorityV2VAttack.node[33].appl generatedWSAs 0
+scalar PriorityV2VAttack.node[33].appl receivedWSAs 0
+scalar PriorityV2VAttack.node[33].nic.phy80211p busyTime 0.0024243106796116
+scalar PriorityV2VAttack.node[33].nic.mac1609_4 ReceivedUnicastPackets 0
+scalar PriorityV2VAttack.node[33].nic.mac1609_4 ReceivedBroadcasts 2278
+scalar PriorityV2VAttack.node[33].nic.mac1609_4 SentPackets 103
+scalar PriorityV2VAttack.node[33].nic.mac1609_4 SentAcknowledgements 0
+scalar PriorityV2VAttack.node[33].nic.mac1609_4 RetriesExceeded 0
+scalar PriorityV2VAttack.node[33].nic.mac1609_4 SNIRLostPackets 123
+scalar PriorityV2VAttack.node[33].nic.mac1609_4 RXTXLostPackets 0
+scalar PriorityV2VAttack.node[33].nic.mac1609_4 TotalLostPackets 123
+scalar PriorityV2VAttack.node[33].nic.mac1609_4 DroppedPacketsInMac 0
+scalar PriorityV2VAttack.node[33].nic.mac1609_4 TooLittleTime 0
+scalar PriorityV2VAttack.node[33].nic.mac1609_4 TimesIntoBackoff 103
+scalar PriorityV2VAttack.node[33].nic.mac1609_4 SlotsBackoff 153
+scalar PriorityV2VAttack.node[33].nic.mac1609_4 NumInternalContention 0
+scalar PriorityV2VAttack.node[33].nic.mac1609_4 totalBusyTime 0.260519
+scalar PriorityV2VAttack.node[33].nic.mac1609_4 NodeDownCount 0
+scalar PriorityV2VAttack.node[33].nic.mac1609_4 retriesExceeded:count 0
+attr source org_car2x_veins_modules_mac_sigRetriesExceeded
+scalar PriorityV2VAttack.node[33].nic.mac1609_4 sentAcks:count 0
+attr source org_car2x_veins_modules_mac_sigSentAck
+scalar PriorityV2VAttack.node[33].nic.mac1609_4 sentPackets:count 103
+attr source org_car2x_veins_modules_mac_sigSentPacket
+scalar PriorityV2VAttack.node[33].nic.mac1609_4 collisions:count 0
+attr source org_car2x_veins_modules_mac_sigCollision
+scalar PriorityV2VAttack.node[33].nic.mac1609_4 channelBusy:timeavg 0.0025293106796116
+attr source org_car2x_veins_modules_mac_sigChannelBusy
+scalar PriorityV2VAttack.node[33].veinsmobility startTime 97
+scalar PriorityV2VAttack.node[33].veinsmobility totalTime 103
+scalar PriorityV2VAttack.node[33].veinsmobility stopTime 200
+scalar PriorityV2VAttack.node[33].veinsmobility minSpeed 4.0408082129639
+scalar PriorityV2VAttack.node[33].veinsmobility maxSpeed 13.999687120791
+scalar PriorityV2VAttack.node[33].veinsmobility totalDistance 1331.0988572085
+scalar PriorityV2VAttack.node[33].veinsmobility totalCO2Emission 250.50434288765
+scalar PriorityV2VAttack.node[34].appl generatedWSMs 0
+scalar PriorityV2VAttack.node[34].appl receivedWSMs 0
+scalar PriorityV2VAttack.node[34].appl generatedBSMs 100
+scalar PriorityV2VAttack.node[34].appl receivedBSMs 2236
+scalar PriorityV2VAttack.node[34].appl generatedWSAs 0
+scalar PriorityV2VAttack.node[34].appl receivedWSAs 0
+scalar PriorityV2VAttack.node[34].nic.phy80211p busyTime 0.00243568
+scalar PriorityV2VAttack.node[34].nic.mac1609_4 ReceivedUnicastPackets 0
+scalar PriorityV2VAttack.node[34].nic.mac1609_4 ReceivedBroadcasts 2236
+scalar PriorityV2VAttack.node[34].nic.mac1609_4 SentPackets 100
+scalar PriorityV2VAttack.node[34].nic.mac1609_4 SentAcknowledgements 0
+scalar PriorityV2VAttack.node[34].nic.mac1609_4 RetriesExceeded 0
+scalar PriorityV2VAttack.node[34].nic.mac1609_4 SNIRLostPackets 106
+scalar PriorityV2VAttack.node[34].nic.mac1609_4 RXTXLostPackets 0
+scalar PriorityV2VAttack.node[34].nic.mac1609_4 TotalLostPackets 106
+scalar PriorityV2VAttack.node[34].nic.mac1609_4 DroppedPacketsInMac 0
+scalar PriorityV2VAttack.node[34].nic.mac1609_4 TooLittleTime 0
+scalar PriorityV2VAttack.node[34].nic.mac1609_4 TimesIntoBackoff 100
+scalar PriorityV2VAttack.node[34].nic.mac1609_4 SlotsBackoff 141
+scalar PriorityV2VAttack.node[34].nic.mac1609_4 NumInternalContention 0
+scalar PriorityV2VAttack.node[34].nic.mac1609_4 totalBusyTime 0.254068
+scalar PriorityV2VAttack.node[34].nic.mac1609_4 NodeDownCount 0
+scalar PriorityV2VAttack.node[34].nic.mac1609_4 retriesExceeded:count 0
+attr source org_car2x_veins_modules_mac_sigRetriesExceeded
+scalar PriorityV2VAttack.node[34].nic.mac1609_4 sentAcks:count 0
+attr source org_car2x_veins_modules_mac_sigSentAck
+scalar PriorityV2VAttack.node[34].nic.mac1609_4 sentPackets:count 100
+attr source org_car2x_veins_modules_mac_sigSentPacket
+scalar PriorityV2VAttack.node[34].nic.mac1609_4 collisions:count 0
+attr source org_car2x_veins_modules_mac_sigCollision
+scalar PriorityV2VAttack.node[34].nic.mac1609_4 channelBusy:timeavg 0.00254068
+attr source org_car2x_veins_modules_mac_sigChannelBusy
+scalar PriorityV2VAttack.node[34].veinsmobility startTime 100
+scalar PriorityV2VAttack.node[34].veinsmobility totalTime 100
+scalar PriorityV2VAttack.node[34].veinsmobility stopTime 200
+scalar PriorityV2VAttack.node[34].veinsmobility minSpeed 4.1892558464568
+scalar PriorityV2VAttack.node[34].veinsmobility maxSpeed 13.999261201438
+scalar PriorityV2VAttack.node[34].veinsmobility totalDistance 1299.3358657565
+scalar PriorityV2VAttack.node[34].veinsmobility totalCO2Emission 251.74233163302
+scalar PriorityV2VAttack.node[35].appl generatedWSMs 0
+scalar PriorityV2VAttack.node[35].appl receivedWSMs 0
+scalar PriorityV2VAttack.node[35].appl generatedBSMs 97
+scalar PriorityV2VAttack.node[35].appl receivedBSMs 2183
+scalar PriorityV2VAttack.node[35].appl generatedWSAs 0
+scalar PriorityV2VAttack.node[35].appl receivedWSAs 0
+scalar PriorityV2VAttack.node[35].nic.phy80211p busyTime 0.0024531134020618
+scalar PriorityV2VAttack.node[35].nic.mac1609_4 ReceivedUnicastPackets 0
+scalar PriorityV2VAttack.node[35].nic.mac1609_4 ReceivedBroadcasts 2183
+scalar PriorityV2VAttack.node[35].nic.mac1609_4 SentPackets 97
+scalar PriorityV2VAttack.node[35].nic.mac1609_4 SentAcknowledgements 0
+scalar PriorityV2VAttack.node[35].nic.mac1609_4 RetriesExceeded 0
+scalar PriorityV2VAttack.node[35].nic.mac1609_4 SNIRLostPackets 105
+scalar PriorityV2VAttack.node[35].nic.mac1609_4 RXTXLostPackets 0
+scalar PriorityV2VAttack.node[35].nic.mac1609_4 TotalLostPackets 105
+scalar PriorityV2VAttack.node[35].nic.mac1609_4 DroppedPacketsInMac 0
+scalar PriorityV2VAttack.node[35].nic.mac1609_4 TooLittleTime 0
+scalar PriorityV2VAttack.node[35].nic.mac1609_4 TimesIntoBackoff 97
+scalar PriorityV2VAttack.node[35].nic.mac1609_4 SlotsBackoff 128
+scalar PriorityV2VAttack.node[35].nic.mac1609_4 NumInternalContention 0
+scalar PriorityV2VAttack.node[35].nic.mac1609_4 totalBusyTime 0.248137
+scalar PriorityV2VAttack.node[35].nic.mac1609_4 NodeDownCount 0
+scalar PriorityV2VAttack.node[35].nic.mac1609_4 retriesExceeded:count 0
+attr source org_car2x_veins_modules_mac_sigRetriesExceeded
+scalar PriorityV2VAttack.node[35].nic.mac1609_4 sentAcks:count 0
+attr source org_car2x_veins_modules_mac_sigSentAck
+scalar PriorityV2VAttack.node[35].nic.mac1609_4 sentPackets:count 97
+attr source org_car2x_veins_modules_mac_sigSentPacket
+scalar PriorityV2VAttack.node[35].nic.mac1609_4 collisions:count 0
+attr source org_car2x_veins_modules_mac_sigCollision
+scalar PriorityV2VAttack.node[35].nic.mac1609_4 channelBusy:timeavg 0.0025581134020618
+attr source org_car2x_veins_modules_mac_sigChannelBusy
+scalar PriorityV2VAttack.node[35].veinsmobility startTime 103
+scalar PriorityV2VAttack.node[35].veinsmobility totalTime 97
+scalar PriorityV2VAttack.node[35].veinsmobility stopTime 200
+scalar PriorityV2VAttack.node[35].veinsmobility minSpeed 3.8679895345137
+scalar PriorityV2VAttack.node[35].veinsmobility maxSpeed 13.999918484567
+scalar PriorityV2VAttack.node[35].veinsmobility totalDistance 1266.3313810318
+scalar PriorityV2VAttack.node[35].veinsmobility totalCO2Emission 244.45961412186
+scalar PriorityV2VAttack.node[36].appl generatedWSMs 0
+scalar PriorityV2VAttack.node[36].appl receivedWSMs 0
+scalar PriorityV2VAttack.node[36].appl generatedBSMs 94
+scalar PriorityV2VAttack.node[36].appl receivedBSMs 2126
+scalar PriorityV2VAttack.node[36].appl generatedWSAs 0
+scalar PriorityV2VAttack.node[36].appl receivedWSAs 0
+scalar PriorityV2VAttack.node[36].nic.phy80211p busyTime 0.0024473191489361
+scalar PriorityV2VAttack.node[36].nic.mac1609_4 ReceivedUnicastPackets 0
+scalar PriorityV2VAttack.node[36].nic.mac1609_4 ReceivedBroadcasts 2126
+scalar PriorityV2VAttack.node[36].nic.mac1609_4 SentPackets 94
+scalar PriorityV2VAttack.node[36].nic.mac1609_4 SentAcknowledgements 0
+scalar PriorityV2VAttack.node[36].nic.mac1609_4 RetriesExceeded 0
+scalar PriorityV2VAttack.node[36].nic.mac1609_4 SNIRLostPackets 86
+scalar PriorityV2VAttack.node[36].nic.mac1609_4 RXTXLostPackets 0
+scalar PriorityV2VAttack.node[36].nic.mac1609_4 TotalLostPackets 86
+scalar PriorityV2VAttack.node[36].nic.mac1609_4 DroppedPacketsInMac 0
+scalar PriorityV2VAttack.node[36].nic.mac1609_4 TooLittleTime 0
+scalar PriorityV2VAttack.node[36].nic.mac1609_4 TimesIntoBackoff 94
+scalar PriorityV2VAttack.node[36].nic.mac1609_4 SlotsBackoff 159
+scalar PriorityV2VAttack.node[36].nic.mac1609_4 NumInternalContention 0
+scalar PriorityV2VAttack.node[36].nic.mac1609_4 totalBusyTime 0.239918
+scalar PriorityV2VAttack.node[36].nic.mac1609_4 NodeDownCount 0
+scalar PriorityV2VAttack.node[36].nic.mac1609_4 retriesExceeded:count 0
+attr source org_car2x_veins_modules_mac_sigRetriesExceeded
+scalar PriorityV2VAttack.node[36].nic.mac1609_4 sentAcks:count 0
+attr source org_car2x_veins_modules_mac_sigSentAck
+scalar PriorityV2VAttack.node[36].nic.mac1609_4 sentPackets:count 94
+attr source org_car2x_veins_modules_mac_sigSentPacket
+scalar PriorityV2VAttack.node[36].nic.mac1609_4 collisions:count 0
+attr source org_car2x_veins_modules_mac_sigCollision
+scalar PriorityV2VAttack.node[36].nic.mac1609_4 channelBusy:timeavg 0.0025523191489361
+attr source org_car2x_veins_modules_mac_sigChannelBusy
+scalar PriorityV2VAttack.node[36].veinsmobility startTime 106
+scalar PriorityV2VAttack.node[36].veinsmobility totalTime 94
+scalar PriorityV2VAttack.node[36].veinsmobility stopTime 200
+scalar PriorityV2VAttack.node[36].veinsmobility minSpeed 4.0021450817148
+scalar PriorityV2VAttack.node[36].veinsmobility maxSpeed 13.995735300365
+scalar PriorityV2VAttack.node[36].veinsmobility totalDistance 1224.3040557487
+scalar PriorityV2VAttack.node[36].veinsmobility totalCO2Emission 237.73251924093
+scalar PriorityV2VAttack.node[37].appl generatedWSMs 0
+scalar PriorityV2VAttack.node[37].appl receivedWSMs 0
+scalar PriorityV2VAttack.node[37].appl generatedBSMs 91
+scalar PriorityV2VAttack.node[37].appl receivedBSMs 1996
+scalar PriorityV2VAttack.node[37].appl generatedWSAs 0
+scalar PriorityV2VAttack.node[37].appl receivedWSAs 0
+scalar PriorityV2VAttack.node[37].nic.phy80211p busyTime 0.0024137142857143
+scalar PriorityV2VAttack.node[37].nic.mac1609_4 ReceivedUnicastPackets 0
+scalar PriorityV2VAttack.node[37].nic.mac1609_4 ReceivedBroadcasts 1996
+scalar PriorityV2VAttack.node[37].nic.mac1609_4 SentPackets 91
+scalar PriorityV2VAttack.node[37].nic.mac1609_4 SentAcknowledgements 0
+scalar PriorityV2VAttack.node[37].nic.mac1609_4 RetriesExceeded 0
+scalar PriorityV2VAttack.node[37].nic.mac1609_4 SNIRLostPackets 116
+scalar PriorityV2VAttack.node[37].nic.mac1609_4 RXTXLostPackets 0
+scalar PriorityV2VAttack.node[37].nic.mac1609_4 TotalLostPackets 116
+scalar PriorityV2VAttack.node[37].nic.mac1609_4 DroppedPacketsInMac 0
+scalar PriorityV2VAttack.node[37].nic.mac1609_4 TooLittleTime 0
+scalar PriorityV2VAttack.node[37].nic.mac1609_4 TimesIntoBackoff 91
+scalar PriorityV2VAttack.node[37].nic.mac1609_4 SlotsBackoff 125
+scalar PriorityV2VAttack.node[37].nic.mac1609_4 NumInternalContention 0
+scalar PriorityV2VAttack.node[37].nic.mac1609_4 totalBusyTime 0.229203
+scalar PriorityV2VAttack.node[37].nic.mac1609_4 NodeDownCount 0
+scalar PriorityV2VAttack.node[37].nic.mac1609_4 retriesExceeded:count 0
+attr source org_car2x_veins_modules_mac_sigRetriesExceeded
+scalar PriorityV2VAttack.node[37].nic.mac1609_4 sentAcks:count 0
+attr source org_car2x_veins_modules_mac_sigSentAck
+scalar PriorityV2VAttack.node[37].nic.mac1609_4 sentPackets:count 91
+attr source org_car2x_veins_modules_mac_sigSentPacket
+scalar PriorityV2VAttack.node[37].nic.mac1609_4 collisions:count 0
+attr source org_car2x_veins_modules_mac_sigCollision
+scalar PriorityV2VAttack.node[37].nic.mac1609_4 channelBusy:timeavg 0.0025187142857143
+attr source org_car2x_veins_modules_mac_sigChannelBusy
+scalar PriorityV2VAttack.node[37].veinsmobility startTime 109
+scalar PriorityV2VAttack.node[37].veinsmobility totalTime 91
+scalar PriorityV2VAttack.node[37].veinsmobility stopTime 200
+scalar PriorityV2VAttack.node[37].veinsmobility minSpeed 4.0688769192505
+scalar PriorityV2VAttack.node[37].veinsmobility maxSpeed 13.998125667097
+scalar PriorityV2VAttack.node[37].veinsmobility totalDistance 1166.3950359164
+scalar PriorityV2VAttack.node[37].veinsmobility totalCO2Emission 229.45058587628
+scalar PriorityV2VAttack.node[38].appl generatedWSMs 0
+scalar PriorityV2VAttack.node[38].appl receivedWSMs 0
+scalar PriorityV2VAttack.node[38].appl generatedBSMs 88
+scalar PriorityV2VAttack.node[38].appl receivedBSMs 1883
+scalar PriorityV2VAttack.node[38].appl generatedWSAs 0
+scalar PriorityV2VAttack.node[38].appl receivedWSAs 0
+scalar PriorityV2VAttack.node[38].nic.phy80211p busyTime 0.002366
+scalar PriorityV2VAttack.node[38].nic.mac1609_4 ReceivedUnicastPackets 0
+scalar PriorityV2VAttack.node[38].nic.mac1609_4 ReceivedBroadcasts 1883
+scalar PriorityV2VAttack.node[38].nic.mac1609_4 SentPackets 88
+scalar PriorityV2VAttack.node[38].nic.mac1609_4 SentAcknowledgements 0
+scalar PriorityV2VAttack.node[38].nic.mac1609_4 RetriesExceeded 0
+scalar PriorityV2VAttack.node[38].nic.mac1609_4 SNIRLostPackets 119
+scalar PriorityV2VAttack.node[38].nic.mac1609_4 RXTXLostPackets 0
+scalar PriorityV2VAttack.node[38].nic.mac1609_4 TotalLostPackets 119
+scalar PriorityV2VAttack.node[38].nic.mac1609_4 DroppedPacketsInMac 0
+scalar PriorityV2VAttack.node[38].nic.mac1609_4 TooLittleTime 0
+scalar PriorityV2VAttack.node[38].nic.mac1609_4 TimesIntoBackoff 88
+scalar PriorityV2VAttack.node[38].nic.mac1609_4 SlotsBackoff 150
+scalar PriorityV2VAttack.node[38].nic.mac1609_4 NumInternalContention 0
+scalar PriorityV2VAttack.node[38].nic.mac1609_4 totalBusyTime 0.217448
+scalar PriorityV2VAttack.node[38].nic.mac1609_4 NodeDownCount 0
+scalar PriorityV2VAttack.node[38].nic.mac1609_4 retriesExceeded:count 0
+attr source org_car2x_veins_modules_mac_sigRetriesExceeded
+scalar PriorityV2VAttack.node[38].nic.mac1609_4 sentAcks:count 0
+attr source org_car2x_veins_modules_mac_sigSentAck
+scalar PriorityV2VAttack.node[38].nic.mac1609_4 sentPackets:count 88
+attr source org_car2x_veins_modules_mac_sigSentPacket
+scalar PriorityV2VAttack.node[38].nic.mac1609_4 collisions:count 0
+attr source org_car2x_veins_modules_mac_sigCollision
+scalar PriorityV2VAttack.node[38].nic.mac1609_4 channelBusy:timeavg 0.002471
+attr source org_car2x_veins_modules_mac_sigChannelBusy
+scalar PriorityV2VAttack.node[38].veinsmobility startTime 112
+scalar PriorityV2VAttack.node[38].veinsmobility totalTime 88
+scalar PriorityV2VAttack.node[38].veinsmobility stopTime 200
+scalar PriorityV2VAttack.node[38].veinsmobility minSpeed 3.9580055631868
+scalar PriorityV2VAttack.node[38].veinsmobility maxSpeed 13.998339578474
+scalar PriorityV2VAttack.node[38].veinsmobility totalDistance 1130.5603488759
+scalar PriorityV2VAttack.node[38].veinsmobility totalCO2Emission 225.62817602783
+scalar PriorityV2VAttack.node[39].appl generatedWSMs 0
+scalar PriorityV2VAttack.node[39].appl receivedWSMs 0
+scalar PriorityV2VAttack.node[39].appl generatedBSMs 85
+scalar PriorityV2VAttack.node[39].appl receivedBSMs 1729
+scalar PriorityV2VAttack.node[39].appl generatedWSAs 0
+scalar PriorityV2VAttack.node[39].appl receivedWSAs 0
+scalar PriorityV2VAttack.node[39].nic.phy80211p busyTime 0.0022708705882353
+scalar PriorityV2VAttack.node[39].nic.mac1609_4 ReceivedUnicastPackets 0
+scalar PriorityV2VAttack.node[39].nic.mac1609_4 ReceivedBroadcasts 1729
+scalar PriorityV2VAttack.node[39].nic.mac1609_4 SentPackets 85
+scalar PriorityV2VAttack.node[39].nic.mac1609_4 SentAcknowledgements 0
+scalar PriorityV2VAttack.node[39].nic.mac1609_4 RetriesExceeded 0
+scalar PriorityV2VAttack.node[39].nic.mac1609_4 SNIRLostPackets 127
+scalar PriorityV2VAttack.node[39].nic.mac1609_4 RXTXLostPackets 0
+scalar PriorityV2VAttack.node[39].nic.mac1609_4 TotalLostPackets 127
+scalar PriorityV2VAttack.node[39].nic.mac1609_4 DroppedPacketsInMac 0
+scalar PriorityV2VAttack.node[39].nic.mac1609_4 TooLittleTime 0
+scalar PriorityV2VAttack.node[39].nic.mac1609_4 TimesIntoBackoff 85
+scalar PriorityV2VAttack.node[39].nic.mac1609_4 SlotsBackoff 141
+scalar PriorityV2VAttack.node[39].nic.mac1609_4 NumInternalContention 0
+scalar PriorityV2VAttack.node[39].nic.mac1609_4 totalBusyTime 0.201949
+scalar PriorityV2VAttack.node[39].nic.mac1609_4 NodeDownCount 0
+scalar PriorityV2VAttack.node[39].nic.mac1609_4 retriesExceeded:count 0
+attr source org_car2x_veins_modules_mac_sigRetriesExceeded
+scalar PriorityV2VAttack.node[39].nic.mac1609_4 sentAcks:count 0
+attr source org_car2x_veins_modules_mac_sigSentAck
+scalar PriorityV2VAttack.node[39].nic.mac1609_4 sentPackets:count 85
+attr source org_car2x_veins_modules_mac_sigSentPacket
+scalar PriorityV2VAttack.node[39].nic.mac1609_4 collisions:count 0
+attr source org_car2x_veins_modules_mac_sigCollision
+scalar PriorityV2VAttack.node[39].nic.mac1609_4 channelBusy:timeavg 0.0023758705882353
+attr source org_car2x_veins_modules_mac_sigChannelBusy
+scalar PriorityV2VAttack.node[39].veinsmobility startTime 115
+scalar PriorityV2VAttack.node[39].veinsmobility totalTime 85
+scalar PriorityV2VAttack.node[39].veinsmobility stopTime 200
+scalar PriorityV2VAttack.node[39].veinsmobility minSpeed 4.0684066445454
+scalar PriorityV2VAttack.node[39].veinsmobility maxSpeed 13.995935866861
+scalar PriorityV2VAttack.node[39].veinsmobility totalDistance 1072.9348588163
+scalar PriorityV2VAttack.node[39].veinsmobility totalCO2Emission 209.94508723933
+scalar PriorityV2VAttack.node[40].appl generatedWSMs 0
+scalar PriorityV2VAttack.node[40].appl receivedWSMs 0
+scalar PriorityV2VAttack.node[40].appl generatedBSMs 82
+scalar PriorityV2VAttack.node[40].appl receivedBSMs 1637
+scalar PriorityV2VAttack.node[40].appl generatedWSAs 0
+scalar PriorityV2VAttack.node[40].appl receivedWSAs 0
+scalar PriorityV2VAttack.node[40].nic.phy80211p busyTime 0.0022816585365854
+scalar PriorityV2VAttack.node[40].nic.mac1609_4 ReceivedUnicastPackets 0
+scalar PriorityV2VAttack.node[40].nic.mac1609_4 ReceivedBroadcasts 1637
+scalar PriorityV2VAttack.node[40].nic.mac1609_4 SentPackets 82
+scalar PriorityV2VAttack.node[40].nic.mac1609_4 SentAcknowledgements 0
+scalar PriorityV2VAttack.node[40].nic.mac1609_4 RetriesExceeded 0
+scalar PriorityV2VAttack.node[40].nic.mac1609_4 SNIRLostPackets 162
+scalar PriorityV2VAttack.node[40].nic.mac1609_4 RXTXLostPackets 0
+scalar PriorityV2VAttack.node[40].nic.mac1609_4 TotalLostPackets 162
+scalar PriorityV2VAttack.node[40].nic.mac1609_4 DroppedPacketsInMac 0
+scalar PriorityV2VAttack.node[40].nic.mac1609_4 TooLittleTime 0
+scalar PriorityV2VAttack.node[40].nic.mac1609_4 TimesIntoBackoff 82
+scalar PriorityV2VAttack.node[40].nic.mac1609_4 SlotsBackoff 129
+scalar PriorityV2VAttack.node[40].nic.mac1609_4 NumInternalContention 0
+scalar PriorityV2VAttack.node[40].nic.mac1609_4 totalBusyTime 0.195706
+scalar PriorityV2VAttack.node[40].nic.mac1609_4 NodeDownCount 0
+scalar PriorityV2VAttack.node[40].nic.mac1609_4 retriesExceeded:count 0
+attr source org_car2x_veins_modules_mac_sigRetriesExceeded
+scalar PriorityV2VAttack.node[40].nic.mac1609_4 sentAcks:count 0
+attr source org_car2x_veins_modules_mac_sigSentAck
+scalar PriorityV2VAttack.node[40].nic.mac1609_4 sentPackets:count 82
+attr source org_car2x_veins_modules_mac_sigSentPacket
+scalar PriorityV2VAttack.node[40].nic.mac1609_4 collisions:count 0
+attr source org_car2x_veins_modules_mac_sigCollision
+scalar PriorityV2VAttack.node[40].nic.mac1609_4 channelBusy:timeavg 0.0023866585365854
+attr source org_car2x_veins_modules_mac_sigChannelBusy
+scalar PriorityV2VAttack.node[40].veinsmobility startTime 118
+scalar PriorityV2VAttack.node[40].veinsmobility totalTime 82
+scalar PriorityV2VAttack.node[40].veinsmobility stopTime 200
+scalar PriorityV2VAttack.node[40].veinsmobility minSpeed 3.8384104538156
+scalar PriorityV2VAttack.node[40].veinsmobility maxSpeed 13.992003732913
+scalar PriorityV2VAttack.node[40].veinsmobility totalDistance 1035.4402782457
+scalar PriorityV2VAttack.node[40].veinsmobility totalCO2Emission 210.60526823841
+scalar PriorityV2VAttack.node[41].appl generatedWSMs 0
+scalar PriorityV2VAttack.node[41].appl receivedWSMs 0
+scalar PriorityV2VAttack.node[41].appl generatedBSMs 79
+scalar PriorityV2VAttack.node[41].appl receivedBSMs 1568
+scalar PriorityV2VAttack.node[41].appl generatedWSAs 0
+scalar PriorityV2VAttack.node[41].appl receivedWSAs 0
+scalar PriorityV2VAttack.node[41].nic.phy80211p busyTime 0.0022774683544304
+scalar PriorityV2VAttack.node[41].nic.mac1609_4 ReceivedUnicastPackets 0
+scalar PriorityV2VAttack.node[41].nic.mac1609_4 ReceivedBroadcasts 1568
+scalar PriorityV2VAttack.node[41].nic.mac1609_4 SentPackets 79
+scalar PriorityV2VAttack.node[41].nic.mac1609_4 SentAcknowledgements 0
+scalar PriorityV2VAttack.node[41].nic.mac1609_4 RetriesExceeded 0
+scalar PriorityV2VAttack.node[41].nic.mac1609_4 SNIRLostPackets 162
+scalar PriorityV2VAttack.node[41].nic.mac1609_4 RXTXLostPackets 0
+scalar PriorityV2VAttack.node[41].nic.mac1609_4 TotalLostPackets 162
+scalar PriorityV2VAttack.node[41].nic.mac1609_4 DroppedPacketsInMac 0
+scalar PriorityV2VAttack.node[41].nic.mac1609_4 TooLittleTime 0
+scalar PriorityV2VAttack.node[41].nic.mac1609_4 TimesIntoBackoff 79
+scalar PriorityV2VAttack.node[41].nic.mac1609_4 SlotsBackoff 116
+scalar PriorityV2VAttack.node[41].nic.mac1609_4 NumInternalContention 0
+scalar PriorityV2VAttack.node[41].nic.mac1609_4 totalBusyTime 0.188215
+scalar PriorityV2VAttack.node[41].nic.mac1609_4 NodeDownCount 0
+scalar PriorityV2VAttack.node[41].nic.mac1609_4 retriesExceeded:count 0
+attr source org_car2x_veins_modules_mac_sigRetriesExceeded
+scalar PriorityV2VAttack.node[41].nic.mac1609_4 sentAcks:count 0
+attr source org_car2x_veins_modules_mac_sigSentAck
+scalar PriorityV2VAttack.node[41].nic.mac1609_4 sentPackets:count 79
+attr source org_car2x_veins_modules_mac_sigSentPacket
+scalar PriorityV2VAttack.node[41].nic.mac1609_4 collisions:count 0
+attr source org_car2x_veins_modules_mac_sigCollision
+scalar PriorityV2VAttack.node[41].nic.mac1609_4 channelBusy:timeavg 0.0023824683544304
+attr source org_car2x_veins_modules_mac_sigChannelBusy
+scalar PriorityV2VAttack.node[41].veinsmobility startTime 121
+scalar PriorityV2VAttack.node[41].veinsmobility totalTime 79
+scalar PriorityV2VAttack.node[41].veinsmobility stopTime 200
+scalar PriorityV2VAttack.node[41].veinsmobility minSpeed 3.9608488762622
+scalar PriorityV2VAttack.node[41].veinsmobility maxSpeed 13.994702985871
+scalar PriorityV2VAttack.node[41].veinsmobility totalDistance 1005.8503867395
+scalar PriorityV2VAttack.node[41].veinsmobility totalCO2Emission 208.97521807028
+scalar PriorityV2VAttack.node[42].appl generatedWSMs 0
+scalar PriorityV2VAttack.node[42].appl receivedWSMs 0
+scalar PriorityV2VAttack.node[42].appl generatedBSMs 76
+scalar PriorityV2VAttack.node[42].appl receivedBSMs 1466
+scalar PriorityV2VAttack.node[42].appl generatedWSAs 0
+scalar PriorityV2VAttack.node[42].appl receivedWSAs 0
+scalar PriorityV2VAttack.node[42].nic.phy80211p busyTime 0.0022565263157895
+scalar PriorityV2VAttack.node[42].nic.mac1609_4 ReceivedUnicastPackets 0
+scalar PriorityV2VAttack.node[42].nic.mac1609_4 ReceivedBroadcasts 1466
+scalar PriorityV2VAttack.node[42].nic.mac1609_4 SentPackets 76
+scalar PriorityV2VAttack.node[42].nic.mac1609_4 SentAcknowledgements 0
+scalar PriorityV2VAttack.node[42].nic.mac1609_4 RetriesExceeded 0
+scalar PriorityV2VAttack.node[42].nic.mac1609_4 SNIRLostPackets 183
+scalar PriorityV2VAttack.node[42].nic.mac1609_4 RXTXLostPackets 0
+scalar PriorityV2VAttack.node[42].nic.mac1609_4 TotalLostPackets 183
+scalar PriorityV2VAttack.node[42].nic.mac1609_4 DroppedPacketsInMac 0
+scalar PriorityV2VAttack.node[42].nic.mac1609_4 TooLittleTime 0
+scalar PriorityV2VAttack.node[42].nic.mac1609_4 TimesIntoBackoff 76
+scalar PriorityV2VAttack.node[42].nic.mac1609_4 SlotsBackoff 96
+scalar PriorityV2VAttack.node[42].nic.mac1609_4 NumInternalContention 0
+scalar PriorityV2VAttack.node[42].nic.mac1609_4 totalBusyTime 0.179476
+scalar PriorityV2VAttack.node[42].nic.mac1609_4 NodeDownCount 0
+scalar PriorityV2VAttack.node[42].nic.mac1609_4 retriesExceeded:count 0
+attr source org_car2x_veins_modules_mac_sigRetriesExceeded
+scalar PriorityV2VAttack.node[42].nic.mac1609_4 sentAcks:count 0
+attr source org_car2x_veins_modules_mac_sigSentAck
+scalar PriorityV2VAttack.node[42].nic.mac1609_4 sentPackets:count 76
+attr source org_car2x_veins_modules_mac_sigSentPacket
+scalar PriorityV2VAttack.node[42].nic.mac1609_4 collisions:count 0
+attr source org_car2x_veins_modules_mac_sigCollision
+scalar PriorityV2VAttack.node[42].nic.mac1609_4 channelBusy:timeavg 0.0023615263157895
+attr source org_car2x_veins_modules_mac_sigChannelBusy
+scalar PriorityV2VAttack.node[42].veinsmobility startTime 124
+scalar PriorityV2VAttack.node[42].veinsmobility totalTime 76
+scalar PriorityV2VAttack.node[42].veinsmobility stopTime 200
+scalar PriorityV2VAttack.node[42].veinsmobility minSpeed 4.1343455316377
+scalar PriorityV2VAttack.node[42].veinsmobility maxSpeed 13.991427041227
+scalar PriorityV2VAttack.node[42].veinsmobility totalDistance 962.17042038389
+scalar PriorityV2VAttack.node[42].veinsmobility totalCO2Emission 187.89629706563
+scalar PriorityV2VAttack.node[43].appl generatedWSMs 0
+scalar PriorityV2VAttack.node[43].appl receivedWSMs 0
+scalar PriorityV2VAttack.node[43].appl generatedBSMs 73
+scalar PriorityV2VAttack.node[43].appl receivedBSMs 1398
+scalar PriorityV2VAttack.node[43].appl generatedWSAs 0
+scalar PriorityV2VAttack.node[43].appl receivedWSAs 0
+scalar PriorityV2VAttack.node[43].nic.phy80211p busyTime 0.0022409863013699
+scalar PriorityV2VAttack.node[43].nic.mac1609_4 ReceivedUnicastPackets 0
+scalar PriorityV2VAttack.node[43].nic.mac1609_4 ReceivedBroadcasts 1398
+scalar PriorityV2VAttack.node[43].nic.mac1609_4 SentPackets 73
+scalar PriorityV2VAttack.node[43].nic.mac1609_4 SentAcknowledgements 0
+scalar PriorityV2VAttack.node[43].nic.mac1609_4 RetriesExceeded 0
+scalar PriorityV2VAttack.node[43].nic.mac1609_4 SNIRLostPackets 175
+scalar PriorityV2VAttack.node[43].nic.mac1609_4 RXTXLostPackets 0
+scalar PriorityV2VAttack.node[43].nic.mac1609_4 TotalLostPackets 175
+scalar PriorityV2VAttack.node[43].nic.mac1609_4 DroppedPacketsInMac 0
+scalar PriorityV2VAttack.node[43].nic.mac1609_4 TooLittleTime 0
+scalar PriorityV2VAttack.node[43].nic.mac1609_4 TimesIntoBackoff 73
+scalar PriorityV2VAttack.node[43].nic.mac1609_4 SlotsBackoff 106
+scalar PriorityV2VAttack.node[43].nic.mac1609_4 NumInternalContention 0
+scalar PriorityV2VAttack.node[43].nic.mac1609_4 totalBusyTime 0.171257
+scalar PriorityV2VAttack.node[43].nic.mac1609_4 NodeDownCount 0
+scalar PriorityV2VAttack.node[43].nic.mac1609_4 retriesExceeded:count 0
+attr source org_car2x_veins_modules_mac_sigRetriesExceeded
+scalar PriorityV2VAttack.node[43].nic.mac1609_4 sentAcks:count 0
+attr source org_car2x_veins_modules_mac_sigSentAck
+scalar PriorityV2VAttack.node[43].nic.mac1609_4 sentPackets:count 73
+attr source org_car2x_veins_modules_mac_sigSentPacket
+scalar PriorityV2VAttack.node[43].nic.mac1609_4 collisions:count 0
+attr source org_car2x_veins_modules_mac_sigCollision
+scalar PriorityV2VAttack.node[43].nic.mac1609_4 channelBusy:timeavg 0.0023459863013699
+attr source org_car2x_veins_modules_mac_sigChannelBusy
+scalar PriorityV2VAttack.node[43].veinsmobility startTime 127
+scalar PriorityV2VAttack.node[43].veinsmobility totalTime 73
+scalar PriorityV2VAttack.node[43].veinsmobility stopTime 200
+scalar PriorityV2VAttack.node[43].veinsmobility minSpeed 3.9878099810693
+scalar PriorityV2VAttack.node[43].veinsmobility maxSpeed 13.996780016983
+scalar PriorityV2VAttack.node[43].veinsmobility totalDistance 937.17558754867
+scalar PriorityV2VAttack.node[43].veinsmobility totalCO2Emission 173.67818893634
+scalar PriorityV2VAttack.node[44].appl generatedWSMs 0
+scalar PriorityV2VAttack.node[44].appl receivedWSMs 0
+scalar PriorityV2VAttack.node[44].appl generatedBSMs 70
+scalar PriorityV2VAttack.node[44].appl receivedBSMs 1297
+scalar PriorityV2VAttack.node[44].appl generatedWSAs 0
+scalar PriorityV2VAttack.node[44].appl receivedWSAs 0
+scalar PriorityV2VAttack.node[44].nic.phy80211p busyTime 0.0021602285714286
+scalar PriorityV2VAttack.node[44].nic.mac1609_4 ReceivedUnicastPackets 0
+scalar PriorityV2VAttack.node[44].nic.mac1609_4 ReceivedBroadcasts 1297
+scalar PriorityV2VAttack.node[44].nic.mac1609_4 SentPackets 70
+scalar PriorityV2VAttack.node[44].nic.mac1609_4 SentAcknowledgements 0
+scalar PriorityV2VAttack.node[44].nic.mac1609_4 RetriesExceeded 0
+scalar PriorityV2VAttack.node[44].nic.mac1609_4 SNIRLostPackets 157
+scalar PriorityV2VAttack.node[44].nic.mac1609_4 RXTXLostPackets 0
+scalar PriorityV2VAttack.node[44].nic.mac1609_4 TotalLostPackets 157
+scalar PriorityV2VAttack.node[44].nic.mac1609_4 DroppedPacketsInMac 0
+scalar PriorityV2VAttack.node[44].nic.mac1609_4 TooLittleTime 0
+scalar PriorityV2VAttack.node[44].nic.mac1609_4 TimesIntoBackoff 70
+scalar PriorityV2VAttack.node[44].nic.mac1609_4 SlotsBackoff 110
+scalar PriorityV2VAttack.node[44].nic.mac1609_4 NumInternalContention 0
+scalar PriorityV2VAttack.node[44].nic.mac1609_4 totalBusyTime 0.158566
+scalar PriorityV2VAttack.node[44].nic.mac1609_4 NodeDownCount 0
+scalar PriorityV2VAttack.node[44].nic.mac1609_4 retriesExceeded:count 0
+attr source org_car2x_veins_modules_mac_sigRetriesExceeded
+scalar PriorityV2VAttack.node[44].nic.mac1609_4 sentAcks:count 0
+attr source org_car2x_veins_modules_mac_sigSentAck
+scalar PriorityV2VAttack.node[44].nic.mac1609_4 sentPackets:count 70
+attr source org_car2x_veins_modules_mac_sigSentPacket
+scalar PriorityV2VAttack.node[44].nic.mac1609_4 collisions:count 0
+attr source org_car2x_veins_modules_mac_sigCollision
+scalar PriorityV2VAttack.node[44].nic.mac1609_4 channelBusy:timeavg 0.0022652285714286
+attr source org_car2x_veins_modules_mac_sigChannelBusy
+scalar PriorityV2VAttack.node[44].veinsmobility startTime 130
+scalar PriorityV2VAttack.node[44].veinsmobility totalTime 70
+scalar PriorityV2VAttack.node[44].veinsmobility stopTime 200
+scalar PriorityV2VAttack.node[44].veinsmobility minSpeed 4.0073256796039
+scalar PriorityV2VAttack.node[44].veinsmobility maxSpeed 13.99517772618
+scalar PriorityV2VAttack.node[44].veinsmobility totalDistance 890.62176146456
+scalar PriorityV2VAttack.node[44].veinsmobility totalCO2Emission 171.37813621219
+scalar PriorityV2VAttack.node[45].appl generatedWSMs 0
+scalar PriorityV2VAttack.node[45].appl receivedWSMs 0
+scalar PriorityV2VAttack.node[45].appl generatedBSMs 67
+scalar PriorityV2VAttack.node[45].appl receivedBSMs 1239
+scalar PriorityV2VAttack.node[45].appl generatedWSAs 0
+scalar PriorityV2VAttack.node[45].appl receivedWSAs 0
+scalar PriorityV2VAttack.node[45].nic.phy80211p busyTime 0.0021079402985075
+scalar PriorityV2VAttack.node[45].nic.mac1609_4 ReceivedUnicastPackets 0
+scalar PriorityV2VAttack.node[45].nic.mac1609_4 ReceivedBroadcasts 1239
+scalar PriorityV2VAttack.node[45].nic.mac1609_4 SentPackets 67
+scalar PriorityV2VAttack.node[45].nic.mac1609_4 SentAcknowledgements 0
+scalar PriorityV2VAttack.node[45].nic.mac1609_4 RetriesExceeded 0
+scalar PriorityV2VAttack.node[45].nic.mac1609_4 SNIRLostPackets 119
+scalar PriorityV2VAttack.node[45].nic.mac1609_4 RXTXLostPackets 0
+scalar PriorityV2VAttack.node[45].nic.mac1609_4 TotalLostPackets 119
+scalar PriorityV2VAttack.node[45].nic.mac1609_4 DroppedPacketsInMac 0
+scalar PriorityV2VAttack.node[45].nic.mac1609_4 TooLittleTime 0
+scalar PriorityV2VAttack.node[45].nic.mac1609_4 TimesIntoBackoff 67
+scalar PriorityV2VAttack.node[45].nic.mac1609_4 SlotsBackoff 105
+scalar PriorityV2VAttack.node[45].nic.mac1609_4 NumInternalContention 0
+scalar PriorityV2VAttack.node[45].nic.mac1609_4 totalBusyTime 0.148267
+scalar PriorityV2VAttack.node[45].nic.mac1609_4 NodeDownCount 0
+scalar PriorityV2VAttack.node[45].nic.mac1609_4 retriesExceeded:count 0
+attr source org_car2x_veins_modules_mac_sigRetriesExceeded
+scalar PriorityV2VAttack.node[45].nic.mac1609_4 sentAcks:count 0
+attr source org_car2x_veins_modules_mac_sigSentAck
+scalar PriorityV2VAttack.node[45].nic.mac1609_4 sentPackets:count 67
+attr source org_car2x_veins_modules_mac_sigSentPacket
+scalar PriorityV2VAttack.node[45].nic.mac1609_4 collisions:count 0
+attr source org_car2x_veins_modules_mac_sigCollision
+scalar PriorityV2VAttack.node[45].nic.mac1609_4 channelBusy:timeavg 0.0022129402985075
+attr source org_car2x_veins_modules_mac_sigChannelBusy
+scalar PriorityV2VAttack.node[45].veinsmobility startTime 133
+scalar PriorityV2VAttack.node[45].veinsmobility totalTime 67
+scalar PriorityV2VAttack.node[45].veinsmobility stopTime 200
+scalar PriorityV2VAttack.node[45].veinsmobility minSpeed 4.0032090945537
+scalar PriorityV2VAttack.node[45].veinsmobility maxSpeed 13.995364193758
+scalar PriorityV2VAttack.node[45].veinsmobility totalDistance 862.77349163016
+scalar PriorityV2VAttack.node[45].veinsmobility totalCO2Emission 169.41212180873
+scalar PriorityV2VAttack.node[46].appl generatedWSMs 0
+scalar PriorityV2VAttack.node[46].appl receivedWSMs 0
+scalar PriorityV2VAttack.node[46].appl generatedBSMs 64
+scalar PriorityV2VAttack.node[46].appl receivedBSMs 1139
+scalar PriorityV2VAttack.node[46].appl generatedWSAs 0
+scalar PriorityV2VAttack.node[46].appl receivedWSAs 0
+scalar PriorityV2VAttack.node[46].nic.phy80211p busyTime 0.0019743750000001
+scalar PriorityV2VAttack.node[46].nic.mac1609_4 ReceivedUnicastPackets 0
+scalar PriorityV2VAttack.node[46].nic.mac1609_4 ReceivedBroadcasts 1139
+scalar PriorityV2VAttack.node[46].nic.mac1609_4 SentPackets 64
+scalar PriorityV2VAttack.node[46].nic.mac1609_4 SentAcknowledgements 0
+scalar PriorityV2VAttack.node[46].nic.mac1609_4 RetriesExceeded 0
+scalar PriorityV2VAttack.node[46].nic.mac1609_4 SNIRLostPackets 76
+scalar PriorityV2VAttack.node[46].nic.mac1609_4 RXTXLostPackets 0
+scalar PriorityV2VAttack.node[46].nic.mac1609_4 TotalLostPackets 76
+scalar PriorityV2VAttack.node[46].nic.mac1609_4 DroppedPacketsInMac 0
+scalar PriorityV2VAttack.node[46].nic.mac1609_4 TooLittleTime 0
+scalar PriorityV2VAttack.node[46].nic.mac1609_4 TimesIntoBackoff 64
+scalar PriorityV2VAttack.node[46].nic.mac1609_4 SlotsBackoff 103
+scalar PriorityV2VAttack.node[46].nic.mac1609_4 NumInternalContention 0
+scalar PriorityV2VAttack.node[46].nic.mac1609_4 totalBusyTime 0.13308
+scalar PriorityV2VAttack.node[46].nic.mac1609_4 NodeDownCount 0
+scalar PriorityV2VAttack.node[46].nic.mac1609_4 retriesExceeded:count 0
+attr source org_car2x_veins_modules_mac_sigRetriesExceeded
+scalar PriorityV2VAttack.node[46].nic.mac1609_4 sentAcks:count 0
+attr source org_car2x_veins_modules_mac_sigSentAck
+scalar PriorityV2VAttack.node[46].nic.mac1609_4 sentPackets:count 64
+attr source org_car2x_veins_modules_mac_sigSentPacket
+scalar PriorityV2VAttack.node[46].nic.mac1609_4 collisions:count 0
+attr source org_car2x_veins_modules_mac_sigCollision
+scalar PriorityV2VAttack.node[46].nic.mac1609_4 channelBusy:timeavg 0.002079375
+attr source org_car2x_veins_modules_mac_sigChannelBusy
+scalar PriorityV2VAttack.node[46].veinsmobility startTime 136
+scalar PriorityV2VAttack.node[46].veinsmobility totalTime 64
+scalar PriorityV2VAttack.node[46].veinsmobility stopTime 200
+scalar PriorityV2VAttack.node[46].veinsmobility minSpeed 4.1213719500938
+scalar PriorityV2VAttack.node[46].veinsmobility maxSpeed 13.99508171211
+scalar PriorityV2VAttack.node[46].veinsmobility totalDistance 802.22193251475
+scalar PriorityV2VAttack.node[46].veinsmobility totalCO2Emission 155.46818554086
+scalar PriorityV2VAttack.node[47].appl generatedWSMs 0
+scalar PriorityV2VAttack.node[47].appl receivedWSMs 0
+scalar PriorityV2VAttack.node[47].appl generatedBSMs 61
+scalar PriorityV2VAttack.node[47].appl receivedBSMs 1046
+scalar PriorityV2VAttack.node[47].appl generatedWSAs 0
+scalar PriorityV2VAttack.node[47].appl receivedWSAs 0
+scalar PriorityV2VAttack.node[47].nic.phy80211p busyTime 0.001880524590164
+scalar PriorityV2VAttack.node[47].nic.mac1609_4 ReceivedUnicastPackets 0
+scalar PriorityV2VAttack.node[47].nic.mac1609_4 ReceivedBroadcasts 1046
+scalar PriorityV2VAttack.node[47].nic.mac1609_4 SentPackets 61
+scalar PriorityV2VAttack.node[47].nic.mac1609_4 SentAcknowledgements 0
+scalar PriorityV2VAttack.node[47].nic.mac1609_4 RetriesExceeded 0
+scalar PriorityV2VAttack.node[47].nic.mac1609_4 SNIRLostPackets 57
+scalar PriorityV2VAttack.node[47].nic.mac1609_4 RXTXLostPackets 0
+scalar PriorityV2VAttack.node[47].nic.mac1609_4 TotalLostPackets 57
+scalar PriorityV2VAttack.node[47].nic.mac1609_4 DroppedPacketsInMac 0
+scalar PriorityV2VAttack.node[47].nic.mac1609_4 TooLittleTime 0
+scalar PriorityV2VAttack.node[47].nic.mac1609_4 TimesIntoBackoff 61
+scalar PriorityV2VAttack.node[47].nic.mac1609_4 SlotsBackoff 93
+scalar PriorityV2VAttack.node[47].nic.mac1609_4 NumInternalContention 0
+scalar PriorityV2VAttack.node[47].nic.mac1609_4 totalBusyTime 0.121117
+scalar PriorityV2VAttack.node[47].nic.mac1609_4 NodeDownCount 0
+scalar PriorityV2VAttack.node[47].nic.mac1609_4 retriesExceeded:count 0
+attr source org_car2x_veins_modules_mac_sigRetriesExceeded
+scalar PriorityV2VAttack.node[47].nic.mac1609_4 sentAcks:count 0
+attr source org_car2x_veins_modules_mac_sigSentAck
+scalar PriorityV2VAttack.node[47].nic.mac1609_4 sentPackets:count 61
+attr source org_car2x_veins_modules_mac_sigSentPacket
+scalar PriorityV2VAttack.node[47].nic.mac1609_4 collisions:count 0
+attr source org_car2x_veins_modules_mac_sigCollision
+scalar PriorityV2VAttack.node[47].nic.mac1609_4 channelBusy:timeavg 0.001985524590164
+attr source org_car2x_veins_modules_mac_sigChannelBusy
+scalar PriorityV2VAttack.node[47].veinsmobility startTime 139
+scalar PriorityV2VAttack.node[47].veinsmobility totalTime 61
+scalar PriorityV2VAttack.node[47].veinsmobility stopTime 200
+scalar PriorityV2VAttack.node[47].veinsmobility minSpeed 4.015751118946
+scalar PriorityV2VAttack.node[47].veinsmobility maxSpeed 13.992500017215
+scalar PriorityV2VAttack.node[47].veinsmobility totalDistance 685.80746564019
+scalar PriorityV2VAttack.node[47].veinsmobility totalCO2Emission 137.6577279308
+scalar PriorityV2VAttack.node[48].appl generatedWSMs 0
+scalar PriorityV2VAttack.node[48].appl receivedWSMs 0
+scalar PriorityV2VAttack.node[48].appl generatedBSMs 58
+scalar PriorityV2VAttack.node[48].appl receivedBSMs 1002
+scalar PriorityV2VAttack.node[48].appl generatedWSAs 0
+scalar PriorityV2VAttack.node[48].appl receivedWSAs 0
+scalar PriorityV2VAttack.node[48].nic.phy80211p busyTime 0.0018863448275863
+scalar PriorityV2VAttack.node[48].nic.mac1609_4 ReceivedUnicastPackets 0
+scalar PriorityV2VAttack.node[48].nic.mac1609_4 ReceivedBroadcasts 1002
+scalar PriorityV2VAttack.node[48].nic.mac1609_4 SentPackets 58
+scalar PriorityV2VAttack.node[48].nic.mac1609_4 SentAcknowledgements 0
+scalar PriorityV2VAttack.node[48].nic.mac1609_4 RetriesExceeded 0
+scalar PriorityV2VAttack.node[48].nic.mac1609_4 SNIRLostPackets 50
+scalar PriorityV2VAttack.node[48].nic.mac1609_4 RXTXLostPackets 0
+scalar PriorityV2VAttack.node[48].nic.mac1609_4 TotalLostPackets 50
+scalar PriorityV2VAttack.node[48].nic.mac1609_4 DroppedPacketsInMac 0
+scalar PriorityV2VAttack.node[48].nic.mac1609_4 TooLittleTime 0
+scalar PriorityV2VAttack.node[48].nic.mac1609_4 TimesIntoBackoff 58
+scalar PriorityV2VAttack.node[48].nic.mac1609_4 SlotsBackoff 103
+scalar PriorityV2VAttack.node[48].nic.mac1609_4 NumInternalContention 0
+scalar PriorityV2VAttack.node[48].nic.mac1609_4 totalBusyTime 0.115498
+scalar PriorityV2VAttack.node[48].nic.mac1609_4 NodeDownCount 0
+scalar PriorityV2VAttack.node[48].nic.mac1609_4 retriesExceeded:count 0
+attr source org_car2x_veins_modules_mac_sigRetriesExceeded
+scalar PriorityV2VAttack.node[48].nic.mac1609_4 sentAcks:count 0
+attr source org_car2x_veins_modules_mac_sigSentAck
+scalar PriorityV2VAttack.node[48].nic.mac1609_4 sentPackets:count 58
+attr source org_car2x_veins_modules_mac_sigSentPacket
+scalar PriorityV2VAttack.node[48].nic.mac1609_4 collisions:count 0
+attr source org_car2x_veins_modules_mac_sigCollision
+scalar PriorityV2VAttack.node[48].nic.mac1609_4 channelBusy:timeavg 0.0019913448275863
+attr source org_car2x_veins_modules_mac_sigChannelBusy
+scalar PriorityV2VAttack.node[48].veinsmobility startTime 142
+scalar PriorityV2VAttack.node[48].veinsmobility totalTime 58
+scalar PriorityV2VAttack.node[48].veinsmobility stopTime 200
+scalar PriorityV2VAttack.node[48].veinsmobility minSpeed 3.9705508804287
+scalar PriorityV2VAttack.node[48].veinsmobility maxSpeed 13.804028445697
+scalar PriorityV2VAttack.node[48].veinsmobility totalDistance 666.81375373811
+scalar PriorityV2VAttack.node[48].veinsmobility totalCO2Emission 133.3108061725
+scalar PriorityV2VAttack.node[49].appl generatedWSMs 0
+scalar PriorityV2VAttack.node[49].appl receivedWSMs 0
+scalar PriorityV2VAttack.node[49].appl generatedBSMs 55
+scalar PriorityV2VAttack.node[49].appl receivedBSMs 947
+scalar PriorityV2VAttack.node[49].appl generatedWSAs 0
+scalar PriorityV2VAttack.node[49].appl receivedWSAs 0
+scalar PriorityV2VAttack.node[49].nic.phy80211p busyTime 0.0018682181818182
+scalar PriorityV2VAttack.node[49].nic.mac1609_4 ReceivedUnicastPackets 0
+scalar PriorityV2VAttack.node[49].nic.mac1609_4 ReceivedBroadcasts 947
+scalar PriorityV2VAttack.node[49].nic.mac1609_4 SentPackets 55
+scalar PriorityV2VAttack.node[49].nic.mac1609_4 SentAcknowledgements 0
+scalar PriorityV2VAttack.node[49].nic.mac1609_4 RetriesExceeded 0
+scalar PriorityV2VAttack.node[49].nic.mac1609_4 SNIRLostPackets 41
+scalar PriorityV2VAttack.node[49].nic.mac1609_4 RXTXLostPackets 0
+scalar PriorityV2VAttack.node[49].nic.mac1609_4 TotalLostPackets 41
+scalar PriorityV2VAttack.node[49].nic.mac1609_4 DroppedPacketsInMac 0
+scalar PriorityV2VAttack.node[49].nic.mac1609_4 TooLittleTime 0
+scalar PriorityV2VAttack.node[49].nic.mac1609_4 TimesIntoBackoff 55
+scalar PriorityV2VAttack.node[49].nic.mac1609_4 SlotsBackoff 77
+scalar PriorityV2VAttack.node[49].nic.mac1609_4 NumInternalContention 0
+scalar PriorityV2VAttack.node[49].nic.mac1609_4 totalBusyTime 0.108527
+scalar PriorityV2VAttack.node[49].nic.mac1609_4 NodeDownCount 0
+scalar PriorityV2VAttack.node[49].nic.mac1609_4 retriesExceeded:count 0
+attr source org_car2x_veins_modules_mac_sigRetriesExceeded
+scalar PriorityV2VAttack.node[49].nic.mac1609_4 sentAcks:count 0
+attr source org_car2x_veins_modules_mac_sigSentAck
+scalar PriorityV2VAttack.node[49].nic.mac1609_4 sentPackets:count 55
+attr source org_car2x_veins_modules_mac_sigSentPacket
+scalar PriorityV2VAttack.node[49].nic.mac1609_4 collisions:count 0
+attr source org_car2x_veins_modules_mac_sigCollision
+scalar PriorityV2VAttack.node[49].nic.mac1609_4 channelBusy:timeavg 0.0019732181818182
+attr source org_car2x_veins_modules_mac_sigChannelBusy
+scalar PriorityV2VAttack.node[49].veinsmobility startTime 145
+scalar PriorityV2VAttack.node[49].veinsmobility totalTime 55
+scalar PriorityV2VAttack.node[49].veinsmobility stopTime 200
+scalar PriorityV2VAttack.node[49].veinsmobility minSpeed 4.0027464997838
+scalar PriorityV2VAttack.node[49].veinsmobility maxSpeed 13.98210951197
+scalar PriorityV2VAttack.node[49].veinsmobility totalDistance 648.15575110966
+scalar PriorityV2VAttack.node[49].veinsmobility totalCO2Emission 132.51139215646
+scalar PriorityV2VAttack.node[50].appl generatedWSMs 0
+scalar PriorityV2VAttack.node[50].appl receivedWSMs 0
+scalar PriorityV2VAttack.node[50].appl generatedBSMs 52
+scalar PriorityV2VAttack.node[50].appl receivedBSMs 883
+scalar PriorityV2VAttack.node[50].appl generatedWSAs 0
+scalar PriorityV2VAttack.node[50].appl receivedWSAs 0
+scalar PriorityV2VAttack.node[50].nic.phy80211p busyTime 0.001856
+scalar PriorityV2VAttack.node[50].nic.mac1609_4 ReceivedUnicastPackets 0
+scalar PriorityV2VAttack.node[50].nic.mac1609_4 ReceivedBroadcasts 883
+scalar PriorityV2VAttack.node[50].nic.mac1609_4 SentPackets 52
+scalar PriorityV2VAttack.node[50].nic.mac1609_4 SentAcknowledgements 0
+scalar PriorityV2VAttack.node[50].nic.mac1609_4 RetriesExceeded 0
+scalar PriorityV2VAttack.node[50].nic.mac1609_4 SNIRLostPackets 45
+scalar PriorityV2VAttack.node[50].nic.mac1609_4 RXTXLostPackets 0
+scalar PriorityV2VAttack.node[50].nic.mac1609_4 TotalLostPackets 45
+scalar PriorityV2VAttack.node[50].nic.mac1609_4 DroppedPacketsInMac 0
+scalar PriorityV2VAttack.node[50].nic.mac1609_4 TooLittleTime 0
+scalar PriorityV2VAttack.node[50].nic.mac1609_4 TimesIntoBackoff 52
+scalar PriorityV2VAttack.node[50].nic.mac1609_4 SlotsBackoff 77
+scalar PriorityV2VAttack.node[50].nic.mac1609_4 NumInternalContention 0
+scalar PriorityV2VAttack.node[50].nic.mac1609_4 totalBusyTime 0.101972
+scalar PriorityV2VAttack.node[50].nic.mac1609_4 NodeDownCount 0
+scalar PriorityV2VAttack.node[50].nic.mac1609_4 retriesExceeded:count 0
+attr source org_car2x_veins_modules_mac_sigRetriesExceeded
+scalar PriorityV2VAttack.node[50].nic.mac1609_4 sentAcks:count 0
+attr source org_car2x_veins_modules_mac_sigSentAck
+scalar PriorityV2VAttack.node[50].nic.mac1609_4 sentPackets:count 52
+attr source org_car2x_veins_modules_mac_sigSentPacket
+scalar PriorityV2VAttack.node[50].nic.mac1609_4 collisions:count 0
+attr source org_car2x_veins_modules_mac_sigCollision
+scalar PriorityV2VAttack.node[50].nic.mac1609_4 channelBusy:timeavg 0.001961
+attr source org_car2x_veins_modules_mac_sigChannelBusy
+scalar PriorityV2VAttack.node[50].veinsmobility startTime 148
+scalar PriorityV2VAttack.node[50].veinsmobility totalTime 52
+scalar PriorityV2VAttack.node[50].veinsmobility stopTime 200
+scalar PriorityV2VAttack.node[50].veinsmobility minSpeed 4.0457048808943
+scalar PriorityV2VAttack.node[50].veinsmobility maxSpeed 13.981422487309
+scalar PriorityV2VAttack.node[50].veinsmobility totalDistance 630.40497350345
+scalar PriorityV2VAttack.node[50].veinsmobility totalCO2Emission 130.00567805165
+scalar PriorityV2VAttack.node[51].appl generatedWSMs 0
+scalar PriorityV2VAttack.node[51].appl receivedWSMs 0
+scalar PriorityV2VAttack.node[51].appl generatedBSMs 49
+scalar PriorityV2VAttack.node[51].appl receivedBSMs 847
+scalar PriorityV2VAttack.node[51].appl generatedWSAs 0
+scalar PriorityV2VAttack.node[51].appl receivedWSAs 0
+scalar PriorityV2VAttack.node[51].nic.phy80211p busyTime 0.0018889795918368
+scalar PriorityV2VAttack.node[51].nic.mac1609_4 ReceivedUnicastPackets 0
+scalar PriorityV2VAttack.node[51].nic.mac1609_4 ReceivedBroadcasts 847
+scalar PriorityV2VAttack.node[51].nic.mac1609_4 SentPackets 49
+scalar PriorityV2VAttack.node[51].nic.mac1609_4 SentAcknowledgements 0
+scalar PriorityV2VAttack.node[51].nic.mac1609_4 RetriesExceeded 0
+scalar PriorityV2VAttack.node[51].nic.mac1609_4 SNIRLostPackets 43
+scalar PriorityV2VAttack.node[51].nic.mac1609_4 RXTXLostPackets 0
+scalar PriorityV2VAttack.node[51].nic.mac1609_4 TotalLostPackets 43
+scalar PriorityV2VAttack.node[51].nic.mac1609_4 DroppedPacketsInMac 0
+scalar PriorityV2VAttack.node[51].nic.mac1609_4 TooLittleTime 0
+scalar PriorityV2VAttack.node[51].nic.mac1609_4 TimesIntoBackoff 49
+scalar PriorityV2VAttack.node[51].nic.mac1609_4 SlotsBackoff 69
+scalar PriorityV2VAttack.node[51].nic.mac1609_4 NumInternalContention 0
+scalar PriorityV2VAttack.node[51].nic.mac1609_4 totalBusyTime 0.097705
+scalar PriorityV2VAttack.node[51].nic.mac1609_4 NodeDownCount 0
+scalar PriorityV2VAttack.node[51].nic.mac1609_4 retriesExceeded:count 0
+attr source org_car2x_veins_modules_mac_sigRetriesExceeded
+scalar PriorityV2VAttack.node[51].nic.mac1609_4 sentAcks:count 0
+attr source org_car2x_veins_modules_mac_sigSentAck
+scalar PriorityV2VAttack.node[51].nic.mac1609_4 sentPackets:count 49
+attr source org_car2x_veins_modules_mac_sigSentPacket
+scalar PriorityV2VAttack.node[51].nic.mac1609_4 collisions:count 0
+attr source org_car2x_veins_modules_mac_sigCollision
+scalar PriorityV2VAttack.node[51].nic.mac1609_4 channelBusy:timeavg 0.0019939795918368
+attr source org_car2x_veins_modules_mac_sigChannelBusy
+scalar PriorityV2VAttack.node[51].veinsmobility startTime 151
+scalar PriorityV2VAttack.node[51].veinsmobility totalTime 49
+scalar PriorityV2VAttack.node[51].veinsmobility stopTime 200
+scalar PriorityV2VAttack.node[51].veinsmobility minSpeed 3.9210062227909
+scalar PriorityV2VAttack.node[51].veinsmobility maxSpeed 13.997578719547
+scalar PriorityV2VAttack.node[51].veinsmobility totalDistance 610.70579349897
+scalar PriorityV2VAttack.node[51].veinsmobility totalCO2Emission 130.91256772184
+scalar PriorityV2VAttack.node[52].appl generatedWSMs 0
+scalar PriorityV2VAttack.node[52].appl receivedWSMs 0
+scalar PriorityV2VAttack.node[52].appl generatedBSMs 46
+scalar PriorityV2VAttack.node[52].appl receivedBSMs 805
+scalar PriorityV2VAttack.node[52].appl generatedWSAs 0
+scalar PriorityV2VAttack.node[52].appl receivedWSAs 0
+scalar PriorityV2VAttack.node[52].nic.phy80211p busyTime 0.001924
+scalar PriorityV2VAttack.node[52].nic.mac1609_4 ReceivedUnicastPackets 0
+scalar PriorityV2VAttack.node[52].nic.mac1609_4 ReceivedBroadcasts 805
+scalar PriorityV2VAttack.node[52].nic.mac1609_4 SentPackets 46
+scalar PriorityV2VAttack.node[52].nic.mac1609_4 SentAcknowledgements 0
+scalar PriorityV2VAttack.node[52].nic.mac1609_4 RetriesExceeded 0
+scalar PriorityV2VAttack.node[52].nic.mac1609_4 SNIRLostPackets 46
+scalar PriorityV2VAttack.node[52].nic.mac1609_4 RXTXLostPackets 0
+scalar PriorityV2VAttack.node[52].nic.mac1609_4 TotalLostPackets 46
+scalar PriorityV2VAttack.node[52].nic.mac1609_4 DroppedPacketsInMac 0
+scalar PriorityV2VAttack.node[52].nic.mac1609_4 TooLittleTime 0
+scalar PriorityV2VAttack.node[52].nic.mac1609_4 TimesIntoBackoff 46
+scalar PriorityV2VAttack.node[52].nic.mac1609_4 SlotsBackoff 69
+scalar PriorityV2VAttack.node[52].nic.mac1609_4 NumInternalContention 0
+scalar PriorityV2VAttack.node[52].nic.mac1609_4 totalBusyTime 0.093334
+scalar PriorityV2VAttack.node[52].nic.mac1609_4 NodeDownCount 0
+scalar PriorityV2VAttack.node[52].nic.mac1609_4 retriesExceeded:count 0
+attr source org_car2x_veins_modules_mac_sigRetriesExceeded
+scalar PriorityV2VAttack.node[52].nic.mac1609_4 sentAcks:count 0
+attr source org_car2x_veins_modules_mac_sigSentAck
+scalar PriorityV2VAttack.node[52].nic.mac1609_4 sentPackets:count 46
+attr source org_car2x_veins_modules_mac_sigSentPacket
+scalar PriorityV2VAttack.node[52].nic.mac1609_4 collisions:count 0
+attr source org_car2x_veins_modules_mac_sigCollision
+scalar PriorityV2VAttack.node[52].nic.mac1609_4 channelBusy:timeavg 0.002029
+attr source org_car2x_veins_modules_mac_sigChannelBusy
+scalar PriorityV2VAttack.node[52].veinsmobility startTime 154
+scalar PriorityV2VAttack.node[52].veinsmobility totalTime 46
+scalar PriorityV2VAttack.node[52].veinsmobility stopTime 200
+scalar PriorityV2VAttack.node[52].veinsmobility minSpeed 4.1345499874911
+scalar PriorityV2VAttack.node[52].veinsmobility maxSpeed 13.99820148767
+scalar PriorityV2VAttack.node[52].veinsmobility totalDistance 572.58730023769
+scalar PriorityV2VAttack.node[52].veinsmobility totalCO2Emission 125.95878471563
+scalar PriorityV2VAttack.node[53].appl generatedWSMs 0
+scalar PriorityV2VAttack.node[53].appl receivedWSMs 0
+scalar PriorityV2VAttack.node[53].appl generatedBSMs 43
+scalar PriorityV2VAttack.node[53].appl receivedBSMs 752
+scalar PriorityV2VAttack.node[53].appl generatedWSAs 0
+scalar PriorityV2VAttack.node[53].appl receivedWSAs 0
+scalar PriorityV2VAttack.node[53].nic.phy80211p busyTime 0.0019227906976744
+scalar PriorityV2VAttack.node[53].nic.mac1609_4 ReceivedUnicastPackets 0
+scalar PriorityV2VAttack.node[53].nic.mac1609_4 ReceivedBroadcasts 752
+scalar PriorityV2VAttack.node[53].nic.mac1609_4 SentPackets 43
+scalar PriorityV2VAttack.node[53].nic.mac1609_4 SentAcknowledgements 0
+scalar PriorityV2VAttack.node[53].nic.mac1609_4 RetriesExceeded 0
+scalar PriorityV2VAttack.node[53].nic.mac1609_4 SNIRLostPackets 43
+scalar PriorityV2VAttack.node[53].nic.mac1609_4 RXTXLostPackets 0
+scalar PriorityV2VAttack.node[53].nic.mac1609_4 TotalLostPackets 43
+scalar PriorityV2VAttack.node[53].nic.mac1609_4 DroppedPacketsInMac 0
+scalar PriorityV2VAttack.node[53].nic.mac1609_4 TooLittleTime 0
+scalar PriorityV2VAttack.node[53].nic.mac1609_4 TimesIntoBackoff 43
+scalar PriorityV2VAttack.node[53].nic.mac1609_4 SlotsBackoff 72
+scalar PriorityV2VAttack.node[53].nic.mac1609_4 NumInternalContention 0
+scalar PriorityV2VAttack.node[53].nic.mac1609_4 totalBusyTime 0.087195
+scalar PriorityV2VAttack.node[53].nic.mac1609_4 NodeDownCount 0
+scalar PriorityV2VAttack.node[53].nic.mac1609_4 retriesExceeded:count 0
+attr source org_car2x_veins_modules_mac_sigRetriesExceeded
+scalar PriorityV2VAttack.node[53].nic.mac1609_4 sentAcks:count 0
+attr source org_car2x_veins_modules_mac_sigSentAck
+scalar PriorityV2VAttack.node[53].nic.mac1609_4 sentPackets:count 43
+attr source org_car2x_veins_modules_mac_sigSentPacket
+scalar PriorityV2VAttack.node[53].nic.mac1609_4 collisions:count 0
+attr source org_car2x_veins_modules_mac_sigCollision
+scalar PriorityV2VAttack.node[53].nic.mac1609_4 channelBusy:timeavg 0.0020277906976745
+attr source org_car2x_veins_modules_mac_sigChannelBusy
+scalar PriorityV2VAttack.node[53].veinsmobility startTime 157
+scalar PriorityV2VAttack.node[53].veinsmobility totalTime 43
+scalar PriorityV2VAttack.node[53].veinsmobility stopTime 200
+scalar PriorityV2VAttack.node[53].veinsmobility minSpeed 4.0621267736
+scalar PriorityV2VAttack.node[53].veinsmobility maxSpeed 13.993893159097
+scalar PriorityV2VAttack.node[53].veinsmobility totalDistance 516.54039380897
+scalar PriorityV2VAttack.node[53].veinsmobility totalCO2Emission 115.95191498347
+scalar PriorityV2VAttack.node[54].appl generatedWSMs 0
+scalar PriorityV2VAttack.node[54].appl receivedWSMs 0
+scalar PriorityV2VAttack.node[54].appl generatedBSMs 40
+scalar PriorityV2VAttack.node[54].appl receivedBSMs 707
+scalar PriorityV2VAttack.node[54].appl generatedWSAs 0
+scalar PriorityV2VAttack.node[54].appl receivedWSAs 0
+scalar PriorityV2VAttack.node[54].nic.phy80211p busyTime 0.00195
+scalar PriorityV2VAttack.node[54].nic.mac1609_4 ReceivedUnicastPackets 0
+scalar PriorityV2VAttack.node[54].nic.mac1609_4 ReceivedBroadcasts 707
+scalar PriorityV2VAttack.node[54].nic.mac1609_4 SentPackets 40
+scalar PriorityV2VAttack.node[54].nic.mac1609_4 SentAcknowledgements 0
+scalar PriorityV2VAttack.node[54].nic.mac1609_4 RetriesExceeded 0
+scalar PriorityV2VAttack.node[54].nic.mac1609_4 SNIRLostPackets 43
+scalar PriorityV2VAttack.node[54].nic.mac1609_4 RXTXLostPackets 0
+scalar PriorityV2VAttack.node[54].nic.mac1609_4 TotalLostPackets 43
+scalar PriorityV2VAttack.node[54].nic.mac1609_4 DroppedPacketsInMac 0
+scalar PriorityV2VAttack.node[54].nic.mac1609_4 TooLittleTime 0
+scalar PriorityV2VAttack.node[54].nic.mac1609_4 TimesIntoBackoff 40
+scalar PriorityV2VAttack.node[54].nic.mac1609_4 SlotsBackoff 56
+scalar PriorityV2VAttack.node[54].nic.mac1609_4 NumInternalContention 0
+scalar PriorityV2VAttack.node[54].nic.mac1609_4 totalBusyTime 0.0822
+scalar PriorityV2VAttack.node[54].nic.mac1609_4 NodeDownCount 0
+scalar PriorityV2VAttack.node[54].nic.mac1609_4 retriesExceeded:count 0
+attr source org_car2x_veins_modules_mac_sigRetriesExceeded
+scalar PriorityV2VAttack.node[54].nic.mac1609_4 sentAcks:count 0
+attr source org_car2x_veins_modules_mac_sigSentAck
+scalar PriorityV2VAttack.node[54].nic.mac1609_4 sentPackets:count 40
+attr source org_car2x_veins_modules_mac_sigSentPacket
+scalar PriorityV2VAttack.node[54].nic.mac1609_4 collisions:count 0
+attr source org_car2x_veins_modules_mac_sigCollision
+scalar PriorityV2VAttack.node[54].nic.mac1609_4 channelBusy:timeavg 0.002055
+attr source org_car2x_veins_modules_mac_sigChannelBusy
+scalar PriorityV2VAttack.node[54].veinsmobility startTime 160
+scalar PriorityV2VAttack.node[54].veinsmobility totalTime 40
+scalar PriorityV2VAttack.node[54].veinsmobility stopTime 200
+scalar PriorityV2VAttack.node[54].veinsmobility minSpeed 3.736904237475
+scalar PriorityV2VAttack.node[54].veinsmobility maxSpeed 13.998537937799
+scalar PriorityV2VAttack.node[54].veinsmobility totalDistance 479.46543158667
+scalar PriorityV2VAttack.node[54].veinsmobility totalCO2Emission 109.60696294176
+scalar PriorityV2VAttack.node[55].appl generatedWSMs 0
+scalar PriorityV2VAttack.node[55].appl receivedWSMs 0
+scalar PriorityV2VAttack.node[55].appl generatedBSMs 37
+scalar PriorityV2VAttack.node[55].appl receivedBSMs 651
+scalar PriorityV2VAttack.node[55].appl generatedWSAs 0
+scalar PriorityV2VAttack.node[55].appl receivedWSAs 0
+scalar PriorityV2VAttack.node[55].nic.phy80211p busyTime 0.0019422702702703
+scalar PriorityV2VAttack.node[55].nic.mac1609_4 ReceivedUnicastPackets 0
+scalar PriorityV2VAttack.node[55].nic.mac1609_4 ReceivedBroadcasts 651
+scalar PriorityV2VAttack.node[55].nic.mac1609_4 SentPackets 37
+scalar PriorityV2VAttack.node[55].nic.mac1609_4 SentAcknowledgements 0
+scalar PriorityV2VAttack.node[55].nic.mac1609_4 RetriesExceeded 0
+scalar PriorityV2VAttack.node[55].nic.mac1609_4 SNIRLostPackets 40
+scalar PriorityV2VAttack.node[55].nic.mac1609_4 RXTXLostPackets 0
+scalar PriorityV2VAttack.node[55].nic.mac1609_4 TotalLostPackets 40
+scalar PriorityV2VAttack.node[55].nic.mac1609_4 DroppedPacketsInMac 0
+scalar PriorityV2VAttack.node[55].nic.mac1609_4 TooLittleTime 0
+scalar PriorityV2VAttack.node[55].nic.mac1609_4 TimesIntoBackoff 37
+scalar PriorityV2VAttack.node[55].nic.mac1609_4 SlotsBackoff 59
+scalar PriorityV2VAttack.node[55].nic.mac1609_4 NumInternalContention 0
+scalar PriorityV2VAttack.node[55].nic.mac1609_4 totalBusyTime 0.075749
+scalar PriorityV2VAttack.node[55].nic.mac1609_4 NodeDownCount 0
+scalar PriorityV2VAttack.node[55].nic.mac1609_4 retriesExceeded:count 0
+attr source org_car2x_veins_modules_mac_sigRetriesExceeded
+scalar PriorityV2VAttack.node[55].nic.mac1609_4 sentAcks:count 0
+attr source org_car2x_veins_modules_mac_sigSentAck
+scalar PriorityV2VAttack.node[55].nic.mac1609_4 sentPackets:count 37
+attr source org_car2x_veins_modules_mac_sigSentPacket
+scalar PriorityV2VAttack.node[55].nic.mac1609_4 collisions:count 0
+attr source org_car2x_veins_modules_mac_sigCollision
+scalar PriorityV2VAttack.node[55].nic.mac1609_4 channelBusy:timeavg 0.0020472702702703
+attr source org_car2x_veins_modules_mac_sigChannelBusy
+scalar PriorityV2VAttack.node[55].veinsmobility startTime 163
+scalar PriorityV2VAttack.node[55].veinsmobility totalTime 37
+scalar PriorityV2VAttack.node[55].veinsmobility stopTime 200
+scalar PriorityV2VAttack.node[55].veinsmobility minSpeed 3.9267152179815
+scalar PriorityV2VAttack.node[55].veinsmobility maxSpeed 13.991036061207
+scalar PriorityV2VAttack.node[55].veinsmobility totalDistance 449.78412008077
+scalar PriorityV2VAttack.node[55].veinsmobility totalCO2Emission 106.89488051463
+scalar PriorityV2VAttack.node[56].appl generatedWSMs 0
+scalar PriorityV2VAttack.node[56].appl receivedWSMs 0
+scalar PriorityV2VAttack.node[56].appl generatedBSMs 34
+scalar PriorityV2VAttack.node[56].appl receivedBSMs 546
+scalar PriorityV2VAttack.node[56].appl generatedWSAs 0
+scalar PriorityV2VAttack.node[56].appl receivedWSAs 0
+scalar PriorityV2VAttack.node[56].nic.phy80211p busyTime 0.0017649411764706
+scalar PriorityV2VAttack.node[56].nic.mac1609_4 ReceivedUnicastPackets 0
+scalar PriorityV2VAttack.node[56].nic.mac1609_4 ReceivedBroadcasts 546
+scalar PriorityV2VAttack.node[56].nic.mac1609_4 SentPackets 34
+scalar PriorityV2VAttack.node[56].nic.mac1609_4 SentAcknowledgements 0
+scalar PriorityV2VAttack.node[56].nic.mac1609_4 RetriesExceeded 0
+scalar PriorityV2VAttack.node[56].nic.mac1609_4 SNIRLostPackets 31
+scalar PriorityV2VAttack.node[56].nic.mac1609_4 RXTXLostPackets 0
+scalar PriorityV2VAttack.node[56].nic.mac1609_4 TotalLostPackets 31
+scalar PriorityV2VAttack.node[56].nic.mac1609_4 DroppedPacketsInMac 0
+scalar PriorityV2VAttack.node[56].nic.mac1609_4 TooLittleTime 0
+scalar PriorityV2VAttack.node[56].nic.mac1609_4 TimesIntoBackoff 34
+scalar PriorityV2VAttack.node[56].nic.mac1609_4 SlotsBackoff 44
+scalar PriorityV2VAttack.node[56].nic.mac1609_4 NumInternalContention 0
+scalar PriorityV2VAttack.node[56].nic.mac1609_4 totalBusyTime 0.063578
+scalar PriorityV2VAttack.node[56].nic.mac1609_4 NodeDownCount 0
+scalar PriorityV2VAttack.node[56].nic.mac1609_4 retriesExceeded:count 0
+attr source org_car2x_veins_modules_mac_sigRetriesExceeded
+scalar PriorityV2VAttack.node[56].nic.mac1609_4 sentAcks:count 0
+attr source org_car2x_veins_modules_mac_sigSentAck
+scalar PriorityV2VAttack.node[56].nic.mac1609_4 sentPackets:count 34
+attr source org_car2x_veins_modules_mac_sigSentPacket
+scalar PriorityV2VAttack.node[56].nic.mac1609_4 collisions:count 0
+attr source org_car2x_veins_modules_mac_sigCollision
+scalar PriorityV2VAttack.node[56].nic.mac1609_4 channelBusy:timeavg 0.0018699411764706
+attr source org_car2x_veins_modules_mac_sigChannelBusy
+scalar PriorityV2VAttack.node[56].veinsmobility startTime 166
+scalar PriorityV2VAttack.node[56].veinsmobility totalTime 34
+scalar PriorityV2VAttack.node[56].veinsmobility stopTime 200
+scalar PriorityV2VAttack.node[56].veinsmobility minSpeed 4.0070650662479
+scalar PriorityV2VAttack.node[56].veinsmobility maxSpeed 11.399205355401
+scalar PriorityV2VAttack.node[56].veinsmobility totalDistance 315.08533390772
+scalar PriorityV2VAttack.node[56].veinsmobility totalCO2Emission 73.460189141473
+scalar PriorityV2VAttack.node[57].appl generatedWSMs 0
+scalar PriorityV2VAttack.node[57].appl receivedWSMs 0
+scalar PriorityV2VAttack.node[57].appl generatedBSMs 31
+scalar PriorityV2VAttack.node[57].appl receivedBSMs 490
+scalar PriorityV2VAttack.node[57].appl generatedWSAs 0
+scalar PriorityV2VAttack.node[57].appl receivedWSAs 0
+scalar PriorityV2VAttack.node[57].nic.phy80211p busyTime 0.0017478709677419
+scalar PriorityV2VAttack.node[57].nic.mac1609_4 ReceivedUnicastPackets 0
+scalar PriorityV2VAttack.node[57].nic.mac1609_4 ReceivedBroadcasts 490
+scalar PriorityV2VAttack.node[57].nic.mac1609_4 SentPackets 31
+scalar PriorityV2VAttack.node[57].nic.mac1609_4 SentAcknowledgements 0
+scalar PriorityV2VAttack.node[57].nic.mac1609_4 RetriesExceeded 0
+scalar PriorityV2VAttack.node[57].nic.mac1609_4 SNIRLostPackets 31
+scalar PriorityV2VAttack.node[57].nic.mac1609_4 RXTXLostPackets 0
+scalar PriorityV2VAttack.node[57].nic.mac1609_4 TotalLostPackets 31
+scalar PriorityV2VAttack.node[57].nic.mac1609_4 DroppedPacketsInMac 0
+scalar PriorityV2VAttack.node[57].nic.mac1609_4 TooLittleTime 0
+scalar PriorityV2VAttack.node[57].nic.mac1609_4 TimesIntoBackoff 31
+scalar PriorityV2VAttack.node[57].nic.mac1609_4 SlotsBackoff 38
+scalar PriorityV2VAttack.node[57].nic.mac1609_4 NumInternalContention 0
+scalar PriorityV2VAttack.node[57].nic.mac1609_4 totalBusyTime 0.057439
+scalar PriorityV2VAttack.node[57].nic.mac1609_4 NodeDownCount 0
+scalar PriorityV2VAttack.node[57].nic.mac1609_4 retriesExceeded:count 0
+attr source org_car2x_veins_modules_mac_sigRetriesExceeded
+scalar PriorityV2VAttack.node[57].nic.mac1609_4 sentAcks:count 0
+attr source org_car2x_veins_modules_mac_sigSentAck
+scalar PriorityV2VAttack.node[57].nic.mac1609_4 sentPackets:count 31
+attr source org_car2x_veins_modules_mac_sigSentPacket
+scalar PriorityV2VAttack.node[57].nic.mac1609_4 collisions:count 0
+attr source org_car2x_veins_modules_mac_sigCollision
+scalar PriorityV2VAttack.node[57].nic.mac1609_4 channelBusy:timeavg 0.0018528709677419
+attr source org_car2x_veins_modules_mac_sigChannelBusy
+scalar PriorityV2VAttack.node[57].veinsmobility startTime 169
+scalar PriorityV2VAttack.node[57].veinsmobility totalTime 31
+scalar PriorityV2VAttack.node[57].veinsmobility stopTime 200
+scalar PriorityV2VAttack.node[57].veinsmobility minSpeed 3.8073804533368
+scalar PriorityV2VAttack.node[57].veinsmobility maxSpeed 12.612489265374
+scalar PriorityV2VAttack.node[57].veinsmobility totalDistance 298.07022183229
+scalar PriorityV2VAttack.node[57].veinsmobility totalCO2Emission 74.949749217039
+scalar PriorityV2VAttack.node[58].appl generatedWSMs 0
+scalar PriorityV2VAttack.node[58].appl receivedWSMs 0
+scalar PriorityV2VAttack.node[58].appl generatedBSMs 28
+scalar PriorityV2VAttack.node[58].appl receivedBSMs 440
+scalar PriorityV2VAttack.node[58].appl generatedWSAs 0
+scalar PriorityV2VAttack.node[58].appl receivedWSAs 0
+scalar PriorityV2VAttack.node[58].nic.phy80211p busyTime 0.0017494285714286
+scalar PriorityV2VAttack.node[58].nic.mac1609_4 ReceivedUnicastPackets 0
+scalar PriorityV2VAttack.node[58].nic.mac1609_4 ReceivedBroadcasts 440
+scalar PriorityV2VAttack.node[58].nic.mac1609_4 SentPackets 28
+scalar PriorityV2VAttack.node[58].nic.mac1609_4 SentAcknowledgements 0
+scalar PriorityV2VAttack.node[58].nic.mac1609_4 RetriesExceeded 0
+scalar PriorityV2VAttack.node[58].nic.mac1609_4 SNIRLostPackets 31
+scalar PriorityV2VAttack.node[58].nic.mac1609_4 RXTXLostPackets 0
+scalar PriorityV2VAttack.node[58].nic.mac1609_4 TotalLostPackets 31
+scalar PriorityV2VAttack.node[58].nic.mac1609_4 DroppedPacketsInMac 0
+scalar PriorityV2VAttack.node[58].nic.mac1609_4 TooLittleTime 0
+scalar PriorityV2VAttack.node[58].nic.mac1609_4 TimesIntoBackoff 28
+scalar PriorityV2VAttack.node[58].nic.mac1609_4 SlotsBackoff 39
+scalar PriorityV2VAttack.node[58].nic.mac1609_4 NumInternalContention 0
+scalar PriorityV2VAttack.node[58].nic.mac1609_4 totalBusyTime 0.051924
+scalar PriorityV2VAttack.node[58].nic.mac1609_4 NodeDownCount 0
+scalar PriorityV2VAttack.node[58].nic.mac1609_4 retriesExceeded:count 0
+attr source org_car2x_veins_modules_mac_sigRetriesExceeded
+scalar PriorityV2VAttack.node[58].nic.mac1609_4 sentAcks:count 0
+attr source org_car2x_veins_modules_mac_sigSentAck
+scalar PriorityV2VAttack.node[58].nic.mac1609_4 sentPackets:count 28
+attr source org_car2x_veins_modules_mac_sigSentPacket
+scalar PriorityV2VAttack.node[58].nic.mac1609_4 collisions:count 0
+attr source org_car2x_veins_modules_mac_sigCollision
+scalar PriorityV2VAttack.node[58].nic.mac1609_4 channelBusy:timeavg 0.0018544285714286
+attr source org_car2x_veins_modules_mac_sigChannelBusy
+scalar PriorityV2VAttack.node[58].veinsmobility startTime 172
+scalar PriorityV2VAttack.node[58].veinsmobility totalTime 28
+scalar PriorityV2VAttack.node[58].veinsmobility stopTime 200
+scalar PriorityV2VAttack.node[58].veinsmobility minSpeed 4.034626709241
+scalar PriorityV2VAttack.node[58].veinsmobility maxSpeed 13.136573262607
+scalar PriorityV2VAttack.node[58].veinsmobility totalDistance 277.67006837511
+scalar PriorityV2VAttack.node[58].veinsmobility totalCO2Emission 75.647876635299
+scalar PriorityV2VAttack.node[59].appl generatedWSMs 0
+scalar PriorityV2VAttack.node[59].appl receivedWSMs 0
+scalar PriorityV2VAttack.node[59].appl generatedBSMs 25
+scalar PriorityV2VAttack.node[59].appl receivedBSMs 389
+scalar PriorityV2VAttack.node[59].appl generatedWSAs 0
+scalar PriorityV2VAttack.node[59].appl receivedWSAs 0
+scalar PriorityV2VAttack.node[59].nic.phy80211p busyTime 0.00176384
+scalar PriorityV2VAttack.node[59].nic.mac1609_4 ReceivedUnicastPackets 0
+scalar PriorityV2VAttack.node[59].nic.mac1609_4 ReceivedBroadcasts 389
+scalar PriorityV2VAttack.node[59].nic.mac1609_4 SentPackets 25
+scalar PriorityV2VAttack.node[59].nic.mac1609_4 SentAcknowledgements 0
+scalar PriorityV2VAttack.node[59].nic.mac1609_4 RetriesExceeded 0
+scalar PriorityV2VAttack.node[59].nic.mac1609_4 SNIRLostPackets 35
+scalar PriorityV2VAttack.node[59].nic.mac1609_4 RXTXLostPackets 0
+scalar PriorityV2VAttack.node[59].nic.mac1609_4 TotalLostPackets 35
+scalar PriorityV2VAttack.node[59].nic.mac1609_4 DroppedPacketsInMac 0
+scalar PriorityV2VAttack.node[59].nic.mac1609_4 TooLittleTime 0
+scalar PriorityV2VAttack.node[59].nic.mac1609_4 TimesIntoBackoff 25
+scalar PriorityV2VAttack.node[59].nic.mac1609_4 SlotsBackoff 33
+scalar PriorityV2VAttack.node[59].nic.mac1609_4 NumInternalContention 0
+scalar PriorityV2VAttack.node[59].nic.mac1609_4 totalBusyTime 0.046721
+scalar PriorityV2VAttack.node[59].nic.mac1609_4 NodeDownCount 0
+scalar PriorityV2VAttack.node[59].nic.mac1609_4 retriesExceeded:count 0
+attr source org_car2x_veins_modules_mac_sigRetriesExceeded
+scalar PriorityV2VAttack.node[59].nic.mac1609_4 sentAcks:count 0
+attr source org_car2x_veins_modules_mac_sigSentAck
+scalar PriorityV2VAttack.node[59].nic.mac1609_4 sentPackets:count 25
+attr source org_car2x_veins_modules_mac_sigSentPacket
+scalar PriorityV2VAttack.node[59].nic.mac1609_4 collisions:count 0
+attr source org_car2x_veins_modules_mac_sigCollision
+scalar PriorityV2VAttack.node[59].nic.mac1609_4 channelBusy:timeavg 0.00186884
+attr source org_car2x_veins_modules_mac_sigChannelBusy
+scalar PriorityV2VAttack.node[59].veinsmobility startTime 175
+scalar PriorityV2VAttack.node[59].veinsmobility totalTime 25
+scalar PriorityV2VAttack.node[59].veinsmobility stopTime 200
+scalar PriorityV2VAttack.node[59].veinsmobility minSpeed 4.0318834454092
+scalar PriorityV2VAttack.node[59].veinsmobility maxSpeed 13.24397403098
+scalar PriorityV2VAttack.node[59].veinsmobility totalDistance 255.29466171584
+scalar PriorityV2VAttack.node[59].veinsmobility totalCO2Emission 74.963976233429
+scalar PriorityV2VAttack.node[60].appl generatedWSMs 0
+scalar PriorityV2VAttack.node[60].appl receivedWSMs 0
+scalar PriorityV2VAttack.node[60].appl generatedBSMs 22
+scalar PriorityV2VAttack.node[60].appl receivedBSMs 331
+scalar PriorityV2VAttack.node[60].appl generatedWSAs 0
+scalar PriorityV2VAttack.node[60].appl receivedWSAs 0
+scalar PriorityV2VAttack.node[60].nic.phy80211p busyTime 0.0016781818181818
+scalar PriorityV2VAttack.node[60].nic.mac1609_4 ReceivedUnicastPackets 0
+scalar PriorityV2VAttack.node[60].nic.mac1609_4 ReceivedBroadcasts 331
+scalar PriorityV2VAttack.node[60].nic.mac1609_4 SentPackets 22
+scalar PriorityV2VAttack.node[60].nic.mac1609_4 SentAcknowledgements 0
+scalar PriorityV2VAttack.node[60].nic.mac1609_4 RetriesExceeded 0
+scalar PriorityV2VAttack.node[60].nic.mac1609_4 SNIRLostPackets 24
+scalar PriorityV2VAttack.node[60].nic.mac1609_4 RXTXLostPackets 0
+scalar PriorityV2VAttack.node[60].nic.mac1609_4 TotalLostPackets 24
+scalar PriorityV2VAttack.node[60].nic.mac1609_4 DroppedPacketsInMac 0
+scalar PriorityV2VAttack.node[60].nic.mac1609_4 TooLittleTime 0
+scalar PriorityV2VAttack.node[60].nic.mac1609_4 TimesIntoBackoff 22
+scalar PriorityV2VAttack.node[60].nic.mac1609_4 SlotsBackoff 30
+scalar PriorityV2VAttack.node[60].nic.mac1609_4 NumInternalContention 0
+scalar PriorityV2VAttack.node[60].nic.mac1609_4 totalBusyTime 0.03923
+scalar PriorityV2VAttack.node[60].nic.mac1609_4 NodeDownCount 0
+scalar PriorityV2VAttack.node[60].nic.mac1609_4 retriesExceeded:count 0
+attr source org_car2x_veins_modules_mac_sigRetriesExceeded
+scalar PriorityV2VAttack.node[60].nic.mac1609_4 sentAcks:count 0
+attr source org_car2x_veins_modules_mac_sigSentAck
+scalar PriorityV2VAttack.node[60].nic.mac1609_4 sentPackets:count 22
+attr source org_car2x_veins_modules_mac_sigSentPacket
+scalar PriorityV2VAttack.node[60].nic.mac1609_4 collisions:count 0
+attr source org_car2x_veins_modules_mac_sigCollision
+scalar PriorityV2VAttack.node[60].nic.mac1609_4 channelBusy:timeavg 0.0017831818181818
+attr source org_car2x_veins_modules_mac_sigChannelBusy
+scalar PriorityV2VAttack.node[60].veinsmobility startTime 178
+scalar PriorityV2VAttack.node[60].veinsmobility totalTime 22
+scalar PriorityV2VAttack.node[60].veinsmobility stopTime 200
+scalar PriorityV2VAttack.node[60].veinsmobility minSpeed 4.2559510328259
+scalar PriorityV2VAttack.node[60].veinsmobility maxSpeed 11.274169162431
+scalar PriorityV2VAttack.node[60].veinsmobility totalDistance 222.70271212165
+scalar PriorityV2VAttack.node[60].veinsmobility totalCO2Emission 49.750284574394
+scalar PriorityV2VAttack.node[61].appl generatedWSMs 0
+scalar PriorityV2VAttack.node[61].appl receivedWSMs 0
+scalar PriorityV2VAttack.node[61].appl generatedBSMs 19
+scalar PriorityV2VAttack.node[61].appl receivedBSMs 279
+scalar PriorityV2VAttack.node[61].appl generatedWSAs 0
+scalar PriorityV2VAttack.node[61].appl receivedWSAs 0
+scalar PriorityV2VAttack.node[61].nic.phy80211p busyTime 0.0016585263157895
+scalar PriorityV2VAttack.node[61].nic.mac1609_4 ReceivedUnicastPackets 0
+scalar PriorityV2VAttack.node[61].nic.mac1609_4 ReceivedBroadcasts 279
+scalar PriorityV2VAttack.node[61].nic.mac1609_4 SentPackets 19
+scalar PriorityV2VAttack.node[61].nic.mac1609_4 SentAcknowledgements 0
+scalar PriorityV2VAttack.node[61].nic.mac1609_4 RetriesExceeded 0
+scalar PriorityV2VAttack.node[61].nic.mac1609_4 SNIRLostPackets 24
+scalar PriorityV2VAttack.node[61].nic.mac1609_4 RXTXLostPackets 0
+scalar PriorityV2VAttack.node[61].nic.mac1609_4 TotalLostPackets 24
+scalar PriorityV2VAttack.node[61].nic.mac1609_4 DroppedPacketsInMac 0
+scalar PriorityV2VAttack.node[61].nic.mac1609_4 TooLittleTime 0
+scalar PriorityV2VAttack.node[61].nic.mac1609_4 TimesIntoBackoff 19
+scalar PriorityV2VAttack.node[61].nic.mac1609_4 SlotsBackoff 38
+scalar PriorityV2VAttack.node[61].nic.mac1609_4 NumInternalContention 0
+scalar PriorityV2VAttack.node[61].nic.mac1609_4 totalBusyTime 0.033507
+scalar PriorityV2VAttack.node[61].nic.mac1609_4 NodeDownCount 0
+scalar PriorityV2VAttack.node[61].nic.mac1609_4 retriesExceeded:count 0
+attr source org_car2x_veins_modules_mac_sigRetriesExceeded
+scalar PriorityV2VAttack.node[61].nic.mac1609_4 sentAcks:count 0
+attr source org_car2x_veins_modules_mac_sigSentAck
+scalar PriorityV2VAttack.node[61].nic.mac1609_4 sentPackets:count 19
+attr source org_car2x_veins_modules_mac_sigSentPacket
+scalar PriorityV2VAttack.node[61].nic.mac1609_4 collisions:count 0
+attr source org_car2x_veins_modules_mac_sigCollision
+scalar PriorityV2VAttack.node[61].nic.mac1609_4 channelBusy:timeavg 0.0017635263157895
+attr source org_car2x_veins_modules_mac_sigChannelBusy
+scalar PriorityV2VAttack.node[61].veinsmobility startTime 181
+scalar PriorityV2VAttack.node[61].veinsmobility totalTime 19
+scalar PriorityV2VAttack.node[61].veinsmobility stopTime 200
+scalar PriorityV2VAttack.node[61].veinsmobility minSpeed 3.7929458832696
+scalar PriorityV2VAttack.node[61].veinsmobility maxSpeed 12.84857585862
+scalar PriorityV2VAttack.node[61].veinsmobility totalDistance 206.57569161638
+scalar PriorityV2VAttack.node[61].veinsmobility totalCO2Emission 48.749092181783
+scalar PriorityV2VAttack.node[62].appl generatedWSMs 0
+scalar PriorityV2VAttack.node[62].appl receivedWSMs 0
+scalar PriorityV2VAttack.node[62].appl generatedBSMs 16
+scalar PriorityV2VAttack.node[62].appl receivedBSMs 238
+scalar PriorityV2VAttack.node[62].appl generatedWSAs 0
+scalar PriorityV2VAttack.node[62].appl receivedWSAs 0
+scalar PriorityV2VAttack.node[62].nic.phy80211p busyTime 0.0016445
+scalar PriorityV2VAttack.node[62].nic.mac1609_4 ReceivedUnicastPackets 0
+scalar PriorityV2VAttack.node[62].nic.mac1609_4 ReceivedBroadcasts 238
+scalar PriorityV2VAttack.node[62].nic.mac1609_4 SentPackets 16
+scalar PriorityV2VAttack.node[62].nic.mac1609_4 SentAcknowledgements 0
+scalar PriorityV2VAttack.node[62].nic.mac1609_4 RetriesExceeded 0
+scalar PriorityV2VAttack.node[62].nic.mac1609_4 SNIRLostPackets 15
+scalar PriorityV2VAttack.node[62].nic.mac1609_4 RXTXLostPackets 0
+scalar PriorityV2VAttack.node[62].nic.mac1609_4 TotalLostPackets 15
+scalar PriorityV2VAttack.node[62].nic.mac1609_4 DroppedPacketsInMac 0
+scalar PriorityV2VAttack.node[62].nic.mac1609_4 TooLittleTime 0
+scalar PriorityV2VAttack.node[62].nic.mac1609_4 TimesIntoBackoff 16
+scalar PriorityV2VAttack.node[62].nic.mac1609_4 SlotsBackoff 24
+scalar PriorityV2VAttack.node[62].nic.mac1609_4 NumInternalContention 0
+scalar PriorityV2VAttack.node[62].nic.mac1609_4 totalBusyTime 0.027992
+scalar PriorityV2VAttack.node[62].nic.mac1609_4 NodeDownCount 0
+scalar PriorityV2VAttack.node[62].nic.mac1609_4 retriesExceeded:count 0
+attr source org_car2x_veins_modules_mac_sigRetriesExceeded
+scalar PriorityV2VAttack.node[62].nic.mac1609_4 sentAcks:count 0
+attr source org_car2x_veins_modules_mac_sigSentAck
+scalar PriorityV2VAttack.node[62].nic.mac1609_4 sentPackets:count 16
+attr source org_car2x_veins_modules_mac_sigSentPacket
+scalar PriorityV2VAttack.node[62].nic.mac1609_4 collisions:count 0
+attr source org_car2x_veins_modules_mac_sigCollision
+scalar PriorityV2VAttack.node[62].nic.mac1609_4 channelBusy:timeavg 0.0017495
+attr source org_car2x_veins_modules_mac_sigChannelBusy
+scalar PriorityV2VAttack.node[62].veinsmobility startTime 184
+scalar PriorityV2VAttack.node[62].veinsmobility totalTime 16
+scalar PriorityV2VAttack.node[62].veinsmobility stopTime 200
+scalar PriorityV2VAttack.node[62].veinsmobility minSpeed 3.9643027338979
+scalar PriorityV2VAttack.node[62].veinsmobility maxSpeed 13.381397598181
+scalar PriorityV2VAttack.node[62].veinsmobility totalDistance 179.76706263353
+scalar PriorityV2VAttack.node[62].veinsmobility totalCO2Emission 48.669755552151
+scalar PriorityV2VAttack.node[63].appl generatedWSMs 0
+scalar PriorityV2VAttack.node[63].appl receivedWSMs 0
+scalar PriorityV2VAttack.node[63].appl generatedBSMs 13
+scalar PriorityV2VAttack.node[63].appl receivedBSMs 207
+scalar PriorityV2VAttack.node[63].appl generatedWSAs 0
+scalar PriorityV2VAttack.node[63].appl receivedWSAs 0
+scalar PriorityV2VAttack.node[63].nic.phy80211p busyTime 0.001744
+scalar PriorityV2VAttack.node[63].nic.mac1609_4 ReceivedUnicastPackets 0
+scalar PriorityV2VAttack.node[63].nic.mac1609_4 ReceivedBroadcasts 207
+scalar PriorityV2VAttack.node[63].nic.mac1609_4 SentPackets 13
+scalar PriorityV2VAttack.node[63].nic.mac1609_4 SentAcknowledgements 0
+scalar PriorityV2VAttack.node[63].nic.mac1609_4 RetriesExceeded 0
+scalar PriorityV2VAttack.node[63].nic.mac1609_4 SNIRLostPackets 11
+scalar PriorityV2VAttack.node[63].nic.mac1609_4 RXTXLostPackets 0
+scalar PriorityV2VAttack.node[63].nic.mac1609_4 TotalLostPackets 11
+scalar PriorityV2VAttack.node[63].nic.mac1609_4 DroppedPacketsInMac 0
+scalar PriorityV2VAttack.node[63].nic.mac1609_4 TooLittleTime 0
+scalar PriorityV2VAttack.node[63].nic.mac1609_4 TimesIntoBackoff 13
+scalar PriorityV2VAttack.node[63].nic.mac1609_4 SlotsBackoff 18
+scalar PriorityV2VAttack.node[63].nic.mac1609_4 NumInternalContention 0
+scalar PriorityV2VAttack.node[63].nic.mac1609_4 totalBusyTime 0.024037
+scalar PriorityV2VAttack.node[63].nic.mac1609_4 NodeDownCount 0
+scalar PriorityV2VAttack.node[63].nic.mac1609_4 retriesExceeded:count 0
+attr source org_car2x_veins_modules_mac_sigRetriesExceeded
+scalar PriorityV2VAttack.node[63].nic.mac1609_4 sentAcks:count 0
+attr source org_car2x_veins_modules_mac_sigSentAck
+scalar PriorityV2VAttack.node[63].nic.mac1609_4 sentPackets:count 13
+attr source org_car2x_veins_modules_mac_sigSentPacket
+scalar PriorityV2VAttack.node[63].nic.mac1609_4 collisions:count 0
+attr source org_car2x_veins_modules_mac_sigCollision
+scalar PriorityV2VAttack.node[63].nic.mac1609_4 channelBusy:timeavg 0.001849
+attr source org_car2x_veins_modules_mac_sigChannelBusy
+scalar PriorityV2VAttack.node[63].veinsmobility startTime 187
+scalar PriorityV2VAttack.node[63].veinsmobility totalTime 13
+scalar PriorityV2VAttack.node[63].veinsmobility stopTime 200
+scalar PriorityV2VAttack.node[63].veinsmobility minSpeed 3.9763429005056
+scalar PriorityV2VAttack.node[63].veinsmobility maxSpeed 13.667736121664
+scalar PriorityV2VAttack.node[63].veinsmobility totalDistance 141.82023789111
+scalar PriorityV2VAttack.node[63].veinsmobility totalCO2Emission 44.994078679557
+scalar PriorityV2VAttack.node[64].appl generatedWSMs 0
+scalar PriorityV2VAttack.node[64].appl receivedWSMs 0
+scalar PriorityV2VAttack.node[64].appl generatedBSMs 10
+scalar PriorityV2VAttack.node[64].appl receivedBSMs 171
+scalar PriorityV2VAttack.node[64].appl generatedWSAs 0
+scalar PriorityV2VAttack.node[64].appl receivedWSAs 0
+scalar PriorityV2VAttack.node[64].nic.phy80211p busyTime 0.0018408
+scalar PriorityV2VAttack.node[64].nic.mac1609_4 ReceivedUnicastPackets 0
+scalar PriorityV2VAttack.node[64].nic.mac1609_4 ReceivedBroadcasts 171
+scalar PriorityV2VAttack.node[64].nic.mac1609_4 SentPackets 10
+scalar PriorityV2VAttack.node[64].nic.mac1609_4 SentAcknowledgements 0
+scalar PriorityV2VAttack.node[64].nic.mac1609_4 RetriesExceeded 0
+scalar PriorityV2VAttack.node[64].nic.mac1609_4 SNIRLostPackets 6
+scalar PriorityV2VAttack.node[64].nic.mac1609_4 RXTXLostPackets 0
+scalar PriorityV2VAttack.node[64].nic.mac1609_4 TotalLostPackets 6
+scalar PriorityV2VAttack.node[64].nic.mac1609_4 DroppedPacketsInMac 0
+scalar PriorityV2VAttack.node[64].nic.mac1609_4 TooLittleTime 0
+scalar PriorityV2VAttack.node[64].nic.mac1609_4 TimesIntoBackoff 10
+scalar PriorityV2VAttack.node[64].nic.mac1609_4 SlotsBackoff 20
+scalar PriorityV2VAttack.node[64].nic.mac1609_4 NumInternalContention 0
+scalar PriorityV2VAttack.node[64].nic.mac1609_4 totalBusyTime 0.019458
+scalar PriorityV2VAttack.node[64].nic.mac1609_4 NodeDownCount 0
+scalar PriorityV2VAttack.node[64].nic.mac1609_4 retriesExceeded:count 0
+attr source org_car2x_veins_modules_mac_sigRetriesExceeded
+scalar PriorityV2VAttack.node[64].nic.mac1609_4 sentAcks:count 0
+attr source org_car2x_veins_modules_mac_sigSentAck
+scalar PriorityV2VAttack.node[64].nic.mac1609_4 sentPackets:count 10
+attr source org_car2x_veins_modules_mac_sigSentPacket
+scalar PriorityV2VAttack.node[64].nic.mac1609_4 collisions:count 0
+attr source org_car2x_veins_modules_mac_sigCollision
+scalar PriorityV2VAttack.node[64].nic.mac1609_4 channelBusy:timeavg 0.0019458
+attr source org_car2x_veins_modules_mac_sigChannelBusy
+scalar PriorityV2VAttack.node[64].veinsmobility startTime 190
+scalar PriorityV2VAttack.node[64].veinsmobility totalTime 10
+scalar PriorityV2VAttack.node[64].veinsmobility stopTime 200
+scalar PriorityV2VAttack.node[64].veinsmobility minSpeed 4.0010424112291
+scalar PriorityV2VAttack.node[64].veinsmobility maxSpeed 13.977768345661
+scalar PriorityV2VAttack.node[64].veinsmobility totalDistance 105.00141460445
+scalar PriorityV2VAttack.node[64].veinsmobility totalCO2Emission 40.578044894371
+scalar PriorityV2VAttack.node[65].appl generatedWSMs 0
+scalar PriorityV2VAttack.node[65].appl receivedWSMs 0
+scalar PriorityV2VAttack.node[65].appl generatedBSMs 7
+scalar PriorityV2VAttack.node[65].appl receivedBSMs 132
+scalar PriorityV2VAttack.node[65].appl generatedWSAs 0
+scalar PriorityV2VAttack.node[65].appl receivedWSAs 0
+scalar PriorityV2VAttack.node[65].nic.phy80211p busyTime 0.0020205714285714
+scalar PriorityV2VAttack.node[65].nic.mac1609_4 ReceivedUnicastPackets 0
+scalar PriorityV2VAttack.node[65].nic.mac1609_4 ReceivedBroadcasts 132
+scalar PriorityV2VAttack.node[65].nic.mac1609_4 SentPackets 7
+scalar PriorityV2VAttack.node[65].nic.mac1609_4 SentAcknowledgements 0
+scalar PriorityV2VAttack.node[65].nic.mac1609_4 RetriesExceeded 0
+scalar PriorityV2VAttack.node[65].nic.mac1609_4 SNIRLostPackets 4
+scalar PriorityV2VAttack.node[65].nic.mac1609_4 RXTXLostPackets 0
+scalar PriorityV2VAttack.node[65].nic.mac1609_4 TotalLostPackets 4
+scalar PriorityV2VAttack.node[65].nic.mac1609_4 DroppedPacketsInMac 0
+scalar PriorityV2VAttack.node[65].nic.mac1609_4 TooLittleTime 0
+scalar PriorityV2VAttack.node[65].nic.mac1609_4 TimesIntoBackoff 7
+scalar PriorityV2VAttack.node[65].nic.mac1609_4 SlotsBackoff 6
+scalar PriorityV2VAttack.node[65].nic.mac1609_4 NumInternalContention 0
+scalar PriorityV2VAttack.node[65].nic.mac1609_4 totalBusyTime 0.014879
+scalar PriorityV2VAttack.node[65].nic.mac1609_4 NodeDownCount 0
+scalar PriorityV2VAttack.node[65].nic.mac1609_4 retriesExceeded:count 0
+attr source org_car2x_veins_modules_mac_sigRetriesExceeded
+scalar PriorityV2VAttack.node[65].nic.mac1609_4 sentAcks:count 0
+attr source org_car2x_veins_modules_mac_sigSentAck
+scalar PriorityV2VAttack.node[65].nic.mac1609_4 sentPackets:count 7
+attr source org_car2x_veins_modules_mac_sigSentPacket
+scalar PriorityV2VAttack.node[65].nic.mac1609_4 collisions:count 0
+attr source org_car2x_veins_modules_mac_sigCollision
+scalar PriorityV2VAttack.node[65].nic.mac1609_4 channelBusy:timeavg 0.0021255714285714
+attr source org_car2x_veins_modules_mac_sigChannelBusy
+scalar PriorityV2VAttack.node[65].veinsmobility startTime 193
+scalar PriorityV2VAttack.node[65].veinsmobility totalTime 7
+scalar PriorityV2VAttack.node[65].veinsmobility stopTime 200
+scalar PriorityV2VAttack.node[65].veinsmobility minSpeed 4.0963891555032
+scalar PriorityV2VAttack.node[65].veinsmobility maxSpeed 13.89932602556
+scalar PriorityV2VAttack.node[65].veinsmobility totalDistance 62.429312282623
+scalar PriorityV2VAttack.node[65].veinsmobility totalCO2Emission 33.963789179338
+scalar PriorityV2VAttack.node[66].appl generatedWSMs 0
+scalar PriorityV2VAttack.node[66].appl receivedWSMs 0
+scalar PriorityV2VAttack.node[66].appl generatedBSMs 4
+scalar PriorityV2VAttack.node[66].appl receivedBSMs 70
+scalar PriorityV2VAttack.node[66].appl generatedWSAs 0
+scalar PriorityV2VAttack.node[66].appl receivedWSAs 0
+scalar PriorityV2VAttack.node[66].nic.phy80211p busyTime 0.002158
+scalar PriorityV2VAttack.node[66].nic.mac1609_4 ReceivedUnicastPackets 0
+scalar PriorityV2VAttack.node[66].nic.mac1609_4 ReceivedBroadcasts 70
+scalar PriorityV2VAttack.node[66].nic.mac1609_4 SentPackets 4
+scalar PriorityV2VAttack.node[66].nic.mac1609_4 SentAcknowledgements 0
+scalar PriorityV2VAttack.node[66].nic.mac1609_4 RetriesExceeded 0
+scalar PriorityV2VAttack.node[66].nic.mac1609_4 SNIRLostPackets 13
+scalar PriorityV2VAttack.node[66].nic.mac1609_4 RXTXLostPackets 0
+scalar PriorityV2VAttack.node[66].nic.mac1609_4 TotalLostPackets 13
+scalar PriorityV2VAttack.node[66].nic.mac1609_4 DroppedPacketsInMac 0
+scalar PriorityV2VAttack.node[66].nic.mac1609_4 TooLittleTime 0
+scalar PriorityV2VAttack.node[66].nic.mac1609_4 TimesIntoBackoff 4
+scalar PriorityV2VAttack.node[66].nic.mac1609_4 SlotsBackoff 7
+scalar PriorityV2VAttack.node[66].nic.mac1609_4 NumInternalContention 0
+scalar PriorityV2VAttack.node[66].nic.mac1609_4 totalBusyTime 0.009052
+scalar PriorityV2VAttack.node[66].nic.mac1609_4 NodeDownCount 0
+scalar PriorityV2VAttack.node[66].nic.mac1609_4 retriesExceeded:count 0
+attr source org_car2x_veins_modules_mac_sigRetriesExceeded
+scalar PriorityV2VAttack.node[66].nic.mac1609_4 sentAcks:count 0
+attr source org_car2x_veins_modules_mac_sigSentAck
+scalar PriorityV2VAttack.node[66].nic.mac1609_4 sentPackets:count 4
+attr source org_car2x_veins_modules_mac_sigSentPacket
+scalar PriorityV2VAttack.node[66].nic.mac1609_4 collisions:count 0
+attr source org_car2x_veins_modules_mac_sigCollision
+scalar PriorityV2VAttack.node[66].nic.mac1609_4 channelBusy:timeavg 0.002263
+attr source org_car2x_veins_modules_mac_sigChannelBusy
+scalar PriorityV2VAttack.node[66].veinsmobility startTime 196
+scalar PriorityV2VAttack.node[66].veinsmobility totalTime 4
+scalar PriorityV2VAttack.node[66].veinsmobility stopTime 200
+scalar PriorityV2VAttack.node[66].veinsmobility minSpeed 3.8129964193388
+scalar PriorityV2VAttack.node[66].veinsmobility maxSpeed 9.5155542239978
+scalar PriorityV2VAttack.node[66].veinsmobility totalDistance 23.170299826305
+scalar PriorityV2VAttack.node[66].veinsmobility totalCO2Emission 15.032761093514
+scalar PriorityV2VAttack.node[67].appl generatedWSMs 0
+scalar PriorityV2VAttack.node[67].appl receivedWSMs 0
+scalar PriorityV2VAttack.node[67].appl generatedBSMs 1
+scalar PriorityV2VAttack.node[67].appl receivedBSMs 18
+scalar PriorityV2VAttack.node[67].appl generatedWSAs 0
+scalar PriorityV2VAttack.node[67].appl receivedWSAs 0
+scalar PriorityV2VAttack.node[67].nic.phy80211p busyTime 0.002288
+scalar PriorityV2VAttack.node[67].nic.mac1609_4 ReceivedUnicastPackets 0
+scalar PriorityV2VAttack.node[67].nic.mac1609_4 ReceivedBroadcasts 18
+scalar PriorityV2VAttack.node[67].nic.mac1609_4 SentPackets 1
+scalar PriorityV2VAttack.node[67].nic.mac1609_4 SentAcknowledgements 0
+scalar PriorityV2VAttack.node[67].nic.mac1609_4 RetriesExceeded 0
+scalar PriorityV2VAttack.node[67].nic.mac1609_4 SNIRLostPackets 4
+scalar PriorityV2VAttack.node[67].nic.mac1609_4 RXTXLostPackets 0
+scalar PriorityV2VAttack.node[67].nic.mac1609_4 TotalLostPackets 4
+scalar PriorityV2VAttack.node[67].nic.mac1609_4 DroppedPacketsInMac 0
+scalar PriorityV2VAttack.node[67].nic.mac1609_4 TooLittleTime 0
+scalar PriorityV2VAttack.node[67].nic.mac1609_4 TimesIntoBackoff 1
+scalar PriorityV2VAttack.node[67].nic.mac1609_4 SlotsBackoff 2
+scalar PriorityV2VAttack.node[67].nic.mac1609_4 NumInternalContention 0
+scalar PriorityV2VAttack.node[67].nic.mac1609_4 totalBusyTime 0.002393
+scalar PriorityV2VAttack.node[67].nic.mac1609_4 NodeDownCount 0
+scalar PriorityV2VAttack.node[67].nic.mac1609_4 retriesExceeded:count 0
+attr source org_car2x_veins_modules_mac_sigRetriesExceeded
+scalar PriorityV2VAttack.node[67].nic.mac1609_4 sentAcks:count 0
+attr source org_car2x_veins_modules_mac_sigSentAck
+scalar PriorityV2VAttack.node[67].nic.mac1609_4 sentPackets:count 1
+attr source org_car2x_veins_modules_mac_sigSentPacket
+scalar PriorityV2VAttack.node[67].nic.mac1609_4 collisions:count 0
+attr source org_car2x_veins_modules_mac_sigCollision
+scalar PriorityV2VAttack.node[67].nic.mac1609_4 channelBusy:timeavg 0.002393
+attr source org_car2x_veins_modules_mac_sigChannelBusy
+scalar PriorityV2VAttack.node[67].veinsmobility startTime 199
+scalar PriorityV2VAttack.node[67].veinsmobility totalTime 1
+scalar PriorityV2VAttack.node[67].veinsmobility stopTime 200
+scalar PriorityV2VAttack.node[67].veinsmobility minSpeed 4.0133306786479
+scalar PriorityV2VAttack.node[67].veinsmobility maxSpeed 4.0133306786479
+scalar PriorityV2VAttack.node[67].veinsmobility totalDistance 3.1013316946711
+scalar PriorityV2VAttack.node[67].veinsmobility totalCO2Emission 0
+

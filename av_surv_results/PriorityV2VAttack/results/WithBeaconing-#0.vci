@@ -1,0 +1,949 @@
+file 2065374 1690162737                                         
+version 2
+run WithBeaconing-0-20230724-01:28:24-25303
+attr configname WithBeaconing
+attr datetime 20230724-01:28:24
+attr experiment WithBeaconing
+attr inifile omnetpp_pva.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network PriorityV2VAttack
+attr processid 25303
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+param *.node[*].appl.sendBeacons true
+param *.playgroundSizeX 2500m
+param *.playgroundSizeY 2500m
+param *.playgroundSizeZ 50m
+param *.annotations.draw true
+param *.obstacles.obstacles "xmldoc(\"config.xml\", \"//AnalogueModel[@type='SimpleObstacleShadowing']/obstacles\")"
+param *.manager.updateInterval 1s
+param *.manager.host "\"localhost\""
+param *.manager.port 9999
+param *.manager.autoShutdown true
+param *.manager.launchConfig "xmldoc(\"erlangen.launchd.xml\")"
+param *.connectionManager.sendDirect true
+param *.connectionManager.maxInterfDist 2600m
+param *.connectionManager.drawMaxIntfDist false
+param *.**.nic.mac1609_4.useServiceChannel false
+param *.**.nic.mac1609_4.txPower 20mW
+param *.**.nic.mac1609_4.bitrate 6Mbps
+param *.**.nic.phy80211p.minPowerLevel -110dBm
+param *.**.nic.phy80211p.useNoiseFloor true
+param *.**.nic.phy80211p.noiseFloor -98dBm
+param *.**.nic.phy80211p.decider "xmldoc(\"config.xml\")"
+param *.**.nic.phy80211p.analogueModels "xmldoc(\"config.xml\")"
+param *.**.nic.phy80211p.usePropagationDelay true
+param *.**.nic.phy80211p.antenna "xmldoc(\"antenna.xml\", \"/root/Antenna[@id='monopole']\")"
+param *.node[*].nic.phy80211p.antennaOffsetY "0 m"
+param *.node[*].nic.phy80211p.antennaOffsetZ "1.895 m"
+param *.attacker[*].nic.phy80211p.antennaOffsetY "0 m"
+param *.attacker[*].nic.phy80211p.antennaOffsetZ "1.895 m"
+param *.manager.moduleType "\"vtype1=org.car2x.veins.nodes.Car *=org.car2x.veins.nodes.Car\""
+param *.manager.moduleName "\"vtype1=attacker *=node\""
+param *.node[*].applType "\"TraCIDemo11p\""
+param *.node[*].appl.headerLength "80 bit"
+param *.node[*].appl.sendBeacons true
+param *.node[*].appl.dataOnSch false
+param *.node[*].appl.beaconInterval 1s
+param *.node[*].appl.dataUserPriority 7
+param *.attacker[*].applType "\"TraCIV2Vp\""
+param *.attacker[*].appl.headerLength "80 bit"
+param *.attacker[*].appl.sendBeacons true
+param *.attacker[*].appl.dataOnSch false
+param *.attacker[*].appl.beaconInterval 1s
+param *.attacker[*].appl.dataUserPriority 1
+param *.node[*].veinsmobility.x 0
+param *.node[*].veinsmobility.y 0
+param *.node[*].veinsmobility.z 0
+param *.node[*].veinsmobility.setHostSpeed false
+param *.attacker[*].veinsmobility.x 0
+param *.attacker[*].veinsmobility.y 0
+param *.attacker[*].veinsmobility.z 0
+param *.attacker[*].veinsmobility.setHostSpeed false
+
+vector 0 PriorityV2VAttack.node[0].veinsmobility posx ETV
+vector 1 PriorityV2VAttack.node[0].veinsmobility posy ETV
+vector 2 PriorityV2VAttack.node[0].veinsmobility speed ETV
+vector 3 PriorityV2VAttack.node[0].veinsmobility acceleration ETV
+vector 4 PriorityV2VAttack.node[0].veinsmobility co2emission ETV
+vector 5 PriorityV2VAttack.node[1].veinsmobility posx ETV
+vector 6 PriorityV2VAttack.node[1].veinsmobility posy ETV
+vector 7 PriorityV2VAttack.node[1].veinsmobility speed ETV
+vector 8 PriorityV2VAttack.node[1].veinsmobility acceleration ETV
+vector 9 PriorityV2VAttack.node[1].veinsmobility co2emission ETV
+vector 10 PriorityV2VAttack.node[2].veinsmobility posx ETV
+vector 11 PriorityV2VAttack.node[2].veinsmobility posy ETV
+vector 12 PriorityV2VAttack.node[2].veinsmobility speed ETV
+vector 13 PriorityV2VAttack.node[2].veinsmobility acceleration ETV
+vector 14 PriorityV2VAttack.node[2].veinsmobility co2emission ETV
+vector 15 PriorityV2VAttack.node[3].veinsmobility posx ETV
+vector 16 PriorityV2VAttack.node[3].veinsmobility posy ETV
+vector 17 PriorityV2VAttack.node[3].veinsmobility speed ETV
+vector 18 PriorityV2VAttack.node[3].veinsmobility acceleration ETV
+vector 19 PriorityV2VAttack.node[3].veinsmobility co2emission ETV
+vector 20 PriorityV2VAttack.node[4].veinsmobility posx ETV
+vector 21 PriorityV2VAttack.node[4].veinsmobility posy ETV
+vector 22 PriorityV2VAttack.node[4].veinsmobility speed ETV
+vector 23 PriorityV2VAttack.node[4].veinsmobility acceleration ETV
+vector 24 PriorityV2VAttack.node[4].veinsmobility co2emission ETV
+vector 25 PriorityV2VAttack.node[5].veinsmobility posx ETV
+vector 26 PriorityV2VAttack.node[5].veinsmobility posy ETV
+vector 27 PriorityV2VAttack.node[5].veinsmobility speed ETV
+vector 28 PriorityV2VAttack.node[5].veinsmobility acceleration ETV
+vector 29 PriorityV2VAttack.node[5].veinsmobility co2emission ETV
+vector 30 PriorityV2VAttack.node[6].veinsmobility posx ETV
+vector 31 PriorityV2VAttack.node[6].veinsmobility posy ETV
+vector 32 PriorityV2VAttack.node[6].veinsmobility speed ETV
+vector 33 PriorityV2VAttack.node[6].veinsmobility acceleration ETV
+vector 34 PriorityV2VAttack.node[6].veinsmobility co2emission ETV
+vector 35 PriorityV2VAttack.node[7].veinsmobility posx ETV
+vector 36 PriorityV2VAttack.node[7].veinsmobility posy ETV
+vector 37 PriorityV2VAttack.node[7].veinsmobility speed ETV
+vector 38 PriorityV2VAttack.node[7].veinsmobility acceleration ETV
+vector 39 PriorityV2VAttack.node[7].veinsmobility co2emission ETV
+vector 40 PriorityV2VAttack.node[8].veinsmobility posx ETV
+vector 41 PriorityV2VAttack.node[8].veinsmobility posy ETV
+vector 42 PriorityV2VAttack.node[8].veinsmobility speed ETV
+vector 43 PriorityV2VAttack.node[8].veinsmobility acceleration ETV
+vector 44 PriorityV2VAttack.node[8].veinsmobility co2emission ETV
+vector 45 PriorityV2VAttack.node[9].veinsmobility posx ETV
+vector 46 PriorityV2VAttack.node[9].veinsmobility posy ETV
+vector 47 PriorityV2VAttack.node[9].veinsmobility speed ETV
+vector 48 PriorityV2VAttack.node[9].veinsmobility acceleration ETV
+vector 49 PriorityV2VAttack.node[9].veinsmobility co2emission ETV
+vector 50 PriorityV2VAttack.node[10].veinsmobility posx ETV
+vector 51 PriorityV2VAttack.node[10].veinsmobility posy ETV
+vector 52 PriorityV2VAttack.node[10].veinsmobility speed ETV
+vector 53 PriorityV2VAttack.node[10].veinsmobility acceleration ETV
+vector 54 PriorityV2VAttack.node[10].veinsmobility co2emission ETV
+vector 55 PriorityV2VAttack.node[11].veinsmobility posx ETV
+vector 56 PriorityV2VAttack.node[11].veinsmobility posy ETV
+vector 57 PriorityV2VAttack.node[6].nic.mac1609_4 droppedPacketStat:vector ETV
+attr source org_car2x_veins_modules_mac_sigDroppedPacket
+vector 58 PriorityV2VAttack.node[7].nic.mac1609_4 droppedPacketStat:vector ETV
+attr source org_car2x_veins_modules_mac_sigDroppedPacket
+vector 59 PriorityV2VAttack.node[1].nic.mac1609_4 droppedPacketStat:vector ETV
+attr source org_car2x_veins_modules_mac_sigDroppedPacket
+vector 60 PriorityV2VAttack.node[8].nic.mac1609_4 droppedPacketStat:vector ETV
+attr source org_car2x_veins_modules_mac_sigDroppedPacket
+vector 61 PriorityV2VAttack.node[0].nic.mac1609_4 droppedPacketStat:vector ETV
+attr source org_car2x_veins_modules_mac_sigDroppedPacket
+vector 62 PriorityV2VAttack.node[11].veinsmobility speed ETV
+vector 63 PriorityV2VAttack.node[11].veinsmobility acceleration ETV
+vector 64 PriorityV2VAttack.node[11].veinsmobility co2emission ETV
+vector 65 PriorityV2VAttack.node[12].veinsmobility posx ETV
+vector 66 PriorityV2VAttack.node[12].veinsmobility posy ETV
+vector 67 PriorityV2VAttack.node[9].nic.mac1609_4 droppedPacketStat:vector ETV
+attr source org_car2x_veins_modules_mac_sigDroppedPacket
+vector 68 PriorityV2VAttack.node[2].nic.mac1609_4 droppedPacketStat:vector ETV
+attr source org_car2x_veins_modules_mac_sigDroppedPacket
+vector 69 PriorityV2VAttack.node[12].veinsmobility speed ETV
+vector 70 PriorityV2VAttack.node[12].veinsmobility acceleration ETV
+vector 71 PriorityV2VAttack.node[12].veinsmobility co2emission ETV
+vector 72 PriorityV2VAttack.node[13].veinsmobility posx ETV
+vector 73 PriorityV2VAttack.node[13].veinsmobility posy ETV
+vector 74 PriorityV2VAttack.node[13].veinsmobility speed ETV
+vector 75 PriorityV2VAttack.node[11].nic.mac1609_4 droppedPacketStat:vector ETV
+attr source org_car2x_veins_modules_mac_sigDroppedPacket
+vector 76 PriorityV2VAttack.node[13].veinsmobility acceleration ETV
+vector 77 PriorityV2VAttack.node[13].veinsmobility co2emission ETV
+vector 78 PriorityV2VAttack.node[3].nic.mac1609_4 droppedPacketStat:vector ETV
+attr source org_car2x_veins_modules_mac_sigDroppedPacket
+vector 79 PriorityV2VAttack.node[10].nic.mac1609_4 droppedPacketStat:vector ETV
+attr source org_car2x_veins_modules_mac_sigDroppedPacket
+vector 80 PriorityV2VAttack.node[14].veinsmobility posx ETV
+vector 81 PriorityV2VAttack.node[14].veinsmobility posy ETV
+vector 82 PriorityV2VAttack.node[4].nic.mac1609_4 droppedPacketStat:vector ETV
+attr source org_car2x_veins_modules_mac_sigDroppedPacket
+vector 83 PriorityV2VAttack.node[14].veinsmobility speed ETV
+vector 84 PriorityV2VAttack.node[14].veinsmobility acceleration ETV
+vector 85 PriorityV2VAttack.node[14].veinsmobility co2emission ETV
+vector 86 PriorityV2VAttack.node[15].veinsmobility posx ETV
+vector 87 PriorityV2VAttack.node[15].veinsmobility posy ETV
+vector 88 PriorityV2VAttack.node[12].nic.mac1609_4 droppedPacketStat:vector ETV
+attr source org_car2x_veins_modules_mac_sigDroppedPacket
+vector 89 PriorityV2VAttack.node[5].nic.mac1609_4 droppedPacketStat:vector ETV
+attr source org_car2x_veins_modules_mac_sigDroppedPacket
+vector 90 PriorityV2VAttack.node[15].veinsmobility speed ETV
+vector 91 PriorityV2VAttack.node[13].nic.mac1609_4 droppedPacketStat:vector ETV
+attr source org_car2x_veins_modules_mac_sigDroppedPacket
+vector 92 PriorityV2VAttack.node[15].veinsmobility acceleration ETV
+vector 93 PriorityV2VAttack.node[15].veinsmobility co2emission ETV
+vector 94 PriorityV2VAttack.node[16].veinsmobility posx ETV
+vector 95 PriorityV2VAttack.node[16].veinsmobility posy ETV
+vector 96 PriorityV2VAttack.node[15].nic.mac1609_4 droppedPacketStat:vector ETV
+attr source org_car2x_veins_modules_mac_sigDroppedPacket
+vector 97 PriorityV2VAttack.node[16].veinsmobility speed ETV
+vector 98 PriorityV2VAttack.node[16].nic.mac1609_4 droppedPacketStat:vector ETV
+attr source org_car2x_veins_modules_mac_sigDroppedPacket
+vector 99 PriorityV2VAttack.node[16].veinsmobility acceleration ETV
+vector 100 PriorityV2VAttack.node[16].veinsmobility co2emission ETV
+vector 101 PriorityV2VAttack.node[17].veinsmobility posx ETV
+vector 102 PriorityV2VAttack.node[17].veinsmobility posy ETV
+vector 103 PriorityV2VAttack.node[17].nic.mac1609_4 droppedPacketStat:vector ETV
+attr source org_car2x_veins_modules_mac_sigDroppedPacket
+vector 104 PriorityV2VAttack.node[17].veinsmobility speed ETV
+vector 105 PriorityV2VAttack.node[17].veinsmobility acceleration ETV
+vector 106 PriorityV2VAttack.node[17].veinsmobility co2emission ETV
+vector 107 PriorityV2VAttack.node[14].nic.mac1609_4 droppedPacketStat:vector ETV
+attr source org_car2x_veins_modules_mac_sigDroppedPacket
+vector 108 PriorityV2VAttack.node[18].veinsmobility posx ETV
+vector 109 PriorityV2VAttack.node[18].veinsmobility posy ETV
+vector 110 PriorityV2VAttack.node[18].nic.mac1609_4 droppedPacketStat:vector ETV
+attr source org_car2x_veins_modules_mac_sigDroppedPacket
+vector 111 PriorityV2VAttack.node[18].veinsmobility speed ETV
+vector 112 PriorityV2VAttack.attacker[19].veinsmobility posx ETV
+vector 113 PriorityV2VAttack.attacker[19].veinsmobility posy ETV
+vector 114 PriorityV2VAttack.node[18].veinsmobility acceleration ETV
+vector 115 PriorityV2VAttack.node[18].veinsmobility co2emission ETV
+vector 116 PriorityV2VAttack.attacker[19].nic.mac1609_4 droppedPacketStat:vector ETV
+attr source org_car2x_veins_modules_mac_sigDroppedPacket
+vector 117 PriorityV2VAttack.node[20].veinsmobility posx ETV
+vector 118 PriorityV2VAttack.node[20].veinsmobility posy ETV
+vector 119 PriorityV2VAttack.attacker[19].veinsmobility speed ETV
+vector 120 PriorityV2VAttack.node[20].nic.mac1609_4 droppedPacketStat:vector ETV
+attr source org_car2x_veins_modules_mac_sigDroppedPacket
+vector 121 PriorityV2VAttack.attacker[19].veinsmobility acceleration ETV
+vector 122 PriorityV2VAttack.attacker[19].veinsmobility co2emission ETV
+vector 123 PriorityV2VAttack.node[20].veinsmobility speed ETV
+vector 124 PriorityV2VAttack.node[20].veinsmobility acceleration ETV
+vector 125 PriorityV2VAttack.node[20].veinsmobility co2emission ETV
+vector 126 PriorityV2VAttack.node[21].veinsmobility posx ETV
+vector 127 PriorityV2VAttack.node[21].veinsmobility posy ETV
+vector 128 PriorityV2VAttack.node[21].nic.mac1609_4 droppedPacketStat:vector ETV
+attr source org_car2x_veins_modules_mac_sigDroppedPacket
+vector 129 PriorityV2VAttack.node[21].veinsmobility speed ETV
+vector 130 PriorityV2VAttack.node[21].veinsmobility acceleration ETV
+vector 131 PriorityV2VAttack.node[21].veinsmobility co2emission ETV
+vector 132 PriorityV2VAttack.node[22].veinsmobility posx ETV
+vector 133 PriorityV2VAttack.node[22].veinsmobility posy ETV
+vector 134 PriorityV2VAttack.node[22].nic.mac1609_4 droppedPacketStat:vector ETV
+attr source org_car2x_veins_modules_mac_sigDroppedPacket
+vector 135 PriorityV2VAttack.node[22].veinsmobility speed ETV
+vector 136 PriorityV2VAttack.node[22].veinsmobility acceleration ETV
+vector 137 PriorityV2VAttack.node[22].veinsmobility co2emission ETV
+vector 138 PriorityV2VAttack.node[23].veinsmobility posx ETV
+vector 139 PriorityV2VAttack.node[23].veinsmobility posy ETV
+vector 140 PriorityV2VAttack.node[23].veinsmobility speed ETV
+vector 141 PriorityV2VAttack.node[23].nic.mac1609_4 droppedPacketStat:vector ETV
+attr source org_car2x_veins_modules_mac_sigDroppedPacket
+vector 142 PriorityV2VAttack.node[23].veinsmobility acceleration ETV
+vector 143 PriorityV2VAttack.node[23].veinsmobility co2emission ETV
+vector 144 PriorityV2VAttack.node[24].veinsmobility posx ETV
+vector 145 PriorityV2VAttack.node[24].veinsmobility posy ETV
+vector 146 PriorityV2VAttack.node[24].veinsmobility speed ETV
+vector 147 PriorityV2VAttack.node[24].veinsmobility acceleration ETV
+vector 148 PriorityV2VAttack.node[24].veinsmobility co2emission ETV
+vector 149 PriorityV2VAttack.node[25].veinsmobility posx ETV
+vector 150 PriorityV2VAttack.node[25].veinsmobility posy ETV
+vector 151 PriorityV2VAttack.node[25].veinsmobility speed ETV
+vector 152 PriorityV2VAttack.node[25].nic.mac1609_4 droppedPacketStat:vector ETV
+attr source org_car2x_veins_modules_mac_sigDroppedPacket
+vector 153 PriorityV2VAttack.node[25].veinsmobility acceleration ETV
+vector 154 PriorityV2VAttack.node[25].veinsmobility co2emission ETV
+vector 155 PriorityV2VAttack.node[24].nic.mac1609_4 droppedPacketStat:vector ETV
+attr source org_car2x_veins_modules_mac_sigDroppedPacket
+vector 156 PriorityV2VAttack.node[26].veinsmobility posx ETV
+vector 157 PriorityV2VAttack.node[26].veinsmobility posy ETV
+vector 158 PriorityV2VAttack.node[26].nic.mac1609_4 droppedPacketStat:vector ETV
+attr source org_car2x_veins_modules_mac_sigDroppedPacket
+vector 159 PriorityV2VAttack.node[26].veinsmobility speed ETV
+vector 160 PriorityV2VAttack.node[26].veinsmobility acceleration ETV
+vector 161 PriorityV2VAttack.node[26].veinsmobility co2emission ETV
+vector 162 PriorityV2VAttack.node[27].veinsmobility posx ETV
+vector 163 PriorityV2VAttack.node[27].veinsmobility posy ETV
+vector 164 PriorityV2VAttack.node[27].veinsmobility speed ETV
+vector 165 PriorityV2VAttack.node[27].nic.mac1609_4 droppedPacketStat:vector ETV
+attr source org_car2x_veins_modules_mac_sigDroppedPacket
+vector 166 PriorityV2VAttack.node[27].veinsmobility acceleration ETV
+vector 167 PriorityV2VAttack.node[27].veinsmobility co2emission ETV
+vector 168 PriorityV2VAttack.node[28].veinsmobility posx ETV
+vector 169 PriorityV2VAttack.node[28].veinsmobility posy ETV
+116	15536 641 41753 6781834 57.142882716423 82.728152211341 22 1 1 22 22
+122	16177 736 46106 6576354 59 82 24 1.7444294842255 9.0861460661315 71.255618900282 294.90204600159
+121	16913 780 46106 6576354 59 82 24 -0.08451131673297 2.27876291906 10.706560639107 20.330413695882
+119	17693 766 43681 6576354 58 82 25 3.2022692176314 13.998651232829 312.47103550488 4134.3682294522
+113	18459 794 41471 6576354 57 82 26 2081.2704481687 2120.8874943638 54865.715440293 115781660.43507
+112	19253 794 41471 6576354 57 82 26 2149.4037608582 2437.5485173609 60100.940126745 139164683.45437
+vector 170 PriorityV2VAttack.node[28].veinsmobility speed ETV
+vector 171 PriorityV2VAttack.node[28].veinsmobility acceleration ETV
+vector 172 PriorityV2VAttack.node[28].veinsmobility co2emission ETV
+vector 173 PriorityV2VAttack.node[28].nic.mac1609_4 droppedPacketStat:vector ETV
+attr source org_car2x_veins_modules_mac_sigDroppedPacket
+vector 174 PriorityV2VAttack.node[29].veinsmobility posx ETV
+vector 175 PriorityV2VAttack.node[29].veinsmobility posy ETV
+vector 176 PriorityV2VAttack.node[29].nic.mac1609_4 droppedPacketStat:vector ETV
+attr source org_car2x_veins_modules_mac_sigDroppedPacket
+vector 177 PriorityV2VAttack.node[29].veinsmobility speed ETV
+vector 178 PriorityV2VAttack.node[29].veinsmobility acceleration ETV
+vector 179 PriorityV2VAttack.node[29].veinsmobility co2emission ETV
+vector 180 PriorityV2VAttack.node[30].veinsmobility posx ETV
+vector 181 PriorityV2VAttack.node[30].veinsmobility posy ETV
+vector 182 PriorityV2VAttack.node[30].veinsmobility speed ETV
+vector 183 PriorityV2VAttack.node[30].nic.mac1609_4 droppedPacketStat:vector ETV
+attr source org_car2x_veins_modules_mac_sigDroppedPacket
+vector 184 PriorityV2VAttack.node[30].veinsmobility acceleration ETV
+vector 185 PriorityV2VAttack.node[30].veinsmobility co2emission ETV
+vector 186 PriorityV2VAttack.node[31].veinsmobility posx ETV
+vector 187 PriorityV2VAttack.node[31].veinsmobility posy ETV
+vector 188 PriorityV2VAttack.node[31].nic.mac1609_4 droppedPacketStat:vector ETV
+attr source org_car2x_veins_modules_mac_sigDroppedPacket
+vector 189 PriorityV2VAttack.node[31].veinsmobility speed ETV
+vector 190 PriorityV2VAttack.node[31].veinsmobility acceleration ETV
+vector 191 PriorityV2VAttack.node[31].veinsmobility co2emission ETV
+vector 192 PriorityV2VAttack.node[32].veinsmobility posx ETV
+vector 193 PriorityV2VAttack.node[32].veinsmobility posy ETV
+vector 194 PriorityV2VAttack.node[32].nic.mac1609_4 droppedPacketStat:vector ETV
+attr source org_car2x_veins_modules_mac_sigDroppedPacket
+vector 195 PriorityV2VAttack.node[32].veinsmobility speed ETV
+vector 196 PriorityV2VAttack.node[32].veinsmobility acceleration ETV
+vector 197 PriorityV2VAttack.node[32].veinsmobility co2emission ETV
+vector 198 PriorityV2VAttack.node[33].veinsmobility posx ETV
+vector 199 PriorityV2VAttack.node[33].veinsmobility posy ETV
+vector 200 PriorityV2VAttack.node[33].nic.mac1609_4 droppedPacketStat:vector ETV
+attr source org_car2x_veins_modules_mac_sigDroppedPacket
+vector 201 PriorityV2VAttack.node[33].veinsmobility speed ETV
+vector 202 PriorityV2VAttack.node[33].veinsmobility acceleration ETV
+vector 203 PriorityV2VAttack.node[33].veinsmobility co2emission ETV
+vector 204 PriorityV2VAttack.node[34].veinsmobility posx ETV
+vector 205 PriorityV2VAttack.node[34].veinsmobility posy ETV
+vector 206 PriorityV2VAttack.node[34].nic.mac1609_4 droppedPacketStat:vector ETV
+attr source org_car2x_veins_modules_mac_sigDroppedPacket
+vector 207 PriorityV2VAttack.node[34].veinsmobility speed ETV
+vector 208 PriorityV2VAttack.node[34].veinsmobility acceleration ETV
+vector 209 PriorityV2VAttack.node[34].veinsmobility co2emission ETV
+vector 210 PriorityV2VAttack.node[35].veinsmobility posx ETV
+vector 211 PriorityV2VAttack.node[35].veinsmobility posy ETV
+vector 212 PriorityV2VAttack.node[35].nic.mac1609_4 droppedPacketStat:vector ETV
+attr source org_car2x_veins_modules_mac_sigDroppedPacket
+vector 213 PriorityV2VAttack.node[35].veinsmobility speed ETV
+vector 214 PriorityV2VAttack.node[35].veinsmobility acceleration ETV
+vector 215 PriorityV2VAttack.node[35].veinsmobility co2emission ETV
+vector 216 PriorityV2VAttack.node[36].veinsmobility posx ETV
+vector 217 PriorityV2VAttack.node[36].veinsmobility posy ETV
+vector 218 PriorityV2VAttack.node[36].nic.mac1609_4 droppedPacketStat:vector ETV
+attr source org_car2x_veins_modules_mac_sigDroppedPacket
+vector 219 PriorityV2VAttack.node[36].veinsmobility speed ETV
+vector 220 PriorityV2VAttack.node[36].veinsmobility acceleration ETV
+vector 221 PriorityV2VAttack.node[36].veinsmobility co2emission ETV
+vector 222 PriorityV2VAttack.node[37].veinsmobility posx ETV
+vector 223 PriorityV2VAttack.node[37].veinsmobility posy ETV
+vector 224 PriorityV2VAttack.node[37].nic.mac1609_4 droppedPacketStat:vector ETV
+attr source org_car2x_veins_modules_mac_sigDroppedPacket
+vector 225 PriorityV2VAttack.node[37].veinsmobility speed ETV
+vector 226 PriorityV2VAttack.node[37].veinsmobility acceleration ETV
+vector 227 PriorityV2VAttack.node[37].veinsmobility co2emission ETV
+vector 228 PriorityV2VAttack.node[38].veinsmobility posx ETV
+vector 229 PriorityV2VAttack.node[38].veinsmobility posy ETV
+vector 230 PriorityV2VAttack.node[38].veinsmobility speed ETV
+vector 231 PriorityV2VAttack.node[38].nic.mac1609_4 droppedPacketStat:vector ETV
+attr source org_car2x_veins_modules_mac_sigDroppedPacket
+vector 232 PriorityV2VAttack.node[38].veinsmobility acceleration ETV
+vector 233 PriorityV2VAttack.node[38].veinsmobility co2emission ETV
+vector 234 PriorityV2VAttack.node[39].veinsmobility posx ETV
+vector 235 PriorityV2VAttack.node[39].veinsmobility posy ETV
+vector 236 PriorityV2VAttack.node[39].nic.mac1609_4 droppedPacketStat:vector ETV
+attr source org_car2x_veins_modules_mac_sigDroppedPacket
+vector 237 PriorityV2VAttack.node[39].veinsmobility speed ETV
+vector 238 PriorityV2VAttack.node[39].veinsmobility acceleration ETV
+vector 239 PriorityV2VAttack.node[39].veinsmobility co2emission ETV
+vector 240 PriorityV2VAttack.node[40].veinsmobility posx ETV
+vector 241 PriorityV2VAttack.node[40].veinsmobility posy ETV
+vector 242 PriorityV2VAttack.node[40].nic.mac1609_4 droppedPacketStat:vector ETV
+attr source org_car2x_veins_modules_mac_sigDroppedPacket
+vector 243 PriorityV2VAttack.node[40].veinsmobility speed ETV
+vector 244 PriorityV2VAttack.node[40].veinsmobility acceleration ETV
+vector 245 PriorityV2VAttack.node[40].veinsmobility co2emission ETV
+vector 246 PriorityV2VAttack.node[41].veinsmobility posx ETV
+vector 247 PriorityV2VAttack.node[41].veinsmobility posy ETV
+vector 248 PriorityV2VAttack.node[41].nic.mac1609_4 droppedPacketStat:vector ETV
+attr source org_car2x_veins_modules_mac_sigDroppedPacket
+vector 249 PriorityV2VAttack.node[41].veinsmobility speed ETV
+vector 250 PriorityV2VAttack.node[41].veinsmobility acceleration ETV
+vector 251 PriorityV2VAttack.node[41].veinsmobility co2emission ETV
+vector 252 PriorityV2VAttack.node[42].veinsmobility posx ETV
+vector 253 PriorityV2VAttack.node[42].veinsmobility posy ETV
+vector 254 PriorityV2VAttack.node[42].nic.mac1609_4 droppedPacketStat:vector ETV
+attr source org_car2x_veins_modules_mac_sigDroppedPacket
+vector 255 PriorityV2VAttack.node[42].veinsmobility speed ETV
+vector 256 PriorityV2VAttack.node[42].veinsmobility acceleration ETV
+vector 257 PriorityV2VAttack.node[42].veinsmobility co2emission ETV
+vector 258 PriorityV2VAttack.node[43].veinsmobility posx ETV
+vector 259 PriorityV2VAttack.node[43].veinsmobility posy ETV
+vector 260 PriorityV2VAttack.node[43].nic.mac1609_4 droppedPacketStat:vector ETV
+attr source org_car2x_veins_modules_mac_sigDroppedPacket
+vector 261 PriorityV2VAttack.node[43].veinsmobility speed ETV
+vector 262 PriorityV2VAttack.node[43].veinsmobility acceleration ETV
+vector 263 PriorityV2VAttack.node[43].veinsmobility co2emission ETV
+vector 264 PriorityV2VAttack.node[44].veinsmobility posx ETV
+vector 265 PriorityV2VAttack.node[44].veinsmobility posy ETV
+vector 266 PriorityV2VAttack.node[44].nic.mac1609_4 droppedPacketStat:vector ETV
+attr source org_car2x_veins_modules_mac_sigDroppedPacket
+vector 267 PriorityV2VAttack.node[44].veinsmobility speed ETV
+vector 268 PriorityV2VAttack.node[44].veinsmobility acceleration ETV
+vector 269 PriorityV2VAttack.node[44].veinsmobility co2emission ETV
+vector 270 PriorityV2VAttack.node[45].veinsmobility posx ETV
+vector 271 PriorityV2VAttack.node[45].veinsmobility posy ETV
+vector 272 PriorityV2VAttack.node[45].nic.mac1609_4 droppedPacketStat:vector ETV
+attr source org_car2x_veins_modules_mac_sigDroppedPacket
+vector 273 PriorityV2VAttack.node[45].veinsmobility speed ETV
+vector 274 PriorityV2VAttack.node[45].veinsmobility acceleration ETV
+vector 275 PriorityV2VAttack.node[45].veinsmobility co2emission ETV
+vector 276 PriorityV2VAttack.node[46].veinsmobility posx ETV
+vector 277 PriorityV2VAttack.node[46].veinsmobility posy ETV
+vector 278 PriorityV2VAttack.node[46].nic.mac1609_4 droppedPacketStat:vector ETV
+attr source org_car2x_veins_modules_mac_sigDroppedPacket
+vector 279 PriorityV2VAttack.node[46].veinsmobility speed ETV
+vector 280 PriorityV2VAttack.node[46].veinsmobility acceleration ETV
+vector 281 PriorityV2VAttack.node[46].veinsmobility co2emission ETV
+vector 282 PriorityV2VAttack.node[47].veinsmobility posx ETV
+vector 283 PriorityV2VAttack.node[47].veinsmobility posy ETV
+vector 284 PriorityV2VAttack.node[47].nic.mac1609_4 droppedPacketStat:vector ETV
+attr source org_car2x_veins_modules_mac_sigDroppedPacket
+vector 285 PriorityV2VAttack.node[47].veinsmobility speed ETV
+vector 286 PriorityV2VAttack.node[47].veinsmobility acceleration ETV
+vector 287 PriorityV2VAttack.node[47].veinsmobility co2emission ETV
+vector 288 PriorityV2VAttack.node[48].veinsmobility posx ETV
+vector 289 PriorityV2VAttack.node[48].veinsmobility posy ETV
+vector 290 PriorityV2VAttack.node[48].nic.mac1609_4 droppedPacketStat:vector ETV
+attr source org_car2x_veins_modules_mac_sigDroppedPacket
+vector 291 PriorityV2VAttack.node[48].veinsmobility speed ETV
+vector 292 PriorityV2VAttack.node[48].veinsmobility acceleration ETV
+vector 293 PriorityV2VAttack.node[48].veinsmobility co2emission ETV
+vector 294 PriorityV2VAttack.node[49].veinsmobility posx ETV
+vector 295 PriorityV2VAttack.node[49].veinsmobility posy ETV
+vector 296 PriorityV2VAttack.node[49].nic.mac1609_4 droppedPacketStat:vector ETV
+attr source org_car2x_veins_modules_mac_sigDroppedPacket
+vector 297 PriorityV2VAttack.node[49].veinsmobility speed ETV
+vector 298 PriorityV2VAttack.node[49].veinsmobility acceleration ETV
+vector 299 PriorityV2VAttack.node[49].veinsmobility co2emission ETV
+vector 300 PriorityV2VAttack.node[50].veinsmobility posx ETV
+vector 301 PriorityV2VAttack.node[50].veinsmobility posy ETV
+vector 302 PriorityV2VAttack.node[50].nic.mac1609_4 droppedPacketStat:vector ETV
+attr source org_car2x_veins_modules_mac_sigDroppedPacket
+vector 303 PriorityV2VAttack.node[50].veinsmobility speed ETV
+vector 304 PriorityV2VAttack.node[50].veinsmobility acceleration ETV
+vector 305 PriorityV2VAttack.node[50].veinsmobility co2emission ETV
+vector 306 PriorityV2VAttack.node[51].veinsmobility posx ETV
+vector 307 PriorityV2VAttack.node[51].veinsmobility posy ETV
+vector 308 PriorityV2VAttack.node[51].nic.mac1609_4 droppedPacketStat:vector ETV
+attr source org_car2x_veins_modules_mac_sigDroppedPacket
+vector 309 PriorityV2VAttack.node[51].veinsmobility speed ETV
+vector 310 PriorityV2VAttack.node[51].veinsmobility acceleration ETV
+vector 311 PriorityV2VAttack.node[51].veinsmobility co2emission ETV
+vector 312 PriorityV2VAttack.node[52].veinsmobility posx ETV
+vector 313 PriorityV2VAttack.node[52].veinsmobility posy ETV
+vector 314 PriorityV2VAttack.node[52].nic.mac1609_4 droppedPacketStat:vector ETV
+attr source org_car2x_veins_modules_mac_sigDroppedPacket
+vector 315 PriorityV2VAttack.node[52].veinsmobility speed ETV
+vector 316 PriorityV2VAttack.node[52].veinsmobility acceleration ETV
+vector 317 PriorityV2VAttack.node[52].veinsmobility co2emission ETV
+vector 318 PriorityV2VAttack.node[53].veinsmobility posx ETV
+vector 319 PriorityV2VAttack.node[53].veinsmobility posy ETV
+vector 320 PriorityV2VAttack.node[53].nic.mac1609_4 droppedPacketStat:vector ETV
+attr source org_car2x_veins_modules_mac_sigDroppedPacket
+vector 321 PriorityV2VAttack.node[53].veinsmobility speed ETV
+vector 322 PriorityV2VAttack.node[53].veinsmobility acceleration ETV
+vector 323 PriorityV2VAttack.node[53].veinsmobility co2emission ETV
+vector 324 PriorityV2VAttack.node[54].veinsmobility posx ETV
+vector 325 PriorityV2VAttack.node[54].veinsmobility posy ETV
+vector 326 PriorityV2VAttack.node[54].nic.mac1609_4 droppedPacketStat:vector ETV
+attr source org_car2x_veins_modules_mac_sigDroppedPacket
+vector 327 PriorityV2VAttack.node[54].veinsmobility speed ETV
+vector 328 PriorityV2VAttack.node[54].veinsmobility acceleration ETV
+vector 329 PriorityV2VAttack.node[54].veinsmobility co2emission ETV
+vector 330 PriorityV2VAttack.node[55].veinsmobility posx ETV
+vector 331 PriorityV2VAttack.node[55].veinsmobility posy ETV
+vector 332 PriorityV2VAttack.node[55].nic.mac1609_4 droppedPacketStat:vector ETV
+attr source org_car2x_veins_modules_mac_sigDroppedPacket
+vector 333 PriorityV2VAttack.node[55].veinsmobility speed ETV
+vector 334 PriorityV2VAttack.node[55].veinsmobility acceleration ETV
+vector 335 PriorityV2VAttack.node[55].veinsmobility co2emission ETV
+vector 336 PriorityV2VAttack.node[56].veinsmobility posx ETV
+vector 337 PriorityV2VAttack.node[56].veinsmobility posy ETV
+vector 338 PriorityV2VAttack.node[56].nic.mac1609_4 droppedPacketStat:vector ETV
+attr source org_car2x_veins_modules_mac_sigDroppedPacket
+vector 339 PriorityV2VAttack.node[56].veinsmobility speed ETV
+vector 340 PriorityV2VAttack.node[56].veinsmobility acceleration ETV
+vector 341 PriorityV2VAttack.node[56].veinsmobility co2emission ETV
+vector 342 PriorityV2VAttack.node[57].veinsmobility posx ETV
+vector 343 PriorityV2VAttack.node[57].veinsmobility posy ETV
+vector 344 PriorityV2VAttack.node[57].nic.mac1609_4 droppedPacketStat:vector ETV
+attr source org_car2x_veins_modules_mac_sigDroppedPacket
+vector 345 PriorityV2VAttack.node[57].veinsmobility speed ETV
+vector 346 PriorityV2VAttack.node[57].veinsmobility acceleration ETV
+vector 347 PriorityV2VAttack.node[57].veinsmobility co2emission ETV
+vector 348 PriorityV2VAttack.node[58].veinsmobility posx ETV
+vector 349 PriorityV2VAttack.node[58].veinsmobility posy ETV
+vector 350 PriorityV2VAttack.node[58].nic.mac1609_4 droppedPacketStat:vector ETV
+attr source org_car2x_veins_modules_mac_sigDroppedPacket
+vector 351 PriorityV2VAttack.node[58].veinsmobility speed ETV
+vector 352 PriorityV2VAttack.node[58].veinsmobility acceleration ETV
+vector 353 PriorityV2VAttack.node[58].veinsmobility co2emission ETV
+vector 354 PriorityV2VAttack.node[59].veinsmobility posx ETV
+vector 355 PriorityV2VAttack.node[59].veinsmobility posy ETV
+vector 356 PriorityV2VAttack.node[59].nic.mac1609_4 droppedPacketStat:vector ETV
+attr source org_car2x_veins_modules_mac_sigDroppedPacket
+vector 357 PriorityV2VAttack.node[59].veinsmobility speed ETV
+vector 358 PriorityV2VAttack.node[59].veinsmobility acceleration ETV
+vector 359 PriorityV2VAttack.node[59].veinsmobility co2emission ETV
+vector 360 PriorityV2VAttack.node[60].veinsmobility posx ETV
+vector 361 PriorityV2VAttack.node[60].veinsmobility posy ETV
+vector 362 PriorityV2VAttack.node[60].nic.mac1609_4 droppedPacketStat:vector ETV
+attr source org_car2x_veins_modules_mac_sigDroppedPacket
+vector 363 PriorityV2VAttack.node[60].veinsmobility speed ETV
+vector 364 PriorityV2VAttack.node[60].veinsmobility acceleration ETV
+vector 365 PriorityV2VAttack.node[60].veinsmobility co2emission ETV
+vector 366 PriorityV2VAttack.node[61].veinsmobility posx ETV
+vector 367 PriorityV2VAttack.node[61].veinsmobility posy ETV
+vector 368 PriorityV2VAttack.node[61].nic.mac1609_4 droppedPacketStat:vector ETV
+attr source org_car2x_veins_modules_mac_sigDroppedPacket
+vector 369 PriorityV2VAttack.node[61].veinsmobility speed ETV
+vector 370 PriorityV2VAttack.node[61].veinsmobility acceleration ETV
+vector 371 PriorityV2VAttack.node[61].veinsmobility co2emission ETV
+vector 372 PriorityV2VAttack.node[62].veinsmobility posx ETV
+vector 373 PriorityV2VAttack.node[62].veinsmobility posy ETV
+vector 374 PriorityV2VAttack.node[62].nic.mac1609_4 droppedPacketStat:vector ETV
+attr source org_car2x_veins_modules_mac_sigDroppedPacket
+vector 375 PriorityV2VAttack.node[62].veinsmobility speed ETV
+vector 376 PriorityV2VAttack.node[62].veinsmobility acceleration ETV
+vector 377 PriorityV2VAttack.node[62].veinsmobility co2emission ETV
+vector 378 PriorityV2VAttack.node[63].veinsmobility posx ETV
+vector 379 PriorityV2VAttack.node[63].veinsmobility posy ETV
+vector 380 PriorityV2VAttack.node[63].nic.mac1609_4 droppedPacketStat:vector ETV
+attr source org_car2x_veins_modules_mac_sigDroppedPacket
+vector 381 PriorityV2VAttack.node[63].veinsmobility speed ETV
+vector 382 PriorityV2VAttack.node[63].veinsmobility acceleration ETV
+vector 383 PriorityV2VAttack.node[63].veinsmobility co2emission ETV
+vector 384 PriorityV2VAttack.node[64].veinsmobility posx ETV
+vector 385 PriorityV2VAttack.node[64].veinsmobility posy ETV
+vector 386 PriorityV2VAttack.node[64].nic.mac1609_4 droppedPacketStat:vector ETV
+attr source org_car2x_veins_modules_mac_sigDroppedPacket
+vector 387 PriorityV2VAttack.node[64].veinsmobility speed ETV
+vector 388 PriorityV2VAttack.node[64].veinsmobility acceleration ETV
+vector 389 PriorityV2VAttack.node[64].veinsmobility co2emission ETV
+vector 390 PriorityV2VAttack.node[65].veinsmobility posx ETV
+vector 391 PriorityV2VAttack.node[65].veinsmobility posy ETV
+vector 392 PriorityV2VAttack.node[65].veinsmobility speed ETV
+vector 393 PriorityV2VAttack.node[65].veinsmobility acceleration ETV
+vector 394 PriorityV2VAttack.node[65].veinsmobility co2emission ETV
+vector 395 PriorityV2VAttack.node[66].veinsmobility posx ETV
+vector 396 PriorityV2VAttack.node[66].veinsmobility posy ETV
+vector 397 PriorityV2VAttack.node[65].nic.mac1609_4 droppedPacketStat:vector ETV
+attr source org_car2x_veins_modules_mac_sigDroppedPacket
+vector 398 PriorityV2VAttack.node[66].nic.mac1609_4 droppedPacketStat:vector ETV
+attr source org_car2x_veins_modules_mac_sigDroppedPacket
+vector 399 PriorityV2VAttack.node[66].veinsmobility speed ETV
+vector 400 PriorityV2VAttack.node[66].veinsmobility acceleration ETV
+vector 401 PriorityV2VAttack.node[66].veinsmobility co2emission ETV
+vector 402 PriorityV2VAttack.node[67].veinsmobility posx ETV
+vector 403 PriorityV2VAttack.node[67].veinsmobility posy ETV
+vector 404 PriorityV2VAttack.node[67].nic.mac1609_4 droppedPacketStat:vector ETV
+attr source org_car2x_veins_modules_mac_sigDroppedPacket
+vector 405 PriorityV2VAttack.node[67].veinsmobility speed ETV
+0	38148 5696 2 7812597 1 200 200 672.27329510928 2450.6236572781 360047.29507955 709959607.5401
+1	43844 5698 2 7812597 1 200 200 1292.5546531742 2120.927603568 336291.59050678 581193946.99833
+2	49542 5673 12 7812597 2 200 199 4.1061966058897 13.999815066161 2701.6701153728 37084.598361882
+3	55215 6116 22 7812597 3 200 198 -4.5 2.2078255666373 9.8225800731074 97.13103199608
+4	61331 5609 22 7812597 3 200 198 0.973 8.9023657158011 456.26419906984 1336.9124013663
+5	66940 5623 32 7812597 4 200 197 716.10338605836 2450.476915126 358379.65815807 709719858.07375
+6	72563 5634 32 7812597 4 200 197 1303.7426487803 2120.5726721929 332536.54792611 576582415.74491
+7	78197 5607 63 7812597 5 200 196 4.0332649588119 13.994007172689 2656.0046733753 36400.060575624
+8	83804 6047 94 7812597 6 200 195 -4.4705637734172 2.1060952395666 9.9081275693002 86.827960841058
+9	89851 5531 94 7812597 6 200 195 0.973 9.0713346505029 446.2633090298 1295.9593156266
+10	95382 5740 125 7812597 7 200 194 754.3835840316 2450.6595677461 355891.28370659 707183641.76656
+11	101122 5750 125 7812597 7 200 194 1310.9839030085 2120.9584702682 328554.17195852 571278042.48782
+12	106872 5723 189 7812597 8 200 193 3.930963162637 13.998553946475 2617.7925552635 35895.225453238
+13	112595 6170 253 7812597 9 200 192 -4.4756347508439 2.1478176588286 9.9760488141056 86.484051393643
+14	118765 5642 253 7812597 9 200 192 0.973 8.3622659466408 440.32907931197 1280.6909868603
+15	124407 5675 317 7812597 10 200 191 825.72694964241 2450.1725752107 356944.79638555 716161463.77756
+16	130082 5677 317 7812597 10 200 191 1317.6113999812 2120.6048223944 325622.67349609 569316614.1157
+17	135759 5657 426 7812597 11 200 190 4.0076977833542 13.999527041174 2545.4793066426 34508.350593265
+18	141416 6069 535 7812597 12 200 189 -4.4730783419683 2.1892695657047 9.9848266247409 84.090034147304
+19	147485 5565 535 7812597 12 200 189 0.973 7.8752525005018 434.51471612558 1278.4559357462
+20	153050 5601 644 7812597 13 200 188 1995.0072290895 2453.7666576797 437074.5267241 1019251525.7253
+21	158651 5594 644 7812597 13 200 188 1096.5188174965 2083.3257098943 287914.75022282 456616096.57664
+22	164245 5577 810 7812597 14 200 187 4.1202440707026 13.998611656229 1857.5250672148 20963.232389292
+23	169822 5961 976 7812597 15 200 186 -3.0332360730302 2.3225643844949 5.9626794776715 73.464409278066
+24	175783 5363 976 7812597 15 200 186 0.973 8.7811237672771 363.71881255918 996.46647363887
+25	181146 5522 1142 7812597 16 200 185 2010.4577766116 2453.8219996264 430637.81639596 1005355217.8112
+26	186668 5519 1142 7812597 16 200 185 1096.0327485558 2082.8051005015 284162.78529208 451819458.76967
+27	192187 5499 1377 7812597 17 200 184 4.11254450365 13.999388816282 1841.4974516657 20800.478430041
+28	197686 5882 1612 7812597 18 200 183 -3.0653385847724 2.2240570376068 5.9210576627728 74.696904257294
+29	203568 5277 1612 7812597 18 200 183 0.973 8.1049142467948 357.4329134363 954.1234881184
+30	208845 5442 1847 7812597 19 200 182 2121.6713814331 2453.7604912785 428469.32120484 1010693303.0472
+31	214287 5441 1847 7812597 19 200 182 1121.5526475888 2082.6041106712 288218.38813972 469546593.00789
+32	219728 5413 2163 7812597 20 200 181 4.067372106413 12.741513219538 1711.3389380608 17821.199467275
+33	225141 5834 2479 7812597 21 200 180 -3.5418639324096 2.2684067178215 2.210960710373 49.793570271055
+34	230975 5339 2479 7812597 21 200 180 0.973 7.3004795594347 325.4290988932 708.36867514571
+35	236314 5354 2795 7812597 22 200 179 2127.4782043443 2453.5830752378 421824.7689678 995937934.27085
+36	241668 5359 2795 7812597 22 200 179 1131.4283587122 2081.9061198337 284150.24354806 463781394.16106
+37	247027 5320 3204 7812597 23 200 178 4.0430421609162 13.996453029746 1701.0919879628 17960.860531134
+38	252347 5706 3613 7812597 24 200 177 -2.2413807551546 2.1796636598976 2.2413250637793 52.04102999846
+39	258053 5153 3613 7812597 24 200 177 0.973 8.3631999206624 323.83808589382 825.32925501449
+40	263206 5272 4022 7812597 25 200 176 2133.2897186994 2453.9358789861 415190.48034691 981235378.59008
+41	268478 5280 4022 7812597 25 200 176 1141.3120486122 2080.4280520957 279975.63897945 457674870.09277
+42	273758 5255 4536 7812597 26 200 175 4.0410625637338 13.996461975116 1688.6782079425 18099.185682387
+43	279013 5609 5050 7812597 27 200 174 -2.2792336745787 2.2442571268557 2.2554358057863 52.045658064637
+44	284622 5034 5050 7812597 27 200 174 0.973 8.5620453376609 322.32668126659 839.97874474934
+45	289656 5205 5564 7812597 28 200 173 2139.0929578948 2453.5162662442 408476.46713138 966158080.27324
+46	294861 5194 5564 7812597 28 200 173 1151.1830568705 2083.6939987838 275694.16187676 451202844.70358
+47	300055 5166 6195 7812597 29 200 172 4.0414518827764 13.990338315354 1678.4137873521 18229.796646178
+48	305221 5538 6826 7812597 30 200 171 -2.7426954467631 2.0453860032652 2.299207484628 53.468185180321
+49	310759 4981 6826 7812597 30 200 171 0.973 8.8694971634234 320.86906731594 855.37979526147
+50	315740 5122 7457 7812597 31 200 170 2144.8973621256 2453.8260227013 401674.39160291 950664930.96884
+51	320862 5114 7457 7812597 31 200 170 1161.0568247521 2083.9066340383 271063.68067321 443456773.09816
+52	325976 5080 8217 7812597 32 200 169 4.0921991861071 13.995584658093 1666.5013959118 18321.773680207
+53	331056 5447 8969 7812597 33 200 168 -3.7593692415675 2.2338055422413 2.2670519669453 52.769986084984
+54	336503 4914 8969 7812597 33 200 168 0.973 7.9363807399548 313.41417404079 793.59245008821
+55	341417 5044 9713 7812597 34 200 167 2150.7023041357 2453.670659331 394862.08985467 935125968.89608
+56	346461 5035 9713 7812597 34 200 167 1170.9315074412 2083.9627767801 266547.0081136 436181774.34601
+57	351496 9110 9841 7792840 34.43769350435 198.669383839992 313 1 1 313 313
+58	360606 69775 9844 7805155 34.437693560243 199.581382387132 2416 1 1 2416 2416
+59	430381 12004 10079 7809288 34.542235563504 199.793617810796 405 1 1 405 405
+60	442385 70516 10209 7668108 34.602869662735 189.320585212048 2431 1 1 2431 2431
+61	512901 10323 10445 7809300 34.728004515143 199.793617961612 349 1 1 349 349
+62	523224 5002 10592 7812597 35 200 166 4.0902178359286 13.998126043116 1653.9382108561 18469.997462941
+63	528226 5348 11459 7812597 36 200 165 -4.4940876030255 2.4779993124097 2.1840750327678 59.611700698157
+64	533574 4826 11459 7812597 36 200 165 0.973 8.394870022358 309.31724792624 795.02139347007
+65	538400 4956 12318 7812597 37 200 164 1398.3902477118 2439.3034607082 348832.32924159 757283855.84508
+66	543356 4949 12318 7812597 37 200 164 1096.2524540955 1749.0508399662 220314.44080799 303439816.11019
+67	548305 10976 12457 7760585 37.437698697217 196.320585394865 377 1 1 377 377
+68	559281 13544 12694 7809281 37.542240427794 199.793617680236 456 1 1 456 456
+69	572825 4927 13316 7812597 38 200 163 3.8721652445728 13.974055984516 1791.5078725868 20954.879930424
+70	577752 5224 14308 7812597 39 200 162 -4.1682951987928 2.2950238743448 9.7646131138466 114.44309804762
+71	582976 4782 14308 7812597 39 200 162 0.973 8.3554658376567 362.39765337446 1187.7171131129
+72	587758 4866 15296 7812597 40 200 161 1317.8740030642 2438.2869332472 333321.16059803 709250283.3891
+73	592624 4873 15296 7812597 40 200 161 1096.5734830368 1701.0913555492 212295.27461373 286375032.4732
+74	597497 4840 16455 7812597 41 200 160 3.8893497726901 13.998275555454 1791.1955008423 21247.886175761
+75	602337 12738 17100 7802583 41.602877693157 199.383571590522 438 1 1 438 438
+76	615075 5120 17614 7812597 42 200 159 -4.5 2.2388895739778 10.055112609361 175.7971320746
+77	620195 4707 17614 7812597 42 200 159 0.973 8.704587327636 385.80329040869 1425.8693717476
+78	624902 16351 18012 7809272 42.48637938979 199.79361744434 549 1 1 549 549
+79	641253 11551 18410 7738450 42.635168391401 194.669381072207 397 1 1 397 397
+80	652804 4786 18763 7812597 43 200 158 1423.8177053106 2438.342559568 336285.2995339 729922606.16468
+81	657590 4794 18763 7812597 43 200 158 1096.0686676251 1701.1241616979 211762.02756838 290863567.21103
+82	662384 6784 19622 7804732 43.622676675954 199.542244960921 233 1 1 233 233
+83	669168 4714 20077 7812597 44 200 157 0 13.999317840978 1668.1549171325 19384.249633994
+84	673882 4990 21395 7812597 45 200 156 -4.5 2.1988506259769 9.9670185733134 171.92572282874
+85	678872 4574 21395 7812597 45 200 156 0.973 8.9607397942146 363.62754227819 1275.0421211914
+86	683446 4710 22693 7812597 46 200 155 1450.2319307791 2438.468880901 330646.50073227 718550843.73878
+87	688156 4703 22693 7812597 46 200 155 1096.5096003013 1701.1029018695 207478.4731954 284503685.80135
+88	692859 8946 23792 7791307 46.635169793747 198.581381229628 311 1 1 311 311
+89	701805 7329 24062 7811492 46.906631595492 199.906630333565 252 1 1 252 252
+90	709134 4678 24168 7812597 47 200 154 2.1298658241565 13.994507228746 1641.2575075844 18832.052506478
+91	713812 37210 24624 7808835 47.473723705726 199.79246625145 1294 1 1 1294 1294
+92	751022 4960 25627 7812597 48 200 153 -3.1728263887563 2.1559245240386 9.8425292637847 128.74246418775
+93	755982 4440 25627 7812597 48 200 153 0.973 9.2796088468674 352.88838843021 1206.3879626179
+94	760422 4614 27080 7812597 49 200 152 1918.902331894 2438.3808372375 344235.49191405 782565725.39461
+95	765036 4621 27080 7812597 49 200 152 1096.2455933113 1701.0458815806 209483.08124088 294624864.75932
+96	769657 3777 28034 7740974 49.602875496965 194.819577518749 130 1 1 130 130
+97	773434 4582 28718 7812597 50 200 151 3.9289234951894 12.063327381323 1166.4480971038 9792.570876761
+98	778016 3121 29663 7804166 50.602875534496 199.483884475852 106 1 1 106 106
+99	781137 4914 30346 7812597 51 200 150 -3.0046421914238 2.0952834175178 6.0090341661836 49.778536631744
+100	786051 4676 30346 7812597 51 200 150 0.973 7.9356935545986 261.04262757272 588.79446319763
+101	790727 4686 31968 7812597 52 200 149 1934.1129509199 2438.3780722083 337910.6616187 769111820.40051
+102	795413 4688 31968 7812597 52 200 149 1096.3169603441 1700.9664443918 205527.35853445 289209503.05334
+103	800101 3745 33053 7804169 52.602883123091 199.483884526394 123 1 1 123 123
+104	803846 4651 33795 7812597 53 200 148 4.1654516040827 12.824866217841 1151.1213516572 9792.8104922309
+105	808497 4947 35616 7812597 54 200 147 -2.088813198281 2.4295921500819 5.7990347227052 49.637079483274
+106	813444 4488 35616 7812597 54 200 147 0.973 7.8479509824424 257.54337215323 651.83276685268
+107	817932 13683 37408 7802590 54.910660438402 199.383573050033 458 1 1 458 458
+108	831615 4591 37434 7812597 55 200 146 1949.2939394757 2438.3942813431 331595.3006953 755718838.59776
+109	836206 4597 37434 7812597 55 200 146 1096.5328706317 1700.9543156391 201502.24411961 283567589.34442
+110	840803 62097 38043 7804173 55.437702842589 199.483884576851 2174 1 1 2174 2174
+111	902900 4562 39462 7812597 56 200 145 4.0059353912065 13.491267315593 1135.1369268006 9826.2423987683
+114	907462 4854 41471 7812597 57 200 144 -1.8640461566213 2.4491593593406 5.9354805812765 51.662046208831
+115	912316 4337 41471 7812597 57 200 144 0.973 8.0323947678323 255.72665421292 692.74866973845
+117	916653 4498 43681 7812597 58 200 143 1964.5015536095 2438.4138695876 325222.8434582 742074196.15907
+118	921151 4516 43681 7812597 58 200 143 1096.092964611 1701.0084983213 197521.18002768 278068532.08769
+120	925667 182449 44317 7804177 58.437700849773 199.483884627367 6321 1 1 6321 6321
+123	1108116 4482 46106 7812597 59 200 142 4.1077073881151 13.992575319903 1121.8687620551 9924.4959546099
+124	1112598 4752 292835 7812597 60 200 141 -2.1411351075504 2.1058116979944 5.8774617306045 57.688980167119
+125	1117350 4228 292835 7812597 60 200 141 0.973 8.3603790085223 256.65022917249 749.0120075524
+126	1121578 4427 563591 7812597 61 200 140 1979.7484777239 2438.3843788879 318702.39306693 727736565.40351
+127	1126005 4419 563591 7812597 61 200 140 1096.3685484529 1700.9740896765 193638.99952517 272876286.47075
+128	1130424 187260 563705 7804735 61.000384185398 199.542245010385 6358 1 1 6358 6358
+129	1317684 4397 865687 7812597 62 200 139 3.9168212624827 13.974547270818 1105.2341099129 9854.3452860945
+130	1322081 4654 1161351 7812597 63 200 138 -3.0312035249834 2.2307585248607 6.0860213198564 60.283792429112
+131	1326735 4202 1161351 7812597 63 200 138 0.973 7.9564523216104 253.51976159879 699.58240295603
+132	1330937 4336 1456949 7812597 64 200 137 1527.6222103394 2450.1829074456 291372.82469936 632130920.20876
+133	1335273 4334 1456949 7812597 64 200 137 1467.4524354413 2120.7552131694 251569.32347417 467317176.11466
+134	1339607 77113 1457138 7808120 64.000524522177 199.729310055239 2557 1 1 2557 2557
+135	1416720 4304 1765236 7812597 65 200 136 4.0312268259559 13.999499795509 1814.4046875634 24620.150509323
+136	1421024 4563 2068354 7812597 66 200 135 -4.4025015585698 2.149178892565 9.9400541648761 91.17182629251
+137	1425587 4204 2068354 7812597 66 200 135 0.973 9.0177694816845 327.18201563337 1072.1440973587
+138	1429791 4237 2369398 7812597 67 200 134 1626.5197194807 2450.5763476155 292310.2124627 647180940.55014
+139	1434028 4246 2369398 7812597 67 200 134 1562.2704374352 2120.7170943841 248807.21576283 466400279.3415
+140	1438274 4212 2674814 7812597 68 200 133 3.9833337411538 13.997477567426 1677.3186302482 21629.856782366
+141	1442486 11175 2862295 7808117 68.542241493892 199.729309598285 362 1 1 362 362
+142	1453661 4478 2971274 7812597 69 200 132 -4.3696285595702 2.0533766001603 9.9164848687805 60.523900131747
+143	1458139 4126 2971274 7812597 69 200 132 0.973 8.3287502328345 298.6783729727 863.77903520688
+144	1462265 4146 3252068 7812597 70 200 131 1646.0012777154 2450.1888840429 286509.55431297 635490821.472
+145	1466411 4156 3252068 7812597 70 200 131 1578.4499450875 2120.8812111448 244243.91450252 459590905.11432
+146	1470567 4115 3528890 7812597 71 200 130 4.0109846863884 13.996943999445 1650.7877468892 21427.529372957
+147	1474682 4357 3807850 7812597 72 200 129 -3.2870497965938 2.2698705216427 9.9005856449122 65.216621569217
+148	1479039 3970 3807850 7812597 72 200 129 0.973 8.2508384063059 296.68592102826 962.79972580041
+149	1483009 4054 4084393 7812597 73 200 128 1665.3676704268 2450.614666044 280685.36971641 623747684.92382
+150	1487063 4049 4084393 7812597 73 200 128 1578.4491727054 2120.5819200855 239593.80535214 452501821.95101
+151	1491112 4025 4366557 7812597 74 200 127 3.951523708284 13.999659525047 1623.1371432456 21221.362374201
+152	1495137 9242 4628515 7805012 74.910839129935 199.561691169843 300 1 1 300 300
+153	1504379 4253 4648050 7812597 75 200 126 -2.3449631099639 2.2564944986859 9.938448995401 63.696219316293
+154	1508632 3849 4648050 7812597 75 200 126 0.973 8.4307264198454 295.48780281564 993.88791537701
+155	1512481 9887 4827717 7805015 75.542440577536 199.561691260257 321 1 1 321 321
+156	1522368 3963 4928843 7812597 76 200 125 1684.0676879745 2450.237870594 274732.26533425 611473965.00499
+157	1526331 3960 4928843 7812597 76 200 125 1578.4596460285 2120.7507610898 234749.29862504 444737650.67517
+158	1530291 8227 5098663 7803868 76.486673720457 199.463952199662 267 1 1 267 267
+159	1538518 3931 5215427 7812597 77 200 124 4.1179416208439 13.994778898368 1597.1316212978 21026.778261882
+160	1542449 4168 5493095 7812597 78 200 123 -1.7861047490112 2.1724637633469 9.8760211419939 60.107547427366
+161	1546617 3776 5493095 7812597 78 200 123 0.973 8.3087839626252 289.34886556986 969.30094990055
+162	1550393 3866 5762833 7812597 79 200 122 1702.5198021129 2450.1992720672 268719.05385928 598970179.5686
+163	1554259 3871 5762833 7812597 79 200 122 1578.4574776795 2120.928306764 229692.28376301 436202788.10372
+164	1558130 3843 6036659 7812597 80 200 121 3.8541923716738 13.995070113812 1570.6804969025 20882.383501742
+165	1561973 8037 6230231 7803865 80.622680718661 199.463952113555 261 1 1 261 261
+166	1570010 4051 6311865 7812597 81 200 120 -2.37 2.0508525678632 10.069295055237 62.458205343976
+167	1574061 3676 6311865 7812597 81 200 120 0.973 8.1648341536205 287.78699632418 960.4809204183
+168	1577737 3774 6576354 7812597 82 200 119 1721.2766005582 2450.4881445401 262873.16025717 587268507.84255
+169	1581511 3775 6576354 7812597 82 200 119 1578.4493355444 2120.5712771686 224447.5804151 426937008.5564
+170	1585286 3740 6836190 7812597 83 200 118 4.0478502342621 13.991711857808 1542.9368801087 20641.764112723
+171	1589026 3969 6839911 7812597 84 200 117 -3.5107395764694 2.1802886426682 9.8978725100188 68.507313704392
+172	1592995 3616 6839911 7812597 84 200 117 0.973 8.3020934744196 282.43405033205 952.08939084933
+173	1596611 7936 6841320 7803862 84.483880752778 199.463952025928 258 1 1 258 258
+174	1604547 3680 6843612 7812597 85 200 116 1741.9547899013 2450.5502830924 257261.47685671 576628399.56473
+175	1608227 3685 6843612 7812597 85 200 116 1578.4435647177 2120.7236862201 219089.81661264 417253472.19787
+176	1611912 6954 6845928 7803859 85.602880599166 199.463951929357 226 1 1 226 226
+177	1618866 3654 6847619 7812597 86 200 115 4.1368244981366 13.995045116786 1515.0787580723 20376.689970673
+178	1622520 3874 6851601 7812597 87 200 114 -4.4987434495288 2.0638333819387 9.8208275537662 72.763880839556
+179	1626394 3547 6851601 7812597 87 200 114 0.973 8.656699988394 278.81175574892 940.75677576694
+180	1629941 3595 6855554 7812597 88 200 113 1765.6190872873 2450.5735341099 251752.94989901 566424529.13414
+181	1633536 3588 6855554 7812597 88 200 113 1578.4419682762 2120.7881517 213800.59494724 407848623.17092
+182	1637124 3565 6859894 7812597 89 200 112 3.991180438225 13.997540312563 1482.5795674112 20013.447679215
+183	1640689 5823 6861262 7803856 89.437705844693 199.463951818853 189 1 1 189 189
+184	1646512 3761 6864222 7812597 90 200 111 -4.4763091632286 2.1236197755067 9.9843846969396 74.615914019029
+185	1650273 3453 6864222 7812597 90 200 111 0.973 8.7548679507815 273.91715656532 944.61002244567
+186	1653726 3503 6868545 7812597 91 200 110 1792.0232562587 2450.6035349453 246290.50750168 556428173.08263
+187	1657229 3503 6868545 7812597 91 200 110 1578.4472567756 2120.8945102552 208580.10592348 398718358.36977
+188	1660732 4621 6870190 7802205 91.473724286737 199.342442564987 150 1 1 150 150
+189	1665353 3472 6873172 7812597 92 200 109 4.1280628345594 13.999772730393 1446.4684886594 19559.223088227
+190	1668825 3666 6877763 7812597 93 200 108 -4.5 2.0819717124221 9.8549729434224 87.322472220339
+191	1672491 3384 6877763 7812597 93 200 108 0.973 8.6087420845148 270.73482644941 941.09492166742
+192	1675875 3409 6882270 7812597 94 200 107 1843.9265505755 2450.3624423441 242052.27551147 551579433.14431
+193	1679284 3405 6882270 7812597 94 200 107 1578.4620709475 2120.6269418765 203126.20369805 388829398.63078
+194	1682689 4377 6884082 7802201 94.473719926457 199.342442325414 142 1 1 142 142
+195	1687066 3381 6887109 7812597 95 200 106 4.1371057962592 13.997278778206 1373.4240117029 18182.127613042
+196	1690447 3575 6891941 7812597 96 200 105 -4.4846138776376 2.0816741126124 9.7638205837097 70.751063699852
+197	1694022 3296 6891941 7812597 96 200 105 0.973 8.8846400148943 253.01231578866 842.7318657001
+198	1697318 3310 6896760 7812597 97 200 104 1866.9424362106 2450.294902815 236154.22267604 539847376.6533
+199	1700628 3317 6896760 7812597 97 200 104 1578.4521538001 2120.6588620879 198023.99124489 380177647.92389
+200	1703945 3794 6898857 7751475 97.483883087317 195.635171604652 123 1 1 123 123
+201	1707739 3284 6901930 7812597 98 200 103 4.0408082129639 13.999687120791 1339.6831941254 17834.573169156
+202	1711023 3450 6907047 7812597 99 200 102 -3.08 2.1618422345677 9.8307206177763 67.344890015685
+203	1714473 3162 6907047 7812597 99 200 102 0.973 8.8782492562195 250.50434288765 894.5671509855
+204	1717635 3223 6912145 7812597 100 200 101 1889.3521883002 2450.1417823771 230155.68685206 527701608.6974
+205	1720858 3225 6912145 7812597 100 200 101 1578.4563870886 2120.7364717424 192768.49930869 370970670.17344
+206	1724083 3276 6914458 7792320 100.483884213675 198.62841824038 106 1 1 106 106
+207	1727359 3189 6917578 7812597 101 200 100 4.1892558464568 13.999261201438 1308.1125663544 17506.152213142
+208	1730548 3376 6922953 7812597 102 200 99 -3.7165481146841 2.2083471913263 9.7615815554935 83.062658972604
+209	1733924 3076 6922953 7812597 102 200 99 0.973 8.0909078804228 251.74233163302 912.49708044561
+210	1737000 3121 6928228 7812597 103 200 98 1912.1754814241 2450.6048629123 224180.83860731 515694898.13879
+211	1740121 3120 6928228 7812597 103 200 98 1578.4476767266 2120.8831066228 187283.03454024 360927953.37396
+212	1743241 3246 6932401 7810900 103.787580543851 199.869349026288 105 1 1 105 105
+213	1746487 3090 6933796 7812597 104 200 97 3.8679895345137 13.999918484567 1275.6770500702 17143.786264937
+214	1749577 3263 6939296 7812597 105 200 96 -3.7354103621936 2.1531429260015 10.084534079161 76.787952788032
+215	1752840 3003 6939296 7812597 105 200 96 0.973 8.9356965353343 244.45961412186 909.53099270937
+216	1755843 3035 6944674 7812597 106 200 95 1941.690092132 2450.5138910291 218437.97107292 504718086.94436
+217	1758878 3028 6944674 7812597 106 200 95 1578.4478494506 2120.6014485937 181675.28573665 350446892.3744
+218	1761906 2658 6945099 7809965 106.037566635812 199.819893381535 86 1 1 86 86
+219	1764564 2998 6950368 7812597 107 200 94 4.0021450817148 13.995735300365 1233.4813971727 16562.896640325
+220	1767562 3158 6955949 7812597 108 200 93 -4.5 2.0936565712374 9.939887907125 84.306245403711
+221	1770720 2906 6955949 7812597 108 200 93 0.973 8.7217324639777 237.73251924093 853.75824926448
+222	1773626 2932 6961417 7812597 109 200 92 1983.4320276168 2450.2519747107 213098.35341511 495532383.8769
+223	1776558 2933 6961417 7812597 109 200 92 1578.4583453937 2120.7833373025 175612.65898025 338310813.2686
+224	1779491 3587 6961839 7809260 109.037565536299 199.793617186991 116 1 1 116 116
+225	1783078 2905 6967184 7812597 110 200 91 4.0688769192505 13.998125667097 1175.3763608763 15540.059010122
+226	1785983 3048 6972840 7812597 111 200 90 -4.3943020395603 2.1946501318784 9.877533362552 82.478416405215
+227	1789031 2834 6972840 7812597 111 200 90 0.973 8.6757176611461 229.45058587628 821.12751549667
+228	1791865 2838 6978434 7812597 112 200 89 2009.807580475 2450.6573059771 206945.34079945 482852004.1637
+229	1794703 2836 6978434 7812597 112 200 89 1578.4605443478 2120.9582995875 170055.32684189 327992350.23693
+230	1797539 2807 6984417 7812597 113 200 88 3.9580055631868 13.998339578474 1137.995330417 15080.696573967
+231	1800346 3670 6985453 7809263 113.142881073785 199.793617309657 119 1 1 119 119
+232	1804016 2969 6990408 7812597 114 200 87 -3.9721588398325 2.0717726634629 9.9245312345812 82.386008513059
+233	1806985 2739 6990408 7812597 114 200 87 0.973 8.2268358184433 225.62817602783 822.22400014645
+234	1809724 2744 6996336 7812597 115 200 86 2050.3704041174 2450.3087403635 201279.49893918 472349773.84246
+235	1812468 2742 6996336 7812597 115 200 86 1578.4616672406 2120.6526346151 163751.35670313 314924180.55137
+236	1815210 3922 7001575 7809275 115.793625545776 199.793617498785 127 1 1 127 127
+237	1819132 2713 7002669 7812597 116 200 85 4.0684066445454 13.995935866861 1081.6423293141 14119.133307396
+238	1821845 2842 7009005 7812597 117 200 84 -4.4680452208761 2.1338178477483 9.878569451477 68.822741710298
+239	1824687 2626 7009005 7812597 117 200 84 0.973 8.2791989196013 209.94508723933 741.6004300683
+240	1827313 2650 7015323 7812597 118 200 83 2076.1644995752 2450.2896716197 194936.02737772 458887973.4544
+241	1829963 2647 7015323 7812597 118 200 83 1578.4455922944 2120.8015566245 158035.78773267 303989946.6267
+242	1832610 5006 7020912 7809278 118.793623667901 199.793617624611 162 1 1 162 162
+243	1837616 2612 7022064 7812597 119 200 82 3.8384104538156 13.992003732913 1043.4275909868 13647.63749846
+244	1840228 2758 7028776 7812597 120 200 81 -4.4923594333984 2.3114013527101 10.136911792585 86.26814072429
+245	1842986 2525 7028776 7812597 120 200 81 0.973 8.3181892890822 210.60526823841 790.4087585868
+246	1845511 2550 7035464 7812597 121 200 80 2096.2351661725 2450.2770601483 188441.55419474 444782324.63664
+247	1848061 2550 7035464 7812597 121 200 80 1578.4610135881 2120.7989567714 152382.89201649 293247311.29265
+248	1850611 5002 7041114 7809284 121.792467297096 199.793617722408 162 1 1 162 162
+249	1855613 2520 7042452 7812597 122 200 79 3.9608488762622 13.994702985871 1013.6855270033 13399.121331712
+250	1858133 2646 7049392 7812597 123 200 78 -3.2790960832915 2.4138475411432 9.9467872789096 83.556230770773
+251	1860779 2423 7049392 7812597 123 200 78 0.973 8.3914183140245 208.97521807028 825.72433628597
+252	1863202 2457 7056289 7812597 124 200 77 2126.3870102274 2450.3919929403 182230.87228396 431955736.87508
+253	1865659 2455 7056289 7812597 124 200 77 1578.4665251151 2120.6142017534 145998.82421336 279779778.76519
+254	1868114 5658 7057482 7809736 124.142886487742 199.819585858838 183 1 1 183 183
+255	1873772 2424 7063520 7812597 125 200 76 4.1343455316377 13.991427041227 968.96160836762 12693.569474094
+256	1876196 2549 7070670 7812597 126 200 75 -4.4936084389847 2.1748547485145 7.4308300168633 77.435607891994
+257	1878745 2345 7070670 7812597 126 200 75 0.973 8.3319268161989 187.89629706563 665.53393725768
+258	1881090 2361 7077746 7812597 127 200 74 2145.3783822098 2450.6345476982 175778.17522557 418063484.10169
+259	1883451 2361 7077746 7812597 127 200 74 1578.4462866811 2120.964511604 139883.55713005 267285245.24488
+260	1885812 5400 7078951 7811901 127.142886118705 199.951217323419 175 1 1 175 175
+261	1891212 2329 7085149 7812597 128 200 73 3.9878099810693 13.996780016983 941.24496437965 12441.36479593
+262	1893541 2457 7092470 7812597 129 200 72 -4.4323026880566 2.006825059643 3.4997088477593 69.010672232713
+263	1895998 2239 7092470 7812597 129 200 72 0.973 8.1261923691537 173.67818893634 570.40327263295
+264	1898237 2263 7099628 7812597 130 200 71 2185.3076402072 2450.4291897531 169464.4862364 404818312.86644
+265	1900500 2262 7099628 7812597 130 200 71 1578.4460022775 2120.8619900635 133287.34035026 252967644.02919
+266	1902762 4853 7100300 7811912 130.06023361521 199.951217480804 157 1 1 157 157
+267	1907615 2231 7107075 7812597 131 200 70 4.0073256796039 13.99517772618 897.59860385533 11813.937861878
+268	1909846 2355 7114396 7812597 132 200 69 -4.4648001725401 2.2568401832436 9.9765127501567 51.952496237868
+269	1912201 2180 7114396 7812597 132 200 69 0.973 7.8669522281559 171.37813621219 573.77037856569
+270	1914381 2170 7121575 7812597 133 200 68 2211.5600295669 2450.426726547 162740.89871147 389735720.86143
+271	1916551 2161 7121575 7812597 133 200 68 1578.4521971671 2120.8588753007 127451.49238796 241466700.01545
+272	1918712 3678 7122235 7811922 133.060228268816 199.951217562484 119 1 1 119 119
+273	1922390 2134 7129039 7812597 134 200 67 4.0032090945537 13.995364193758 869.58447517042 11603.927689909
+274	1924524 2238 7136420 7812597 135 200 66 -3.1633547781624 2.4893962075608 9.9920577545539 52.416165716353
+275	1926762 2057 7136420 7812597 135 200 66 0.973 8.0128676980886 169.41212180873 611.23532020052
+276	1928819 2070 7143711 7812597 136 200 65 2271.3846913461 2450.5427504934 156176.12403227 375388753.72249
+277	1930889 2074 7143711 7812597 136 200 65 1578.4578125877 2120.6695365962 120502.89577622 225775523.00538
+278	1932963 2347 7144045 7811932 136.031192724258 199.95121772431 76 1 1 76 76
+279	1935310 2041 7151336 7812597 137 200 64 4.1213719500938 13.99508171211 811.18359152396 10556.4377774
+280	1937351 2148 7158905 7812597 138 200 63 -4.1171151965313 2.1576759482548 9.8360802661942 43.771079260483
+281	1939499 1997 7158905 7812597 138 200 63 0.973 9.1205592135345 155.46818554086 526.91253036312
+282	1941496 1979 7166416 7812597 139 200 62 2334.5146651219 2450.5526023157 149690.15016721 361486480.69984
+283	1943475 1977 7166416 7812597 139 200 62 1578.446631128 2120.7279213946 112453.40297104 205787741.42203
+284	1945452 1764 7166758 7807687 139.031191815011 199.723885328208 57 1 1 57 57
+285	1947216 1944 7174280 7812597 140 200 61 4.015751118946 13.992500017215 693.58382024314 8097.3458007784
+286	1949160 2043 7181991 7812597 141 200 60 -1.7684040211443 2.079336216792 9.9767488982695 25.432302219579
+287	1951203 1891 7181991 7812597 141 200 60 0.973 7.556322748889 137.6577279308 414.67956132848
+288	1953094 1877 7189661 7812597 142 200 59 2334.3066126858 2450.2126418223 142544.12430938 344461604.16692
+289	1954971 1882 7189661 7812597 142 200 59 1578.4376417901 2120.8911067517 106809.09736294 195008764.32125
+290	1956853 1543 7195580 7809507 142.709098428572 199.793886111684 50 1 1 50 50
+291	1958396 1851 7197682 7812597 143 200 58 3.9705508804287 13.804028445697 675.09549392697 8077.3000637157
+292	1960247 1935 7205661 7812597 144 200 57 -1.4159555851432 2.0037778424635 9.8334775652685 30.537098997595
+293	1962182 1758 7205661 7812597 144 200 57 0.973 7.5960053203557 133.3108061725 464.64300886848
+294	1963940 1783 7213612 7812597 145 200 56 2333.8908878828 2450.6478691645 135352.6606919 327219290.21318
+295	1965723 1783 7213612 7812597 145 200 56 1578.4592936262 2115.2256248323 101100.38667196 184014670.13143
+296	1967506 1268 7219614 7809494 145.709095466094 199.793886074396 41 1 1 41 41
+297	1968774 1752 7221929 7812597 146 200 55 4.0027464997838 13.98210951197 655.99473455484 8046.4571748012
+298	1970526 1827 7230194 7812597 147 200 54 -1.6846411436339 2.1650862723682 9.6755459896406 32.786216588502
+299	1972353 1663 7230194 7812597 147 200 54 0.973 8.3906831981642 132.51139215646 483.41697331806
+300	1974016 1694 7238422 7812597 148 200 53 2334.2211216646 2450.1768468011 128091.04226278 309640276.26215
+301	1975710 1692 7238422 7812597 148 200 53 1578.456517756 2101.4472274967 95305.430236494 172714671.75117
+302	1977402 1391 7238597 7809490 148.018916798003 199.793886017004 45 1 1 45 45
+303	1978793 1659 7246951 7812597 149 200 52 4.0457048808943 13.981422487309 637.76612133604 8046.1163394467
+304	1980452 1716 7255468 7812597 150 200 51 -1.2735767751452 2.1181549833715 9.6149374854351 35.073497142487
+305	1982168 1570 7255468 7812597 150 200 51 0.973 8.4100670600081 130.00567805165 500.58733608182
+306	1983738 1595 7263887 7812597 151 200 50 2334.2023249848 2450.1370415544 120843.38800423 292125734.48192
+307	1985333 1594 7263887 7812597 151 200 50 1578.4526576875 2082.7787350295 89467.413109163 161250116.42435
+308	1986927 1330 7264751 7807670 151.09819452506 199.723885157907 43 1 1 43 43
+309	1988257 1562 7272568 7812597 152 200 49 3.9210062227909 13.997578719547 619.09591358538 8091.8237134532
+310	1989819 1617 7281208 7812597 153 200 48 -2.3431129917639 2.1645142078702 9.72736680995 45.599719641982
+311	1991436 1462 7281208 7812597 153 200 48 0.973 8.1882870127176 130.91256772184 542.02811303281
+312	1992898 1500 7289812 7812597 154 200 47 2335.0010403282 2450.3177066158 113492.24591845 274116616.42967
+313	1994398 1494 7289812 7812597 154 200 47 1578.4458654542 2043.8638007976 83187.194082535 148148653.44348
+314	1995892 1422 7291743 7809027 154.279779419767 199.792773639982 46 1 1 46 46
+315	1997314 1467 7298769 7812597 155 200 46 4.1345499874911 13.99820148767 580.08012818337 7568.5700003366
+316	1998781 1528 7307675 7812597 156 200 45 -3.3653291290258 2.0690598297748 9.8026954143956 50.789171194407
+317	2000309 1414 7307675 7812597 156 200 45 0.973 7.475285882909 125.95878471563 497.03289589398
+318	2001723 1402 7316546 7812597 157 200 44 2333.944950545 2450.3012583625 106081.57627564 255819799.31365
+319	2003125 1404 7316546 7812597 157 200 44 1578.4516664166 1988.489007391 76762.955815745 134561518.86634
+320	2004529 1327 7318714 7788593 157.307211517 198.357132546961 43 1 1 43 43
+321	2005856 1367 7325762 7812597 158 200 43 4.0621267736 13.993893159097 523.92254729627 6617.3180707194
+322	2007223 1420 7334949 7812597 159 200 42 -3.0058536428929 2.165046100216 9.8519493743316 45.210592905642
+323	2008643 1323 7334949 7812597 159 200 42 0.973 7.6091175214956 115.95191498347 459.17041285664
+324	2009966 1306 7344125 7812597 160 200 41 2333.8711574204 2450.3240826607 98777.367647272 238032706.28682
+325	2011272 1307 7344125 7812597 160 200 41 1578.455221232 1951.5884402925 70926.155742761 123183662.5097
+326	2012579 1327 7346542 7803816 160.307204581752 199.463950892054 43 1 1 43 43
+327	2013906 1277 7353704 7812597 161 200 40 3.736904237475 13.998537937799 487.21168670397 6176.7772662202
+328	2015183 1314 7363231 7812597 162 200 39 -3.181071259478 2.1495894253999 10.142799540675 41.035573697656
+329	2016497 1212 7363231 7812597 162 200 39 0.973 9.0324394806405 109.60696294176 453.11182592209
+330	2017709 1213 7372766 7812597 163 200 38 2334.3666742834 2450.2430979558 91517.038013684 220455798.06507
+331	2018922 1211 7372766 7812597 163 200 38 1578.4609713852 1922.7067747815 65378.829063958 112863935.02859
+332	2020133 1237 7374354 7774800 163.241589386344 197.357140965093 40 1 1 40 40
+333	2021370 1181 7382657 7812597 164 200 37 3.9267152179815 13.991036061207 458.61386773305 5934.4186216307
+334	2022551 1214 7392517 7812597 165 200 36 -2.2808372260092 2.0985216724081 9.997178356085 41.866516028076
+335	2023765 1096 7392517 7812597 165 200 36 0.973 8.1507722281635 106.89488051463 477.33915688923
+336	2024861 1116 7402320 7812597 166 200 35 2334.3014031765 2440.3815508715 83689.74493636 200156527.35504
+337	2025977 1117 7402320 7812597 166 200 35 1578.4457050785 1787.0910558514 58510.097323577 97930166.408682
+338	2027094 956 7403012 7731591 166.06023286138 194.098202334622 31 1 1 31 31
+339	2028050 1087 7412520 7812597 167 200 34 4.0070650662479 11.399205355401 321.07292947727 3107.753010991
+340	2029137 1123 7422695 7812597 168 200 33 -1.89693649935 2.0301833031955 7.2769516896941 20.05021637471
+341	2030260 1041 7422695 7812597 168 200 33 0.973 6.5506638429377 73.460189141473 226.68050659678
+342	2031301 1023 7432873 7812597 169 200 32 2333.9097565187 2439.1243028421 76469.341049798 182773870.46273
+343	2032324 1022 7432873 7812597 169 200 32 1578.4472377179 1769.5058423188 53376.203576475 89125067.426331
+344	2033346 958 7438887 7788387 169.608559480674 198.342449806591 31 1 1 31 31
+345	2034304 990 7443407 7812597 170 200 31 3.8073804533368 12.612489265374 303.01395289745 3077.8887634791
+346	2035294 1006 7453926 7812597 171 200 30 -1.3875364932187 2.0719440690265 7.8959231552031 31.827231550584
+347	2036300 848 7453926 7812597 171 200 30 0.973 7.5800326801467 74.949749217039 327.168448666
+348	2037148 925 7464424 7812597 172 200 29 2333.8611517622 2437.5134714381 69260.11377392 165443704.4059
+349	2038073 925 7464424 7812597 172 200 29 1578.4515397679 1749.2651319643 48238.037014081 80312060.558247
+350	2038998 959 7469779 7787496 172.561686090044 198.279780631477 31 1 1 31 31
+351	2039957 889 7475305 7812597 173 200 28 4.034626709241 13.136573262607 283.08161486912 3010.6455107631
+352	2040846 901 7486172 7812597 174 200 27 -1.8360737781182 2.1559067521919 8.5531920797194 36.282966028516
+353	2041747 742 7486172 7812597 174 200 27 0.973 8.1224757530053 75.647876635299 362.65960368583
+354	2042489 828 7497003 7812597 175 200 26 2334.0516782651 2434.1907405433 62042.99382213 148076245.8853
+355	2043317 830 7497003 7812597 175 200 26 1578.4579158844 1727.3998731524 43080.792931217 71443296.893729
+356	2044147 1084 7497410 7810212 175.031187296021 199.823971206893 35 1 1 35 35
+357	2045231 797 7508256 7812597 176 200 25 4.0318834454092 13.24397403098 261.69448689712 2888.1200767627
+358	2046028 794 7519506 7812597 177 200 24 -1.4815628318974 2.1313343618065 9.2120905855713 37.374624224834
+359	2046822 696 7519506 7812597 177 200 24 0.973 8.0994977241799 74.963976233429 373.26937421592
+360	2047518 731 7530743 7812597 178 200 23 2334.4179237145 2422.4703821694 54684.062792328 130032654.22129
+361	2048249 729 7530743 7812597 178 200 23 1578.4665043773 1700.8885521973 37869.437750285 62397929.895198
+362	2048978 742 7532231 7810205 178.163826014989 199.823971163123 24 1 1 24 24
+363	2049720 701 7542422 7812597 179 200 22 4.2559510328259 11.274169162431 225.61005851325 2401.8349929259
+364	2050421 715 7554077 7812597 180 200 21 -4.3893400723867 2.0165439030761 2.021665396611 32.422677517078
+365	2051136 650 7554077 7812597 180 200 21 0.973 6.6570872828171 49.750284574394 163.45387124624
+366	2051786 638 7565814 7812597 181 200 20 2333.916369168 2414.8869719487 47518.352907527 112913287.17915
+367	2052424 640 7565814 7812597 181 200 20 1578.4469180359 1699.3580990564 32822.492960208 53905762.506792
+368	2053064 740 7568692 7811340 181.309923588259 199.878437929862 24 1 1 24 24
+369	2053804 607 7577923 7812597 182 200 19 3.7929458832696 12.84857585862 210.07904040334 2452.8246239485
+370	2054411 605 7590059 7812597 183 200 18 -3.0975399590911 2.0795488964138 4.7643464519962 26.530668142115
+371	2055016 544 7590059 7812597 183 200 18 0.973 6.5578619305513 48.749092181783 199.73968169298
+372	2055560 542 7602127 7812597 184 200 17 2334.9206664417 2414.8551852707 40342.926968138 95750002.785459
+373	2056102 543 7602127 7812597 184 200 17 1578.4585899385 1696.7463668566 27755.024517378 45343937.26603
+374	2056645 465 7603174 7801512 184.098193931302 199.307209633098 15 1 1 15 15
+375	2057110 512 7614608 7812597 185 200 16 3.9643027338979 13.381397598181 185.32559859963 2283.689560102
+376	2057622 503 7627033 7812597 186 200 15 -0.73571641545892 2.0584293723037 8.5891710485795 18.258607630859
+377	2058125 467 7627033 7812597 186 200 15 0.973 7.1878060954396 48.669755552151 223.00588685777
+378	2058592 444 7639370 7812597 187 200 14 2334.7527693885 2414.8702641105 33242.073465925 78942336.255642
+379	2059036 448 7639370 7812597 187 200 14 1578.4530530674 1681.2879302735 22677.141719363 36748932.019604
+380	2059484 340 7640445 7759399 187.098194348918 196.263239018781 11 1 1 11 11
+381	2059824 415 7652172 7812597 188 200 13 3.9763429005056 13.667736121664 148.07199497604 1826.6473954124
+382	2060239 400 7664908 7812597 189 200 12 -0.12946178318933 2.0140962869045 9.5960105622023 18.836046733735
+383	2060639 384 7664908 7812597 189 200 12 1.5699136110099 8.3582546639874 44.994078679557 234.54028717036
+384	2061023 346 7677633 7812597 190 200 11 2339.68132197 2414.8508010724 26213.850833391 62476468.584622
+385	2061369 351 7677633 7812597 190 200 11 1578.4601997929 1650.8024321869 17673.815589804 28403354.65122
+386	2061720 186 7680708 7786978 190.307204290766 198.263240484283 6 1 1 6 6
+387	2061906 320 7690779 7812597 191 200 10 4.0010424112291 13.977768345661 110.26802677067 1342.6539047976
+388	2062226 297 7703856 7812597 192 200 9 -0.05581968498649 2.2203784901882 9.9365280954987 19.894179620087
+389	2062523 288 7703856 7812597 192 200 9 1.8409783676152 8.0390342394294 40.578044894371 236.19541362155
+390	2062811 255 7716914 7812597 193 200 8 2369.1016335692 2414.827880781 19167.161739093 45924355.367498
+391	2063066 256 7716914 7812597 193 200 8 1578.4686160041 1620.1032842081 12751.112912937 20325507.693378
+392	2063322 222 7730300 7812597 194 200 7 4.0963891555032 13.89932602556 67.475072968013 733.98003660164
+393	2063544 193 7743731 7812597 195 200 6 0.29534287529879 2.1348477373528 9.8029368700564 18.247506214576
+394	2063737 192 7743731 7812597 195 200 6 3.0178830022619 7.9754529266501 33.963789179338 208.93801435138
+395	2063929 159 7757090 7812597 196 200 5 2396.7587246678 2414.873747339 12034.064578134 28963951.326077
+396	2064088 159 7757090 7812597 196 200 5 1578.451774044 1592.0904611154 7917.1036579488 12536232.656049
+397	2064247 124 7763977 7811112 196.597312410761 199.872333727827 4 1 1 4 4
+398	2064371 398 7763980 7812364 196.597312436267 199.98659963619 13 1 1 13 13
+399	2064769 128 7770859 7812597 197 200 4 3.8129964193388 9.5155542239978 26.606607794697 195.17449265478
+400	2064897 96 7784656 7812597 198 200 3 1.8420662235841 1.9679318655143 5.702557804659 10.847746076339
+401	2064993 96 7784656 7812597 198 200 3 3.9100036745225 5.9887332085942 15.032761093514 77.511258771444
+402	2065089 64 7798428 7812597 199 200 2 2411.9660243392 2414.8772939658 4826.843318305 11649212.447478
+403	2065153 64 7798428 7812597 199 200 2 1578.4504717411 1579.5194747541 3157.9699464953 4986387.6628674
+404	2065217 124 7800570 7812367 199.241590903807 199.986599660228 4 1 1 4 4
+405	2065341 32 7812597 7812597 200 200 1 4.0133306786479 4.0133306786479 4.0133306786479 16.106823136176
+
